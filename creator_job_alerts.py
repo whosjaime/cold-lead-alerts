@@ -20,7 +20,6 @@ ROSTER_WEBHOOK_URL = os.getenv("ROSTER_WEBHOOK_URL", "")
 YTJOBS_URL = "https://ytjobs.co/job/search"
 ROSTER_URL = "https://www.joinroster.co/jobs"
 
-# 65 sec so posts do not feel instant/back-to-back
 POST_DELAY_SECONDS = int(os.getenv("POST_DELAY_SECONDS", "65"))
 
 
@@ -201,6 +200,82 @@ def choose_best_link(links: List[str], domains: List[str]) -> str:
     return "Not listed"
 
 
+def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    seen_ids = set()
+    cleaned: List[Dict[str, Any]] = []
+    for job in jobs:
+        if job["id"] in seen_ids:
+            continue
+        seen_ids.add(job["id"])
+        cleaned.append(job)
+    return cleaned
+
+
+def send_to_discord(job: Dict[str, Any]) -> None:
+    source = job.get("source", "Unknown")
+    webhook_url = get_webhook_url(source)
+
+    if not webhook_url:
+        raise RuntimeError(f"Missing webhook URL for source: {source}")
+
+    title = clean_text(job.get("title") or "New job")
+    creator = clean_text(job.get("creator") or "Not listed")
+    location = clean_text(job.get("location") or "Not listed")
+    job_type = clean_text(job.get("job_type") or "Not listed")
+    pay = clean_text(job.get("pay") or "Not listed")
+    description = clean_text(job.get("summary") or "No description listed.")
+    url = clean_text(job.get("url") or "")
+    email = clean_text(job.get("email") or "Not listed")
+    youtube_link = clean_text(job.get("youtube_link") or "Not listed")
+    website_link = clean_text(job.get("website_link") or "Not listed")
+
+    if not url.startswith("http"):
+        log(f"[DISCORD] Invalid or missing URL for job: {title} | url={url!r}")
+        url = "Not listed"
+
+    extra_lines = []
+
+    if email != "Not listed":
+        extra_lines.append(f"**Email:** {email}")
+    if youtube_link != "Not listed":
+        extra_lines.append(f"**YouTube:** {youtube_link}")
+    if website_link != "Not listed":
+        extra_lines.append(f"**Website:** {website_link}")
+
+    extras = "\n".join(extra_lines)
+    if extras:
+        extras += "\n"
+
+    content = (
+        f"🔥 Cold lead spotted. Time to warm it up.\n\n"
+        f"**Job:** {title}\n"
+        f"{url}\n\n"
+        f"**Type:** {job_type}\n"
+        f"**Location:** {location}\n"
+        f"**Pay:** {pay}\n"
+        f"**Creator / Poster:** {creator}\n"
+        f"{extras}"
+        f"**Description:** {description}"
+    )
+
+    payload = {
+        "username": "Manifest Media Leads",
+        "content": content[:1900],
+        "allowed_mentions": {"parse": []},
+    }
+
+    log(f"[DISCORD] Sending {source} job: {title}")
+    log(f"[DISCORD] URL: {url}")
+
+    response = requests.post(webhook_url, json=payload, timeout=30)
+
+    log(f"[DISCORD] Status: {response.status_code}")
+    if response.status_code >= 400:
+        log(f"[DISCORD] Error body: {response.text}")
+
+    response.raise_for_status()
+
+
 async def scrape_job_detail(page, url: str) -> Dict[str, str]:
     try:
         log(f"[DETAIL] Visiting: {url}")
@@ -289,83 +364,6 @@ async def scrape_job_detail(page, url: str) -> Dict[str, str]:
         }
 
 
-def send_to_discord(job: Dict[str, Any]) -> None:
-    source = job.get("source", "Unknown")
-    webhook_url = get_webhook_url(source)
-
-    if not webhook_url:
-        raise RuntimeError(f"Missing webhook URL for source: {source}")
-
-    title = clean_text(job.get("title") or "New job")
-    creator = clean_text(job.get("creator") or "Not listed")
-    location = clean_text(job.get("location") or "Not listed")
-    job_type = clean_text(job.get("job_type") or "Not listed")
-    pay = clean_text(job.get("pay") or "Not listed")
-    description = clean_text(job.get("summary") or "No description listed.")
-    url = clean_text(job.get("url") or "")
-    email = clean_text(job.get("email") or "Not listed")
-    youtube_link = clean_text(job.get("youtube_link") or "Not listed")
-    website_link = clean_text(job.get("website_link") or "Not listed")
-
-    if not url.startswith("http"):
-        log(f"[DISCORD] Invalid or missing URL for job: {title} | url={url!r}")
-        url = "Not listed"
-
-    extra_lines = []
-
-    if email != "Not listed":
-        extra_lines.append(f"**Email:** {email}")
-    if youtube_link != "Not listed":
-        extra_lines.append(f"**YouTube:** {youtube_link}")
-    if website_link != "Not listed":
-        extra_lines.append(f"**Website:** {website_link}")
-
-    extras = "\n".join(extra_lines)
-    if extras:
-        extras += "\n"
-
-    # raw URL on its own line = most reliable clickable format
-    content = (
-        f"🔥 Cold lead spotted. Time to warm it up.\n\n"
-        f"**Job:** {title}\n"
-        f"{url}\n\n"
-        f"**Type:** {job_type}\n"
-        f"**Location:** {location}\n"
-        f"**Pay:** {pay}\n"
-        f"**Creator / Poster:** {creator}\n"
-        f"{extras}"
-        f"**Description:** {description}"
-    )
-
-    payload = {
-        "username": "Manifest Media Leads",
-        "content": content[:1900],
-        "allowed_mentions": {"parse": []},
-    }
-
-    log(f"[DISCORD] Sending {source} job: {title}")
-    log(f"[DISCORD] URL: {url}")
-
-    response = requests.post(webhook_url, json=payload, timeout=30)
-
-    log(f"[DISCORD] Status: {response.status_code}")
-    if response.status_code >= 400:
-        log(f"[DISCORD] Error body: {response.text}")
-
-    response.raise_for_status()
-
-
-def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    seen_ids = set()
-    cleaned: List[Dict[str, Any]] = []
-    for job in jobs:
-        if job["id"] in seen_ids:
-            continue
-        seen_ids.add(job["id"])
-        cleaned.append(job)
-    return cleaned
-
-
 async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
     log(f"[YTJOBS] Visiting {YTJOBS_URL}")
     await page.goto(YTJOBS_URL, wait_until="networkidle")
@@ -385,7 +383,6 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
         if not raw_title:
             continue
 
-        # Try to get a better bounded container than plain parent
         card = a.find_parent(["article", "li"]) or a.find_parent("div")
         context = clean_text(card.get_text(" ", strip=True) if card else raw_title)
 
@@ -421,12 +418,48 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
 
 async def scrape_roster(page) -> List[Dict[str, Any]]:
     log(f"[ROSTER] Visiting {ROSTER_URL}")
+
+    jobs: List[Dict[str, Any]] = []
+    seen_urls = set()
+    captured_payloads: List[Dict[str, Any]] = []
+
+    async def handle_response(response) -> None:
+        try:
+            url = response.url
+            ct = (response.headers.get("content-type") or "").lower()
+
+            interesting = (
+                "json" in ct
+                or "api" in url.lower()
+                or "job" in url.lower()
+                or "roster" in url.lower()
+            )
+
+            if not interesting:
+                return
+
+            log(f"[ROSTER][NET] {response.status} {url} | {ct}")
+
+            if "json" not in ct:
+                return
+
+            data = await response.json()
+            captured_payloads.append({
+                "url": url,
+                "data": data,
+            })
+
+        except Exception as e:
+            log(f"[ROSTER][NET] Failed reading response: {e}")
+
+    page.on("response", handle_response)
+
     await page.goto(ROSTER_URL, wait_until="domcontentloaded")
     await page.wait_for_timeout(8000)
 
-    for _ in range(3):
-        await page.mouse.wheel(0, 3000)
-        await page.wait_for_timeout(1500)
+    for _ in range(4):
+        await page.mouse.wheel(0, 4000)
+        await page.wait_for_timeout(2000)
 
     current_url = page.url
     html = await page.content()
@@ -434,117 +467,163 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
     log(f"[ROSTER] Final URL: {current_url}")
     log(f"[ROSTER] HTML length: {len(html)}")
     log(f"[ROSTER] HTML preview: {html[:800]}")
+    log(f"[ROSTER] Captured payload count: {len(captured_payloads)}")
 
-    jobs: List[Dict[str, Any]] = []
+    def add_job(title: str, href: str, summary: str = "No description listed.") -> None:
+        title_clean = clean_job_title(title or "Roster Job")
+        href_clean = clean_text(href)
 
-    anchors = await page.eval_on_selector_all(
-        "a[href]",
-        """elements => elements.map(a => ({
-            href: a.href || "",
-            text: (a.innerText || a.textContent || "").trim()
-        }))"""
-    )
+        if not href_clean.startswith("http"):
+            return
+        if href_clean in seen_urls:
+            return
 
-    log(f"[ROSTER] Total anchors found: {len(anchors)}")
-
-    seen_urls = set()
-
-    for item in anchors:
-        href = clean_text(item.get("href", ""))
-        text = clean_text(item.get("text", ""))
-
-        if not href.startswith("http"):
-            continue
-
-        href_lower = href.lower()
-
-        if "joinroster.co/jobs/" not in href_lower and "app.joinroster.co/jobs/" not in href_lower:
-            continue
-
-        if href.rstrip("/") in {
-            "https://www.joinroster.co/jobs",
-            "https://app.joinroster.co/jobs",
-        }:
-            continue
-
-        junk_texts = {
-            "",
-            "log in",
-            "login",
-            "sign up",
-            "create free account",
-            "create free account →",
-            "view full job description",
-            "apply",
-            "apply now",
-        }
-        if text.lower() in junk_texts:
-            continue
-
-        if href in seen_urls:
-            continue
-        seen_urls.add(href)
-
-        title = clean_job_title(text) if text else "Roster Job"
+        seen_urls.add(href_clean)
 
         jobs.append(
             {
-                "id": make_id("roster", title, href),
-                "title": title,
+                "id": make_id("roster", title_clean, href_clean),
+                "title": title_clean,
                 "creator": "Not listed",
-                "summary": "No description listed.",
+                "summary": summary[:400] if summary else "No description listed.",
                 "location": "Not listed",
                 "job_type": "Not listed",
                 "pay": "Not listed",
-                "url": href,
+                "url": href_clean,
                 "source": "Roster",
             }
         )
 
-        log(f"[ROSTER] Anchor candidate -> title={title!r} href={href!r}")
+    def walk_json(obj: Any, source_url: str = "") -> None:
+        if isinstance(obj, dict):
+            lower_keys = {str(k).lower() for k in obj.keys()}
+
+            possible_title = (
+                obj.get("title")
+                or obj.get("jobTitle")
+                or obj.get("name")
+                or obj.get("role")
+                or obj.get("position")
+            )
+            possible_url = (
+                obj.get("url")
+                or obj.get("jobUrl")
+                or obj.get("applyUrl")
+                or obj.get("href")
+                or obj.get("link")
+                or obj.get("job_url")
+            )
+            possible_summary = (
+                obj.get("description")
+                or obj.get("summary")
+                or obj.get("excerpt")
+                or "No description listed."
+            )
+
+            if possible_title and possible_url:
+                full_url = urljoin(ROSTER_URL, str(possible_url))
+                add_job(str(possible_title), full_url, clean_text(str(possible_summary)))
+
+            elif possible_title and ("slug" in lower_keys or "id" in lower_keys or "jobid" in lower_keys):
+                slug = obj.get("slug")
+                job_id = obj.get("id") or obj.get("jobId") or obj.get("jobid")
+
+                if slug:
+                    add_job(
+                        str(possible_title),
+                        urljoin(ROSTER_URL, f"/jobs/{slug}"),
+                        clean_text(str(possible_summary)),
+                    )
+                elif job_id:
+                    add_job(
+                        str(possible_title),
+                        urljoin(ROSTER_URL, f"/jobs/{job_id}"),
+                        clean_text(str(possible_summary)),
+                    )
+
+            for value in obj.values():
+                walk_json(value, source_url)
+
+        elif isinstance(obj, list):
+            for item in obj:
+                walk_json(item, source_url)
+
+    for payload in captured_payloads:
+        try:
+            log(f"[ROSTER][PAYLOAD] Inspecting {payload['url']}")
+            walk_json(payload["data"], payload["url"])
+        except Exception as e:
+            log(f"[ROSTER][PAYLOAD] Failed parsing payload: {e}")
 
     if not jobs:
-        log("[ROSTER] No anchor-based jobs found. Trying regex fallback...")
+        log("[ROSTER] No jobs from network payloads. Trying DOM fallback...")
 
-        patterns = [
-            r'https://www\.joinroster\.co/jobs/[^"\s<>]+',
-            r'https://app\.joinroster\.co/jobs/[^"\s<>]+',
-            r'/jobs/[^"\s<>]+',
-        ]
+        anchors = await page.eval_on_selector_all(
+            "a[href]",
+            """elements => elements.map(a => ({
+                href: a.href || "",
+                text: (a.innerText || a.textContent || "").trim()
+            }))"""
+        )
 
-        urls = set()
-        for pattern in patterns:
-            matches = re.findall(pattern, html, flags=re.IGNORECASE)
-            log(f"[ROSTER] Regex {pattern} -> {len(matches)} matches")
-            urls.update(matches)
+        log(f"[ROSTER] DOM fallback anchors: {len(anchors)}")
 
-        normalized_urls = set()
-        for href in urls:
-            full_href = urljoin(current_url, href)
-            if "/jobs/" not in full_href.lower():
+        for item in anchors:
+            href = clean_text(item.get("href", ""))
+            text = clean_text(item.get("text", ""))
+
+            if not href.startswith("http"):
                 continue
-            if full_href.rstrip("/") in {
+
+            if "joinroster.co" not in href.lower():
+                continue
+
+            if href.rstrip("/") in {
                 "https://www.joinroster.co/jobs",
                 "https://app.joinroster.co/jobs",
             }:
                 continue
-            normalized_urls.add(full_href)
 
-        for href in sorted(normalized_urls):
-            jobs.append(
-                {
-                    "id": make_id("roster", href),
-                    "title": "Roster Job",
-                    "creator": "Not listed",
-                    "summary": "No description listed.",
-                    "location": "Not listed",
-                    "job_type": "Not listed",
-                    "pay": "Not listed",
-                    "url": href,
-                    "source": "Roster",
-                }
-            )
-            log(f"[ROSTER] Regex candidate -> href={href!r}")
+            if not any(keyword in href.lower() for keyword in ["/jobs/", "/job/", "apply", "career", "role"]):
+                continue
+
+            title = clean_job_title(text) if text else "Roster Job"
+            add_job(title, href, "No description listed.")
+            log(f"[ROSTER] DOM fallback candidate -> title={title!r} href={href!r}")
+
+    if not jobs:
+        log("[ROSTER] No jobs from network or anchor fallback. Trying text/card fallback...")
+
+        cards = await page.locator("div, article, li, section").all()
+        log(f"[ROSTER] Text/card fallback nodes: {len(cards)}")
+
+        for card in cards[:400]:
+            try:
+                text = clean_text(await card.inner_text())
+            except Exception:
+                continue
+
+            if not text or len(text) < 30:
+                continue
+
+            lower = text.lower()
+            if not any(term in lower for term in ["remote", "full-time", "part-time", "contract", "apply", "job"]):
+                continue
+
+            href = ""
+            try:
+                child_link = await card.locator("a[href]").first.get_attribute("href")
+                if child_link:
+                    href = urljoin(current_url, child_link)
+            except Exception:
+                pass
+
+            if not href.startswith("http"):
+                continue
+
+            title = clean_job_title(text.split("\n")[0].strip() or "Roster Job")
+            add_job(title, href, text[:400])
+            log(f"[ROSTER] Text/card candidate -> title={title!r} href={href!r}")
 
     log(f"[ROSTER] Jobs found: {len(jobs)}")
     return dedupe_jobs(jobs)
@@ -585,11 +664,10 @@ async def enrich_jobs_with_detail(page, jobs: List[Dict[str, Any]]) -> List[Dict
     return enriched
 
 
-async def fetch_jobs() -> List[Dict[str, Any]]:
+async def fetch_job_lists() -> List[Dict[str, Any]]:
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         list_page = await browser.new_page()
-        detail_page = await browser.new_page()
 
         jobs: List[Dict[str, Any]] = []
 
@@ -603,6 +681,18 @@ async def fetch_jobs() -> List[Dict[str, Any]]:
         except Exception as e:
             log(f"Roster scrape failed: {e}")
 
+        await browser.close()
+        return jobs
+
+
+async def enrich_unseen_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    if not jobs:
+        return jobs
+
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        detail_page = await browser.new_page()
+
         try:
             jobs = await enrich_jobs_with_detail(detail_page, jobs)
         except Exception as e:
@@ -614,18 +704,22 @@ async def fetch_jobs() -> List[Dict[str, Any]]:
 
 async def main() -> None:
     seen = load_seen()
-    jobs = await fetch_jobs()
 
-    log(f"Total fetched jobs before seen filter: {len(jobs)}")
-    log(f"YTJobs count: {len([j for j in jobs if j['source'] == 'YTJobs'])}")
-    log(f"Roster count: {len([j for j in jobs if j['source'] == 'Roster'])}")
+    all_jobs = await fetch_job_lists()
+
+    log(f"Total fetched jobs before seen filter: {len(all_jobs)}")
+    log(f"YTJobs count: {len([j for j in all_jobs if j['source'] == 'YTJobs'])}")
+    log(f"Roster count: {len([j for j in all_jobs if j['source'] == 'Roster'])}")
+
+    unseen_jobs = [job for job in all_jobs if job["id"] not in seen]
+    log(f"Unseen jobs before enrichment: {len(unseen_jobs)}")
+
+    unseen_jobs = await enrich_unseen_jobs(unseen_jobs)
+    log(f"Unseen jobs after enrichment: {len(unseen_jobs)}")
 
     new_count = 0
 
-    for job in jobs:
-        if job["id"] in seen:
-            continue
-
+    for job in unseen_jobs:
         try:
             send_to_discord(job)
             seen.add(job["id"])
