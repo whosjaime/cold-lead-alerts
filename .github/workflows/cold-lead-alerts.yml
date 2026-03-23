@@ -2,7 +2,7 @@ name: Cold Lead Alerts
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/10 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -32,7 +32,7 @@ jobs:
         env:
           YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
           ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
-          POST_DELAY_SECONDS: "65"
+          WEBHOOK_AVATAR_URL: ${{ secrets.WEBHOOK_AVATAR_URL }}
         run: python creator_job_alerts.py
 
       - name: Commit seen jobs file
