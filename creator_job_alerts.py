@@ -3,6 +3,7 @@ import hashlib
 import json
 import os
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 from urllib.parse import urljoin
@@ -19,20 +20,26 @@ ROSTER_WEBHOOK_URL = os.getenv("ROSTER_WEBHOOK_URL", "")
 YTJOBS_URL = "https://ytjobs.co/job/search"
 ROSTER_URL = "https://www.joinroster.co/jobs"
 
-POST_DELAY_SECONDS = int(os.getenv("POST_DELAY_SECONDS", "10"))
+# 65 sec so posts do not feel instant/back-to-back
+POST_DELAY_SECONDS = int(os.getenv("POST_DELAY_SECONDS", "65"))
+
+
+def log(message: str) -> None:
+    now = datetime.now(timezone.utc).isoformat()
+    print(f"[{now}] {message}")
 
 
 def load_seen() -> set[str]:
     if not STATE_FILE.exists():
         return set()
     try:
-        return set(json.loads(STATE_FILE.read_text()))
+        return set(json.loads(STATE_FILE.read_text(encoding="utf-8")))
     except Exception:
         return set()
 
 
 def save_seen(items: set[str]) -> None:
-    STATE_FILE.write_text(json.dumps(sorted(items), indent=2))
+    STATE_FILE.write_text(json.dumps(sorted(items), indent=2), encoding="utf-8")
 
 
 def make_id(*parts: str) -> str:
@@ -60,6 +67,8 @@ def clean_job_title(title: str) -> str:
             title = title.split(sep)[0].strip()
 
     title = re.sub(r"\$\d[\d,]*(?:\s*-\s*\$\d[\d,]*)?.*", "", title).strip()
+    title = re.sub(r"\s{2,}", " ", title).strip()
+
     return title[:100] or "New job"
 
 
@@ -136,6 +145,29 @@ def extract_creator(text: str) -> str:
     return "Not listed"
 
 
+def strip_noise(text: str) -> str:
+    text = clean_text(text)
+
+    noise_patterns = [
+        r"Post a Job",
+        r"Join as Talent",
+        r"Talent Jobs",
+        r"Talent",
+        r"How It Works",
+        r"Login",
+        r"Log in",
+        r"Sign up",
+        r"Posted on:",
+        r"Starts ASAP",
+    ]
+
+    for pattern in noise_patterns:
+        text = re.sub(pattern, "", text, flags=re.IGNORECASE)
+
+    text = re.sub(r"\s{2,}", " ", text).strip()
+    return text
+
+
 def extract_description(title: str, text: str) -> str:
     description = clean_text(text)
 
@@ -150,8 +182,10 @@ def extract_description(title: str, text: str) -> str:
         r"^\$?\d[\d,]*(?:\s*-\s*\$?\d[\d,]*)?\s*(?:per hour|/hour|hourly|per project|/project)?",
         "",
         description,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     ).strip(" |,-")
+
+    description = strip_noise(description)
 
     if not description:
         return "No description listed."
@@ -169,14 +203,22 @@ def choose_best_link(links: List[str], domains: List[str]) -> str:
 
 async def scrape_job_detail(page, url: str) -> Dict[str, str]:
     try:
-        await page.goto(url, wait_until="networkidle")
-        await page.wait_for_timeout(2000)
+        log(f"[DETAIL] Visiting: {url}")
+        await page.goto(url, wait_until="domcontentloaded")
+        await page.wait_for_timeout(4000)
 
         html = await page.content()
-        soup = BeautifulSoup(html, "html.parser")
-        page_text = clean_text(soup.get_text(" ", strip=True))
+        log(f"[DETAIL] HTML length: {len(html)}")
 
-        all_links = []
+        soup = BeautifulSoup(html, "html.parser")
+
+        for tag in soup.select("script, style, noscript, svg, header, footer, nav, aside"):
+            tag.decompose()
+
+        page_text = clean_text(soup.get_text(" ", strip=True))
+        page_text = strip_noise(page_text)
+
+        all_links: List[str] = []
         for a in soup.select("a[href]"):
             href = (a.get("href") or "").strip()
             if not href:
@@ -186,36 +228,49 @@ async def scrape_job_detail(page, url: str) -> Dict[str, str]:
                 all_links.append(full_href)
 
         email = extract_email(page_text)
-
         youtube_link = choose_best_link(all_links, ["youtube.com", "youtu.be"])
-        website_link = "Not listed"
 
+        website_link = "Not listed"
         for link in all_links:
             lower = link.lower()
             if all(domain not in lower for domain in [
-                "youtube.com", "youtu.be", "instagram.com",
-                "x.com", "twitter.com", "linkedin.com",
-                "discord.com", "ytjobs.co", "joinroster.co", "app.joinroster.co"
+                "youtube.com",
+                "youtu.be",
+                "instagram.com",
+                "x.com",
+                "twitter.com",
+                "linkedin.com",
+                "discord.com",
+                "ytjobs.co",
+                "joinroster.co",
+                "app.joinroster.co",
+                "t.me/",
+                "telegram.me/",
             ]):
                 website_link = link
                 break
 
         description = "No description listed."
         selectors = [
-            "main",
-            "article",
             "[class*='description']",
+            "[class*='details']",
             "[class*='content']",
-            "[class*='job']",
+            "article",
+            "main",
         ]
 
         for selector in selectors:
             node = soup.select_one(selector)
-            if node:
-                candidate = clean_text(node.get_text(" ", strip=True))
-                if len(candidate) > 80:
-                    description = candidate[:500]
-                    break
+            if not node:
+                continue
+
+            candidate = clean_text(node.get_text(" ", strip=True))
+            candidate = strip_noise(candidate)
+
+            if len(candidate) > 80:
+                description = candidate[:500]
+                log(f"[DETAIL] Description found using selector: {selector}")
+                break
 
         return {
             "email": email,
@@ -223,8 +278,9 @@ async def scrape_job_detail(page, url: str) -> Dict[str, str]:
             "website_link": website_link,
             "detail_description": description,
         }
+
     except Exception as e:
-        print(f"Detail scrape failed for {url}: {e}")
+        log(f"Detail scrape failed for {url}: {e}")
         return {
             "email": "Not listed",
             "youtube_link": "Not listed",
@@ -251,23 +307,28 @@ def send_to_discord(job: Dict[str, Any]) -> None:
     youtube_link = clean_text(job.get("youtube_link") or "Not listed")
     website_link = clean_text(job.get("website_link") or "Not listed")
 
+    if not url.startswith("http"):
+        log(f"[DISCORD] Invalid or missing URL for job: {title} | url={url!r}")
+        url = "Not listed"
+
     extra_lines = []
 
     if email != "Not listed":
         extra_lines.append(f"**Email:** {email}")
     if youtube_link != "Not listed":
-        extra_lines.append(f"**YouTube:** <{youtube_link}>")
+        extra_lines.append(f"**YouTube:** {youtube_link}")
     if website_link != "Not listed":
-        extra_lines.append(f"**Website:** <{website_link}>")
+        extra_lines.append(f"**Website:** {website_link}")
 
     extras = "\n".join(extra_lines)
     if extras:
-        extras = f"{extras}\n"
+        extras += "\n"
 
+    # raw URL on its own line = most reliable clickable format
     content = (
-        f"🔥 **Cold lead spotted. Time to warm it up.**\n\n"
+        f"🔥 Cold lead spotted. Time to warm it up.\n\n"
         f"**Job:** {title}\n"
-        f"<{url}>\n\n"
+        f"{url}\n\n"
         f"**Type:** {job_type}\n"
         f"**Location:** {location}\n"
         f"**Pay:** {pay}\n"
@@ -278,11 +339,19 @@ def send_to_discord(job: Dict[str, Any]) -> None:
 
     payload = {
         "username": "Manifest Media Leads",
-        "content": content,
+        "content": content[:1900],
         "allowed_mentions": {"parse": []},
     }
 
+    log(f"[DISCORD] Sending {source} job: {title}")
+    log(f"[DISCORD] URL: {url}")
+
     response = requests.post(webhook_url, json=payload, timeout=30)
+
+    log(f"[DISCORD] Status: {response.status_code}")
+    if response.status_code >= 400:
+        log(f"[DISCORD] Error body: {response.text}")
+
     response.raise_for_status()
 
 
@@ -298,7 +367,10 @@ def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
 
 async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
+    log(f"[YTJOBS] Visiting {YTJOBS_URL}")
     await page.goto(YTJOBS_URL, wait_until="networkidle")
+    await page.wait_for_timeout(3000)
+
     html = await page.content()
     soup = BeautifulSoup(html, "html.parser")
 
@@ -313,8 +385,10 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
         if not raw_title:
             continue
 
-        card = a.parent
+        # Try to get a better bounded container than plain parent
+        card = a.find_parent(["article", "li"]) or a.find_parent("div")
         context = clean_text(card.get_text(" ", strip=True) if card else raw_title)
+
         full_url = href if href.startswith("http") else f"https://ytjobs.co{href}"
 
         title = clean_job_title(raw_title)
@@ -323,6 +397,9 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
         location = extract_location(context)
         creator = extract_creator(context)
         summary = extract_description(title, context)
+
+        if not full_url.startswith("http"):
+            continue
 
         jobs.append(
             {
@@ -338,39 +415,77 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
             }
         )
 
-    print(f"YTJobs found: {len(jobs)}")
+    log(f"[YTJOBS] Found: {len(jobs)}")
     return dedupe_jobs(jobs)
 
 
 async def scrape_roster(page) -> List[Dict[str, Any]]:
+    log(f"[ROSTER] Visiting {ROSTER_URL}")
     await page.goto(ROSTER_URL, wait_until="domcontentloaded")
-    await page.wait_for_timeout(12000)
+    await page.wait_for_timeout(8000)
+
+    for _ in range(3):
+        await page.mouse.wheel(0, 3000)
+        await page.wait_for_timeout(1500)
+
+    current_url = page.url
+    html = await page.content()
+
+    log(f"[ROSTER] Final URL: {current_url}")
+    log(f"[ROSTER] HTML length: {len(html)}")
+    log(f"[ROSTER] HTML preview: {html[:800]}")
 
     jobs: List[Dict[str, Any]] = []
 
-    # Try to grab rendered anchors first
-    links = await page.eval_on_selector_all(
-        "a",
+    anchors = await page.eval_on_selector_all(
+        "a[href]",
         """elements => elements.map(a => ({
             href: a.href || "",
             text: (a.innerText || a.textContent || "").trim()
         }))"""
     )
 
-    for item in links:
+    log(f"[ROSTER] Total anchors found: {len(anchors)}")
+
+    seen_urls = set()
+
+    for item in anchors:
         href = clean_text(item.get("href", ""))
         text = clean_text(item.get("text", ""))
 
-        if not href or "/jobs/" not in href:
-            continue
-        if href.rstrip("/") == ROSTER_URL.rstrip("/"):
-            continue
-        if "details" not in href:
+        if not href.startswith("http"):
             continue
 
-        title = clean_job_title(text) if text else "Roster Job"
-        if title.lower() in ["create free account →", "log in", "view full job description"]:
+        href_lower = href.lower()
+
+        if "joinroster.co/jobs/" not in href_lower and "app.joinroster.co/jobs/" not in href_lower:
             continue
+
+        if href.rstrip("/") in {
+            "https://www.joinroster.co/jobs",
+            "https://app.joinroster.co/jobs",
+        }:
+            continue
+
+        junk_texts = {
+            "",
+            "log in",
+            "login",
+            "sign up",
+            "create free account",
+            "create free account →",
+            "view full job description",
+            "apply",
+            "apply now",
+        }
+        if text.lower() in junk_texts:
+            continue
+
+        if href in seen_urls:
+            continue
+        seen_urls.add(href)
+
+        title = clean_job_title(text) if text else "Roster Job"
 
         jobs.append(
             {
@@ -386,13 +501,36 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
             }
         )
 
-    # Fallback: scrape URLs directly from rendered HTML if anchors are sparse
-    if not jobs:
-        html = await page.content()
-        urls = set(re.findall(r'https://www\.joinroster\.co/jobs/[a-f0-9\-]+/details', html))
-        urls.update(re.findall(r'https://app\.joinroster\.co/jobs/[a-f0-9\-]+/details', html))
+        log(f"[ROSTER] Anchor candidate -> title={title!r} href={href!r}")
 
+    if not jobs:
+        log("[ROSTER] No anchor-based jobs found. Trying regex fallback...")
+
+        patterns = [
+            r'https://www\.joinroster\.co/jobs/[^"\s<>]+',
+            r'https://app\.joinroster\.co/jobs/[^"\s<>]+',
+            r'/jobs/[^"\s<>]+',
+        ]
+
+        urls = set()
+        for pattern in patterns:
+            matches = re.findall(pattern, html, flags=re.IGNORECASE)
+            log(f"[ROSTER] Regex {pattern} -> {len(matches)} matches")
+            urls.update(matches)
+
+        normalized_urls = set()
         for href in urls:
+            full_href = urljoin(current_url, href)
+            if "/jobs/" not in full_href.lower():
+                continue
+            if full_href.rstrip("/") in {
+                "https://www.joinroster.co/jobs",
+                "https://app.joinroster.co/jobs",
+            }:
+                continue
+            normalized_urls.add(full_href)
+
+        for href in sorted(normalized_urls):
             jobs.append(
                 {
                     "id": make_id("roster", href),
@@ -406,13 +544,15 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
                     "source": "Roster",
                 }
             )
+            log(f"[ROSTER] Regex candidate -> href={href!r}")
 
-    print(f"Roster jobs found: {len(jobs)}")
+    log(f"[ROSTER] Jobs found: {len(jobs)}")
     return dedupe_jobs(jobs)
 
 
 async def enrich_jobs_with_detail(page, jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     enriched = []
+
     for job in jobs:
         detail = await scrape_job_detail(page, job["url"])
 
@@ -425,12 +565,12 @@ async def enrich_jobs_with_detail(page, jobs: List[Dict[str, Any]]) -> List[Dict
         if detail.get("website_link") and detail["website_link"] != "Not listed":
             job["website_link"] = detail["website_link"]
 
-        detail_description = detail.get("detail_description", "").strip()
+        detail_description = clean_text(detail.get("detail_description", "").strip())
         if detail_description and detail_description != "No description listed.":
             job["summary"] = detail_description[:400]
 
-        # Second-pass extraction from detail text
         detail_text = detail_description if detail_description != "No description listed." else job.get("summary", "")
+
         if job.get("pay", "Not listed") == "Not listed":
             job["pay"] = extract_pay(detail_text)
         if job.get("job_type", "Not listed") == "Not listed":
@@ -456,17 +596,17 @@ async def fetch_jobs() -> List[Dict[str, Any]]:
         try:
             jobs.extend(await scrape_ytjobs(list_page))
         except Exception as e:
-            print(f"YTJobs scrape failed: {e}")
+            log(f"YTJobs scrape failed: {e}")
 
         try:
             jobs.extend(await scrape_roster(list_page))
         except Exception as e:
-            print(f"Roster scrape failed: {e}")
+            log(f"Roster scrape failed: {e}")
 
         try:
             jobs = await enrich_jobs_with_detail(detail_page, jobs)
         except Exception as e:
-            print(f"Detail enrichment failed: {e}")
+            log(f"Detail enrichment failed: {e}")
 
         await browser.close()
         return jobs
@@ -476,7 +616,12 @@ async def main() -> None:
     seen = load_seen()
     jobs = await fetch_jobs()
 
+    log(f"Total fetched jobs before seen filter: {len(jobs)}")
+    log(f"YTJobs count: {len([j for j in jobs if j['source'] == 'YTJobs'])}")
+    log(f"Roster count: {len([j for j in jobs if j['source'] == 'Roster'])}")
+
     new_count = 0
+
     for job in jobs:
         if job["id"] in seen:
             continue
@@ -485,17 +630,17 @@ async def main() -> None:
             send_to_discord(job)
             seen.add(job["id"])
             new_count += 1
-            print(f"Posted: {job['title']} ({job['source']})")
+            log(f"Posted: {job['title']} ({job['source']})")
 
             if POST_DELAY_SECONDS > 0:
-                print(f"Waiting {POST_DELAY_SECONDS} seconds before next post...")
+                log(f"Waiting {POST_DELAY_SECONDS} seconds before next post...")
                 await asyncio.sleep(POST_DELAY_SECONDS)
 
         except Exception as e:
-            print(f"Error sending job: {e}")
+            log(f"Error sending job: {e}")
 
     save_seen(seen)
-    print(f"Done. Sent {new_count} new jobs.")
+    log(f"Done. Sent {new_count} new jobs.")
 
 
 if __name__ == "__main__":
