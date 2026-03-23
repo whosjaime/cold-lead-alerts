@@ -2,7 +2,7 @@ import asyncio
 import hashlib
 import json
 import os
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -14,9 +14,10 @@ STATE_FILE = Path("seen_jobs.json")
 
 YTJOBS_WEBHOOK_URL = os.getenv("YTJOBS_WEBHOOK_URL", "")
 ROSTER_WEBHOOK_URL = os.getenv("ROSTER_WEBHOOK_URL", "")
+WEBHOOK_AVATAR_URL = os.getenv("WEBHOOK_AVATAR_URL", "")
+
 YTJOBS_URL = "https://ytjobs.co/job/search"
 ROSTER_URL = "https://app.joinroster.co/jobs"
-ALERT_HEADER = os.getenv("ALERT_HEADER", "Cold lead spotted. Time to warm it up.")
 
 
 def load_seen() -> set[str]:
@@ -56,30 +57,34 @@ def send_to_discord(job: Dict[str, Any]) -> None:
     if not webhook_url:
         raise RuntimeError(f"Missing webhook URL for source: {source}")
 
-    title = job.get("title", "New job")
-    company = job.get("company", "Unknown creator/company")
+    title = clean_text(job.get("title") or "New job")
+    company = clean_text(job.get("company") or "Not listed")
+    creator = clean_text(job.get("creator") or "Not listed")
+    location = clean_text(job.get("location") or "Not listed")
+    job_type = clean_text(job.get("job_type") or "Not listed")
+    pay = clean_text(job.get("pay") or "Not listed")
+    description = clean_text(job.get("summary") or "No description listed.")
     url = job.get("url", "")
-    location = job.get("location", "Not listed")
-    job_type = job.get("job_type", "Not listed")
-    summary = (job.get("summary", "") or "")[:3000]
+
+    if len(description) > 350:
+        description = description[:347] + "..."
+
+    content = (
+        f"**Job Title:** {title}\n"
+        f"{url}\n\n"
+        f"**Source:** {source}\n"
+        f"**Type:** {job_type}\n"
+        f"**Location:** {location}\n"
+        f"**Pay:** {pay}\n"
+        f"**Creator / Poster:** {creator}\n"
+        f"**Company:** {company}\n"
+        f"**Description:** {description}"
+    )
 
     payload = {
-        "username": "Cold Lead Alerts",
-        "content": ALERT_HEADER,
-        "embeds": [
-            {
-                "title": f"{company} is hiring: {title}",
-                "url": url,
-                "description": summary or "A new creator-economy job was found.",
-                "fields": [
-                    {"name": "Source", "value": source, "inline": True},
-                    {"name": "Location", "value": location, "inline": True},
-                    {"name": "Type", "value": job_type, "inline": True},
-                ],
-                "footer": {"text": "Cold lead tracker"},
-                "timestamp": datetime.now(timezone.utc).isoformat(),
-            }
-        ],
+        "username": "Manifest Media Leads",
+        "avatar_url": WEBHOOK_AVATAR_URL,
+        "content": content,
         "allowed_mentions": {"parse": []},
     }
 
@@ -121,54 +126,63 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
         jobs.append(
             {
                 "id": make_id("ytjobs", title, full_url),
-                "title": title,
+                "title": title[:120],
                 "company": "",
-                "summary": context[:1000],
-                "location": "",
-                "job_type": "",
+                "creator": "",
+                "summary": context[:350],
+                "location": "Not listed",
+                "job_type": "Not listed",
+                "pay": "Not listed",
                 "url": full_url,
                 "source": "YTJobs",
             }
         )
 
+    print(f"YTJobs found: {len(jobs)}")
     return dedupe_jobs(jobs)
 
 
 async def scrape_roster(page) -> List[Dict[str, Any]]:
-    await page.goto(ROSTER_URL, wait_until="domcontentloaded")
-    await page.wait_for_timeout(5000)
-    html = await page.content()
-    soup = BeautifulSoup(html, "html.parser")
+    await page.goto(ROSTER_URL, wait_until="networkidle")
+    await page.wait_for_timeout(8000)
+
+    links = await page.eval_on_selector_all(
+        "a",
+        """elements => elements.map(a => ({
+            href: a.href || "",
+            text: (a.innerText || "").trim()
+        }))"""
+    )
 
     jobs: List[Dict[str, Any]] = []
 
-    for a in soup.select("a"):
-        href = a.get("href") or ""
-        text = clean_text(a.get_text(" ", strip=True))
+    for item in links:
+        href = item.get("href", "")
+        text = clean_text(item.get("text", ""))
 
         if not href:
             continue
-        if "job" not in href.lower() and "apply" not in text.lower():
+        if "job" not in href.lower():
             continue
-
-        full_url = href if href.startswith("http") else f"https://app.joinroster.co{href}"
-        title = text or "Roster Job"
-        card = a.parent
-        context = clean_text(card.get_text(" ", strip=True) if card else title)
+        if not text:
+            continue
 
         jobs.append(
             {
-                "id": make_id("roster", title, full_url),
-                "title": title,
+                "id": make_id("roster", text, href),
+                "title": text[:120],
                 "company": "",
-                "summary": context[:1000],
-                "location": "",
-                "job_type": "",
-                "url": full_url,
+                "creator": "",
+                "summary": text[:350],
+                "location": "Not listed",
+                "job_type": "Not listed",
+                "pay": "Not listed",
+                "url": href,
                 "source": "Roster",
             }
         )
 
+    print(f"Roster jobs found: {len(jobs)}")
     return dedupe_jobs(jobs)
 
 
@@ -198,6 +212,7 @@ async def main() -> None:
     jobs = await fetch_jobs()
 
     new_count = 0
+
     for job in jobs:
         if job["id"] in seen:
             continue
@@ -208,7 +223,7 @@ async def main() -> None:
             new_count += 1
             print(f"Posted: {job['title']} ({job['source']})")
         except Exception as e:
-            print(f"Discord send failed for {job.get('title')}: {e}")
+            print(f"Error sending job: {e}")
 
     save_seen(seen)
     print(f"Done. Sent {new_count} new jobs.")
