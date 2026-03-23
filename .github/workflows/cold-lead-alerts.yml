@@ -32,7 +32,7 @@ jobs:
         env:
           YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
           ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
-          POST_DELAY_SECONDS: "10"
+          POST_DELAY_SECONDS: "65"
         run: python creator_job_alerts.py
 
       - name: Commit seen jobs file
