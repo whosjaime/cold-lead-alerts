@@ -17,7 +17,7 @@ YTJOBS_WEBHOOK_URL = os.getenv("YTJOBS_WEBHOOK_URL", "")
 ROSTER_WEBHOOK_URL = os.getenv("ROSTER_WEBHOOK_URL", "")
 
 YTJOBS_URL = "https://ytjobs.co/job/search"
-ROSTER_URL = "https://app.joinroster.co/jobs"
+ROSTER_URL = "https://www.joinroster.co/jobs"
 
 POST_DELAY_SECONDS = int(os.getenv("POST_DELAY_SECONDS", "10"))
 
@@ -188,9 +188,6 @@ async def scrape_job_detail(page, url: str) -> Dict[str, str]:
         email = extract_email(page_text)
 
         youtube_link = choose_best_link(all_links, ["youtube.com", "youtu.be"])
-        instagram_link = choose_best_link(all_links, ["instagram.com"])
-        twitter_link = choose_best_link(all_links, ["x.com", "twitter.com"])
-        linkedin_link = choose_best_link(all_links, ["linkedin.com"])
         website_link = "Not listed"
 
         for link in all_links:
@@ -204,7 +201,6 @@ async def scrape_job_detail(page, url: str) -> Dict[str, str]:
                 break
 
         description = "No description listed."
-
         selectors = [
             "main",
             "article",
@@ -224,9 +220,6 @@ async def scrape_job_detail(page, url: str) -> Dict[str, str]:
         return {
             "email": email,
             "youtube_link": youtube_link,
-            "instagram_link": instagram_link,
-            "twitter_link": twitter_link,
-            "linkedin_link": linkedin_link,
             "website_link": website_link,
             "detail_description": description,
         }
@@ -235,9 +228,6 @@ async def scrape_job_detail(page, url: str) -> Dict[str, str]:
         return {
             "email": "Not listed",
             "youtube_link": "Not listed",
-            "instagram_link": "Not listed",
-            "twitter_link": "Not listed",
-            "linkedin_link": "Not listed",
             "website_link": "Not listed",
             "detail_description": "No description listed.",
         }
@@ -353,48 +343,69 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
 
 
 async def scrape_roster(page) -> List[Dict[str, Any]]:
-    await page.goto(ROSTER_URL, wait_until="networkidle")
-    await page.wait_for_timeout(8000)
+    await page.goto(ROSTER_URL, wait_until="domcontentloaded")
+    await page.wait_for_timeout(12000)
 
+    jobs: List[Dict[str, Any]] = []
+
+    # Try to grab rendered anchors first
     links = await page.eval_on_selector_all(
         "a",
         """elements => elements.map(a => ({
             href: a.href || "",
-            text: (a.innerText || "").trim()
+            text: (a.innerText || a.textContent || "").trim()
         }))"""
     )
 
-    jobs: List[Dict[str, Any]] = []
-
     for item in links:
-        href = item.get("href", "")
+        href = clean_text(item.get("href", ""))
         text = clean_text(item.get("text", ""))
 
-        if not href or not text:
+        if not href or "/jobs/" not in href:
             continue
-        if "job" not in href.lower():
+        if href.rstrip("/") == ROSTER_URL.rstrip("/"):
+            continue
+        if "details" not in href:
             continue
 
-        title = clean_job_title(text)
-        pay = extract_pay(text)
-        job_type = extract_job_type(text)
-        location = extract_location(text)
-        creator = "Not listed"
-        summary = extract_description(title, text)
+        title = clean_job_title(text) if text else "Roster Job"
+        if title.lower() in ["create free account →", "log in", "view full job description"]:
+            continue
 
         jobs.append(
             {
                 "id": make_id("roster", title, href),
                 "title": title,
-                "creator": creator,
-                "summary": summary,
-                "location": location,
-                "job_type": job_type,
-                "pay": pay,
+                "creator": "Not listed",
+                "summary": "No description listed.",
+                "location": "Not listed",
+                "job_type": "Not listed",
+                "pay": "Not listed",
                 "url": href,
                 "source": "Roster",
             }
         )
+
+    # Fallback: scrape URLs directly from rendered HTML if anchors are sparse
+    if not jobs:
+        html = await page.content()
+        urls = set(re.findall(r'https://www\.joinroster\.co/jobs/[a-f0-9\-]+/details', html))
+        urls.update(re.findall(r'https://app\.joinroster\.co/jobs/[a-f0-9\-]+/details', html))
+
+        for href in urls:
+            jobs.append(
+                {
+                    "id": make_id("roster", href),
+                    "title": "Roster Job",
+                    "creator": "Not listed",
+                    "summary": "No description listed.",
+                    "location": "Not listed",
+                    "job_type": "Not listed",
+                    "pay": "Not listed",
+                    "url": href,
+                    "source": "Roster",
+                }
+            )
 
     print(f"Roster jobs found: {len(jobs)}")
     return dedupe_jobs(jobs)
@@ -417,6 +428,17 @@ async def enrich_jobs_with_detail(page, jobs: List[Dict[str, Any]]) -> List[Dict
         detail_description = detail.get("detail_description", "").strip()
         if detail_description and detail_description != "No description listed.":
             job["summary"] = detail_description[:400]
+
+        # Second-pass extraction from detail text
+        detail_text = detail_description if detail_description != "No description listed." else job.get("summary", "")
+        if job.get("pay", "Not listed") == "Not listed":
+            job["pay"] = extract_pay(detail_text)
+        if job.get("job_type", "Not listed") == "Not listed":
+            job["job_type"] = extract_job_type(detail_text)
+        if job.get("location", "Not listed") == "Not listed":
+            job["location"] = extract_location(detail_text)
+        if job.get("creator", "Not listed") == "Not listed":
+            job["creator"] = extract_creator(detail_text)
 
         enriched.append(job)
 
