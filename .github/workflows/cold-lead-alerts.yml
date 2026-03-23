@@ -32,14 +32,14 @@ jobs:
         env:
           YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
           ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
-          ALERT_HEADER: ${{ secrets.ALERT_HEADER }}
+          POST_DELAY_SECONDS: "10"
         run: python creator_job_alerts.py
 
       - name: Commit seen jobs file
         run: |
+          touch seen_jobs.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          touch seen_jobs.json
           git add seen_jobs.json
           git diff --staged --quiet || git commit -m "Update seen jobs"
           git push
