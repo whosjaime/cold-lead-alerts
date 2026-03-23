@@ -12,8 +12,8 @@ from playwright.async_api import async_playwright
 
 STATE_FILE = Path("seen_jobs.json")
 
-YTJOBS_WEBHOOK_URL = os.getenv("https://discord.com/api/webhooks/1485690482448404600/cuEScEI0J4FmyKKJGOJuAju5_8Tuk2Sel29rlrp9RtGzUkFwt_vNpNXqtTB24PTIobZr", "")
-ROSTER_WEBHOOK_URL = os.getenv("https://discord.com/api/webhooks/1485690404266311730/EH3j7-28GMkN4oHFkmNFNk7WW5Cm2D6LyQ1qdoo9EpS9_NeqIRLujmt7U02FQ90dwFLu", "")
+YTJOBS_WEBHOOK_URL = os.getenv("YTJOBS_WEBHOOK_URL", "")
+ROSTER_WEBHOOK_URL = os.getenv("ROSTER_WEBHOOK_URL", "")
 YTJOBS_URL = "https://ytjobs.co/job/search"
 ROSTER_URL = "https://app.joinroster.co/jobs"
 ALERT_HEADER = os.getenv("ALERT_HEADER", "Cold lead spotted. Time to warm it up.")
