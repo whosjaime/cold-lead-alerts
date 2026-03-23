@@ -10,16 +10,13 @@ import requests
 from bs4 import BeautifulSoup
 from playwright.async_api import async_playwright
 
-STATE_DIR = Path(os.getenv("STATE_DIR", "/opt/render/project/src/data"))
-STATE_DIR.mkdir(parents=True, exist_ok=True)
-STATE_FILE = STATE_DIR / "seen_jobs.json"
+STATE_FILE = Path("seen_jobs.json")
 
 YTJOBS_WEBHOOK_URL = os.getenv("https://discord.com/api/webhooks/1485690482448404600/cuEScEI0J4FmyKKJGOJuAju5_8Tuk2Sel29rlrp9RtGzUkFwt_vNpNXqtTB24PTIobZr", "")
 ROSTER_WEBHOOK_URL = os.getenv("https://discord.com/api/webhooks/1485690404266311730/EH3j7-28GMkN4oHFkmNFNk7WW5Cm2D6LyQ1qdoo9EpS9_NeqIRLujmt7U02FQ90dwFLu", "")
 YTJOBS_URL = "https://ytjobs.co/job/search"
 ROSTER_URL = "https://app.joinroster.co/jobs"
 ALERT_HEADER = os.getenv("ALERT_HEADER", "Cold lead spotted. Time to warm it up.")
-CHECK_EVERY_MINUTES = int(os.getenv("CHECK_EVERY_MINUTES", "10"))
 
 
 def load_seen() -> set[str]:
@@ -196,7 +193,7 @@ async def fetch_jobs() -> List[Dict[str, Any]]:
         return jobs
 
 
-async def check_once() -> None:
+async def main() -> None:
     seen = load_seen()
     jobs = await fetch_jobs()
 
@@ -215,17 +212,6 @@ async def check_once() -> None:
 
     save_seen(seen)
     print(f"Done. Sent {new_count} new jobs.")
-
-
-async def main() -> None:
-    while True:
-        try:
-            await check_once()
-        except Exception as e:
-            print(f"Loop error: {e}")
-
-        print(f"Sleeping for {CHECK_EVERY_MINUTES} minutes...")
-        await asyncio.sleep(CHECK_EVERY_MINUTES * 60)
 
 
 if __name__ == "__main__":
