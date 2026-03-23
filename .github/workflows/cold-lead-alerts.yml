@@ -1,0 +1,45 @@
+name: Cold Lead Alerts
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-alerts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+
+      - name: Run job monitor
+        env:
+          YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
+          ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
+          ALERT_HEADER: ${{ secrets.ALERT_HEADER }}
+        run: python creator_job_alerts.py
+
+      - name: Commit seen jobs file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          touch seen_jobs.json
+          git add seen_jobs.json
+          git diff --staged --quiet || git commit -m "Update seen jobs"
+          git push
