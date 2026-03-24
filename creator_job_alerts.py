@@ -235,22 +235,44 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
     await page.goto(ROSTER_URL, wait_until="domcontentloaded")
     await page.wait_for_timeout(12000)
 
+    for _ in range(4):
+        await page.mouse.wheel(0, 3000)
+        await page.wait_for_timeout(1500)
+
     html = await page.content()
+    Path("roster_debug.html").write_text(html, encoding="utf-8")
+
+    body_text = await page.locator("body").inner_text()
+    Path("roster_debug.txt").write_text(body_text, encoding="utf-8")
+
     soup = BeautifulSoup(html, "html.parser")
 
-    jobs: List[Dict[str, Any]] = []
-
+    all_links = []
     for a in soup.select("a[href]"):
         href = a.get("href", "")
         text = clean_text(a.get_text(" ", strip=True))
+        all_links.append((href, text))
 
-        if not href:
-            continue
-        if "/jobs/" not in href.lower():
-            continue
+    print(f"Roster total links on page: {len(all_links)}")
 
+    candidate_links = []
+    for href, text in all_links:
+        href_lower = href.lower()
+        joined = f"{href} {text}".lower()
+        if "/jobs/" in href_lower or "apply" in joined or "details" in href_lower:
+            candidate_links.append((href, text))
+
+    print(f"Roster candidate links: {len(candidate_links)}")
+    for href, text in candidate_links[:20]:
+        print(f"Roster candidate: href={href} text={text}")
+
+    print(f"Roster body preview: {clip(body_text, 1000)}")
+
+    jobs: List[Dict[str, Any]] = []
+
+    for href, text in candidate_links:
         full_url = href if href.startswith("http") else f"https://www.joinroster.co{href}"
-        context = clean_text(a.parent.get_text(" ", strip=True) if a.parent else text) or text
+        context = clean_text(text) or href
 
         role = extract_role_only(context)
         if not role or role == "New Job":
@@ -309,10 +331,7 @@ async def main() -> None:
             seen.add(job["id"])
             new_count += 1
             print(f"Posted: {job['title']} ({job['source']})")
-
-            # ⏱️ 1 minute delay between posts
             await asyncio.sleep(60)
-
         except Exception as e:
             print(f"Discord send failed for {job.get('title')}: {e}")
 
