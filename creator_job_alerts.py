@@ -2,6 +2,7 @@ import asyncio
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -16,7 +17,9 @@ ROSTER_WEBHOOK_URL = os.getenv("ROSTER_WEBHOOK_URL", "")
 WEBHOOK_AVATAR_URL = os.getenv("WEBHOOK_AVATAR_URL", "")
 
 YTJOBS_URL = "https://ytjobs.co/job/search"
-ROSTER_URL = "https://app.joinroster.co/jobs"
+ROSTER_URL = "https://www.joinroster.co/jobs"
+
+HEADER_TEXT = "Cold leads, warm them up!"
 
 
 def load_seen() -> set[str]:
@@ -41,6 +44,13 @@ def clean_text(text: Optional[str]) -> str:
     return " ".join((text or "").split())
 
 
+def clip(text: str, max_len: int) -> str:
+    text = clean_text(text)
+    if len(text) <= max_len:
+        return text
+    return text[: max_len - 3].rstrip() + "..."
+
+
 def get_webhook_url(source: str) -> str:
     if source == "YTJobs":
         return YTJOBS_WEBHOOK_URL
@@ -49,11 +59,85 @@ def get_webhook_url(source: str) -> str:
     return ""
 
 
-def clip(text: str, max_len: int) -> str:
+def extract_role_only(text: str) -> str:
     text = clean_text(text)
-    if len(text) <= max_len:
-        return text
-    return text[: max_len - 3].rstrip() + "..."
+
+    split_markers = [
+        r"\$",
+        r"\bRemote\b",
+        r"\bHybrid\b",
+        r"\bOn[- ]?site\b",
+        r"\bPart[- ]?time\b",
+        r"\bFull[- ]?time\b",
+        r"\bContract\b",
+        r"\bFreelance\b",
+        r"\bPer project\b",
+        r"\bPer hour\b",
+        r"\bHour\b",
+        r"\bApply\b",
+        r"\bsubs\b",
+    ]
+
+    for marker in split_markers:
+        match = re.search(marker, text, flags=re.IGNORECASE)
+        if match:
+            text = text[: match.start()].strip()
+            break
+
+    for sep in [" | ", " - ", " — ", " +", " / "]:
+        if sep in text:
+            text = text.split(sep)[0].strip()
+
+    words = text.split()
+    if len(words) > 8:
+        text = " ".join(words[:8])
+
+    return clip(text, 80) if text else "New Job"
+
+
+def extract_pay(text: str) -> str:
+    text = clean_text(text)
+    pay_match = re.search(
+        r"(\$\d[\d,]*(?:\s*-\s*\$\d[\d,]*)?(?:\s*(?:/|per)\s*(?:hour|hr|project|month|year))?)",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if pay_match:
+        return clip(pay_match.group(1), 80)
+    return "Not listed"
+
+
+def extract_location(text: str) -> str:
+    lower = text.lower()
+    if "remote" in lower:
+        return "Remote"
+    if "hybrid" in lower:
+        return "Hybrid"
+    if "on-site" in lower or "onsite" in lower:
+        return "On-site"
+    return "Not listed"
+
+
+def extract_job_type(text: str) -> str:
+    lower = text.lower()
+    if "part-time" in lower or "part time" in lower:
+        return "Part-time"
+    if "full-time" in lower or "full time" in lower:
+        return "Full-time"
+    if "contract" in lower:
+        return "Contract"
+    if "freelance" in lower:
+        return "Freelance"
+    if "per project" in lower:
+        return "Per project"
+    return "Not listed"
+
+
+def build_description(text: str, role: str) -> str:
+    text = clean_text(text)
+    if text.lower().startswith(role.lower()):
+        return clip(text, 220)
+    return clip(f"{role} — {text}", 220)
 
 
 def send_to_discord(job: Dict[str, Any]) -> None:
@@ -63,29 +147,22 @@ def send_to_discord(job: Dict[str, Any]) -> None:
     if not webhook_url:
         raise RuntimeError(f"Missing webhook URL for source: {source}")
 
-    title = clip(job.get("title", "New job"), 180)
-    company = clip(job.get("company", "Not listed"), 120)
-    creator = clip(job.get("creator", "Not listed"), 120)
-    location = clip(job.get("location", "Not listed"), 120)
-    job_type = clip(job.get("job_type", "Not listed"), 120)
-    pay = clip(job.get("pay", "Not listed"), 120)
-    description = clip(job.get("summary", "No description listed."), 700)
+    role = clip(job.get("title", "New job"), 100)
+    location = clip(job.get("location", "Not listed"), 60)
+    job_type = clip(job.get("job_type", "Not listed"), 60)
+    pay = clip(job.get("pay", "Not listed"), 80)
+    description = clip(job.get("summary", "No description listed."), 220)
     url = (job.get("url") or "").strip()
 
-    if url:
-        title_line = f"**Job Title:** [{title}]({url})"
-    else:
-        title_line = f"**Job Title:** {title}"
-
     content = (
-        f"{title_line}\n"
+        f"{HEADER_TEXT}\n\n"
+        f"**Job Title:** {role}\n"
         f"**Source:** {source}\n"
         f"**Type:** {job_type}\n"
         f"**Location:** {location}\n"
         f"**Pay:** {pay}\n"
-        f"**Creator / Poster:** {creator}\n"
-        f"**Company:** {company}\n"
-        f"**Description:** {description}"
+        f"**Description:** {description}\n"
+        f"**Link:** {url if url else 'Not listed'}"
     )
 
     payload = {
@@ -112,52 +189,6 @@ def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return cleaned
 
 
-def parse_ytjobs_card_text(text: str) -> Dict[str, str]:
-    text = clean_text(text)
-
-    result = {
-        "company": "Not listed",
-        "creator": "Not listed",
-        "location": "Not listed",
-        "job_type": "Not listed",
-        "pay": "Not listed",
-        "summary": text[:700] if text else "No description listed.",
-    }
-
-    lower = text.lower()
-
-    if "remote" in lower:
-        result["location"] = "Remote"
-    elif "hybrid" in lower:
-        result["location"] = "Hybrid"
-    elif "on-site" in lower or "onsite" in lower:
-        result["location"] = "On-site"
-
-    if "part-time" in lower:
-        result["job_type"] = "Part-time"
-    elif "full-time" in lower:
-        result["job_type"] = "Full-time"
-    elif "contract" in lower:
-        result["job_type"] = "Contract"
-    elif "freelance" in lower:
-        result["job_type"] = "Freelance"
-
-    tokens = text.split()
-    pay_tokens = []
-    capture = False
-    for token in tokens:
-        if "$" in token:
-            capture = True
-        if capture:
-            pay_tokens.append(token)
-            if len(pay_tokens) >= 8:
-                break
-    if pay_tokens:
-        result["pay"] = clean_text(" ".join(pay_tokens))
-
-    return result
-
-
 async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
     await page.goto(YTJOBS_URL, wait_until="networkidle")
     html = await page.content()
@@ -170,26 +201,27 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
         if "/job/search" in href:
             continue
 
-        title = clean_text(a.get_text(" ", strip=True))
-        if not title:
-            continue
-
         full_url = href if href.startswith("http") else f"https://ytjobs.co{href}"
 
         card = a.parent
-        context = clean_text(card.get_text(" ", strip=True) if card else title)
-        parsed = parse_ytjobs_card_text(context)
+        context = clean_text(card.get_text(" ", strip=True) if card else a.get_text(" ", strip=True))
+        if not context:
+            continue
+
+        role = extract_role_only(context)
+        pay = extract_pay(context)
+        location = extract_location(context)
+        job_type = extract_job_type(context)
+        description = build_description(context, role)
 
         jobs.append(
             {
-                "id": make_id("ytjobs", title, full_url),
-                "title": title,
-                "company": parsed["company"],
-                "creator": parsed["creator"],
-                "summary": parsed["summary"],
-                "location": parsed["location"],
-                "job_type": parsed["job_type"],
-                "pay": parsed["pay"],
+                "id": make_id("ytjobs", role, full_url),
+                "title": role,
+                "summary": description,
+                "location": location,
+                "job_type": job_type,
+                "pay": pay,
                 "url": full_url,
                 "source": "YTJobs",
             }
@@ -201,44 +233,68 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
 
 
 async def scrape_roster(page) -> List[Dict[str, Any]]:
-    await page.goto(ROSTER_URL, wait_until="networkidle")
-    await page.wait_for_timeout(8000)
+    await page.goto(ROSTER_URL, wait_until="domcontentloaded")
+    await page.wait_for_timeout(12000)
 
-    links = await page.eval_on_selector_all(
-        "a",
-        """elements => elements.map(a => ({
-            href: a.href || "",
-            text: (a.innerText || "").trim()
-        }))"""
-    )
+    # Try to trigger lazy-loaded content
+    for _ in range(4):
+        await page.mouse.wheel(0, 3000)
+        await page.wait_for_timeout(1500)
+
+    html = await page.content()
+    Path("roster_debug.html").write_text(html, encoding="utf-8")
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Debug: print potentially useful links
+    hrefs = []
+    for a in soup.select("a[href]"):
+        href = a.get("href", "")
+        if "/jobs/" in href.lower() or "apply" in href.lower():
+            hrefs.append(href)
+
+    print(f"Roster debug href count: {len(hrefs)}")
+    for href in hrefs[:20]:
+        print(f"Roster href: {href}")
 
     jobs: List[Dict[str, Any]] = []
 
-    for item in links:
-        href = item.get("href", "")
-        text = clean_text(item.get("text", ""))
+    # Pass 1: direct job links
+    for a in soup.select("a[href]"):
+        href = a.get("href", "")
+        text = clean_text(a.get_text(" ", strip=True))
 
         if not href:
             continue
-        if "job" not in href.lower():
+        if "/jobs/" not in href.lower():
             continue
-        if not text:
+
+        full_url = href if href.startswith("http") else f"https://www.joinroster.co{href}"
+        context = clean_text(a.parent.get_text(" ", strip=True) if a.parent else text) or text
+
+        role = extract_role_only(context)
+        if not role or role == "New Job":
             continue
 
         jobs.append(
             {
-                "id": make_id("roster", text, href),
-                "title": text,
-                "company": "Not listed",
-                "creator": "Not listed",
-                "summary": text,
-                "location": "Not listed",
-                "job_type": "Not listed",
-                "pay": "Not listed",
-                "url": href,
+                "id": make_id("roster", role, full_url),
+                "title": role,
+                "summary": clip(context, 220),
+                "location": extract_location(context),
+                "job_type": extract_job_type(context),
+                "pay": extract_pay(context),
+                "url": full_url,
                 "source": "Roster",
             }
         )
+
+    # Pass 2: look for apply buttons/cards if direct links are hidden
+    if not jobs:
+        texts = await page.locator("body").inner_text()
+        Path("roster_debug.txt").write_text(texts, encoding="utf-8")
+        print("Roster page text snapshot saved to roster_debug.txt")
+        print(f"Roster body text preview: {clip(texts, 800)}")
 
     jobs = dedupe_jobs(jobs)
     print(f"Roster jobs found: {len(jobs)}")
