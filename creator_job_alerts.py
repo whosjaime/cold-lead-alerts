@@ -233,53 +233,109 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
 
 
 async def scrape_roster(page) -> List[Dict[str, Any]]:
-    await page.goto(ROSTER_URL, wait_until="domcontentloaded")
-    await page.wait_for_timeout(12000)
+    async def load_roster_list() -> str:
+        await page.goto(ROSTER_URL, wait_until="domcontentloaded")
+        await page.wait_for_timeout(5000)
 
-    for _ in range(4):
-        await page.mouse.wheel(0, 3000)
-        await page.wait_for_timeout(1500)
+        for _ in range(4):
+            await page.mouse.wheel(0, 3000)
+            await page.wait_for_timeout(1200)
 
-    html = await page.content()
-    Path("roster_debug.html").write_text(html, encoding="utf-8")
+        html = await page.content()
+        Path("roster_debug.html").write_text(html, encoding="utf-8")
+        body = await page.locator("body").inner_text()
+        return body
 
-    body_text = await page.locator("body").inner_text()
+    def parse_roster_block(block: str, idx: int) -> Dict[str, str]:
+        block = clean_text(block)
+
+        title = block
+        for marker in ["📍", "💼", "👥", "$", "Apply"]:
+            if marker in title:
+                title = title.split(marker)[0].strip()
+
+        title = clip(title, 60)
+        if not title:
+            title = f"Roster Job {idx + 1}"
+
+        location = extract_location(block)
+        job_type = extract_job_type(block)
+        pay = extract_pay(block)
+
+        description = block
+        if description.lower().startswith(title.lower()):
+            description = description[len(title):].strip(" -—:|")
+
+        for marker in ["📍", "💼", "👥"]:
+            description = description.replace(marker, " ")
+
+        description = clean_text(description)
+        description = clip(description, 180)
+
+        if not description:
+            description = "No description listed."
+
+        return {
+            "title": title,
+            "summary": description,
+            "location": location,
+            "job_type": job_type,
+            "pay": pay,
+        }
+
+    body_text = await load_roster_list()
     Path("roster_debug.txt").write_text(body_text, encoding="utf-8")
 
     print(f"Roster body preview: {clip(body_text, 1200)}")
 
-    jobs: List[Dict[str, Any]] = []
+    raw_blocks = [clean_text(x) for x in body_text.split("Apply")]
+    raw_blocks = [x for x in raw_blocks if x and len(x) > 30]
 
-    raw_blocks = body_text.split("Apply")
     print(f"Roster raw blocks: {len(raw_blocks)}")
 
-    for i, block in enumerate(raw_blocks):
-        block = clean_text(block)
-        if not block:
-            continue
-        if len(block) < 30:
-            continue
+    apply_count = await page.locator("text=Apply").count()
+    print(f"Roster apply buttons: {apply_count}")
 
-        lines = [clean_text(line) for line in block.splitlines() if clean_text(line)]
-        if not lines:
-            continue
+    jobs: List[Dict[str, Any]] = []
+    total = min(len(raw_blocks), apply_count)
 
-        title = lines[0]
-        title = clip(title, 80)
-        if not title:
-            title = f"Roster Job {i + 1}"
+    for i in range(total):
+        await load_roster_list()
 
-        summary = clip(block, 220)
+        apply_locator = page.locator("text=Apply").nth(i)
+        detail_url = ROSTER_URL
+
+        try:
+            await apply_locator.scroll_into_view_if_needed()
+            await page.wait_for_timeout(500)
+
+            before_url = page.url
+
+            try:
+                async with page.expect_navigation(wait_until="networkidle", timeout=10000):
+                    await apply_locator.click()
+            except Exception:
+                await apply_locator.click(force=True)
+                await page.wait_for_timeout(3000)
+
+            after_url = page.url
+            if after_url and after_url != before_url:
+                detail_url = after_url
+        except Exception as e:
+            print(f"Roster click failed for block {i}: {e}")
+
+        block = raw_blocks[i]
+        parsed = parse_roster_block(block, i)
 
         jobs.append(
             {
-                "id": make_id("roster", title, summary[:120]),
-                "title": title,
-                "summary": summary,
-                "location": extract_location(block),
-                "job_type": extract_job_type(block),
-                "pay": extract_pay(block),
-                "url": ROSTER_URL,
+                "id": make_id("roster", parsed["title"], detail_url),
+                "title": parsed["title"],
+                "summary": parsed["summary"],
+                "location": parsed["location"],
+                "job_type": parsed["job_type"],
+                "pay": parsed["pay"],
+                "url": detail_url,
                 "source": "Roster",
             }
         )
@@ -287,7 +343,7 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
     jobs = dedupe_jobs(jobs)
     print(f"Roster jobs found: {len(jobs)}")
     for job in jobs[:10]:
-        print(f"Roster parsed job: {job['title']} | {job['pay']} | {job['location']}")
+        print(f"Roster parsed job: {job['title']} | {job['pay']} | {job['location']} | {job['url']}")
 
     return jobs
 
