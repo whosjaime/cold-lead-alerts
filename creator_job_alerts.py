@@ -171,6 +171,9 @@ def send_to_discord(job: Dict[str, Any]) -> None:
         "allowed_mentions": {"parse": []},
     }
 
+    if source == "Roster":
+        payload["flags"] = 4
+
     if WEBHOOK_AVATAR_URL:
         payload["avatar_url"] = WEBHOOK_AVATAR_URL
 
@@ -383,7 +386,7 @@ async def main() -> None:
             seen.add(job["id"])
             new_count += 1
             print(f"Posted: {job['title']} ({job['source']})")
-            await asyncio.sleep(60)
+            await asyncio.sleep(1800)  # 30 minutes
         except Exception as e:
             print(f"Discord send failed for {job.get('title')}: {e}")
 
