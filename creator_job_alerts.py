@@ -19,7 +19,7 @@ WEBHOOK_AVATAR_URL = os.getenv("WEBHOOK_AVATAR_URL", "")
 YTJOBS_URL = "https://ytjobs.co/job/search"
 ROSTER_URL = "https://www.joinroster.co/jobs"
 
-HEADER_TEXT = "Cold leads, warm them up!"
+HEADER_TEXT = "Cold leads, warm them up! 🔥"
 
 
 def load_seen() -> set[str]:
@@ -73,7 +73,6 @@ def extract_role_only(text: str) -> str:
         r"\bFreelance\b",
         r"\bPer project\b",
         r"\bPer hour\b",
-        r"\bHour\b",
         r"\bApply\b",
         r"\bsubs\b",
     ]
@@ -236,30 +235,11 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
     await page.goto(ROSTER_URL, wait_until="domcontentloaded")
     await page.wait_for_timeout(12000)
 
-    # Try to trigger lazy-loaded content
-    for _ in range(4):
-        await page.mouse.wheel(0, 3000)
-        await page.wait_for_timeout(1500)
-
     html = await page.content()
-    Path("roster_debug.html").write_text(html, encoding="utf-8")
-
     soup = BeautifulSoup(html, "html.parser")
-
-    # Debug: print potentially useful links
-    hrefs = []
-    for a in soup.select("a[href]"):
-        href = a.get("href", "")
-        if "/jobs/" in href.lower() or "apply" in href.lower():
-            hrefs.append(href)
-
-    print(f"Roster debug href count: {len(hrefs)}")
-    for href in hrefs[:20]:
-        print(f"Roster href: {href}")
 
     jobs: List[Dict[str, Any]] = []
 
-    # Pass 1: direct job links
     for a in soup.select("a[href]"):
         href = a.get("href", "")
         text = clean_text(a.get_text(" ", strip=True))
@@ -288,13 +268,6 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
                 "source": "Roster",
             }
         )
-
-    # Pass 2: look for apply buttons/cards if direct links are hidden
-    if not jobs:
-        texts = await page.locator("body").inner_text()
-        Path("roster_debug.txt").write_text(texts, encoding="utf-8")
-        print("Roster page text snapshot saved to roster_debug.txt")
-        print(f"Roster body text preview: {clip(texts, 800)}")
 
     jobs = dedupe_jobs(jobs)
     print(f"Roster jobs found: {len(jobs)}")
@@ -336,6 +309,10 @@ async def main() -> None:
             seen.add(job["id"])
             new_count += 1
             print(f"Posted: {job['title']} ({job['source']})")
+
+            # ⏱️ 1 minute delay between posts
+            await asyncio.sleep(60)
+
         except Exception as e:
             print(f"Discord send failed for {job.get('title')}: {e}")
 
