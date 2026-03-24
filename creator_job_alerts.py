@@ -75,6 +75,7 @@ def extract_role_only(text: str) -> str:
         r"\bPer hour\b",
         r"\bApply\b",
         r"\bsubs\b",
+        r"\bfollowers\b",
     ]
 
     for marker in split_markers:
@@ -83,15 +84,15 @@ def extract_role_only(text: str) -> str:
             text = text[: match.start()].strip()
             break
 
-    for sep in [" | ", " - ", " — ", " +", " / "]:
+    for sep in [" | ", " - ", " — ", " +", " / ", ":"]:
         if sep in text:
             text = text.split(sep)[0].strip()
 
     words = text.split()
-    if len(words) > 8:
-        text = " ".join(words[:8])
+    if len(words) > 6:
+        text = " ".join(words[:6])
 
-    return clip(text, 80) if text else "New Job"
+    return clip(text, 60) if text else "New Job"
 
 
 def extract_pay(text: str) -> str:
@@ -245,54 +246,49 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
     body_text = await page.locator("body").inner_text()
     Path("roster_debug.txt").write_text(body_text, encoding="utf-8")
 
-    soup = BeautifulSoup(html, "html.parser")
-
-    all_links = []
-    for a in soup.select("a[href]"):
-        href = a.get("href", "")
-        text = clean_text(a.get_text(" ", strip=True))
-        all_links.append((href, text))
-
-    print(f"Roster total links on page: {len(all_links)}")
-
-    candidate_links = []
-    for href, text in all_links:
-        href_lower = href.lower()
-        joined = f"{href} {text}".lower()
-        if "/jobs/" in href_lower or "apply" in joined or "details" in href_lower:
-            candidate_links.append((href, text))
-
-    print(f"Roster candidate links: {len(candidate_links)}")
-    for href, text in candidate_links[:20]:
-        print(f"Roster candidate: href={href} text={text}")
-
-    print(f"Roster body preview: {clip(body_text, 1000)}")
+    print(f"Roster body preview: {clip(body_text, 1200)}")
 
     jobs: List[Dict[str, Any]] = []
 
-    for href, text in candidate_links:
-        full_url = href if href.startswith("http") else f"https://www.joinroster.co{href}"
-        context = clean_text(text) or href
+    raw_blocks = body_text.split("Apply")
+    print(f"Roster raw blocks: {len(raw_blocks)}")
 
-        role = extract_role_only(context)
-        if not role or role == "New Job":
+    for i, block in enumerate(raw_blocks):
+        block = clean_text(block)
+        if not block:
             continue
+        if len(block) < 30:
+            continue
+
+        lines = [clean_text(line) for line in block.splitlines() if clean_text(line)]
+        if not lines:
+            continue
+
+        title = lines[0]
+        title = clip(title, 80)
+        if not title:
+            title = f"Roster Job {i + 1}"
+
+        summary = clip(block, 220)
 
         jobs.append(
             {
-                "id": make_id("roster", role, full_url),
-                "title": role,
-                "summary": clip(context, 220),
-                "location": extract_location(context),
-                "job_type": extract_job_type(context),
-                "pay": extract_pay(context),
-                "url": full_url,
+                "id": make_id("roster", title, summary[:120]),
+                "title": title,
+                "summary": summary,
+                "location": extract_location(block),
+                "job_type": extract_job_type(block),
+                "pay": extract_pay(block),
+                "url": ROSTER_URL,
                 "source": "Roster",
             }
         )
 
     jobs = dedupe_jobs(jobs)
     print(f"Roster jobs found: {len(jobs)}")
+    for job in jobs[:10]:
+        print(f"Roster parsed job: {job['title']} | {job['pay']} | {job['location']}")
+
     return jobs
 
 
