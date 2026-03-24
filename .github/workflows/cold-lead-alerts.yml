@@ -35,6 +35,16 @@ jobs:
           WEBHOOK_AVATAR_URL: ${{ secrets.WEBHOOK_AVATAR_URL }}
         run: python creator_job_alerts.py
 
+      - name: Upload roster debug files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: roster-debug
+          path: |
+            roster_debug.html
+            roster_debug.txt
+          if-no-files-found: ignore
+
       - name: Commit seen jobs file
         run: |
           touch seen_jobs.json
