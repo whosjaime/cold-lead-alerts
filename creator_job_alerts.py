@@ -26,13 +26,13 @@ def load_seen() -> set[str]:
     if not STATE_FILE.exists():
         return set()
     try:
-        return set(json.loads(STATE_FILE.read_text()))
+        return set(json.loads(STATE_FILE.read_text(encoding="utf-8")))
     except Exception:
         return set()
 
 
 def save_seen(items: set[str]) -> None:
-    STATE_FILE.write_text(json.dumps(sorted(items), indent=2))
+    STATE_FILE.write_text(json.dumps(sorted(items), indent=2), encoding="utf-8")
 
 
 def make_id(*parts: str) -> str:
@@ -384,13 +384,12 @@ async def main() -> None:
         try:
             send_to_discord(job)
             seen.add(job["id"])
+            save_seen(seen)
             new_count += 1
             print(f"Posted: {job['title']} ({job['source']})")
-            await asyncio.sleep(1800)  # 30 minutes
         except Exception as e:
             print(f"Discord send failed for {job.get('title')}: {e}")
 
-    save_seen(seen)
     print(f"Done. Sent {new_count} new jobs.")
 
 
