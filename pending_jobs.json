@@ -1,16 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "ef470ba2ff807b0a1582c2e8960c4b75d5a997dee60262d1b34f954402b62bb0",
-      "title": "Video Editor Per project",
-      "summary": "Video Editor Per project Remote Gaming People & Blogs Challenge Nick Pro 26.9M subs",
-      "location": "Remote",
-      "job_type": "Per project",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/37380",
-      "source": "YTJobs"
-    },
-    {
       "id": "9dfc25976f036febf5ed03f665fd449ff669f480eec01a1b90dd951f5d041c7b",
       "title": "Video Editor (AI",
       "summary": "Video Editor (AI + 2D Explainer Style) Per project Remote Business and Finance Animation Faceless Zen Company",
@@ -149,19 +139,29 @@
       "pay": "$1,500 Per project",
       "url": "https://ytjobs.co/job/37345",
       "source": "YTJobs"
+    },
+    {
+      "id": "a1a91e9b1f9442c9084f28cda3167b9958a4d93cec1a1e1725f8ecbe5aab6f97",
+      "title": "YouTube Strategist Part-time",
+      "summary": "YouTube Strategist Part-time Remote Gaming Grace Whest 23.6K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/37392",
+      "source": "YTJobs"
+    },
+    {
+      "id": "aa907508b2a125ad5fcb0484238298dbc47e7b01f77f5bf71687fd1999f14062",
+      "title": "YouTube Strategist for Educational Channels",
+      "summary": "YouTube Strategist for Educational Channels $120,000-$360,000 Per Year . Full-time Remote Education Business and Finance Jake Trinder 3.32K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$120,000-$360,000 Per Year",
+      "url": "https://ytjobs.co/job/36831",
+      "source": "YTJobs"
     }
   ],
   "Roster": [
-    {
-      "id": "cb97d3caee52fd6ea6ca831bb0fda7d74e6fe869d66c01eb6ad17cc03114404b",
-      "title": "Ordinary Adventures",
-      "summary": "Remote YouTube 439.0K followers We\u2019re looking for a freelance video editor to help edit long-form YouTube vlogs for Ordinary Adventures, a food and travel channel with a strong focus... $300 - $400 Travel Food & Cooking",
-      "location": "Remote",
-      "job_type": "Freelance",
-      "pay": "$300 - $400",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster"
-    },
     {
       "id": "f0b931c43180c769542afa8614cfac4f98814412521a53800c7ab8e259e52216",
       "title": "RetroGamingNow",
@@ -579,6 +579,16 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$300 - $600",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster"
+    },
+    {
+      "id": "8e0f847d360e0c26076d273c65670aba8bf37b77510df6e5b1d27217a09af0eb",
+      "title": "For creators For talent Features Login Get started Jobs Find your next opport...",
+      "summary": "For creators For talent Features Login Get started Jobs Find your next opportunity in the creator economy yapWithJordyn Remote YouTube 1.6K followers I'm looking for a good YouTuber scriptwriter who will look through...",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$10 - $200",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster"
     }
