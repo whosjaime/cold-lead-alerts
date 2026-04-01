@@ -2,8 +2,8 @@ name: Cold Lead Alerts
 
 on:
   schedule:
-    - cron: "*/30 14-23 * * *"  # 9am–7:30pm EST
-    - cron: "*/30 0-2 * * *"    # 8pm–9:30pm EST
+    - cron: "*/30 14-23 * * *"
+    - cron: "*/30 0-2 * * *"
   workflow_dispatch:
 
 permissions:
@@ -11,11 +11,12 @@ permissions:
 
 concurrency:
   group: cold-lead-alerts
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   run-alerts:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout repo
@@ -32,6 +33,14 @@ jobs:
         run: |
           pip install -r requirements.txt
           playwright install chromium
+
+      - name: Debug webhook presence
+        env:
+          YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
+          ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
+        run: |
+          if [ -z "$YTJOBS_WEBHOOK_URL" ]; then echo "YTJOBS_WEBHOOK_URL is missing"; else echo "YTJOBS_WEBHOOK_URL is set"; fi
+          if [ -z "$ROSTER_WEBHOOK_URL" ]; then echo "ROSTER_WEBHOOK_URL is missing"; else echo "ROSTER_WEBHOOK_URL is set"; fi
 
       - name: Run job monitor
         env:
@@ -50,21 +59,21 @@ jobs:
             roster_debug.txt
           if-no-files-found: ignore
 
-      - name: Commit state files
+      - name: Commit queue state
         if: always()
         run: |
-          touch seen_jobs.json
           touch pending_jobs.json
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add seen_jobs.json pending_jobs.json
+          git add pending_jobs.json
+          git rm -f --ignore-unmatch seen_jobs.json
 
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update job state"
-            git pull --rebase origin "${GITHUB_REF_NAME}"
-            git push origin "HEAD:${GITHUB_REF_NAME}"
+            git commit -m "Update job queue state"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push origin "HEAD:${GITHUB_REF_NAME}" || true
           fi
