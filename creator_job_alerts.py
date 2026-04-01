@@ -422,7 +422,6 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
     total = min(len(raw_blocks), apply_count)
 
     for i in range(total):
-        await load_roster_list()
 
         apply_locator = page.locator("text=Apply").nth(i)
         detail_url = ROSTER_URL
