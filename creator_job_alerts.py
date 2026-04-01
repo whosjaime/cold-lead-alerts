@@ -10,7 +10,6 @@ import requests
 from bs4 import BeautifulSoup
 from playwright.async_api import async_playwright
 
-STATE_FILE = Path("seen_jobs.json")
 PENDING_FILE = Path("pending_jobs.json")
 
 YTJOBS_WEBHOOK_URL = os.getenv("YTJOBS_WEBHOOK_URL", "")
@@ -21,33 +20,59 @@ YTJOBS_URL = "https://ytjobs.co/job/search"
 ROSTER_URL = "https://www.joinroster.co/jobs"
 
 HEADER_TEXT = "Cold leads, warm them up! 🔥"
+VALID_SOURCES = ("YTJobs", "Roster")
+
+ROLE_IDS = {
+    "channel_manager": "1482015129150427166",
+    "creative_director": "1482015129762660637",
+    "thumbnail_designer": "1482015130807046194",
+    "scriptwriter": "1482015131482194094",
+    "editor": "1482015132753330236",
+    "production_manager": "1482015133889986753",
+    "strategist": "1482015134452023296",
+}
+
+JUNK_TITLE_PATTERNS = [
+    r"^company about us",
+    r"^all you have to do is",
+    r"^be a beutiful prod",
+    r"^video editing services$",
+]
 
 
-def load_seen() -> set[str]:
-    if not STATE_FILE.exists():
-        return set()
-    try:
-        return set(json.loads(STATE_FILE.read_text()))
-    except Exception:
-        return set()
+def load_pending() -> Dict[str, List[Dict[str, Any]]]:
+    default_pending: Dict[str, List[Dict[str, Any]]] = {source: [] for source in VALID_SOURCES}
 
-
-def save_seen(items: set[str]) -> None:
-    STATE_FILE.write_text(json.dumps(sorted(items), indent=2))
-
-
-def load_pending() -> List[Dict[str, Any]]:
     if not PENDING_FILE.exists():
-        return []
+        return default_pending
+
     try:
         data = json.loads(PENDING_FILE.read_text())
-        return data if isinstance(data, list) else []
     except Exception:
-        return []
+        return default_pending
+
+    if isinstance(data, dict):
+        normalized = {source: [] for source in VALID_SOURCES}
+        for source in VALID_SOURCES:
+            items = data.get(source, [])
+            normalized[source] = items if isinstance(items, list) else []
+        return normalized
+
+    if isinstance(data, list):
+        for item in data:
+            if not isinstance(item, dict):
+                continue
+            source = item.get("source")
+            if source in default_pending:
+                default_pending[source].append(item)
+        return default_pending
+
+    return default_pending
 
 
-def save_pending(items: List[Dict[str, Any]]) -> None:
-    PENDING_FILE.write_text(json.dumps(items, indent=2))
+def save_pending(items: Dict[str, List[Dict[str, Any]]]) -> None:
+    normalized = {source: items.get(source, []) for source in VALID_SOURCES}
+    PENDING_FILE.write_text(json.dumps(normalized, indent=2))
 
 
 def make_id(*parts: str) -> str:
@@ -82,6 +107,7 @@ def extract_role_only(text: str) -> str:
         r"\bRemote\b",
         r"\bHybrid\b",
         r"\bOn[- ]?site\b",
+        r"\bIn[- ]?person\b",
         r"\bPart[- ]?time\b",
         r"\bFull[- ]?time\b",
         r"\bContract\b",
@@ -104,10 +130,10 @@ def extract_role_only(text: str) -> str:
             text = text.split(sep)[0].strip()
 
     words = text.split()
-    if len(words) > 6:
-        text = " ".join(words[:6])
+    if len(words) > 8:
+        text = " ".join(words[:8])
 
-    return clip(text, 60) if text else "New Job"
+    return clip(text, 80) if text else "New Job"
 
 
 def extract_pay(text: str) -> str:
@@ -130,6 +156,8 @@ def extract_location(text: str) -> str:
         return "Hybrid"
     if "on-site" in lower or "onsite" in lower:
         return "On-site"
+    if "in-person" in lower or "in person" in lower:
+        return "In-person"
     return "Not listed"
 
 
@@ -150,9 +178,80 @@ def extract_job_type(text: str) -> str:
 
 def build_description(text: str, role: str) -> str:
     text = clean_text(text)
+    text = text.replace("About the Channel", " About the Channel")
+    text = text.replace("About the Job", " About the Job")
     if text.lower().startswith(role.lower()):
         return clip(text, 220)
     return clip(f"{role} — {text}", 220)
+
+
+def is_junk_job(job: Dict[str, Any]) -> bool:
+    title = clean_text(job.get("title", "")).lower()
+    summary = clean_text(job.get("summary", "")).lower()
+
+    if not title or title == "new job":
+        return True
+
+    for pattern in JUNK_TITLE_PATTERNS:
+        if re.search(pattern, title, flags=re.IGNORECASE):
+            return True
+
+    if "privacy terms of service" in summary:
+        return True
+    if title.count(" ") < 1 and len(title) < 4:
+        return True
+
+    return False
+
+
+def detect_role_tag(title: str, summary: str) -> Optional[str]:
+    text = f"{title} {summary}".lower()
+
+    if "thumbnail" in text:
+        return "thumbnail_designer"
+
+    if "creative director" in text or "content director" in text:
+        return "creative_director"
+
+    if "channel manager" in text or "youtube channel manager" in text:
+        return "channel_manager"
+
+    if "strategist" in text or "strategy" in text:
+        return "strategist"
+
+    if (
+        "script" in text
+        or "scriptwriter" in text
+        or "script writer" in text
+        or "copywriter" in text
+        or "video essay writer" in text
+    ):
+        return "scriptwriter"
+
+    if "editor" in text:
+        return "editor"
+
+    if (
+        "producer" in text
+        or "production manager" in text
+        or "production" in text
+        or "content producer" in text
+    ):
+        return "production_manager"
+
+    return None
+
+
+def build_role_line_and_mentions(title: str, summary: str) -> tuple[str, Dict[str, Any]]:
+    role_key = detect_role_tag(title, summary)
+    role_line = f"**Role:** {title}"
+    allowed_mentions: Dict[str, Any] = {"parse": []}
+
+    if role_key and role_key in ROLE_IDS:
+        role_line += f"\n<@&{ROLE_IDS[role_key]}>"
+        allowed_mentions["roles"] = [ROLE_IDS[role_key]]
+
+    return role_line, allowed_mentions
 
 
 def send_to_discord(job: Dict[str, Any]) -> None:
@@ -162,16 +261,18 @@ def send_to_discord(job: Dict[str, Any]) -> None:
     if not webhook_url:
         raise RuntimeError(f"Missing webhook URL for source: {source}")
 
-    role = clip(job.get("title", "New job"), 100)
+    title = clip(job.get("title", "New job"), 100)
     location = clip(job.get("location", "Not listed"), 60)
     job_type = clip(job.get("job_type", "Not listed"), 60)
     pay = clip(job.get("pay", "Not listed"), 80)
     description = clip(job.get("summary", "No description listed."), 220)
     url = (job.get("url") or "").strip()
 
+    role_line, allowed_mentions = build_role_line_and_mentions(title, description)
+
     content = (
         f"{HEADER_TEXT}\n\n"
-        f"**Job Title:** {role}\n"
+        f"{role_line}\n"
         f"**Source:** {source}\n"
         f"**Type:** {job_type}\n"
         f"**Location:** {location}\n"
@@ -183,16 +284,14 @@ def send_to_discord(job: Dict[str, Any]) -> None:
     payload = {
         "username": "Manifest Media Leads",
         "content": content,
-        "allowed_mentions": {"parse": []},
+        "allowed_mentions": allowed_mentions,
     }
-
-    if source == "Roster":
-        payload["flags"] = 4
 
     if WEBHOOK_AVATAR_URL:
         payload["avatar_url"] = WEBHOOK_AVATAR_URL
 
     response = requests.post(webhook_url, json=payload, timeout=30)
+    print(f"Discord response for {source}: {response.status_code}")
     response.raise_for_status()
 
 
@@ -201,6 +300,9 @@ def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     cleaned: List[Dict[str, Any]] = []
     for job in jobs:
         if job["id"] in seen_ids:
+            continue
+        if is_junk_job(job):
+            print(f"Skipped junk job: {job.get('title', 'Unknown')} ({job.get('source', 'Unknown')})")
             continue
         seen_ids.add(job["id"])
         cleaned.append(job)
@@ -272,7 +374,7 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
             if marker in title:
                 title = title.split(marker)[0].strip()
 
-        title = clip(title, 60)
+        title = clip(title, 80)
         if not title:
             title = f"Roster Job {idx + 1}"
 
@@ -288,7 +390,9 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
             description = description.replace(marker, " ")
 
         description = clean_text(description)
-        description = clip(description, 180)
+        description = description.replace("About the Channel", " About the Channel")
+        description = description.replace("About the Job", " About the Job")
+        description = clip(description, 220)
 
         if not description:
             description = "No description listed."
@@ -387,62 +491,79 @@ async def fetch_jobs() -> List[Dict[str, Any]]:
         return jobs
 
 
-def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], seen: set[str], pending: List[Dict[str, Any]]) -> int:
-    pending_ids = {job.get("id") for job in pending}
-    added = 0
+def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], pending: Dict[str, List[Dict[str, Any]]]) -> Dict[str, int]:
+    pending_ids = {
+        source: {job.get("id") for job in pending.get(source, [])}
+        for source in VALID_SOURCES
+    }
+    added = {source: 0 for source in VALID_SOURCES}
 
     for job in all_jobs:
-        if job["id"] in seen or job["id"] in pending_ids:
+        source = job.get("source")
+        if source not in pending_ids:
+            continue
+        if job["id"] in pending_ids[source]:
             continue
 
-        pending.append(job)
-        pending_ids.add(job["id"])
-        seen.add(job["id"])
-        added += 1
-        print(f"Queued: {job['title']} ({job['source']})")
+        pending[source].append(job)
+        pending_ids[source].add(job["id"])
+        added[source] += 1
+        print(f"Queued: {job['title']} ({source})")
 
     return added
 
 
-def post_next_job(pending: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
-    if not pending:
+def post_next_job_for_source(source: str, pending: Dict[str, List[Dict[str, Any]]]) -> Optional[Dict[str, Any]]:
+    queue = pending.get(source, [])
+    if not queue:
         return None
 
-    job = pending.pop(0)
-    send_to_discord(job)
-    return job
+    job = queue[0]
+
+    try:
+        send_to_discord(job)
+        queue.pop(0)
+        return job
+    except Exception as e:
+        print(f"Post failed for {source}, will retry next run: {e}")
+        return None
 
 
 async def main() -> None:
-    seen = load_seen()
     pending = load_pending()
 
-    print(f"Seen jobs loaded: {len(seen)}")
-    print(f"Pending jobs loaded: {len(pending)}")
+    print(
+        f"Pending jobs loaded: YTJobs={len(pending['YTJobs'])}, Roster={len(pending['Roster'])}"
+    )
 
     jobs = await fetch_jobs()
-    queued_count = enqueue_new_jobs(jobs, seen, pending)
-
-    save_seen(seen)
+    queued_count = enqueue_new_jobs(jobs, pending)
     save_pending(pending)
 
-    print(f"Queued {queued_count} new jobs.")
-    print(f"Pending queue size before post: {len(pending)}")
+    print(
+        f"Queued new jobs: YTJobs={queued_count['YTJobs']}, Roster={queued_count['Roster']}"
+    )
+    print(
+        f"Pending queue sizes before post: YTJobs={len(pending['YTJobs'])}, Roster={len(pending['Roster'])}"
+    )
 
-    if not pending:
-        print("No queued jobs to post.")
-        return
+    posted_ytjobs = post_next_job_for_source("YTJobs", pending)
+    posted_roster = post_next_job_for_source("Roster", pending)
+    save_pending(pending)
 
-    try:
-        posted_job = post_next_job(pending)
-        save_pending(pending)
+    if posted_ytjobs:
+        print(f"Posted YTJobs: {posted_ytjobs['title']}")
+    else:
+        print("No YTJobs post sent this run.")
 
-        if posted_job:
-            print(f"Posted: {posted_job['title']} ({posted_job['source']})")
-            print(f"Pending queue size after post: {len(pending)}")
-    except Exception as e:
-        print(f"Failed to post next queued job: {e}")
-        save_pending(pending)
+    if posted_roster:
+        print(f"Posted Roster: {posted_roster['title']}")
+    else:
+        print("No Roster post sent this run.")
+
+    print(
+        f"Pending queue sizes after post: YTJobs={len(pending['YTJobs'])}, Roster={len(pending['Roster'])}"
+    )
 
 
 if __name__ == "__main__":
