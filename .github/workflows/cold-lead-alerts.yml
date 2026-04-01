@@ -2,7 +2,8 @@ name: Cold Lead Alerts
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/30 14-23 * * *"  # 9am–7:30pm EST
+    - cron: "*/30 0-2 * * *"    # 8pm–9:30pm EST
   workflow_dispatch:
 
 permissions:
@@ -32,18 +33,18 @@ jobs:
           pip install -r requirements.txt
           playwright install chromium
 
-      - name: Run job scanner + queue poster
+      - name: Run job monitor
         env:
           YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
           ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
           WEBHOOK_AVATAR_URL: ${{ secrets.WEBHOOK_AVATAR_URL }}
         run: python creator_job_alerts.py
 
-      - name: Upload debug files
+      - name: Upload roster debug files
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: debug-files
+          name: roster-debug
           path: |
             roster_debug.html
             roster_debug.txt
@@ -63,7 +64,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update job state (seen + queue)"
+            git commit -m "Update job state"
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
