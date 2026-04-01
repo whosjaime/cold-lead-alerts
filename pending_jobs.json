@@ -1,16 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "9dfc25976f036febf5ed03f665fd449ff669f480eec01a1b90dd951f5d041c7b",
-      "title": "Video Editor (AI",
-      "summary": "Video Editor (AI + 2D Explainer Style) Per project Remote Business and Finance Animation Faceless Zen Company",
-      "location": "Remote",
-      "job_type": "Per project",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/37381",
-      "source": "YTJobs"
-    },
-    {
       "id": "fc59d2d09e6bc251bc74a430932165277323aa971edef3d8569d0668582f6b6e",
       "title": "Video Editor Part-time",
       "summary": "Video Editor Part-time Remote Good Peeps Company",
@@ -159,19 +149,19 @@
       "pay": "$120,000-$360,000 Per Year",
       "url": "https://ytjobs.co/job/36831",
       "source": "YTJobs"
+    },
+    {
+      "id": "ef470ba2ff807b0a1582c2e8960c4b75d5a997dee60262d1b34f954402b62bb0",
+      "title": "Video Editor Per project",
+      "summary": "Video Editor Per project Remote Gaming People & Blogs Challenge Nick Pro 26.9M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/37380",
+      "source": "YTJobs"
     }
   ],
   "Roster": [
-    {
-      "id": "f0b931c43180c769542afa8614cfac4f98814412521a53800c7ab8e259e52216",
-      "title": "RetroGamingNow",
-      "summary": "Remote YouTube 671.0K followers About the JobI am seeking a skilled and creative Thumbnail Artist who understands how to capture attention and drive clicks within the gaming mystery ... $50 - $150 Entertainment Gaming",
-      "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$50 - $150",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster"
-    },
     {
       "id": "c07f74f9cf2013461c5c6cd34130f4fef9a50405f673b8d76f993bfae5ffd122",
       "title": "Long-Form Video Editor (YouTube)",
@@ -589,6 +579,16 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$10 - $200",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster"
+    },
+    {
+      "id": "cb97d3caee52fd6ea6ca831bb0fda7d74e6fe869d66c01eb6ad17cc03114404b",
+      "title": "Ordinary Adventures",
+      "summary": "Remote YouTube 439.0K followers We\u2019re looking for a freelance video editor to help edit long-form YouTube vlogs for Ordinary Adventures, a food and travel channel with a strong focus... $300 - $400 Travel Food & Cooking",
+      "location": "Remote",
+      "job_type": "Freelance",
+      "pay": "$300 - $400",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster"
     }
