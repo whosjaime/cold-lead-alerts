@@ -2,7 +2,7 @@ name: Cold Lead Alerts
 
 on:
   schedule:
-    - cron: "*/30 * * * *"  # every 30 minutes
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -32,7 +32,7 @@ jobs:
           pip install -r requirements.txt
           playwright install chromium
 
-      - name: Run job scanner + scheduler
+      - name: Run job scanner + queue poster
         env:
           YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
           ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
