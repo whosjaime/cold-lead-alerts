@@ -1,3 +1,4 @@
+import asyncio
 import hashlib
 import json
 import os
@@ -26,27 +27,27 @@ def load_seen() -> set[str]:
     if not STATE_FILE.exists():
         return set()
     try:
-        return set(json.loads(STATE_FILE.read_text(encoding="utf-8")))
+        return set(json.loads(STATE_FILE.read_text()))
     except Exception:
         return set()
 
 
 def save_seen(items: set[str]) -> None:
-    STATE_FILE.write_text(json.dumps(sorted(items), indent=2), encoding="utf-8")
+    STATE_FILE.write_text(json.dumps(sorted(items), indent=2))
 
 
 def load_pending() -> List[Dict[str, Any]]:
     if not PENDING_FILE.exists():
         return []
     try:
-        data = json.loads(PENDING_FILE.read_text(encoding="utf-8"))
+        data = json.loads(PENDING_FILE.read_text())
         return data if isinstance(data, list) else []
     except Exception:
         return []
 
 
 def save_pending(items: List[Dict[str, Any]]) -> None:
-    PENDING_FILE.write_text(json.dumps(items, indent=2), encoding="utf-8")
+    PENDING_FILE.write_text(json.dumps(items, indent=2))
 
 
 def make_id(*parts: str) -> str:
@@ -252,11 +253,11 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
 async def scrape_roster(page) -> List[Dict[str, Any]]:
     async def load_roster_list() -> str:
         await page.goto(ROSTER_URL, wait_until="domcontentloaded")
-        await page.wait_for_timeout(2500)
+        await page.wait_for_timeout(5000)
 
-        for _ in range(3):
+        for _ in range(4):
             await page.mouse.wheel(0, 3000)
-            await page.wait_for_timeout(800)
+            await page.wait_for_timeout(1200)
 
         html = await page.content()
         Path("roster_debug.html").write_text(html, encoding="utf-8")
@@ -310,20 +311,49 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
 
     print(f"Roster raw blocks: {len(raw_blocks)}")
 
-    jobs: List[Dict[str, Any]] = []
+    apply_count = await page.locator("text=Apply").count()
+    print(f"Roster apply buttons: {apply_count}")
 
-    for i, block in enumerate(raw_blocks):
+    jobs: List[Dict[str, Any]] = []
+    total = min(len(raw_blocks), apply_count)
+
+    for i in range(total):
+        await load_roster_list()
+
+        apply_locator = page.locator("text=Apply").nth(i)
+        detail_url = ROSTER_URL
+
+        try:
+            await apply_locator.scroll_into_view_if_needed()
+            await page.wait_for_timeout(500)
+
+            before_url = page.url
+
+            try:
+                async with page.expect_navigation(wait_until="networkidle", timeout=10000):
+                    await apply_locator.click()
+            except Exception:
+                await apply_locator.click(force=True)
+                await page.wait_for_timeout(3000)
+
+            after_url = page.url
+            if after_url and after_url != before_url:
+                detail_url = after_url
+        except Exception as e:
+            print(f"Roster click failed for block {i}: {e}")
+
+        block = raw_blocks[i]
         parsed = parse_roster_block(block, i)
 
         jobs.append(
             {
-                "id": make_id("roster", parsed["title"], parsed["summary"]),
+                "id": make_id("roster", parsed["title"], detail_url),
                 "title": parsed["title"],
                 "summary": parsed["summary"],
                 "location": parsed["location"],
                 "job_type": parsed["job_type"],
                 "pay": parsed["pay"],
-                "url": ROSTER_URL,
+                "url": detail_url,
                 "source": "Roster",
             }
         )
@@ -362,13 +392,12 @@ def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], seen: set[str], pending: Li
     added = 0
 
     for job in all_jobs:
-        job_id = job["id"]
-        if job_id in seen or job_id in pending_ids:
+        if job["id"] in seen or job["id"] in pending_ids:
             continue
 
         pending.append(job)
-        pending_ids.add(job_id)
-        seen.add(job_id)
+        pending_ids.add(job["id"])
+        seen.add(job["id"])
         added += 1
         print(f"Queued: {job['title']} ({job['source']})")
 
@@ -391,8 +420,8 @@ async def main() -> None:
     print(f"Seen jobs loaded: {len(seen)}")
     print(f"Pending jobs loaded: {len(pending)}")
 
-    all_jobs = await fetch_jobs()
-    queued_count = enqueue_new_jobs(all_jobs, seen, pending)
+    jobs = await fetch_jobs()
+    queued_count = enqueue_new_jobs(jobs, seen, pending)
 
     save_seen(seen)
     save_pending(pending)
@@ -417,5 +446,4 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    import asyncio
     asyncio.run(main())
