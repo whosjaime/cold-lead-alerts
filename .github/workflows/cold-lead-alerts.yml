@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: cold-lead-alerts
+  cancel-in-progress: false
+
 jobs:
   run-alerts:
     runs-on: ubuntu-latest
@@ -47,6 +51,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Commit seen jobs file
+        if: always()
         run: |
           touch seen_jobs.json
           git config user.name "github-actions[bot]"
@@ -58,5 +63,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update seen jobs"
+            git pull --rebase origin ${GITHUB_REF_NAME}
             git push
           fi
