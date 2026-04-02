@@ -1,16 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "082dc7c59b1b53b99f886759b2dffafd5f0a7970d13b627ef6c3d6e77bc9cf47",
-      "title": "YouTube Video Editor \u2013 Channel for Creatives Over",
-      "summary": "YouTube Video Editor \u2013 Channel for Creatives Over 40 Part-time Remote Film & Animation Comedy +6 more Roby Brown 40 subs",
-      "location": "Remote",
-      "job_type": "Part-time",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/37371",
-      "source": "YTJobs"
-    },
-    {
       "id": "39f9d7c1c1865ae722ea658c5d3e105394dff750982352db8b6be8e411f7a246",
       "title": "Short-Form Video Editor (Instagram Reels Focus)",
       "summary": "Short-Form Video Editor (Instagram Reels Focus) $15,000-$35,000 Per Year . Full-time Remote heyDominik Company",
@@ -169,19 +159,29 @@
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/37381",
       "source": "YTJobs"
+    },
+    {
+      "id": "4d89c7f9ea067da55c67c911cc2db61927b797a02336883ffb0a1ad7d319cbbe",
+      "title": "Video Editor for Reaction Channel",
+      "summary": "Video Editor for Reaction Channel $93,600 Per Year . Full-time Remote Gaming Comedy Entertainment +2 more 7-ElevenZ 940K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$93,600 Per Year",
+      "url": "https://ytjobs.co/job/32413",
+      "source": "YTJobs"
+    },
+    {
+      "id": "fc59d2d09e6bc251bc74a430932165277323aa971edef3d8569d0668582f6b6e",
+      "title": "Video Editor Part-time",
+      "summary": "Video Editor Part-time Remote Good Peeps Company",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/37374",
+      "source": "YTJobs"
     }
   ],
   "Roster": [
-    {
-      "id": "5613b60e542ebf7481d3c951e9a187242a9a7a6cd9ba3f076fd3d4dc1aefe5a5",
-      "title": "Copywriter",
-      "summary": "remote YouTube, Instagram We\u2019re building a next-gen wireless brand designed for gamers, stream viewers, and the online creator ecosystem. Our audience lives on Twitch, YouTube,... $1,500 - $3,000 Lifestyle & Vlogs Gaming",
-      "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$1,500 - $3,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster"
-    },
     {
       "id": "cb6e1469c1e3f95aeb7bee0510297b55f45daa8f69844c10f12854ac6eb59959",
       "title": "Ori Pro",
@@ -599,6 +599,16 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$50 - $150",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster"
+    },
+    {
+      "id": "c07f74f9cf2013461c5c6cd34130f4fef9a50405f673b8d76f993bfae5ffd122",
+      "title": "Long-Form Video Editor (YouTube)",
+      "summary": "remote YouTube 43.4K followers We\u2019re looking for a long-form video editing specialist who can craft high-performing, retention-driven content for YouTube. About the ChannelWe create ... $1,000 - $2,000 Education Finan...",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1,000 - $2,000",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster"
     }
