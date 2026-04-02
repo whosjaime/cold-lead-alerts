@@ -47,6 +47,120 @@ jobs:
           YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
           ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
           WEBHOOK_AVATAR_URL: ${{ secrets.WEBHOOK_AVATAR_URL }}
+
+          MONDAY_API_TOKEN: ${{ secrets.MONDAY_API_TOKEN }}
+          MONDAY_BOARD_ID: ${{ secrets.MONDAY_BOARD_ID }}
+          MONDAY_GROUP_ID: ${{ secrets.MONDAY_GROUP_ID }}
+
+          MONDAY_COL_PAY: ${{ secrets.MONDAY_COL_PAY }}
+          MONDAY_COL_TYPE: ${{ secrets.MONDAY_COL_TYPE }}
+          MONDAY_COL_EMAIL: ${{ secrets.MONDAY_COL_EMAIL }}
+          MONDAY_COL_PRIMARY_SKILL: ${{ secrets.MONDAY_COL_PRIMARY_SKILL }}
+          MONDAY_COL_PLATFORM: ${{ secrets.MONDAY_COL_PLATFORM }}
+          MONDAY_COL_SOURCED_FROM: ${{ secrets.MONDAY_COL_SOURCED_FROM }}
+          MONDAY_COL_CATEGORY: ${{ secrets.MONDAY_COL_CATEGORY }}
+          MONDAY_COL_COMPANY: ${{ secrets.MONDAY_COL_COMPANY }}
+          MONDAY_COL_ROLE: ${{ secrets.MONDAY_COL_ROLE }}
+          MONDAY_COL_LOCATION: ${{ secrets.MONDAY_COL_LOCATION }}
+          MONDAY_COL_DESCRIPTION: ${{ secrets.MONDAY_COL_DESCRIPTION }}
+          MONDAY_COL_LINK: ${{ secrets.MONDAY_COL_LINK }}
+          MONDAY_COL_POST_DATE: ${{ secrets.MONDAY_COL_POST_DATE }}
+        run: python creator_job_alerts.py
+
+      - name: Upload roster debug files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: roster-debug
+          path: |
+            roster_debug.html
+            roster_debug.txt
+          if-no-files-found: ignore
+
+      - name: Commit queue state
+        if: always()
+        run: |
+          touch pending_jobs.json
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add pending_jobs.json
+          git rm -f --ignore-unmatch seen_jobs.json
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update job queue state"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push origin "HEAD:${GITHUB_REF_NAME}" || true
+          finame: Cold Lead Alerts
+
+on:
+  schedule:
+    - cron: "*/30 14-23 * * *"
+    - cron: "*/30 0-2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cold-lead-alerts
+  cancel-in-progress: false
+
+jobs:
+  run-alerts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+
+      - name: Debug webhook presence
+        env:
+          YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
+          ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
+        run: |
+          if [ -z "$YTJOBS_WEBHOOK_URL" ]; then echo "YTJOBS_WEBHOOK_URL is missing"; else echo "YTJOBS_WEBHOOK_URL is set"; fi
+          if [ -z "$ROSTER_WEBHOOK_URL" ]; then echo "ROSTER_WEBHOOK_URL is missing"; else echo "ROSTER_WEBHOOK_URL is set"; fi
+
+      - name: Run job monitor
+        env:
+          YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
+          ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
+          WEBHOOK_AVATAR_URL: ${{ secrets.WEBHOOK_AVATAR_URL }}
+
+          MONDAY_API_TOKEN: ${{ secrets.MONDAY_API_TOKEN }}
+          MONDAY_BOARD_ID: ${{ secrets.MONDAY_BOARD_ID }}
+          MONDAY_GROUP_ID: ${{ secrets.MONDAY_GROUP_ID }}
+
+          MONDAY_COL_PAY: ${{ secrets.MONDAY_COL_PAY }}
+          MONDAY_COL_TYPE: ${{ secrets.MONDAY_COL_TYPE }}
+          MONDAY_COL_EMAIL: ${{ secrets.MONDAY_COL_EMAIL }}
+          MONDAY_COL_PRIMARY_SKILL: ${{ secrets.MONDAY_COL_PRIMARY_SKILL }}
+          MONDAY_COL_PLATFORM: ${{ secrets.MONDAY_COL_PLATFORM }}
+          MONDAY_COL_SOURCED_FROM: ${{ secrets.MONDAY_COL_SOURCED_FROM }}
+          MONDAY_COL_CATEGORY: ${{ secrets.MONDAY_COL_CATEGORY }}
+          MONDAY_COL_COMPANY: ${{ secrets.MONDAY_COL_COMPANY }}
+          MONDAY_COL_ROLE: ${{ secrets.MONDAY_COL_ROLE }}
+          MONDAY_COL_LOCATION: ${{ secrets.MONDAY_COL_LOCATION }}
+          MONDAY_COL_DESCRIPTION: ${{ secrets.MONDAY_COL_DESCRIPTION }}
+          MONDAY_COL_LINK: ${{ secrets.MONDAY_COL_LINK }}
+          MONDAY_COL_POST_DATE: ${{ secrets.MONDAY_COL_POST_DATE }}
         run: python creator_job_alerts.py
 
       - name: Upload roster debug files
