@@ -1,16 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "fc59d2d09e6bc251bc74a430932165277323aa971edef3d8569d0668582f6b6e",
-      "title": "Video Editor Part-time",
-      "summary": "Video Editor Part-time Remote Good Peeps Company",
-      "location": "Remote",
-      "job_type": "Part-time",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/37374",
-      "source": "YTJobs"
-    },
-    {
       "id": "082dc7c59b1b53b99f886759b2dffafd5f0a7970d13b627ef6c3d6e77bc9cf47",
       "title": "YouTube Video Editor \u2013 Channel for Creatives Over",
       "summary": "YouTube Video Editor \u2013 Channel for Creatives Over 40 Part-time Remote Film & Animation Comedy +6 more Roby Brown 40 subs",
@@ -159,19 +149,29 @@
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/37380",
       "source": "YTJobs"
+    },
+    {
+      "id": "4843cc9a66c264b2f067e8de0b2cfb0c48db30935ef3c72e1032ea303579e6dc",
+      "title": "YouTube Video Editor",
+      "summary": "YouTube Video Editor \u2014 Global Beauty Brand $80,000-$100,000 Per Year . Full-time Hybrid . Los Angeles, CA, US Howto & Style Beauty Makeup +10 more Snowball Company",
+      "location": "Hybrid",
+      "job_type": "Full-time",
+      "pay": "$80,000-$100,000 Per Year",
+      "url": "https://ytjobs.co/job/37394",
+      "source": "YTJobs"
+    },
+    {
+      "id": "9dfc25976f036febf5ed03f665fd449ff669f480eec01a1b90dd951f5d041c7b",
+      "title": "Video Editor (AI",
+      "summary": "Video Editor (AI + 2D Explainer Style) Per project Remote Business and Finance Animation Faceless Zen Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/37381",
+      "source": "YTJobs"
     }
   ],
   "Roster": [
-    {
-      "id": "c07f74f9cf2013461c5c6cd34130f4fef9a50405f673b8d76f993bfae5ffd122",
-      "title": "Long-Form Video Editor (YouTube)",
-      "summary": "remote YouTube 43.4K followers We\u2019re looking for a long-form video editing specialist who can craft high-performing, retention-driven content for YouTube. About the ChannelWe create ... $1,000 - $2,000 Education Finan...",
-      "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$1,000 - $2,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster"
-    },
     {
       "id": "5613b60e542ebf7481d3c951e9a187242a9a7a6cd9ba3f076fd3d4dc1aefe5a5",
       "title": "Copywriter",
@@ -589,6 +589,16 @@
       "location": "Remote",
       "job_type": "Freelance",
       "pay": "$300 - $400",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster"
+    },
+    {
+      "id": "f0b931c43180c769542afa8614cfac4f98814412521a53800c7ab8e259e52216",
+      "title": "RetroGamingNow",
+      "summary": "Remote YouTube 671.0K followers About the JobI am seeking a skilled and creative Thumbnail Artist who understands how to capture attention and drive clicks within the gaming mystery ... $50 - $150 Entertainment Gaming",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$50 - $150",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster"
     }
