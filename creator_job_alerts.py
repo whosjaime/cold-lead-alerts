@@ -3,6 +3,7 @@ import hashlib
 import json
 import os
 import re
+from datetime import date
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -15,6 +16,24 @@ PENDING_FILE = Path("pending_jobs.json")
 YTJOBS_WEBHOOK_URL = os.getenv("YTJOBS_WEBHOOK_URL", "")
 ROSTER_WEBHOOK_URL = os.getenv("ROSTER_WEBHOOK_URL", "")
 WEBHOOK_AVATAR_URL = os.getenv("WEBHOOK_AVATAR_URL", "")
+
+MONDAY_API_TOKEN = os.getenv("MONDAY_API_TOKEN", "")
+MONDAY_BOARD_ID = os.getenv("MONDAY_BOARD_ID", "")
+MONDAY_GROUP_ID = os.getenv("MONDAY_GROUP_ID", "")
+
+MONDAY_COL_PAY = os.getenv("MONDAY_COL_PAY", "")
+MONDAY_COL_TYPE = os.getenv("MONDAY_COL_TYPE", "")
+MONDAY_COL_EMAIL = os.getenv("MONDAY_COL_EMAIL", "")
+MONDAY_COL_PRIMARY_SKILL = os.getenv("MONDAY_COL_PRIMARY_SKILL", "")
+MONDAY_COL_PLATFORM = os.getenv("MONDAY_COL_PLATFORM", "")
+MONDAY_COL_SOURCED_FROM = os.getenv("MONDAY_COL_SOURCED_FROM", "")
+MONDAY_COL_CATEGORY = os.getenv("MONDAY_COL_CATEGORY", "")
+MONDAY_COL_COMPANY = os.getenv("MONDAY_COL_COMPANY", "")
+MONDAY_COL_ROLE = os.getenv("MONDAY_COL_ROLE", "")
+MONDAY_COL_LOCATION = os.getenv("MONDAY_COL_LOCATION", "")
+MONDAY_COL_DESCRIPTION = os.getenv("MONDAY_COL_DESCRIPTION", "")
+MONDAY_COL_LINK = os.getenv("MONDAY_COL_LINK", "")
+MONDAY_COL_POST_DATE = os.getenv("MONDAY_COL_POST_DATE", "")
 
 YTJOBS_URL = "https://ytjobs.co/job/search"
 ROSTER_URL = "https://www.joinroster.co/jobs"
@@ -254,6 +273,48 @@ def build_role_line_and_mentions(title: str, summary: str) -> tuple[str, Dict[st
     return role_line, allowed_mentions
 
 
+def monday_company_name(job: Dict[str, Any]) -> str:
+    title = clean_text(job.get("title", ""))
+    source = job.get("source", "")
+
+    if source == "Roster":
+        return clip(title, 255)
+
+    return "Unknown"
+
+
+def monday_primary_skill(job: Dict[str, Any]) -> str:
+    role_key = detect_role_tag(job.get("title", ""), job.get("summary", ""))
+
+    mapping = {
+        "editor": "Editor",
+        "scriptwriter": "Scriptwriter",
+        "thumbnail_designer": "Thumbnail Designer",
+        "strategist": "Strategist",
+        "channel_manager": "Channel Manager",
+        "creative_director": "Creative Director",
+        "production_manager": "Production Manager",
+    }
+
+    return mapping.get(role_key, "Other")
+
+
+def monday_category(job: Dict[str, Any]) -> str:
+    role_key = detect_role_tag(job.get("title", ""), job.get("summary", ""))
+
+    mapping = {
+        "editor": "Editing",
+        "scriptwriter": "Writing",
+        "thumbnail_designer": "Design",
+        "strategist": "Strategy",
+        "channel_manager": "Management",
+        "creative_director": "Creative",
+        "production_manager": "Production",
+    }
+
+    return mapping.get(role_key, "Other")
+
+
 def send_to_discord(job: Dict[str, Any]) -> None:
     source = job.get("source", "Unknown")
     webhook_url = get_webhook_url(source)
@@ -293,6 +354,90 @@ def send_to_discord(job: Dict[str, Any]) -> None:
     response = requests.post(webhook_url, json=payload, timeout=30)
     print(f"Discord response for {source}: {response.status_code}")
     response.raise_for_status()
+
+
+def send_to_monday(job: Dict[str, Any]) -> None:
+    if not MONDAY_API_TOKEN or not MONDAY_BOARD_ID:
+        print("Monday not configured, skipping.")
+        return
+
+    role_title = clip(job.get("title", "New lead"), 255)
+    source = job.get("source", "Unknown")
+    job_type = job.get("job_type", "Not listed")
+    location = job.get("location", "Not listed")
+    pay = job.get("pay", "Not listed")
+    description = clip(job.get("summary", "No description listed."), 1000)
+    url = (job.get("url") or "").strip()
+
+    company = monday_company_name(job)
+    primary_skill = monday_primary_skill(job)
+    category = monday_category(job)
+    post_date = str(date.today())
+
+    column_values = {}
+
+    if MONDAY_COL_PAY:
+        column_values[MONDAY_COL_PAY] = pay
+    if MONDAY_COL_TYPE:
+        column_values[MONDAY_COL_TYPE] = job_type
+    if MONDAY_COL_PLATFORM:
+        column_values[MONDAY_COL_PLATFORM] = source
+    if MONDAY_COL_SOURCED_FROM:
+        column_values[MONDAY_COL_SOURCED_FROM] = source
+    if MONDAY_COL_PRIMARY_SKILL:
+        column_values[MONDAY_COL_PRIMARY_SKILL] = primary_skill
+    if MONDAY_COL_CATEGORY:
+        column_values[MONDAY_COL_CATEGORY] = category
+    if MONDAY_COL_COMPANY:
+        column_values[MONDAY_COL_COMPANY] = company
+    if MONDAY_COL_ROLE:
+        column_values[MONDAY_COL_ROLE] = role_title
+    if MONDAY_COL_LOCATION:
+        column_values[MONDAY_COL_LOCATION] = location
+    if MONDAY_COL_DESCRIPTION:
+        column_values[MONDAY_COL_DESCRIPTION] = description
+    if MONDAY_COL_LINK and url:
+        column_values[MONDAY_COL_LINK] = {"url": url, "text": "Job post"}
+    if MONDAY_COL_POST_DATE:
+        column_values[MONDAY_COL_POST_DATE] = {"date": post_date}
+    if MONDAY_COL_EMAIL:
+        column_values[MONDAY_COL_EMAIL] = {}
+    query = """
+    mutation CreateItem($board_id: ID!, $group_id: String, $item_name: String!, $column_values: JSON!) {
+      create_item(
+        board_id: $board_id,
+        group_id: $group_id,
+        item_name: $item_name,
+        column_values: $column_values
+      ) {
+        id
+      }
+    }
+    """
+
+    variables = {
+        "board_id": str(MONDAY_BOARD_ID),
+        "group_id": MONDAY_GROUP_ID or None,
+        "item_name": role_title,
+        "column_values": json.dumps(column_values),
+    }
+
+    response = requests.post(
+        "https://api.monday.com/v2",
+        headers={
+            "Authorization": MONDAY_API_TOKEN,
+            "Content-Type": "application/json",
+        },
+        json={"query": query, "variables": variables},
+        timeout=30,
+    )
+    response.raise_for_status()
+
+    payload = response.json()
+    if "errors" in payload:
+        raise RuntimeError(f"Monday API error: {payload['errors']}")
+
+    print(f"Monday item created for: {role_title}")
 
 
 def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -422,7 +567,6 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
     total = min(len(raw_blocks), apply_count)
 
     for i in range(total):
-
         apply_locator = page.locator("text=Apply").nth(i)
         detail_url = ROSTER_URL
 
@@ -521,6 +665,7 @@ def post_next_job_for_source(source: str, pending: Dict[str, List[Dict[str, Any]
 
     try:
         send_to_discord(job)
+        send_to_monday(job)
         queue.pop(0)
         return job
     except Exception as e:
