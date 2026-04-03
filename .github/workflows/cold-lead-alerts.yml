@@ -34,19 +34,43 @@ jobs:
           pip install -r requirements.txt
           playwright install chromium
 
-      - name: Debug webhook presence
+      - name: Debug webhook and Monday presence
         env:
           YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
           ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
           MONDAY_API_TOKEN: ${{ secrets.MONDAY_API_TOKEN }}
           MONDAY_BOARD_ID: ${{ secrets.MONDAY_BOARD_ID }}
           MONDAY_GROUP_ID: ${{ secrets.MONDAY_GROUP_ID }}
+          MONDAY_COL_PAY: ${{ secrets.MONDAY_COL_PAY }}
+          MONDAY_COL_TYPE: ${{ secrets.MONDAY_COL_TYPE }}
+          MONDAY_COL_PRIMARY_SKILL: ${{ secrets.MONDAY_COL_PRIMARY_SKILL }}
+          MONDAY_COL_PLATFORM: ${{ secrets.MONDAY_COL_PLATFORM }}
+          MONDAY_COL_SOURCED_FROM: ${{ secrets.MONDAY_COL_SOURCED_FROM }}
+          MONDAY_COL_CATEGORY: ${{ secrets.MONDAY_COL_CATEGORY }}
+          MONDAY_COL_COMPANY: ${{ secrets.MONDAY_COL_COMPANY }}
+          MONDAY_COL_ROLE: ${{ secrets.MONDAY_COL_ROLE }}
+          MONDAY_COL_LOCATION: ${{ secrets.MONDAY_COL_LOCATION }}
+          MONDAY_COL_DESCRIPTION: ${{ secrets.MONDAY_COL_DESCRIPTION }}
+          MONDAY_COL_LINK: ${{ secrets.MONDAY_COL_LINK }}
+          MONDAY_COL_POST_DATE: ${{ secrets.MONDAY_COL_POST_DATE }}
         run: |
           if [ -z "$YTJOBS_WEBHOOK_URL" ]; then echo "YTJOBS_WEBHOOK_URL is missing"; else echo "YTJOBS_WEBHOOK_URL is set"; fi
           if [ -z "$ROSTER_WEBHOOK_URL" ]; then echo "ROSTER_WEBHOOK_URL is missing"; else echo "ROSTER_WEBHOOK_URL is set"; fi
           if [ -z "$MONDAY_API_TOKEN" ]; then echo "MONDAY_API_TOKEN is missing"; else echo "MONDAY_API_TOKEN is set"; fi
           if [ -z "$MONDAY_BOARD_ID" ]; then echo "MONDAY_BOARD_ID is missing"; else echo "MONDAY_BOARD_ID is set"; fi
           if [ -z "$MONDAY_GROUP_ID" ]; then echo "MONDAY_GROUP_ID is missing (optional)"; else echo "MONDAY_GROUP_ID is set"; fi
+          if [ -z "$MONDAY_COL_PAY" ]; then echo "MONDAY_COL_PAY is missing"; else echo "MONDAY_COL_PAY is set"; fi
+          if [ -z "$MONDAY_COL_TYPE" ]; then echo "MONDAY_COL_TYPE is missing"; else echo "MONDAY_COL_TYPE is set"; fi
+          if [ -z "$MONDAY_COL_PRIMARY_SKILL" ]; then echo "MONDAY_COL_PRIMARY_SKILL is missing"; else echo "MONDAY_COL_PRIMARY_SKILL is set"; fi
+          if [ -z "$MONDAY_COL_PLATFORM" ]; then echo "MONDAY_COL_PLATFORM is missing"; else echo "MONDAY_COL_PLATFORM is set"; fi
+          if [ -z "$MONDAY_COL_SOURCED_FROM" ]; then echo "MONDAY_COL_SOURCED_FROM is missing"; else echo "MONDAY_COL_SOURCED_FROM is set"; fi
+          if [ -z "$MONDAY_COL_CATEGORY" ]; then echo "MONDAY_COL_CATEGORY is missing"; else echo "MONDAY_COL_CATEGORY is set"; fi
+          if [ -z "$MONDAY_COL_COMPANY" ]; then echo "MONDAY_COL_COMPANY is missing"; else echo "MONDAY_COL_COMPANY is set"; fi
+          if [ -z "$MONDAY_COL_ROLE" ]; then echo "MONDAY_COL_ROLE is missing"; else echo "MONDAY_COL_ROLE is set"; fi
+          if [ -z "$MONDAY_COL_LOCATION" ]; then echo "MONDAY_COL_LOCATION is missing"; else echo "MONDAY_COL_LOCATION is set"; fi
+          if [ -z "$MONDAY_COL_DESCRIPTION" ]; then echo "MONDAY_COL_DESCRIPTION is missing"; else echo "MONDAY_COL_DESCRIPTION is set"; fi
+          if [ -z "$MONDAY_COL_LINK" ]; then echo "MONDAY_COL_LINK is missing"; else echo "MONDAY_COL_LINK is set"; fi
+          if [ -z "$MONDAY_COL_POST_DATE" ]; then echo "MONDAY_COL_POST_DATE is missing"; else echo "MONDAY_COL_POST_DATE is set"; fi
 
       - name: Run job monitor
         env:
