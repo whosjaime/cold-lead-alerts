@@ -5,7 +5,7 @@ import os
 import re
 from datetime import date
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set
 
 import requests
 from bs4 import BeautifulSoup
@@ -23,6 +23,7 @@ MONDAY_GROUP_ID = os.getenv("MONDAY_GROUP_ID", "")
 
 MONDAY_COL_PAY = os.getenv("MONDAY_COL_PAY", "")
 MONDAY_COL_TYPE = os.getenv("MONDAY_COL_TYPE", "")
+MONDAY_COL_EMAIL = os.getenv("MONDAY_COL_EMAIL", "")
 MONDAY_COL_PRIMARY_SKILL = os.getenv("MONDAY_COL_PRIMARY_SKILL", "")
 MONDAY_COL_PLATFORM = os.getenv("MONDAY_COL_PLATFORM", "")
 MONDAY_COL_SOURCED_FROM = os.getenv("MONDAY_COL_SOURCED_FROM", "")
@@ -56,6 +57,15 @@ JUNK_TITLE_PATTERNS = [
     r"^be a beutiful prod",
     r"^video editing services$",
 ]
+
+EMAIL_RE = re.compile(r"\b[A-Z0-9._%+\-]+@[A-Z0-9.\-]+\.[A-Z]{2,}\b", re.IGNORECASE)
+BAD_EMAIL_PARTS = {
+    "example.com",
+    "email.com",
+    "yourname",
+    "hello@yourcompany",
+    "name@email.com",
+}
 
 
 def load_pending() -> Dict[str, List[Dict[str, Any]]]:
@@ -273,6 +283,10 @@ def build_role_line_and_mentions(title: str, summary: str) -> tuple[str, Dict[st
 
 
 def monday_company_name(job: Dict[str, Any]) -> str:
+    company = clean_text(job.get("company", ""))
+    if company:
+        return clip(company, 255)
+
     title = clean_text(job.get("title", ""))
     source = job.get("source", "")
 
@@ -369,6 +383,184 @@ def extract_numeric_pay(pay: str) -> Optional[float]:
         return None
 
 
+def normalize_email(email: str) -> Optional[str]:
+    email = clean_text(email).strip(".,;:()[]{}<>\"'")
+    lower = email.lower()
+
+    if "@" not in lower:
+        return None
+    if any(bad in lower for bad in BAD_EMAIL_PARTS):
+        return None
+    if lower.endswith((".png", ".jpg", ".jpeg", ".webp", ".svg")):
+        return None
+    return lower
+
+
+def extract_emails_from_text(text: str) -> List[str]:
+    found: List[str] = []
+    for match in EMAIL_RE.findall(text or ""):
+        email = normalize_email(match)
+        if email and email not in found:
+            found.append(email)
+    return found
+
+
+def find_first_public_email_in_html(html: str) -> Optional[str]:
+    soup = BeautifulSoup(html, "html.parser")
+
+    mailtos = []
+    for a in soup.select('a[href^="mailto:"]'):
+        href = a.get("href") or ""
+        candidate = href.replace("mailto:", "").split("?")[0].strip()
+        email = normalize_email(candidate)
+        if email:
+            mailtos.append(email)
+
+    if mailtos:
+        return mailtos[0]
+
+    text_emails = extract_emails_from_text(soup.get_text(" ", strip=True))
+    return text_emails[0] if text_emails else None
+
+
+def find_candidate_links(html: str, base_url: str) -> Dict[str, Optional[str]]:
+    soup = BeautifulSoup(html, "html.parser")
+    links: Dict[str, Optional[str]] = {
+        "website": None,
+        "youtube": None,
+    }
+
+    for a in soup.select("a[href]"):
+        href = (a.get("href") or "").strip()
+        if not href:
+            continue
+
+        full = requests.compat.urljoin(base_url, href)
+        lower = full.lower()
+
+        if not links["youtube"] and ("youtube.com" in lower or "youtu.be" in lower):
+            links["youtube"] = full
+
+        if not links["website"]:
+            if lower.startswith("http") and "joinroster.co" not in lower and "ytjobs.co" not in lower and "youtube.com" not in lower and "youtu.be" not in lower:
+                links["website"] = full
+
+    return links
+
+
+def discover_contact_pages(base_url: str, html: str) -> List[str]:
+    soup = BeautifulSoup(html, "html.parser")
+    found: List[str] = []
+
+    keywords = ("contact", "about", "business", "inquiries", "team")
+    for a in soup.select("a[href]"):
+        href = (a.get("href") or "").strip()
+        text = clean_text(a.get_text(" ", strip=True)).lower()
+        full = requests.compat.urljoin(base_url, href)
+        lower = full.lower()
+
+        if any(k in text for k in keywords) or any(k in lower for k in keywords):
+            if full not in found:
+                found.append(full)
+
+    common_paths = ["/contact", "/contact-us", "/about", "/about-us"]
+    for path in common_paths:
+        candidate = requests.compat.urljoin(base_url, path)
+        if candidate not in found:
+            found.append(candidate)
+
+    return found[:8]
+
+
+def safe_get(url: str, timeout: int = 20) -> Optional[requests.Response]:
+    try:
+        response = requests.get(
+            url,
+            timeout=timeout,
+            headers={
+                "User-Agent": "Mozilla/5.0 (compatible; ManifestMediaLeadBot/1.0)"
+            },
+            allow_redirects=True,
+        )
+        if response.status_code >= 400:
+            return None
+        content_type = (response.headers.get("Content-Type") or "").lower()
+        if "text/html" not in content_type and "application/xhtml+xml" not in content_type:
+            return None
+        return response
+    except Exception:
+        return None
+
+
+def enrich_public_email(job: Dict[str, Any]) -> None:
+    checked_urls: Set[str] = set()
+    sources_checked: List[str] = []
+
+    def try_url(url: Optional[str], label: str) -> Optional[str]:
+        if not url:
+            return None
+        if url in checked_urls:
+            return None
+        checked_urls.add(url)
+        sources_checked.append(f"{label}:{url}")
+
+        response = safe_get(url)
+        if not response:
+            return None
+
+        email = find_first_public_email_in_html(response.text)
+        if email:
+            return email
+
+        return None
+
+    job["email"] = None
+    job["email_source"] = None
+
+    direct_url = (job.get("url") or "").strip()
+    if direct_url:
+        response = safe_get(direct_url)
+        if response:
+            email = find_first_public_email_in_html(response.text)
+            if email:
+                job["email"] = email
+                job["email_source"] = "job_post"
+                print(f"Found public email on job post for {job.get('title')}: {email}")
+                return
+
+            links = find_candidate_links(response.text, direct_url)
+
+            website_url = links.get("website")
+            if website_url:
+                email = try_url(website_url, "website")
+                if email:
+                    job["email"] = email
+                    job["email_source"] = "website"
+                    print(f"Found public email on website for {job.get('title')}: {email}")
+                    return
+
+                website_response = safe_get(website_url)
+                if website_response:
+                    for page_url in discover_contact_pages(website_url, website_response.text):
+                        email = try_url(page_url, "website_contact")
+                        if email:
+                            job["email"] = email
+                            job["email_source"] = "website_contact"
+                            print(f"Found public email on website contact page for {job.get('title')}: {email}")
+                            return
+
+            youtube_url = links.get("youtube")
+            if youtube_url:
+                email = try_url(youtube_url, "youtube")
+                if email:
+                    job["email"] = email
+                    job["email_source"] = "youtube_public"
+                    print(f"Found public email on YouTube page for {job.get('title')}: {email}")
+                    return
+
+    print(f"No public email found for {job.get('title')}. Checked: {sources_checked}")
+
+
 def send_to_discord(job: Dict[str, Any]) -> None:
     source = job.get("source", "Unknown")
     webhook_url = get_webhook_url(source)
@@ -422,6 +614,7 @@ def send_to_monday(job: Dict[str, Any]) -> None:
     pay = job.get("pay", "Not listed")
     description = clip(job.get("summary", "No description listed."), 1000)
     url = (job.get("url") or "").strip()
+    email = clean_text(job.get("email"))
 
     company = monday_company_name(job)
     primary_skill = map_monday_role_label(job)
@@ -471,6 +664,12 @@ def send_to_monday(job: Dict[str, Any]) -> None:
 
     if MONDAY_COL_POST_DATE:
         column_values[MONDAY_COL_POST_DATE] = {"date": post_date}
+
+    if MONDAY_COL_EMAIL and email:
+        column_values[MONDAY_COL_EMAIL] = {
+            "email": email,
+            "text": email,
+        }
 
     query = """
     mutation CreateItem($board_id: ID!, $group_id: String, $item_name: String!, $column_values: JSON!) {
@@ -566,6 +765,9 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
                 "pay": pay,
                 "url": full_url,
                 "source": "YTJobs",
+                "email": None,
+                "email_source": None,
+                "company": None,
             }
         )
 
@@ -679,6 +881,9 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
                 "pay": parsed["pay"],
                 "url": detail_url,
                 "source": "Roster",
+                "email": None,
+                "email_source": None,
+                "company": None,
             }
         )
 
@@ -747,6 +952,11 @@ def post_next_job_for_source(source: str, pending: Dict[str, List[Dict[str, Any]
         return None
 
     queue.pop(0)
+
+    try:
+        enrich_public_email(job)
+    except Exception as e:
+        print(f"Email enrichment failed for {source}: {e}")
 
     try:
         send_to_monday(job)
