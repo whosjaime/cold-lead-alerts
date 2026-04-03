@@ -1,16 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "84e7c427ee5cd59abe5e8705947a9fe99e2339f6efc955020e9827584c4bcd07",
-      "title": "Video Editor",
-      "summary": "Video Editor + Motion Graphics + Youtube Documentaries $8 Per project Remote News & Politics Documentary +6 more Kevin Chan 15 subs",
-      "location": "Remote",
-      "job_type": "Per project",
-      "pay": "$8 Per project",
-      "url": "https://ytjobs.co/job/37358",
-      "source": "YTJobs"
-    },
-    {
       "id": "32b389e72237bc8dd63fdbcdeab2321acfee6d3f0e076d50d9e40848bc73a62b",
       "title": "Experienced Scriptwriters and Storytellers",
       "summary": "Experienced Scriptwriters and Storytellers $200 Per project Remote Film & Animation Gaming Comedy +11 more Wallace 176K subs",
@@ -352,16 +342,6 @@
     }
   ],
   "Roster": [
-    {
-      "id": "a129eaa41fa3f8de1e61a5c6b168e364682a4e3059839c649ace699d266dbe16",
-      "title": "Decoded Genius",
-      "summary": "Remote YouTube We're looking for a top 1% Youtube thumbnail designer for our podcast. This is a long term project, we're building the worlds #1 podcast where we inte... $200 - $2,000 Education",
-      "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$200 - $2,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster"
-    },
     {
       "id": "30df215096ef597ffe96b18cb4f94a2e3b279d59621d199efde4cc3cfe0624ed",
       "title": "SMENATIONS",
@@ -791,6 +771,19 @@
       "pay": "$10 - $200",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster"
+    },
+    {
+      "id": "2ea3742113c3cd8b30cff218565e0ccaaf7ef35965875f6b040d5f06ab9e32f8",
+      "title": "North Idaho Experience",
+      "summary": "Remote YouTube, Spotify 18.0K followers We are looking for a talented and experienced Thumbnail Designer to join our creative team. The ideal candidates primary role will be to create engagi... $125 - $200 Lifestyle &...",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$125 - $200",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
     }
   ]
 }
