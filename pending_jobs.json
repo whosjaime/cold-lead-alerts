@@ -1,16 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "a1a91e9b1f9442c9084f28cda3167b9958a4d93cec1a1e1725f8ecbe5aab6f97",
-      "title": "YouTube Strategist Part-time",
-      "summary": "YouTube Strategist Part-time Remote Gaming Grace Whest 23.6K subs",
-      "location": "Remote",
-      "job_type": "Part-time",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/37392",
-      "source": "YTJobs"
-    },
-    {
       "id": "aa907508b2a125ad5fcb0484238298dbc47e7b01f77f5bf71687fd1999f14062",
       "title": "YouTube Strategist for Educational Channels",
       "summary": "YouTube Strategist for Educational Channels $120,000-$360,000 Per Year . Full-time Remote Education Business and Finance Jake Trinder 3.32K subs",
@@ -341,19 +331,22 @@
       "email": null,
       "email_source": null,
       "company": null
+    },
+    {
+      "id": "a8b9d161f989b4dab855c0395e3ae18feb562640b67c47b23bbc95cb53a31322",
+      "title": "Video Editor for Finance Channel",
+      "summary": "Video Editor for Finance Channel $24,000-$48,000 Per Year . Full-time Remote Howto & Style Education +6 more RoseTree Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$24,000-$48,000 Per Year",
+      "url": "https://ytjobs.co/job/37463",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
     }
   ],
   "Roster": [
-    {
-      "id": "297e7927a179b7915cc02277f8dcd88fc71f32fc5efd4378781a4e786ad5bf26",
-      "title": "Creator Operations Manager (Content + Systems)",
-      "summary": "Remote YouTube, TikTok I run a creator-led media company focused on helping people stop renting their careers and start building assets they own.I\u2019m looking for someone who ... $2,500 - $3,500 Education Finance & Busi...",
-      "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$2,500 - $3,500",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster"
-    },
     {
       "id": "93e8fcdd9a1b09cf9b4db9c1320c6fa99235696f810ba5d074b20052a3eac9cc",
       "title": "YouTube Creative Director",
@@ -796,6 +789,19 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$50 - $100",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "d66caf921efed4cdf4e3fd6d0dd00c3b9978aa242b823b1f43b510598eb92494",
+      "title": "YouTube Content Strategist",
+      "summary": "Remote YouTube, Instagram 285.0K followers About the JobLooking for a YouTube content strategist who can help analyze flop videos, brainstorm video ideas and packaging, help me expand into diff... $800 - $1,500 Educat...",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$800 - $1,500",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster",
       "email": null,
