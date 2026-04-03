@@ -1,16 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "aa907508b2a125ad5fcb0484238298dbc47e7b01f77f5bf71687fd1999f14062",
-      "title": "YouTube Strategist for Educational Channels",
-      "summary": "YouTube Strategist for Educational Channels $120,000-$360,000 Per Year . Full-time Remote Education Business and Finance Jake Trinder 3.32K subs",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$120,000-$360,000 Per Year",
-      "url": "https://ytjobs.co/job/36831",
-      "source": "YTJobs"
-    },
-    {
       "id": "ef470ba2ff807b0a1582c2e8960c4b75d5a997dee60262d1b34f954402b62bb0",
       "title": "Video Editor Per project",
       "summary": "Video Editor Per project Remote Gaming People & Blogs Challenge Nick Pro 26.9M subs",
@@ -344,19 +334,22 @@
       "email": null,
       "email_source": null,
       "company": null
+    },
+    {
+      "id": "9be9be793a36acc9cd6e27166520a5dd7739899a3ca457076a2e57664231a351",
+      "title": "Scriptwriter for 2D Animated History & Comedy Channel",
+      "summary": "Scriptwriter for 2D Animated History & Comedy Channel $300-$600 Per project Remote Comedy Entertainment Education +5 more null Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300-$600 Per project",
+      "url": "https://ytjobs.co/job/37467",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
     }
   ],
   "Roster": [
-    {
-      "id": "93e8fcdd9a1b09cf9b4db9c1320c6fa99235696f810ba5d074b20052a3eac9cc",
-      "title": "YouTube Creative Director",
-      "summary": "Remote YouTube 997 followers Who we are:Four years ago, Dragonfruit set out to bring together some of the most talented visual storytellers, viral video strategists, and big-name ... $100,000 - $150,000 Education Life...",
-      "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$100,000 - $150,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster"
-    },
     {
       "id": "f53112d93d295b32fac049cc8edfe3c985d9227328ee7f87d7989ba5ddea7e88",
       "title": "RKH Media",
@@ -802,6 +795,19 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$800 - $1,500",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "297e7927a179b7915cc02277f8dcd88fc71f32fc5efd4378781a4e786ad5bf26",
+      "title": "Creator Operations Manager (Content + Systems)",
+      "summary": "Remote YouTube, TikTok I run a creator-led media company focused on helping people stop renting their careers and start building assets they own.I\u2019m looking for someone who ... $2,500 - $3,500 Education Finance & Busi...",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$2,500 - $3,500",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster",
       "email": null,
