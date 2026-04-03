@@ -23,7 +23,6 @@ MONDAY_GROUP_ID = os.getenv("MONDAY_GROUP_ID", "")
 
 MONDAY_COL_PAY = os.getenv("MONDAY_COL_PAY", "")
 MONDAY_COL_TYPE = os.getenv("MONDAY_COL_TYPE", "")
-MONDAY_COL_EMAIL = os.getenv("MONDAY_COL_EMAIL", "")
 MONDAY_COL_PRIMARY_SKILL = os.getenv("MONDAY_COL_PRIMARY_SKILL", "")
 MONDAY_COL_PLATFORM = os.getenv("MONDAY_COL_PLATFORM", "")
 MONDAY_COL_SOURCED_FROM = os.getenv("MONDAY_COL_SOURCED_FROM", "")
@@ -283,36 +282,91 @@ def monday_company_name(job: Dict[str, Any]) -> str:
     return "Unknown"
 
 
-def monday_primary_skill(job: Dict[str, Any]) -> str:
+def map_monday_type(job_type: str, pay: str) -> Optional[str]:
+    jt = clean_text(job_type).lower()
+    pay_text = clean_text(pay).lower()
+
+    if "per project" in jt or "per project" in pay_text:
+        return "Per Project"
+    if "/hour" in pay_text or "per hour" in pay_text or "/hr" in pay_text:
+        return "Per Hour"
+    if "salary" in pay_text or "/year" in pay_text or "per year" in pay_text:
+        return "Salary"
+
+    return None
+
+
+def map_monday_platform(source: str) -> Optional[str]:
+    if source in {"YTJobs", "Roster"}:
+        return "YouTube"
+    return "Other"
+
+
+def map_monday_sourced_from(source: str) -> Optional[str]:
+    if source == "YTJobs":
+        return "YTJobs"
+    if source == "Roster":
+        return "Roster"
+    return None
+
+
+def map_monday_category(job: Dict[str, Any]) -> Optional[str]:
+    source = job.get("source", "")
+    title = clean_text(job.get("title", ""))
+    summary = clean_text(job.get("summary", ""))
+    text = f"{title} {summary}".lower()
+
+    if source == "YTJobs":
+        return "YouTuber"
+
+    if source == "Roster":
+        if any(word in text for word in ["agency", "client", "clients"]):
+            return "Agency"
+        if any(word in text for word in ["startup", "saas", "founder"]):
+            return "Startup"
+        if any(word in text for word in ["company", "brand", "business"]):
+            return "Company"
+        return "Creator"
+
+    return None
+
+
+def map_monday_location(location: str) -> Optional[str]:
+    loc = clean_text(location).lower()
+    if loc == "remote":
+        return "Remote"
+    if loc == "hybrid":
+        return "Hybrid"
+    if loc in {"on-site", "onsite", "in-person", "in person"}:
+        return "Onsite"
+    return None
+
+
+def map_monday_role_label(job: Dict[str, Any]) -> str:
     role_key = detect_role_tag(job.get("title", ""), job.get("summary", ""))
 
     mapping = {
-        "editor": "Editor",
+        "editor": "Video Editor",
         "scriptwriter": "Scriptwriter",
         "thumbnail_designer": "Thumbnail Designer",
         "strategist": "Strategist",
         "channel_manager": "Channel Manager",
         "creative_director": "Creative Director",
-        "production_manager": "Production Manager",
+        "production_manager": "Producer",
     }
 
     return mapping.get(role_key, "Other")
 
 
-def monday_category(job: Dict[str, Any]) -> str:
-    role_key = detect_role_tag(job.get("title", ""), job.get("summary", ""))
-
-    mapping = {
-        "editor": "Editing",
-        "scriptwriter": "Writing",
-        "thumbnail_designer": "Design",
-        "strategist": "Strategy",
-        "channel_manager": "Management",
-        "creative_director": "Creative",
-        "production_manager": "Production",
-    }
-
-    return mapping.get(role_key, "Other")
+def extract_numeric_pay(pay: str) -> Optional[float]:
+    text = clean_text(pay)
+    match = re.search(r"\$?(\d[\d,]*)(?:\.\d+)?", text)
+    if not match:
+        return None
+    try:
+        return float(match.group(1).replace(",", ""))
+    except ValueError:
+        return None
 
 
 def send_to_discord(job: Dict[str, Any]) -> None:
@@ -370,38 +424,54 @@ def send_to_monday(job: Dict[str, Any]) -> None:
     url = (job.get("url") or "").strip()
 
     company = monday_company_name(job)
-    primary_skill = monday_primary_skill(job)
-    category = monday_category(job)
+    primary_skill = map_monday_role_label(job)
+    role_position = map_monday_role_label(job)
+    monday_type = map_monday_type(job_type, pay)
+    monday_platform = map_monday_platform(source)
+    monday_sourced_from = map_monday_sourced_from(source)
+    monday_category = map_monday_category(job)
+    monday_location = map_monday_location(location)
     post_date = str(date.today())
+    numeric_pay = extract_numeric_pay(pay)
 
-    column_values = {}
+    column_values: Dict[str, Any] = {}
 
-    if MONDAY_COL_PAY:
-        column_values[MONDAY_COL_PAY] = pay
-    if MONDAY_COL_TYPE:
-        column_values[MONDAY_COL_TYPE] = job_type
-    if MONDAY_COL_PLATFORM:
-        column_values[MONDAY_COL_PLATFORM] = source
-    if MONDAY_COL_SOURCED_FROM:
-        column_values[MONDAY_COL_SOURCED_FROM] = source
-    if MONDAY_COL_PRIMARY_SKILL:
-        column_values[MONDAY_COL_PRIMARY_SKILL] = primary_skill
-    if MONDAY_COL_CATEGORY:
-        column_values[MONDAY_COL_CATEGORY] = category
-    if MONDAY_COL_COMPANY:
+    if MONDAY_COL_PAY and numeric_pay is not None:
+        column_values[MONDAY_COL_PAY] = numeric_pay
+
+    if MONDAY_COL_TYPE and monday_type:
+        column_values[MONDAY_COL_TYPE] = {"labels": [monday_type]}
+
+    if MONDAY_COL_PRIMARY_SKILL and primary_skill:
+        column_values[MONDAY_COL_PRIMARY_SKILL] = {"labels": [primary_skill]}
+
+    if MONDAY_COL_ROLE and role_position:
+        column_values[MONDAY_COL_ROLE] = {"labels": [role_position]}
+
+    if MONDAY_COL_LOCATION and monday_location:
+        column_values[MONDAY_COL_LOCATION] = {"labels": [monday_location]}
+
+    if MONDAY_COL_PLATFORM and monday_platform:
+        column_values[MONDAY_COL_PLATFORM] = {"label": monday_platform}
+
+    if MONDAY_COL_SOURCED_FROM and monday_sourced_from:
+        column_values[MONDAY_COL_SOURCED_FROM] = {"label": monday_sourced_from}
+
+    if MONDAY_COL_CATEGORY and monday_category:
+        column_values[MONDAY_COL_CATEGORY] = {"label": monday_category}
+
+    if MONDAY_COL_COMPANY and company and company != "Unknown":
         column_values[MONDAY_COL_COMPANY] = company
-    if MONDAY_COL_ROLE:
-        column_values[MONDAY_COL_ROLE] = role_title
-    if MONDAY_COL_LOCATION:
-        column_values[MONDAY_COL_LOCATION] = location
+
     if MONDAY_COL_DESCRIPTION:
         column_values[MONDAY_COL_DESCRIPTION] = description
+
     if MONDAY_COL_LINK and url:
         column_values[MONDAY_COL_LINK] = {"url": url, "text": "Job post"}
+
     if MONDAY_COL_POST_DATE:
         column_values[MONDAY_COL_POST_DATE] = {"date": post_date}
-    if MONDAY_COL_EMAIL:
-        column_values[MONDAY_COL_EMAIL] = {}
+
     query = """
     mutation CreateItem($board_id: ID!, $group_id: String, $item_name: String!, $column_values: JSON!) {
       create_item(
@@ -422,6 +492,9 @@ def send_to_monday(job: Dict[str, Any]) -> None:
         "column_values": json.dumps(column_values),
     }
 
+    print("Monday variables:")
+    print(json.dumps(variables, indent=2))
+
     response = requests.post(
         "https://api.monday.com/v2",
         headers={
@@ -431,11 +504,15 @@ def send_to_monday(job: Dict[str, Any]) -> None:
         json={"query": query, "variables": variables},
         timeout=30,
     )
+
+    print(f"Monday status: {response.status_code}")
+    print(f"Monday raw response: {response.text}")
+
     response.raise_for_status()
 
     payload = response.json()
     if "errors" in payload:
-        raise RuntimeError(f"Monday API error: {payload['errors']}")
+        raise RuntimeError(f"Monday API error: {json.dumps(payload['errors'], indent=2)}")
 
     print(f"Monday item created for: {role_title}")
 
@@ -665,12 +742,18 @@ def post_next_job_for_source(source: str, pending: Dict[str, List[Dict[str, Any]
 
     try:
         send_to_discord(job)
-        send_to_monday(job)
-        queue.pop(0)
-        return job
     except Exception as e:
-        print(f"Post failed for {source}, will retry next run: {e}")
+        print(f"Discord post failed for {source}, will retry next run: {e}")
         return None
+
+    queue.pop(0)
+
+    try:
+        send_to_monday(job)
+    except Exception as e:
+        print(f"Monday create failed for {source}: {e}")
+
+    return job
 
 
 async def main() -> None:
