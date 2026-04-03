@@ -43,6 +43,7 @@ jobs:
           MONDAY_GROUP_ID: ${{ secrets.MONDAY_GROUP_ID }}
           MONDAY_COL_PAY: ${{ secrets.MONDAY_COL_PAY }}
           MONDAY_COL_TYPE: ${{ secrets.MONDAY_COL_TYPE }}
+          MONDAY_COL_EMAIL: ${{ secrets.MONDAY_COL_EMAIL }}
           MONDAY_COL_PRIMARY_SKILL: ${{ secrets.MONDAY_COL_PRIMARY_SKILL }}
           MONDAY_COL_PLATFORM: ${{ secrets.MONDAY_COL_PLATFORM }}
           MONDAY_COL_SOURCED_FROM: ${{ secrets.MONDAY_COL_SOURCED_FROM }}
@@ -61,6 +62,7 @@ jobs:
           if [ -z "$MONDAY_GROUP_ID" ]; then echo "MONDAY_GROUP_ID is missing (optional)"; else echo "MONDAY_GROUP_ID is set"; fi
           if [ -z "$MONDAY_COL_PAY" ]; then echo "MONDAY_COL_PAY is missing"; else echo "MONDAY_COL_PAY is set"; fi
           if [ -z "$MONDAY_COL_TYPE" ]; then echo "MONDAY_COL_TYPE is missing"; else echo "MONDAY_COL_TYPE is set"; fi
+          if [ -z "$MONDAY_COL_EMAIL" ]; then echo "MONDAY_COL_EMAIL is missing"; else echo "MONDAY_COL_EMAIL is set"; fi
           if [ -z "$MONDAY_COL_PRIMARY_SKILL" ]; then echo "MONDAY_COL_PRIMARY_SKILL is missing"; else echo "MONDAY_COL_PRIMARY_SKILL is set"; fi
           if [ -z "$MONDAY_COL_PLATFORM" ]; then echo "MONDAY_COL_PLATFORM is missing"; else echo "MONDAY_COL_PLATFORM is set"; fi
           if [ -z "$MONDAY_COL_SOURCED_FROM" ]; then echo "MONDAY_COL_SOURCED_FROM is missing"; else echo "MONDAY_COL_SOURCED_FROM is set"; fi
@@ -84,6 +86,7 @@ jobs:
 
           MONDAY_COL_PAY: ${{ secrets.MONDAY_COL_PAY }}
           MONDAY_COL_TYPE: ${{ secrets.MONDAY_COL_TYPE }}
+          MONDAY_COL_EMAIL: ${{ secrets.MONDAY_COL_EMAIL }}
           MONDAY_COL_PRIMARY_SKILL: ${{ secrets.MONDAY_COL_PRIMARY_SKILL }}
           MONDAY_COL_PLATFORM: ${{ secrets.MONDAY_COL_PLATFORM }}
           MONDAY_COL_SOURCED_FROM: ${{ secrets.MONDAY_COL_SOURCED_FROM }}
