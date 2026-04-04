@@ -1,16 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "082dc7c59b1b53b99f886759b2dffafd5f0a7970d13b627ef6c3d6e77bc9cf47",
-      "title": "YouTube Video Editor \u2013 Channel for Creatives Over",
-      "summary": "YouTube Video Editor \u2013 Channel for Creatives Over 40 Part-time Remote Film & Animation Comedy +6 more Roby Brown 40 subs",
-      "location": "Remote",
-      "job_type": "Part-time",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/37371",
-      "source": "YTJobs"
-    },
-    {
       "id": "337fc4e4eb2f7972210a58e505d92cb135cc940f45ab0d8abc41961130cf8278",
       "title": "Art Director",
       "summary": "Art Director $45,000-$54,000 Per Year . Full-time Remote Autos & Vehicles News & Politics +7 more YTMG LTD Company",
@@ -349,19 +339,22 @@
       "email": null,
       "email_source": null,
       "company": null
+    },
+    {
+      "id": "d043f22f7318c5ac3bbc1808b00bb80b4950d5f21fd1bdbfcdc84dc481af93df",
+      "title": "Minecraft Builder",
+      "summary": "Minecraft Builder $100-$300 Per project Remote Minecraft People & Blogs +2 more Mint 132K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$300 Per project",
+      "url": "https://ytjobs.co/job/37494",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
     }
   ],
   "Roster": [
-    {
-      "id": "267b6243e246f1d114c74656c8ac3948633cba8e823cc8944adf108b4dfbf2de",
-      "title": "Jenny hoyos",
-      "summary": "Remote YouTube, TikTok I just love to edit I have a channel I came here to edit not for money sometimes I\u2019m busy because it\u2019s important but I just want to make people smile.... $10 - $20 Entertainment Kids & Family",
-      "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$10 - $20",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster"
-    },
     {
       "id": "39f61ecf01ce158a358f62e099455b72a023ce8b2d179aa4cff4b2055a4459e6",
       "title": "Creator Evangelist",
@@ -825,6 +818,19 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$70 - $200",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "787445414467cc359a9dd94a6989522d7b928c206569372b04de8c58d7dc71bd",
+      "title": "NORTHSIDESOCIALMEDIAMUSICSPRODUCTIONS",
+      "summary": "Remote YouTube, TikTok Tour Manager/Ticket Sales Manager/Booking Agent: Well-established agencies such as Live Nation, WME, or CAA.Music Producer/Engineer: Explore local rec... $200 - $500 Travel",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$200 - $500",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster",
       "email": null,
