@@ -1,16 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "4a6e13f6b575f98f3b21cf8a4380bbb56062792707998cad261e638d87f24891",
-      "title": "Video Editor",
-      "summary": "Video Editor $18,000-$30,000 Per Year . Full-time Remote Howto & Style Education Marketing +5 more Dan Kieft 201K subs",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$18,000-$30,000 Per Year",
-      "url": "https://ytjobs.co/job/37450",
-      "source": "YTJobs"
-    },
-    {
       "id": "ab25047930af076d5f3851739017f73748c9e3ddf3100fe6d7d144386d4e16f8",
       "title": "Head of Marketing",
       "summary": "Head of Marketing $25-$40 Per Hour . Part-time Remote Marketing Talking head Nischa 2.11M subs",
@@ -309,19 +299,22 @@
       "email": null,
       "email_source": null,
       "company": null
+    },
+    {
+      "id": "35249f9c26aa8d3f41d08d1c3a32b298a932b16bcb934f5c84d69185be229f5c",
+      "title": "\ud83e\udde0 YouTube Strategist Per project",
+      "summary": "\ud83e\udde0 YouTube Strategist Per project Remote Education Tutorial Gaming +3 more Jack Roberts 135K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/36358",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
     }
   ],
   "Roster": [
-    {
-      "id": "293f996ed77470e56d3e48da1d539266329b7ca7a69fad93ad04f292731ab0d6",
-      "title": "Ali Spagnola",
-      "summary": "remote YouTube, TikTok 2.6M followers Ali Spagnola is searching for a high-energy, detail-oriented Social Media & Content Distribution Manager to join a fast-moving team of creatives focus... $1,500 - $2,500 Comedy Sp...",
-      "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$1,500 - $2,500",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster"
-    },
     {
       "id": "8b70492ebd5b6efad6b76d6d6dd064996b7f87d7239234d3f4c19f8ee951e4a7",
       "title": "Lisa's Creative Studio",
@@ -836,6 +829,19 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$400 - $1,500",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "0779fd3dfe32ee5d1dd971f401620e419880e4c9470bbfb7fafdc87ac1c760d3",
+      "title": "Video Essay Scriptwriter",
+      "summary": "Remote YouTube 648.0K followers FULL-TIME VIDEO ESSAY SCRIPTWRITER \u2014 SOAPBOX SERIESABOUT SOAPBOXSoapbox is a new premium video essay series from a 640K+ subscriber political commenta... $3,000 - $5,000 Education",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$3,000 - $5,000",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster",
       "email": null,
