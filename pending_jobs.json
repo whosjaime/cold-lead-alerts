@@ -1,16 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "2c74e53a586b075061a0eb6e4c680609b91bea8af2dede3557e9559f2539d550",
-      "title": "YouTube Editor & Producer Part-time",
-      "summary": "YouTube Editor & Producer Part-time Remote Science & Technology +6 more Brian Casel 50.5K subs",
-      "location": "Remote",
-      "job_type": "Part-time",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/37428",
-      "source": "YTJobs"
-    },
-    {
       "id": "378a7f3994707ecb412c6cdd2c988415d2034e867e32603cb0223dd387d6899f",
       "title": "YouTube Shorts Video Editor",
       "summary": "YouTube Shorts Video Editor $15 Per project Remote Health and Medicine People & Blogs +5 more Dr. Josef 208K subs",
@@ -323,19 +313,35 @@
       "email": null,
       "email_source": null,
       "company": null
+    },
+    {
+      "id": "7eb683dd3477101f06ccc9896d846cbbe89bd615741f270b4a34985c1bd95e00",
+      "title": "Video Editor",
+      "summary": "Video Editor \u2014 Long-Form Travel/Lifestyle Content: www.youtu $12,000-$24,000 Per Year . Full-time Remote Travel & Events Videoblogging +2 more Go With Ali 1.58M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$12,000-$24,000 Per Year",
+      "url": "https://ytjobs.co/job/37543",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "1e1e0ca540e9fbcde39dc73ff2693adc99a05d2a9de1475fe06d6890d052fa5c",
+      "title": "Short-Form Video Editor for Instagram Reels (Fashion",
+      "summary": "Short-Form Video Editor for Instagram Reels (Fashion / Lifes $12,000-$21,600 Per Year . Full-time Remote People & Blogs Shorts GRWM +3 more Jan Miskela 21 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$12,000-$21,600 Per Year",
+      "url": "https://ytjobs.co/job/36685",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
     }
   ],
   "Roster": [
-    {
-      "id": "7db5bc9d59ccde43ac6d2e5ebeeb8f4757f0a89dcc300c843f99723711cc4879",
-      "title": "Jenny's GRWM Video Editor Competition",
-      "summary": "Remote Various 11.3M followers Show off your editing skills and align with Jenny Hoyos' relatable, quirky editing style! Join this unique opportunity to land a long-term position wi... $50 - $150",
-      "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$50 - $150",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster"
-    },
     {
       "id": "8dce4935a8c6caec7d044aa71d244a24817948916a5f6860a83a6b0670629bc9",
       "title": "Community & Social Media Manager",
@@ -838,6 +844,19 @@
       "location": "In-person",
       "job_type": "Not listed",
       "pay": "$46,000 - $70,000",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "323bd8a0a5e87b1048718694ed817cd977ccea6a3eb3483f02433d2cb4590fed",
+      "title": "Senior Digital Video Editor",
+      "summary": "hybrid YouTube, TikTok 1.2M followers Location: Remote/Hybrid (EST or CST Preferred)Type: Full-TimeSoftware: Adobe Premiere Pro, PhotoshopThe RoleWe are looking for a high-output Senior Di... $100,000 - $120,000 Educa...",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$100,000 - $120,000",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster",
       "email": null,
