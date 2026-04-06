@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "a8b9d161f989b4dab855c0395e3ae18feb562640b67c47b23bbc95cb53a31322",
-      "title": "Video Editor for Finance Channel",
-      "summary": "Video Editor for Finance Channel $24,000-$48,000 Per Year . Full-time Remote Howto & Style Education +6 more RoseTree Company",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$24,000-$48,000 Per Year",
-      "url": "https://ytjobs.co/job/37463",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "9be9be793a36acc9cd6e27166520a5dd7739899a3ca457076a2e57664231a351",
       "title": "Scriptwriter for 2D Animated History & Comedy Channel",
       "summary": "Scriptwriter for 2D Animated History & Comedy Channel $300-$600 Per project Remote Comedy Entertainment Education +5 more null Company",
@@ -272,19 +259,22 @@
       "email": null,
       "email_source": null,
       "company": null
+    },
+    {
+      "id": "211bf987a3d0be5fb433972fe6f0da0c3041c196b05e0b480de91c813147b375",
+      "title": "Comedic Multi POV Gaming Video Editor",
+      "summary": "Comedic Multi POV Gaming Video Editor $750-$3,000 Per project Remote . US Gaming Comedy Challenge Gameplay FGTeeV 25.2M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$750-$3,000 Per project",
+      "url": "https://ytjobs.co/job/36722",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
     }
   ],
   "Roster": [
-    {
-      "id": "cb6e1469c1e3f95aeb7bee0510297b55f45daa8f69844c10f12854ac6eb59959",
-      "title": "Ori Pro",
-      "summary": "Remote YouTube, LinkedIn I\u2019m looking for a senior YouTube-native operator to help build a channel from the ground up. This is not a standard editor role.The channel sits at th... $500 - $2,500 Education Lifestyle & Vlogs",
-      "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$500 - $2,500",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster"
-    },
     {
       "id": "8417f34b65aa26e7f5c448d33b451ad57e53ef42a7c39bd4f9e1f486c404a6bc",
       "title": "Blowout Professor",
@@ -813,6 +803,19 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$1,000 - $2,000",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "5613b60e542ebf7481d3c951e9a187242a9a7a6cd9ba3f076fd3d4dc1aefe5a5",
+      "title": "Copywriter",
+      "summary": "remote YouTube, Instagram We\u2019re building a next-gen wireless brand designed for gamers, stream viewers, and the online creator ecosystem. Our audience lives on Twitch, YouTube,... $1,500 - $3,000 Lifestyle & Vlogs Gaming",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1,500 - $3,000",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster",
       "email": null,
