@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "5c7837dfd730c28ffe74f841dad6e3c6e40fdef8508fad35ca263972a55de639",
-      "title": "Assistant",
-      "summary": "Assistant $60,000 Per Year . Full-time Onsite . Atlanta, GA, US Assistant People & Blogs +4 more JustFanum 1.82M subs",
-      "location": "On-site",
-      "job_type": "Full-time",
-      "pay": "$60,000 Per Year",
-      "url": "https://ytjobs.co/job/37596",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "4229da24bab7e26b3626e70d3f3197bad6cd2652bc0f5d852827558e93baea0d",
       "title": "TikTok & short form specialist",
       "summary": "TikTok & short form specialist $6,000-$12,000 Per Year . Full-time Remote Short Movies Gaming Comedy +11 more Drewcutshair 0 subs",
@@ -532,22 +519,48 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "d2679ea5e7be686f247a66fc795a3883d8a78b7917ce40c6c1f2b97286fd3a21",
-      "title": "Dr Sam Robbins",
-      "summary": "Remote YouTube, TikTok 2.1M followers I'm Dr. Sam Robbins, a men's health practitioner with 30+ years of experience and a YouTube channel with 2.1 million subscribers. I'm looking for a ta... $300 - $1,500 Education S...",
+      "id": "2fe6aa8b1061ef6a2eff2a00026752c1725cf49c1e4e4c99ee63dc1ef0b498a8",
+      "title": "YouTube Producer",
+      "summary": "YouTube Producer - Solar & Home Energy Channel $2,000 Per project Remote Science & Technology DIY Tutorial +4 more Footprint Hero with Alex Beale 165K subs",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$300 - $1,500",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Per project",
+      "pay": "$2,000 Per project",
+      "url": "https://ytjobs.co/job/37702",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "aa907508b2a125ad5fcb0484238298dbc47e7b01f77f5bf71687fd1999f14062",
+      "title": "YouTube Strategist for Educational Channels",
+      "summary": "YouTube Strategist for Educational Channels $120,000-$360,000 Per Year . Full-time Remote Education Business and Finance Jake Trinder 3.32K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$120,000-$360,000 Per Year",
+      "url": "https://ytjobs.co/job/36831",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "8c2782f1e41fe87b8090d25f924d4d7e7e59a73fb7556096db453685cbeecfee",
+      "title": "Video Editor Per project",
+      "summary": "Video Editor Per project Remote Paris Power 6.62K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/37703",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "b04fd3aac0cebf30eed88a85ad07a7fd10c9cb7c40772c7977a429067580d8c0",
       "title": "Shopss",
@@ -1153,6 +1166,32 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$2,000 - $4,000",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "865cb7158034d9dafc3d0066f01dc3d88b377af0fc907f42fef5ef7e73afebae",
+      "title": "Short Form Producer (Personal Content)",
+      "summary": "in-person TikTok, Instagram 26.9M followers BIG PICTURE:We\u2019re looking for a creative, trend-savvy Shorts Producer to join our team and create stylish, scroll-stopping content for our founder, La... $3,200 - $6,000 Lif...",
+      "location": "In-person",
+      "job_type": "Not listed",
+      "pay": "$3,200 - $6,000",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "d65d1aae875c773fe67cb186b1bab52034860d8543d6090435576a004c8bc05d",
+      "title": "Dhar Mann Studios",
+      "summary": "Remote YouTube, TikTok 26.9M followers Changing Lives Productions is the in-house video production company of Dhar Mann Studios, the #1 creator of scripted positive content online. With ove... $50 - $100 Entertainment",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$50 - $100",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster",
       "email": null,
