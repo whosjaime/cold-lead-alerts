@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "f4984115cb96221914279717eec2c22466fbce775e80d22d39bb132c8c7c5555",
-      "title": "YouTube Video Editor (Hair Tutorials",
-      "summary": "YouTube Video Editor (Hair Tutorials / Beauty Content) Per project Remote Howto & Style Education Beauty +5 more Hair Tutorials with Bekah 2.31K subs",
-      "location": "Remote",
-      "job_type": "Per project",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/37666",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "bf5fee8688df38bf08d9141485b335c4b7c9b20628ed7d45078470fcdb8c4968",
       "title": "Cinematic Video Editor for Personal Brand (Short-Form &",
       "summary": "Cinematic Video Editor for Personal Brand (Short-Form & Storytelling Focus) $700 Per project Remote Videoblogging Shorts +7 more Michael Aririguzo 103 subs",
@@ -493,22 +480,35 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "2ea3742113c3cd8b30cff218565e0ccaaf7ef35965875f6b040d5f06ab9e32f8",
-      "title": "North Idaho Experience",
-      "summary": "Remote YouTube, Spotify 18.0K followers We are looking for a talented and experienced Thumbnail Designer to join our creative team. The ideal candidates primary role will be to create engagi... $125 - $200 Lifestyle &...",
+      "id": "0c59cc8a136f832be264df68fa3be34ca1da342b78a942802c2febc91f3a663f",
+      "title": "Thumbnail Designer for Fun Interview Show \ud83d\udc95",
+      "summary": "Thumbnail Designer for Fun Interview Show \ud83d\udc95 $100 Per project Remote Music Comedy Shorts Interview Podcast the lana show 46 subs",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$125 - $200",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Per project",
+      "pay": "$100 Per project",
+      "url": "https://ytjobs.co/job/37789",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "345e43ff2c880a9c7743ebedfe2408ff294a732630f2028d89e54310788806bc",
+      "title": "Content Production & Channel Manager",
+      "summary": "Content Production & Channel Manager $58,000-$70,000 Per Year . Full-time Hybrid . Calgary, AB, Canada Education Real Estate Talking head Scripted Chamberlain Real Estate Group 21.7K subs",
+      "location": "Hybrid",
+      "job_type": "Full-time",
+      "pay": "$58,000-$70,000 Per Year",
+      "url": "https://ytjobs.co/job/37788",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "a129eaa41fa3f8de1e61a5c6b168e364682a4e3059839c649ace699d266dbe16",
       "title": "Decoded Genius",
@@ -1114,6 +1114,19 @@
       "location": "Remote",
       "job_type": "Full-time",
       "pay": "$1,000 - $4,000",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "3d962c9d51bbda0d7db538c7554019aa7c344fbd475d2d141c8f007db9dcbcf0",
+      "title": "yapWithJordyn",
+      "summary": "Remote YouTube 1.6K followers I'm looking for a good YouTuber scriptwriter who will look through my raw footage (2-3 hours of footage normally) and tell me where to put voiceovers,... $10 - $200 Film & Animation Enter...",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$10 - $200",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster",
       "email": null,
