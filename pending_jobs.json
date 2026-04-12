@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "b70584ada82402cccef0a479296ea6f77d51c26d62f1f5190c44bc5d2c673a3b",
-      "title": "Video Editor",
-      "summary": "Video Editor - YouTube + Short Form Editors Needed $18,000-$30,000 Per Year . Full-time Remote Andrew Garcia 345 subs",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$18,000-$30,000 Per Year",
-      "url": "https://ytjobs.co/job/37717",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "4fc319fa43f68148dec7597ec232b6e55d78b705353dad68fd6299a4ef250cb4",
       "title": "Graphic Designer",
       "summary": "Graphic Designer - YT thumbnails, Ads, LinkedIn Graphics $14,400-$24,000 Per Year . Full-time Remote Andrew Garcia 345 subs",
@@ -454,22 +441,35 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "d2679ea5e7be686f247a66fc795a3883d8a78b7917ce40c6c1f2b97286fd3a21",
-      "title": "Dr Sam Robbins",
-      "summary": "Remote YouTube, TikTok 2.1M followers I'm Dr. Sam Robbins, a men's health practitioner with 30+ years of experience and a YouTube channel with 2.1 million subscribers. I'm looking for a ta... $300 - $1,500 Education S...",
+      "id": "ebc30b5dda1bb70574316327fee9811694743534367640e6e32fb5cf1b74ccca",
+      "title": "Video Editor for eCommerce ads",
+      "summary": "Video Editor for eCommerce ads $12,000-$15,000 Per Year . Full-time Remote Short Movies Travel & Events +18 more MADO Company",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$300 - $1,500",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Full-time",
+      "pay": "$12,000-$15,000 Per Year",
+      "url": "https://ytjobs.co/job/37871",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "4cd3db4a4852ed20edd574ac5c714de9aaa9912f2a4a46454839ff4a80930fea",
+      "title": "Thumbnail Designer & Title Strategist",
+      "summary": "Thumbnail Designer & Title Strategist $40-$100 Per project Remote Film & Animation Comedy +10 more Mizana Reacts 2.94K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$40-$100 Per project",
+      "url": "https://ytjobs.co/job/37863",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "b04fd3aac0cebf30eed88a85ad07a7fd10c9cb7c40772c7977a429067580d8c0",
       "title": "Shopss",
@@ -1114,6 +1114,19 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$2,000 - $4,000",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "c4fd634946dff31ecb8de217cbfa630985e2cb86844a5975ef88b79fb265dd49",
+      "title": "Head of Video Production & Growth ~ Rutger Bregman",
+      "summary": "Remote YouTube 52.5K followers About UsRutger Bregman \u2014 bestselling author (Utopia for Realists, Humankind, Moral Ambition \u2014 2.5M+ copies, 46 languages), historian, BBC Reith Lectur... $70,000 - $125,000 Education",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$70,000 - $125,000",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster",
       "email": null,
