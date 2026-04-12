@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "337fc4e4eb2f7972210a58e505d92cb135cc940f45ab0d8abc41961130cf8278",
-      "title": "Art Director",
-      "summary": "Art Director $45,000-$54,000 Per Year . Full-time Remote Autos & Vehicles News & Politics +7 more YTMG LTD Company",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$45,000-$54,000 Per Year",
-      "url": "https://ytjobs.co/job/37140",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "e681b86669cfc86f55b0e00680dab3a27b68b3ec271c75640e10c6c85bfc561a",
       "title": "Experienced Video Editor",
       "summary": "Experienced Video Editor $100-$250 Per project Remote People & Blogs News & Politics +10 more Lucid Frame Media Company",
@@ -480,22 +467,22 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "d65d1aae875c773fe67cb186b1bab52034860d8543d6090435576a004c8bc05d",
-      "title": "Dhar Mann Studios",
-      "summary": "Remote YouTube, TikTok 26.9M followers Changing Lives Productions is the in-house video production company of Dhar Mann Studios, the #1 creator of scripted positive content online. With ove... $50 - $100 Entertainment",
+      "id": "f77640c635d0a322d2ce4f10809abf69d0a751f6486f1546f8a194b339dc9cb4",
+      "title": "Video Editor Per project",
+      "summary": "Video Editor Per project Remote Home Improvement People & Blogs +7 more Weekly Home Check 96.9K subs",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$50 - $100",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/37860",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
-    },
+    }
+  ],
+  "Roster": [
     {
       "id": "2b32eddee2c11773abb8a0bf730d2ef653afe5fbfaf620366686497ca58c98de",
       "title": "Senior Editor for Rutger Bregman",
@@ -1140,6 +1127,19 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$2,000 - $4,000",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "865cb7158034d9dafc3d0066f01dc3d88b377af0fc907f42fef5ef7e73afebae",
+      "title": "Short Form Producer (Personal Content)",
+      "summary": "in-person TikTok, Instagram 26.9M followers BIG PICTURE:We\u2019re looking for a creative, trend-savvy Shorts Producer to join our team and create stylish, scroll-stopping content for our founder, La... $3,200 - $6,000 Lif...",
+      "location": "In-person",
+      "job_type": "Not listed",
+      "pay": "$3,200 - $6,000",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster",
       "email": null,
