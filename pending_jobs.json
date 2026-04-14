@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "345e43ff2c880a9c7743ebedfe2408ff294a732630f2028d89e54310788806bc",
-      "title": "Content Production & Channel Manager",
-      "summary": "Content Production & Channel Manager $58,000-$70,000 Per Year . Full-time Hybrid . Calgary, AB, Canada Education Real Estate Talking head Scripted Chamberlain Real Estate Group 21.7K subs",
-      "location": "Hybrid",
-      "job_type": "Full-time",
-      "pay": "$58,000-$70,000 Per Year",
-      "url": "https://ytjobs.co/job/37788",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "4ce11284ae4435abb539ddc59a23ce2e1732b40346a404b6f3ffe96cda759b57",
       "title": "Video Editor Per project",
       "summary": "Video Editor Per project Remote Education Documentary +3 more SWAN Retirement Strategies 13.8K subs",
@@ -558,22 +545,35 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "9654761b4832fe001677b31ca70ff9fab6bb9e89aa3d5df4461987164ff3a101",
-      "title": "Scriptwriter / Researcher",
-      "summary": "Remote YouTube 854.0K followers Up and Atom is a YouTube channel that makes videos about maths and physics for a general audience. We take complex topics and turn them into engaging,... $1,000 - $2,000 Education Maker...",
+      "id": "dd80b6a863e3abbe312401ddbd02254a01267d777fbfc9d74a65d8ef6996a4db",
+      "title": "Scriptwriter",
+      "summary": "Scriptwriter | Documentary Style Per project Remote Documentary Crime +5 more Visual Venture 1.57M subs",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$1,000 - $2,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/33667",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "ee22e4988c050ebb7a73f0f733565d06810bb71ab5f0e3f2a99a28af155d4be6",
+      "title": "Video Editor",
+      "summary": "Video Editor | Documentary Style Per project Remote Documentary Internet Culture +4 more Visual Venture 1.57M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/37221",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "5613b60e542ebf7481d3c951e9a187242a9a7a6cd9ba3f076fd3d4dc1aefe5a5",
       "title": "Copywriter",
@@ -1218,6 +1218,19 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$50 - $150",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "c07f74f9cf2013461c5c6cd34130f4fef9a50405f673b8d76f993bfae5ffd122",
+      "title": "Long-Form Video Editor (YouTube)",
+      "summary": "remote YouTube 44.1K followers We\u2019re looking for a long-form video editing specialist who can craft high-performing, retention-driven content for YouTube. About the ChannelWe create ... $1,000 - $2,000 Education Finan...",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1,000 - $2,000",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster",
       "email": null,
