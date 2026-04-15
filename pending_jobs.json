@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "2b1cad2f49f6a82eb05d0d8328d548326fac130976d00781136a8f6048342051",
-      "title": "Video Editor",
-      "summary": "Video Editor - Professional, warm, high retention $5-$20 Per Hour . Part-time Remote Education Marketing +4 more Data Coach Claire 1.39K subs",
-      "location": "Remote",
-      "job_type": "Part-time",
-      "pay": "$5-$20 Per Hour",
-      "url": "https://ytjobs.co/job/37825",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "54fdb6d80eccc11148a910d905fd91ddd65483127231376b71852e51c1bba2c3",
       "title": "Podcast Trailer Editor Full-time",
       "summary": "Podcast Trailer Editor Full-time Remote Finance Gaming Podcast +2 more Words of Rizdom 480K subs",
@@ -558,22 +545,35 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "a129eaa41fa3f8de1e61a5c6b168e364682a4e3059839c649ace699d266dbe16",
-      "title": "Decoded Genius",
-      "summary": "Remote YouTube We're looking for a top 1% Youtube thumbnail designer for our podcast. This is a long term project, we're building the worlds #1 podcast where we inte... $200 - $2,000 Education",
-      "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$200 - $2,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "id": "da45c83af64bb319951d483f88ed8b982cf74d92f2e9c51d356651a95c0651ad",
+      "title": "Video Editor",
+      "summary": "Video Editor $80,000-$100,000 Per Year . Full-time Onsite . Austin, TX, US Long-form storytelling People & Blogs +5 more Limitless YT Corp Company",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "$80,000-$100,000 Per Year",
+      "url": "https://ytjobs.co/job/37956",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "0caa4b950fa7207ad4c7045b44368f43e9f6654dd1f3f03de31b62c48aa2ac42",
+      "title": "Video Editor",
+      "summary": "Video Editor - Minecraft Hardcore & 100 Days Per project Remote Minecraft Gameplay bentheboss 289K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/37997",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "30df215096ef597ffe96b18cb4f94a2e3b279d59621d199efde4cc3cfe0624ed",
       "title": "SMENATIONS",
@@ -1244,6 +1244,19 @@
       "location": "Remote",
       "job_type": "Not listed",
       "pay": "$10 - $200",
+      "url": "https://www.joinroster.co/jobs",
+      "source": "Roster",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "2ea3742113c3cd8b30cff218565e0ccaaf7ef35965875f6b040d5f06ab9e32f8",
+      "title": "North Idaho Experience",
+      "summary": "Remote YouTube, Spotify 18.0K followers We are looking for a talented and experienced Thumbnail Designer to join our creative team. The ideal candidates primary role will be to create engagi... $125 - $200 Lifestyle &...",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$125 - $200",
       "url": "https://www.joinroster.co/jobs",
       "source": "Roster",
       "email": null,
