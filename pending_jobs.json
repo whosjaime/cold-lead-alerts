@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "ebc30b5dda1bb70574316327fee9811694743534367640e6e32fb5cf1b74ccca",
-      "title": "Video Editor for eCommerce ads",
-      "summary": "Video Editor for eCommerce ads $12,000-$15,000 Per Year . Full-time Remote Short Movies Travel & Events +18 more MADO Company",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$12,000-$15,000 Per Year",
-      "url": "https://ytjobs.co/job/37871",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "4cd3db4a4852ed20edd574ac5c714de9aaa9912f2a4a46454839ff4a80930fea",
       "title": "Thumbnail Designer & Title Strategist",
       "summary": "Thumbnail Designer & Title Strategist $40-$100 Per project Remote Film & Animation Comedy +10 more Mizana Reacts 2.94K subs",
@@ -623,22 +610,35 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "f53112d93d295b32fac049cc8edfe3c985d9227328ee7f87d7989ba5ddea7e88",
-      "title": "RKH Media",
-      "summary": "Remote YouTube Hey, can you help me with script likehttps://www.youtube.com/@InternetAnarchisthttps://www.youtube.com/@IndartOnlinehttps://www.youtube.com/@NeevsOffi... $100 - $150 Entertainment",
+      "id": "ytjobs_37140",
+      "title": "Art Director",
+      "summary": "Art Director $45,000-$54,000 Per Year . Full-time Remote Autos & Vehicles News & Politics +7 more YTMG LTD Company",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$100 - $150",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Full-time",
+      "pay": "$45,000-$54,000 Per Year",
+      "url": "https://ytjobs.co/job/37140",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "ytjobs_36920",
+      "title": "Senior Video Editor, AI Characters",
+      "summary": "Senior Video Editor, AI Characters $80,000-$150,000 Per Year . Full-time Remote . US Videoblogging People & Blogs +9 more Mindalter Studio Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$80,000-$150,000 Per Year",
+      "url": "https://ytjobs.co/job/36920",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "b557fe9f0f9a68794208509c120caadd299c12054311d856b6590f7097256df6",
       "title": "Thumbnail Strategist",
