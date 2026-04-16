@@ -442,7 +442,13 @@ def find_candidate_links(html: str, base_url: str) -> Dict[str, Optional[str]]:
             links["youtube"] = full
 
         if not links["website"]:
-            if lower.startswith("http") and "joinroster.co" not in lower and "ytjobs.co" not in lower and "youtube.com" not in lower and "youtu.be" not in lower:
+            if (
+                lower.startswith("http")
+                and "joinroster.co" not in lower
+                and "ytjobs.co" not in lower
+                and "youtube.com" not in lower
+                and "youtu.be" not in lower
+            ):
                 links["website"] = full
 
     return links
@@ -546,7 +552,9 @@ def enrich_public_email(job: Dict[str, Any]) -> None:
                         if email:
                             job["email"] = email
                             job["email_source"] = "website_contact"
-                            print(f"Found public email on website contact page for {job.get('title')}: {email}")
+                            print(
+                                f"Found public email on website contact page for {job.get('title')}: {email}"
+                            )
                             return
 
             youtube_url = links.get("youtube")
@@ -730,6 +738,18 @@ def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return cleaned
 
 
+def extract_ytjobs_stable_id(full_url: str) -> str:
+    match = re.search(r"/job/(\d+)", full_url)
+    if match:
+        return f"ytjobs_{match.group(1)}"
+    return f"ytjobs_{hashlib.sha256(full_url.encode('utf-8')).hexdigest()}"
+
+
+def extract_roster_stable_id(detail_url: str) -> str:
+    normalized = clean_text(detail_url).rstrip("/")
+    return f"roster_{hashlib.sha256(normalized.encode('utf-8')).hexdigest()}"
+
+
 async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
     await page.goto(YTJOBS_URL, wait_until="networkidle")
     html = await page.content()
@@ -757,7 +777,7 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
 
         jobs.append(
             {
-                "id": make_id("ytjobs", role, full_url),
+                "id": extract_ytjobs_stable_id(full_url),
                 "title": role,
                 "summary": description,
                 "location": location,
@@ -873,7 +893,7 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
 
         jobs.append(
             {
-                "id": make_id("roster", parsed["title"], detail_url),
+                "id": extract_roster_stable_id(detail_url),
                 "title": parsed["title"],
                 "summary": parsed["summary"],
                 "location": parsed["location"],
@@ -921,17 +941,30 @@ def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], pending: Dict[str, List[Dic
         source: {job.get("id") for job in pending.get(source, [])}
         for source in VALID_SOURCES
     }
+    pending_urls = {
+        source: {clean_text(job.get("url", "")).rstrip("/") for job in pending.get(source, [])}
+        for source in VALID_SOURCES
+    }
     added = {source: 0 for source in VALID_SOURCES}
 
     for job in all_jobs:
         source = job.get("source")
         if source not in pending_ids:
             continue
+
+        normalized_url = clean_text(job.get("url", "")).rstrip("/")
+
         if job["id"] in pending_ids[source]:
+            continue
+
+        if normalized_url and normalized_url in pending_urls[source]:
+            print(f"Skipped duplicate URL already queued: {job['title']} ({source}) | {normalized_url}")
             continue
 
         pending[source].append(job)
         pending_ids[source].add(job["id"])
+        if normalized_url:
+            pending_urls[source].add(normalized_url)
         added[source] += 1
         print(f"Queued: {job['title']} ({source})")
 
