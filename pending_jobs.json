@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "4cd3db4a4852ed20edd574ac5c714de9aaa9912f2a4a46454839ff4a80930fea",
-      "title": "Thumbnail Designer & Title Strategist",
-      "summary": "Thumbnail Designer & Title Strategist $40-$100 Per project Remote Film & Animation Comedy +10 more Mizana Reacts 2.94K subs",
-      "location": "Remote",
-      "job_type": "Per project",
-      "pay": "$40-$100 Per project",
-      "url": "https://ytjobs.co/job/37863",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "7130ac50fe52d49065d6eabbb11aec31cd7b8ec26eb7931b903ae3b0ab357ab8",
       "title": "Lead Video Editor \u2013 Movie Reactions (Context Specialist)",
       "summary": "Lead Video Editor \u2013 Movie Reactions (Context Specialist) $100-$150 Per project Remote Film & Animation Comedy +8 more Mizana Reacts 2.94K subs",
@@ -636,22 +623,35 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "b557fe9f0f9a68794208509c120caadd299c12054311d856b6590f7097256df6",
-      "title": "Thumbnail Strategist",
-      "summary": "hybrid YouTube 19.7M followers The Unspeakable Vlogs team is in the process of expanding our internal thumbnail team. As we continue to scale various channels in 2026, we are lookin... $40,000 - $50,000 Lifestyle & Vl...",
-      "location": "Hybrid",
-      "job_type": "Not listed",
-      "pay": "$40,000 - $50,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "id": "ytjobs_38056",
+      "title": "Short Form Video Editor",
+      "summary": "Short Form Video Editor $75 Per project Remote Videoblogging People & Blogs +13 more Taher Hassanali 62.1K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$75 Per project",
+      "url": "https://ytjobs.co/job/38056",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "ytjobs_38054",
+      "title": "Cinematic Editor needed for Elite True Crime channel",
+      "summary": "Cinematic Editor needed for Elite True Crime channel $250-$300 Per project Remote Documentary Crime True Crime +2 more Ethan Bradberry 25.4K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$250-$300 Per project",
+      "url": "https://ytjobs.co/job/38054",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "9320742d2c3ec8340460f1b23f950a2138c11f31daddfb6d16a3a71f1649b700",
       "title": "Short Form Video Editor",
