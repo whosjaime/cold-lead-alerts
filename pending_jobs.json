@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "af21814e7f02964917a48883a6d2f9d2591e6307f9ea6048445d3b68b5df0838",
-      "title": "Video Editor Needed",
-      "summary": "Video Editor Needed $300 Per project Remote Gaming Comedy Challenge Scripted Difficult Gamerz 4.54K subs",
-      "location": "Remote",
-      "job_type": "Per project",
-      "pay": "$300 Per project",
-      "url": "https://ytjobs.co/job/37925",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "3da533ab8ba0bcabb87b9c6180f42c7b4bd749b92299b1f35e2fc5dd1692280b",
       "title": "Editor Opportunity",
       "summary": "Editor Opportunity \u2014 Charisma on Command (7M+ subs) Part-time Remote Film & Animation People & Blogs +10 more Charisma on Command 7.01M subs",
@@ -623,22 +610,35 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "c4fd634946dff31ecb8de217cbfa630985e2cb86844a5975ef88b79fb265dd49",
-      "title": "Head of Video Production & Growth ~ Rutger Bregman",
-      "summary": "Remote YouTube 52.5K followers About UsRutger Bregman \u2014 bestselling author (Utopia for Realists, Humankind, Moral Ambition \u2014 2.5M+ copies, 46 languages), historian, BBC Reith Lectur... $70,000 - $125,000 Education",
+      "id": "ytjobs_38097",
+      "title": "Military",
+      "summary": "Military - Defense Video Editor and Creator Full-time Remote News & Politics +11 more Harry J. Kazianis 65 subs",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$70,000 - $125,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38097",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "ytjobs_38096",
+      "title": "2-Person Production Team/Fixer (Warsaw, Poland)",
+      "summary": "2-Person Production Team/Fixer (Warsaw, Poland) $400-$450 Per project Onsite . Warsaw, Poland Breaking Stories 8 subs",
+      "location": "On-site",
+      "job_type": "Per project",
+      "pay": "$400-$450 Per project",
+      "url": "https://ytjobs.co/job/38096",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "d2679ea5e7be686f247a66fc795a3883d8a78b7917ce40c6c1f2b97286fd3a21",
       "title": "Dr Sam Robbins",
