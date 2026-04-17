@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "5c7837dfd730c28ffe74f841dad6e3c6e40fdef8508fad35ca263972a55de639",
-      "title": "Assistant",
-      "summary": "Assistant $60,000 Per Year . Full-time Onsite . Atlanta, GA, US Assistant People & Blogs +4 more JustFanum 1.82M subs",
-      "location": "On-site",
-      "job_type": "Full-time",
-      "pay": "$60,000 Per Year",
-      "url": "https://ytjobs.co/job/37596",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "056e112a7f4080cd8f574fc93ff0d1389458579e8333d37b057300d51935ecf5",
       "title": "Administrative Operations Analyst (Remote)",
       "summary": "Administrative Operations Analyst (Remote) $75,000-$120,000 Per Year . Full-time Remote . US Airspool Company",
@@ -623,22 +610,22 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "d65d1aae875c773fe67cb186b1bab52034860d8543d6090435576a004c8bc05d",
-      "title": "Dhar Mann Studios",
-      "summary": "Remote YouTube, TikTok 26.9M followers Changing Lives Productions is the in-house video production company of Dhar Mann Studios, the #1 creator of scripted positive content online. With ove... $50 - $100 Entertainment",
+      "id": "ytjobs_37965",
+      "title": "Video Editor for Female Self-Improvement YouTube Channel Per",
+      "summary": "Video Editor for Female Self-Improvement YouTube Channel Per project Remote People & Blogs Education +3 more Veronika Mark 90.7K subs",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$50 - $100",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/37965",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
-    },
+    }
+  ],
+  "Roster": [
     {
       "id": "2b32eddee2c11773abb8a0bf730d2ef653afe5fbfaf620366686497ca58c98de",
       "title": "Senior Editor for Rutger Bregman",
