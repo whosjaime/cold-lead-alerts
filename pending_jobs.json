@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "3879e19ea3ec759479c18332040b1483bebd5411d12ad699863b4864f70c3c45",
-      "title": "Short Form Video Editor",
-      "summary": "Short Form Video Editor $10,000-$30,000 Per Year . Full-time Remote Science & Technology Talking head Sean No Code 1.14K subs",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$10,000-$30,000 Per Year",
-      "url": "https://ytjobs.co/job/37936",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "1af21ba540228c62a58dc509445d05936ad5482ce0c9fcb0e7bca9e21b599b91",
       "title": "YouTube Strategist",
       "summary": "YouTube Strategist $72,000-$108,000 Per Year . Full-time Remote Travel & Events People & Blogs +11 more Breaking and Building Leaders 1.3K subs",
@@ -649,22 +636,22 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "db4a14df742c942f9fddea0212cb7aa7aa59a8c2bc015ab39833d19bdb137417",
-      "title": "linkedin",
-      "summary": "Remote Apple Podcasts Senior jobSenior jobSenior jobSenior jobSenior jobSenior jobSenior job... $1,100 - $1,200 Tech & Startup",
-      "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$1,100 - $1,200",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "id": "ytjobs_38118",
+      "title": "Social Media Strategist",
+      "summary": "Social Media Strategist $65,000-$75,000 Per Year . Full-time Hybrid . Philadelphia, PA, US Videoblogging Entertainment +15 more aCreative Studio Company",
+      "location": "Hybrid",
+      "job_type": "Full-time",
+      "pay": "$65,000-$75,000 Per Year",
+      "url": "https://ytjobs.co/job/38118",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
-    },
+    }
+  ],
+  "Roster": [
     {
       "id": "03126d9cf1c9ff6f40829b2aa274ff35df182c3deeb9d60c93fa2eafddd3ffee",
       "title": "Video Editor (Short-Form Content)",
