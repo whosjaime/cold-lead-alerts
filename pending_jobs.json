@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "dd80b6a863e3abbe312401ddbd02254a01267d777fbfc9d74a65d8ef6996a4db",
-      "title": "Scriptwriter",
-      "summary": "Scriptwriter | Documentary Style Per project Remote Documentary Crime +5 more Visual Venture 1.57M subs",
-      "location": "Remote",
-      "job_type": "Per project",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/33667",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "ee22e4988c050ebb7a73f0f733565d06810bb71ab5f0e3f2a99a28af155d4be6",
       "title": "Video Editor",
       "summary": "Video Editor | Documentary Style Per project Remote Documentary Internet Culture +4 more Visual Venture 1.57M subs",
@@ -636,22 +623,22 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "1d4b5029fcc892ce08a90b5c7d03104e6798c57f87814e309bd7bab48c6cbeaa",
-      "title": "Thumbnail designer for a new high-production investigative channel",
-      "summary": "Remote YouTube 199.0K followers Building a new channel similar to Johnny Harris, Max Fisher, Search Party. Looking for a thumbnail designer for our first video. ... $500 - $2,000 Education",
+      "id": "ytjobs_38119",
+      "title": "Remote Graphics Editor",
+      "summary": "Remote Graphics Editor $50,000-$70,000 Per Year . Full-time Hybrid . Austin, TX, US Entertainment Challenges +5 more Limitless YT Corp Company",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$500 - $2,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Full-time",
+      "pay": "$50,000-$70,000 Per Year",
+      "url": "https://ytjobs.co/job/38119",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
-    },
+    }
+  ],
+  "Roster": [
     {
       "id": "881aeb1a29608bca03d3abcfe397758a4afee83fcff9949768c5139dd7487c22",
       "title": "Redux Payments",
