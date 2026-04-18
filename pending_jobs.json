@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "ee22e4988c050ebb7a73f0f733565d06810bb71ab5f0e3f2a99a28af155d4be6",
-      "title": "Video Editor",
-      "summary": "Video Editor | Documentary Style Per project Remote Documentary Internet Culture +4 more Visual Venture 1.57M subs",
-      "location": "Remote",
-      "job_type": "Per project",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/37221",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "7577b0db2f452183d8460617c338259229a2620542436cf6a7fb9ea49ec72106",
       "title": "Video Editor",
       "summary": "Video Editor - Football Per project Remote Sports Shorts People & Blogs Education Futbol Media 2.27M subs",
@@ -636,22 +623,22 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "881aeb1a29608bca03d3abcfe397758a4afee83fcff9949768c5139dd7487c22",
-      "title": "Redux Payments",
-      "summary": "Remote LinkedIn Redux Payments is looking for a freelance ghostwriter to write LinkedIn content for our founder.We're a SaaS company selling to consumer software foun... $1,500 - $3,000 Tech & Startup Finance & Business",
-      "location": "Remote",
-      "job_type": "Freelance",
-      "pay": "$1,500 - $3,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "id": "ytjobs_38123",
+      "title": "YouTube Producer (NYC)",
+      "summary": "YouTube Producer (NYC) $60,000-$75,000 Per Year . Full-time Onsite . New York City, NY, US Gaming Comedy Shorts +7 more KJ1 136K subs",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "$60,000-$75,000 Per Year",
+      "url": "https://ytjobs.co/job/38123",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
-    },
+    }
+  ],
+  "Roster": [
     {
       "id": "764a3ef9a77ffa8108c13c51d023effbe18b14d8c1d87e8c54bc35f6a10975d5",
       "title": "Lead Video Editor",
