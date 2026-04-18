@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "1f64dfffb0662beb43fb670ba93ea994921a40cf2d15a7bde748e42663479c66",
-      "title": "Video Editor",
-      "summary": "Video Editor $24,000-$36,000 Per Year . Full-time Remote Film & Animation People & Blogs +16 more Breaking and Building Leaders 1.3K subs",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$24,000-$36,000 Per Year",
-      "url": "https://ytjobs.co/job/37623",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "3879e19ea3ec759479c18332040b1483bebd5411d12ad699863b4864f70c3c45",
       "title": "Short Form Video Editor",
       "summary": "Short Form Video Editor $10,000-$30,000 Per Year . Full-time Remote Science & Technology Talking head Sean No Code 1.14K subs",
@@ -610,22 +597,61 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "fe639b5fe0ecbe8c67f184242439239dc9ae60f73429dea074e81256fefd79ef",
-      "title": "YouTube Executive Manager",
-      "summary": "Remote YouTube 138.0K followers Hello! We are looking for a YouTube Executive Manager to manage our multi-channel network, manage daily operations, lead our team, and help grow our Y... $1,000 - $1,500 Film & Animatio...",
+      "id": "ytjobs_38117",
+      "title": "Video Editor",
+      "summary": "Video Editor $500-$1,000 Per Hour . Part-time Remote People & Blogs Dr. Jennifer Roelands, Perimenopause, Hormones 28K subs",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$1,000 - $1,500",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Part-time",
+      "pay": "$500-$1,000 Per Hour",
+      "url": "https://ytjobs.co/job/38117",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "ytjobs_38111",
+      "title": "Video Editor (Long-Form True Crime",
+      "summary": "Video Editor (Long-Form True Crime / Dark Internet Mystery) $300-$500 Per project Remote Documentary Horror Crime Music +16 more Chrismatic 290 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300-$500 Per project",
+      "url": "https://ytjobs.co/job/38111",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "ytjobs_38109",
+      "title": "2D Animator",
+      "summary": "2D Animator \u2014 Adobe Animate (YouTube Shorts) $13,500-$18,000 Per Year . Full-time Remote Film & Animation Entertainment +10 more Tales of Laws 145K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$13,500-$18,000 Per Year",
+      "url": "https://ytjobs.co/job/38109",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "ytjobs_37798",
+      "title": "Reacts Clip Aggregator Per project",
+      "summary": "Reacts Clip Aggregator Per project Remote Sports Gaming Comedy +6 more RGS 221K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/37798",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "db4a14df742c942f9fddea0212cb7aa7aa59a8c2bc015ab39833d19bdb137417",
       "title": "linkedin",
