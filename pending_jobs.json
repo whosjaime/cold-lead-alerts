@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "259ee39a86fb8d83d467e8aedcefaf5fbbdea9ca441252c4f883fb04e754410d",
-      "title": "Channel Manager (Full time) Full-time",
-      "summary": "Channel Manager (Full time) Full-time Remote Business and Finance People & Blogs +2 more GrowYourRealEstateChannel Company",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/37980",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "cd4a64ff3f90a61654fe6fd03253456d00e0b4ebe9708a7d96589c7ba86d9bad",
       "title": "Online Chat Representative (Remote)",
       "summary": "Online Chat Representative (Remote) $40,000-$60,000 Per Year . Full-time Remote . US Airspool Company",
@@ -558,22 +545,35 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "9654761b4832fe001677b31ca70ff9fab6bb9e89aa3d5df4461987164ff3a101",
-      "title": "Scriptwriter / Researcher",
-      "summary": "Remote YouTube 854.0K followers Up and Atom is a YouTube channel that makes videos about maths and physics for a general audience. We take complex topics and turn them into engaging,... $1,000 - $2,000 Education Maker...",
+      "id": "ytjobs_38139",
+      "title": "Shorts Scriptwriter for YouTube Shorts Automation Agency",
+      "summary": "Shorts Scriptwriter for YouTube Shorts Automation Agency $6-$6 Per project Remote Shorts Film & Animation Music +6 more AOM Media Company",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$1,000 - $2,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Per project",
+      "pay": "$6-$6 Per project",
+      "url": "https://ytjobs.co/job/38139",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "ytjobs_38081",
+      "title": "Video Editor",
+      "summary": "Video Editor $100-$200 Per project Remote Entertainment Animation brainrot 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$200 Per project",
+      "url": "https://ytjobs.co/job/38081",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "5613b60e542ebf7481d3c951e9a187242a9a7a6cd9ba3f076fd3d4dc1aefe5a5",
       "title": "Copywriter",
