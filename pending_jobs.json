@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "c50668a6486a0eb5066fee2ffce0830d5e70e4951ee19b97d270b7b175b56fd9",
-      "title": "We're Hiring",
-      "summary": "We're Hiring: Youtube Coach $48,000-$72,000 Per Year . Full-time Remote Shane Hummus 1.53M subs",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$48,000-$72,000 Per Year",
-      "url": "https://ytjobs.co/job/34955",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "259ee39a86fb8d83d467e8aedcefaf5fbbdea9ca441252c4f883fb04e754410d",
       "title": "Channel Manager (Full time) Full-time",
       "summary": "Channel Manager (Full time) Full-time Remote Business and Finance People & Blogs +2 more GrowYourRealEstateChannel Company",
@@ -558,22 +545,22 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "c07f74f9cf2013461c5c6cd34130f4fef9a50405f673b8d76f993bfae5ffd122",
-      "title": "Long-Form Video Editor (YouTube)",
-      "summary": "remote YouTube 44.1K followers We\u2019re looking for a long-form video editing specialist who can craft high-performing, retention-driven content for YouTube. About the ChannelWe create ... $1,000 - $2,000 Education Finan...",
+      "id": "ytjobs_38126",
+      "title": "Video Editor for Productivity App content",
+      "summary": "Video Editor for Productivity App content $350-$700 Per project Remote Entertainment Howto & Style +4 more cjg 0 subs",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$1,000 - $2,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Per project",
+      "pay": "$350-$700 Per project",
+      "url": "https://ytjobs.co/job/38126",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
-    },
+    }
+  ],
+  "Roster": [
     {
       "id": "9654761b4832fe001677b31ca70ff9fab6bb9e89aa3d5df4461987164ff3a101",
       "title": "Scriptwriter / Researcher",
