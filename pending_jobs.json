@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "e07c120de80c30997a6f5aaeabb067776a89022b990b153911be53f30f8443b4",
-      "title": "Story Editor",
-      "summary": "Story Editor $300 Per project Remote Videoblogging News & Politics +7 more Woke up thinking about 0 subs",
-      "location": "Remote",
-      "job_type": "Per project",
-      "pay": "$300 Per project",
-      "url": "https://ytjobs.co/job/38031",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "97be7a5a229ca2f251f73854676175775444f55b8a01add3c77521b6b9be62de",
       "title": "Video Editor for DTC Supplement Brand Per project",
       "summary": "Video Editor for DTC Supplement Brand Per project Remote Marketing Entertainment +3 more Neurostead Company",
@@ -480,22 +467,35 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "ba9bc550fea4eb8c794b7472fbb2ac69f6217c530e0209064408cd3df97316c2",
-      "title": "JoelBergs Entertainment",
-      "summary": "Remote YouTube I\u2019m a full-time content creator with:11M+ TikTok followers600K+ Instagram followersI\u2019m now scaling into YouTube with two channels:Main channel (reacti... $1,000 - $4,000 Entertainment",
+      "id": "ytjobs_38150",
+      "title": "Video Editor",
+      "summary": "Video Editor - Guitar Teaching Channel (Shorts + Long) $20-$50 Per Hour . Part-time Remote Music Education Gaming Comedy +8 more RoyZivMusic 611K subs",
       "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$1,000 - $4,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Part-time",
+      "pay": "$20-$50 Per Hour",
+      "url": "https://ytjobs.co/job/38150",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "ytjobs_38149",
+      "title": "Creative Director Full-time",
+      "summary": "Creative Director Full-time Remote Comedy Entertainment Shorts +12 more Feral Agency Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38149",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "3d962c9d51bbda0d7db538c7554019aa7c344fbd475d2d141c8f007db9dcbcf0",
       "title": "yapWithJordyn",
