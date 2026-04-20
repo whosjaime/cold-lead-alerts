@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "bcbf143dd8c41a2da4d8f1ae25daad2ff0897ececd0580658e9cc3a5cae712a2",
-      "title": "2D/3D Animator (Blender",
-      "summary": "2D/3D Animator (Blender + After Effects) $12,000 Per Year . Full-time Remote News & Politics Documentary +3 more YTMG LTD Company",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$12,000 Per Year",
-      "url": "https://ytjobs.co/job/38038",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "0f38d13211c83a98d9e9e0560ca1d2db4870fdbdde5f577ffa0c4bd877d090d4",
       "title": "Video Editor for James Charles Part-time",
       "summary": "Video Editor for James Charles Part-time Remote . Los Angeles, CA, US Comedy Entertainment Marketing +9 more James Charles 23.9M subs",
@@ -545,22 +532,35 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "a129eaa41fa3f8de1e61a5c6b168e364682a4e3059839c649ace699d266dbe16",
-      "title": "Decoded Genius",
-      "summary": "Remote YouTube We're looking for a top 1% Youtube thumbnail designer for our podcast. This is a long term project, we're building the worlds #1 podcast where we inte... $200 - $2,000 Education",
+      "id": "ytjobs_38182",
+      "title": "Sports YouTube Thumbnail Designer",
+      "summary": "Sports YouTube Thumbnail Designer $15-$75 Per project Remote Sports SROS 209K subs",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$200 - $2,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Per project",
+      "pay": "$15-$75 Per project",
+      "url": "https://ytjobs.co/job/38182",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "ytjobs_38181",
+      "title": "Thumbnail Designer Per project",
+      "summary": "Thumbnail Designer Per project Remote People & Blogs Education +2 more Idingo Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38181",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "0320187f754965a1afde73e9f70884dcd2b7f6be6ed7f7a75e61b704e665cc62",
       "title": "testing ihirng",
