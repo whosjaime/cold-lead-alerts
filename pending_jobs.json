@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "ytjobs_37140",
-      "title": "Art Director",
-      "summary": "Art Director $45,000-$54,000 Per Year . Full-time Remote Autos & Vehicles News & Politics +7 more YTMG LTD Company",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$45,000-$54,000 Per Year",
-      "url": "https://ytjobs.co/job/37140",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "ytjobs_36920",
       "title": "Senior Video Editor, AI Characters",
       "summary": "Senior Video Editor, AI Characters $80,000-$150,000 Per Year . Full-time Remote . US Videoblogging People & Blogs +9 more Mindalter Studio Company",
@@ -532,22 +519,35 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "5351f709becb49d8a37a4f07c8a65760cf3099274aac217b30b404a87f603d0a",
-      "title": "zople",
-      "summary": "Remote YouTube 620.0K followers I\u2019m looking for someone to help me come up with and build out YouTube videos.I need someone who can actually take a concept and turn it into something... $150 - $300 Comedy Entertainment",
+      "id": "ytjobs_38196",
+      "title": "Video Editor for video gaming",
+      "summary": "Video Editor for video gaming $5-$25 Per project Remote Gaming Comedy Entertainment +7 more Scattered Ideas 344 subs",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$150 - $300",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Per project",
+      "pay": "$5-$25 Per project",
+      "url": "https://ytjobs.co/job/38196",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "ytjobs_38197",
+      "title": "Short Form Video Editor",
+      "summary": "Short Form Video Editor $5,000 Per Year . Full-time Onsite . Tampa, FL, US Music Gaming +2 more The Eric Michael Show 27.9K subs",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "$5,000 Per Year",
+      "url": "https://ytjobs.co/job/38197",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "3de36dbf2f1421bd61a3edb4ba6e8ff6bea477d3cde710c64af14626c37a405b",
       "title": "Social Media Channel Manager",
