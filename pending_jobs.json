@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "ytjobs_38070",
-      "title": "Christian, Political, and Business Video Editor Part-time",
-      "summary": "Christian, Political, and Business Video Editor Part-time Remote People & Blogs News & Politics +25 more UNSTUNTED 9 subs",
-      "location": "Remote",
-      "job_type": "Part-time",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/38070",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "ytjobs_38083",
       "title": "Video Editor Needed for Growing Roblox Gaming Channel",
       "summary": "Video Editor Needed for Growing Roblox Gaming Channel Per project Remote Gaming People & Blogs +6 more RoBrax 206 subs",
@@ -636,21 +623,20 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "297e7927a179b7915cc02277f8dcd88fc71f32fc5efd4378781a4e786ad5bf26",
-      "title": "Creator Operations Manager (Content + Systems)",
-      "summary": "Remote YouTube, TikTok I run a creator-led media company focused on helping people stop renting their careers and start building assets they own.I\u2019m looking for someone who ... $2,500 - $3,500 Education Finance & Busi...",
+      "id": "ytjobs_38219",
+      "title": "Shot Form Comedy Skits Video Editor",
+      "summary": "Shot Form Comedy Skits Video Editor $30-$75 Per project Remote Comedy Gaming Videoblogging +26 more Chuchington 2.74M subs",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$2,500 - $3,500",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Per project",
+      "pay": "$30-$75 Per project",
+      "url": "https://ytjobs.co/job/38219",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     }
-  ]
+  ],
+  "Roster": []
 }
