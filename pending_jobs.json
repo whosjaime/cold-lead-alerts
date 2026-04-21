@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "ytjobs_38050",
-      "title": "Video Editor",
-      "summary": "Video Editor $9,000-$18,000 Per Year . Full-time Remote Talking head Shorts/Reels Kings Media 168 subs",
-      "location": "Remote",
-      "job_type": "Full-time",
-      "pay": "$9,000-$18,000 Per Year",
-      "url": "https://ytjobs.co/job/38050",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "ytjobs_38070",
       "title": "Christian, Political, and Business Video Editor Part-time",
       "summary": "Christian, Political, and Business Video Editor Part-time Remote People & Blogs News & Politics +25 more UNSTUNTED 9 subs",
@@ -597,22 +584,61 @@
       "email": null,
       "email_source": null,
       "company": null
-    }
-  ],
-  "Roster": [
+    },
     {
-      "id": "10d6aeeeed6dad167a43a31f61997f016ea9496403244c23c8f841c585976599",
-      "title": "Senior video editor/creator.",
-      "summary": "Remote YouTube, TikTok Hello, thanks for reading this.We run a number of digital marketing brands for poker and gambling clients in multiple locations. We're looking for a s... $2,000 - $3,000 Gaming",
+      "id": "ytjobs_38214",
+      "title": "Video Editor",
+      "summary": "Video Editor - YouTube Full-time Remote News & Politics Documentary +6 more NewsDaddy Company",
       "location": "Remote",
-      "job_type": "Not listed",
-      "pay": "$2,000 - $3,000",
-      "url": "https://www.joinroster.co/jobs",
-      "source": "Roster",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38214",
+      "source": "YTJobs",
       "email": null,
       "email_source": null,
       "company": null
     },
+    {
+      "id": "ytjobs_37623",
+      "title": "Video Editor",
+      "summary": "Video Editor $24,000-$36,000 Per Year . Full-time Remote Film & Animation People & Blogs +16 more Breaking and Building Leaders 1.3K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$24,000-$36,000 Per Year",
+      "url": "https://ytjobs.co/job/37623",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "ytjobs_37620",
+      "title": "YouTube Strategist",
+      "summary": "YouTube Strategist $72,000-$108,000 Per Year . Full-time Remote Travel & Events People & Blogs +11 more Breaking and Building Leaders 1.3K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$72,000-$108,000 Per Year",
+      "url": "https://ytjobs.co/job/37620",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    },
+    {
+      "id": "ytjobs_38208",
+      "title": "Video Editor for 60s Talking Head Vid Per",
+      "summary": "Video Editor for 60s Talking Head Vid Per project Remote Education Marketing +8 more Frontier Media Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38208",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null
+    }
+  ],
+  "Roster": [
     {
       "id": "297e7927a179b7915cc02277f8dcd88fc71f32fc5efd4378781a4e786ad5bf26",
       "title": "Creator Operations Manager (Content + Systems)",
