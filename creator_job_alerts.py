@@ -45,9 +45,7 @@ BOC_URL = "https://www.bucketofcrabs.net/jobs"
 
 HEADER_TEXT = "Cold leads, warm them up! 🔥"
 
-# IMPORTANT:
-# These source names are used in pending_jobs.json and Monday mapping.
-# Keep YTCareers and BucketofCrabs matching your Monday labels exactly.
+# These source names also match your Monday labels.
 VALID_SOURCES = ("YTJobs", "Roster", "YTCareers", "BucketofCrabs")
 
 ROLE_IDS = {
@@ -72,9 +70,15 @@ JUNK_TITLE_PATTERNS = [
     r"^home$",
     r"^jobs$",
     r"^youtube jobs$",
+    r"^create job offer$",
+    r"^post a job$",
+    r"^submit job$",
+    r"^job title",
+    r"^job title & info",
 ]
 
 EMAIL_RE = re.compile(r"\b[A-Z0-9._%+\-]+@[A-Z0-9.\-]+\.[A-Z]{2,}\b", re.IGNORECASE)
+
 BAD_EMAIL_PARTS = {
     "example.com",
     "email.com",
@@ -98,14 +102,14 @@ def load_pending() -> Dict[str, List[Dict[str, Any]]]:
     if isinstance(data, dict):
         normalized = {source: [] for source in VALID_SOURCES}
 
-        # Preserve old queues if they exist.
         for source in VALID_SOURCES:
             items = data.get(source, [])
             normalized[source] = items if isinstance(items, list) else []
 
-        # In case old versions used names with punctuation/spaces.
+        # Support older names if they ever got saved before.
         if "YT.Careers" in data and not normalized["YTCareers"]:
             normalized["YTCareers"] = data.get("YT.Careers", [])
+
         if "Bucket of Crabs" in data and not normalized["BucketofCrabs"]:
             normalized["BucketofCrabs"] = data.get("Bucket of Crabs", [])
 
@@ -115,9 +119,11 @@ def load_pending() -> Dict[str, List[Dict[str, Any]]]:
         for item in data:
             if not isinstance(item, dict):
                 continue
+
             source = item.get("source")
             if source in default_pending:
                 default_pending[source].append(item)
+
         return default_pending
 
     return default_pending
@@ -139,20 +145,26 @@ def clean_text(text: Optional[str]) -> str:
 
 def clip(text: str, max_len: int) -> str:
     text = clean_text(text)
+
     if len(text) <= max_len:
         return text
+
     return text[: max_len - 3].rstrip() + "..."
 
 
 def get_webhook_url(source: str) -> str:
     if source == "YTJobs":
         return YTJOBS_WEBHOOK_URL
+
     if source == "Roster":
         return ROSTER_WEBHOOK_URL
+
     if source == "YTCareers":
         return YT_CAREERS_WEBHOOK_URL
+
     if source == "BucketofCrabs":
         return BOC_WEBHOOK_URL
+
     return ""
 
 
@@ -169,6 +181,7 @@ def extract_role_only(text: str) -> str:
         r"\bFull[- ]?time\b",
         r"\bContract\b",
         r"\bFreelance\b",
+        r"\bInternship\b",
         r"\bPer project\b",
         r"\bPer hour\b",
         r"\bApply\b",
@@ -191,6 +204,28 @@ def extract_role_only(text: str) -> str:
     words = text.split()
     if len(words) > 10:
         text = " ".join(words[:10])
+
+    return clip(text, 80) if text else "New Job"
+
+
+def clean_source_specific_title(source: str, text: str) -> str:
+    text = clean_text(text)
+
+    if source == "BucketofCrabs":
+        text = re.sub(r"^Job Title\s*&\s*Info\s*", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"^Job Title\s*", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"\s*Game\s*&\s*Date\s*", " ", text, flags=re.IGNORECASE)
+        text = re.sub(r"\s*Posted\s+\w+\s+\d{1,2}(st|nd|rd|th)?\s+\d{4}.*$", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"\s*Remote Only.*$", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"\s*Long Term.*$", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"\s*\$\d.*$", "", text)
+
+    if source == "YTCareers":
+        text = re.sub(r"^Create job offer$", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"\s*Apply Now.*$", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"\s*View Job.*$", "", text, flags=re.IGNORECASE)
+
+    text = clean_text(text)
 
     return clip(text, 80) if text else "New Job"
 
@@ -221,19 +256,22 @@ def extract_location(text: str) -> str:
 
     if "remote" in lower:
         return "Remote"
+
     if "hybrid" in lower:
         return "Hybrid"
+
     if "on-site" in lower or "onsite" in lower:
         return "On-site"
+
     if "in-person" in lower or "in person" in lower:
         return "In-person"
 
-    # Try to capture city/state style after common labels.
     loc_match = re.search(
         r"(?:Location|Based in|City)\s*[:\-]?\s*([A-Za-z ,.\-]+)",
         text,
         flags=re.IGNORECASE,
     )
+
     if loc_match:
         return clip(loc_match.group(1), 80)
 
@@ -242,23 +280,31 @@ def extract_location(text: str) -> str:
 
 def extract_job_type(text: str) -> str:
     lower = text.lower()
+
     if "part-time" in lower or "part time" in lower:
         return "Part-time"
+
     if "full-time" in lower or "full time" in lower:
         return "Full-time"
+
     if "contract" in lower:
         return "Contract"
+
     if "freelance" in lower:
         return "Freelance"
+
     if "internship" in lower or "intern" in lower:
         return "Internship"
+
     if "per project" in lower:
         return "Per project"
+
     return "Not listed"
 
 
 def build_description(text: str, role: str) -> str:
     text = clean_text(text)
+
     text = text.replace("About the Channel", " About the Channel")
     text = text.replace("About the Job", " About the Job")
     text = text.replace("Responsibilities", " Responsibilities")
@@ -282,6 +328,23 @@ def is_junk_job(job: Dict[str, Any]) -> bool:
         if re.search(pattern, title, flags=re.IGNORECASE):
             return True
 
+    bad_url_parts = [
+        "/new",
+        "/create",
+        "/post",
+        "/submit",
+        "/login",
+        "/sign-in",
+        "/signin",
+        "/register",
+        "/pricing",
+        "/privacy",
+        "/terms",
+    ]
+
+    if any(part in url for part in bad_url_parts):
+        return True
+
     if "privacy terms of service" in summary:
         return True
 
@@ -297,42 +360,93 @@ def is_junk_job(job: Dict[str, Any]) -> bool:
 def detect_role_tag(title: str, summary: str) -> Optional[str]:
     text = f"{title} {summary}".lower()
 
-    if "thumbnail" in text:
+    # Thumbnail Designer
+    if any(word in text for word in [
+        "thumbnail",
+        "thumbnail designer",
+        "thumbnail artist",
+        "youtube thumbnail",
+    ]):
         return "thumbnail_designer"
 
-    if "creative director" in text or "content director" in text:
+    # Creative Director
+    if any(word in text for word in [
+        "creative director",
+        "content director",
+        "creative lead",
+        "head of creative",
+        "creative strategist",
+    ]):
         return "creative_director"
 
-    if "channel manager" in text or "youtube channel manager" in text:
+    # Channel Manager
+    if any(word in text for word in [
+        "channel manager",
+        "youtube channel manager",
+        "channel operator",
+        "content operator",
+        "youtube manager",
+        "youtube specialist",
+        "creator manager",
+        "account manager",
+    ]):
         return "channel_manager"
 
-    if "strategist" in text or "strategy" in text:
+    # Strategist
+    if any(word in text for word in [
+        "strategist",
+        "strategy",
+        "youtube strategist",
+        "content strategist",
+        "growth strategist",
+        "audience development",
+        "growth manager",
+    ]):
         return "strategist"
 
-    if (
-        "script" in text
-        or "scriptwriter" in text
-        or "script writer" in text
-        or "copywriter" in text
-        or "video essay writer" in text
-        or "writer" in text
-    ):
+    # Scriptwriter
+    if any(word in text for word in [
+        "scriptwriter",
+        "script writer",
+        "script",
+        "writer",
+        "copywriter",
+        "video essay writer",
+        "story writer",
+        "narrative designer",
+    ]):
         return "scriptwriter"
 
-    if (
-        "editor" in text
-        or "editing" in text
-        or "post-production" in text
-        or "post production" in text
-    ):
+    # Editor
+    if any(word in text for word in [
+        "editor",
+        "video editor",
+        "short-form editor",
+        "short form editor",
+        "long-form editor",
+        "long form editor",
+        "editing",
+        "post-production",
+        "post production",
+        "motion graphics",
+        "vfx",
+        "after effects",
+        "premiere pro",
+        "davinci",
+    ]):
         return "editor"
 
-    if (
-        "producer" in text
-        or "production manager" in text
-        or "production" in text
-        or "content producer" in text
-    ):
+    # Producer / Production Manager
+    if any(word in text for word in [
+        "producer",
+        "production manager",
+        "production coordinator",
+        "production assistant",
+        "content producer",
+        "video producer",
+        "line producer",
+        "showrunner",
+    ]):
         return "production_manager"
 
     return None
@@ -352,6 +466,7 @@ def build_role_line_and_mentions(title: str, summary: str) -> tuple[str, Dict[st
 
 def monday_company_name(job: Dict[str, Any]) -> str:
     company = clean_text(job.get("company", ""))
+
     if company:
         return clip(company, 255)
 
@@ -370,8 +485,10 @@ def map_monday_type(job_type: str, pay: str) -> Optional[str]:
 
     if "per project" in jt or "per project" in pay_text:
         return "Per Project"
+
     if "/hour" in pay_text or "per hour" in pay_text or "/hr" in pay_text:
         return "Per Hour"
+
     if "salary" in pay_text or "/year" in pay_text or "per year" in pay_text or "k" in pay_text:
         return "Salary"
 
@@ -381,18 +498,23 @@ def map_monday_type(job_type: str, pay: str) -> Optional[str]:
 def map_monday_platform(source: str) -> Optional[str]:
     if source in {"YTJobs", "Roster", "YTCareers", "BucketofCrabs"}:
         return "YouTube"
+
     return "Other"
 
 
 def map_monday_sourced_from(source: str) -> Optional[str]:
     if source == "YTJobs":
         return "YTJobs"
+
     if source == "Roster":
         return "Roster"
+
     if source == "YTCareers":
         return "YTCareers"
+
     if source == "BucketofCrabs":
         return "BucketofCrabs"
+
     return None
 
 
@@ -408,22 +530,16 @@ def map_monday_category(job: Dict[str, Any]) -> Optional[str]:
     if source == "YTCareers":
         return "Creator"
 
-    if source == "BucketofCrabs":
+    if source in {"Roster", "BucketofCrabs"}:
         if any(word in text for word in ["agency", "client", "clients"]):
             return "Agency"
-        if any(word in text for word in ["startup", "saas", "founder"]):
-            return "Startup"
-        if any(word in text for word in ["company", "brand", "business"]):
-            return "Company"
-        return "Creator"
 
-    if source == "Roster":
-        if any(word in text for word in ["agency", "client", "clients"]):
-            return "Agency"
         if any(word in text for word in ["startup", "saas", "founder"]):
             return "Startup"
-        if any(word in text for word in ["company", "brand", "business"]):
+
+        if any(word in text for word in ["company", "brand", "business", "studio"]):
             return "Company"
+
         return "Creator"
 
     return None
@@ -431,12 +547,16 @@ def map_monday_category(job: Dict[str, Any]) -> Optional[str]:
 
 def map_monday_location(location: str) -> Optional[str]:
     loc = clean_text(location).lower()
+
     if loc == "remote":
         return "Remote"
+
     if loc == "hybrid":
         return "Hybrid"
+
     if loc in {"on-site", "onsite", "in-person", "in person"}:
         return "Onsite"
+
     return None
 
 
@@ -459,7 +579,6 @@ def map_monday_role_label(job: Dict[str, Any]) -> str:
 def extract_numeric_pay(pay: str) -> Optional[float]:
     text = clean_text(pay)
 
-    # Convert "$50k" to 50000
     k_match = re.search(r"\$?(\d+(?:\.\d+)?)\s*[kK]\b", text)
     if k_match:
         try:
@@ -468,6 +587,7 @@ def extract_numeric_pay(pay: str) -> Optional[float]:
             return None
 
     match = re.search(r"\$?(\d[\d,]*)(?:\.\d+)?", text)
+
     if not match:
         return None
 
@@ -483,19 +603,25 @@ def normalize_email(email: str) -> Optional[str]:
 
     if "@" not in lower:
         return None
+
     if any(bad in lower for bad in BAD_EMAIL_PARTS):
         return None
+
     if lower.endswith((".png", ".jpg", ".jpeg", ".webp", ".svg")):
         return None
+
     return lower
 
 
 def extract_emails_from_text(text: str) -> List[str]:
     found: List[str] = []
+
     for match in EMAIL_RE.findall(text or ""):
         email = normalize_email(match)
+
         if email and email not in found:
             found.append(email)
+
     return found
 
 
@@ -503,10 +629,12 @@ def find_first_public_email_in_html(html: str) -> Optional[str]:
     soup = BeautifulSoup(html, "html.parser")
 
     mailtos = []
+
     for a in soup.select('a[href^="mailto:"]'):
         href = a.get("href") or ""
         candidate = href.replace("mailto:", "").split("?")[0].strip()
         email = normalize_email(candidate)
+
         if email:
             mailtos.append(email)
 
@@ -514,11 +642,13 @@ def find_first_public_email_in_html(html: str) -> Optional[str]:
         return mailtos[0]
 
     text_emails = extract_emails_from_text(soup.get_text(" ", strip=True))
+
     return text_emails[0] if text_emails else None
 
 
 def find_candidate_links(html: str, base_url: str) -> Dict[str, Optional[str]]:
     soup = BeautifulSoup(html, "html.parser")
+
     links: Dict[str, Optional[str]] = {
         "website": None,
         "youtube": None,
@@ -526,6 +656,7 @@ def find_candidate_links(html: str, base_url: str) -> Dict[str, Optional[str]]:
 
     for a in soup.select("a[href]"):
         href = (a.get("href") or "").strip()
+
         if not href:
             continue
 
@@ -555,6 +686,7 @@ def discover_contact_pages(base_url: str, html: str) -> List[str]:
     found: List[str] = []
 
     keywords = ("contact", "about", "business", "inquiries", "team")
+
     for a in soup.select("a[href]"):
         href = (a.get("href") or "").strip()
         text = clean_text(a.get_text(" ", strip=True)).lower()
@@ -566,8 +698,10 @@ def discover_contact_pages(base_url: str, html: str) -> List[str]:
                 found.append(full)
 
     common_paths = ["/contact", "/contact-us", "/about", "/about-us"]
+
     for path in common_paths:
         candidate = urljoin(base_url, path)
+
         if candidate not in found:
             found.append(candidate)
 
@@ -584,11 +718,15 @@ def safe_get(url: str, timeout: int = 20) -> Optional[requests.Response]:
             },
             allow_redirects=True,
         )
+
         if response.status_code >= 400:
             return None
+
         content_type = (response.headers.get("Content-Type") or "").lower()
+
         if "text/html" not in content_type and "application/xhtml+xml" not in content_type:
             return None
+
         return response
     except Exception:
         return None
@@ -601,16 +739,20 @@ def enrich_public_email(job: Dict[str, Any]) -> None:
     def try_url(url: Optional[str], label: str) -> Optional[str]:
         if not url:
             return None
+
         if url in checked_urls:
             return None
+
         checked_urls.add(url)
         sources_checked.append(f"{label}:{url}")
 
         response = safe_get(url)
+
         if not response:
             return None
 
         email = find_first_public_email_in_html(response.text)
+
         if email:
             return email
 
@@ -620,10 +762,13 @@ def enrich_public_email(job: Dict[str, Any]) -> None:
     job["email_source"] = None
 
     direct_url = (job.get("url") or "").strip()
+
     if direct_url:
         response = safe_get(direct_url)
+
         if response:
             email = find_first_public_email_in_html(response.text)
+
             if email:
                 job["email"] = email
                 job["email_source"] = "job_post"
@@ -633,8 +778,10 @@ def enrich_public_email(job: Dict[str, Any]) -> None:
             links = find_candidate_links(response.text, direct_url)
 
             website_url = links.get("website")
+
             if website_url:
                 email = try_url(website_url, "website")
+
                 if email:
                     job["email"] = email
                     job["email_source"] = "website"
@@ -642,9 +789,11 @@ def enrich_public_email(job: Dict[str, Any]) -> None:
                     return
 
                 website_response = safe_get(website_url)
+
                 if website_response:
                     for page_url in discover_contact_pages(website_url, website_response.text):
                         email = try_url(page_url, "website_contact")
+
                         if email:
                             job["email"] = email
                             job["email_source"] = "website_contact"
@@ -654,8 +803,10 @@ def enrich_public_email(job: Dict[str, Any]) -> None:
                             return
 
             youtube_url = links.get("youtube")
+
             if youtube_url:
                 email = try_url(youtube_url, "youtube")
+
                 if email:
                     job["email"] = email
                     job["email_source"] = "youtube_public"
@@ -680,6 +831,7 @@ def send_to_discord(job: Dict[str, Any]) -> None:
     description = clip(job.get("summary", "No description listed."), 220)
     url = (job.get("url") or "").strip()
 
+    # This is the important part: every source uses the same role-tag logic.
     role_line, allowed_mentions = build_role_line_and_mentions(title, description)
 
     content = (
@@ -816,6 +968,7 @@ def send_to_monday(job: Dict[str, Any]) -> None:
     response.raise_for_status()
 
     payload = response.json()
+
     if "errors" in payload:
         raise RuntimeError(f"Monday API error: {json.dumps(payload['errors'], indent=2)}")
 
@@ -829,9 +982,11 @@ def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     for job in jobs:
         if job["id"] in seen_ids:
             continue
+
         if is_junk_job(job):
             print(f"Skipped junk job: {job.get('title', 'Unknown')} ({job.get('source', 'Unknown')})")
             continue
+
         seen_ids.add(job["id"])
         cleaned.append(job)
 
@@ -840,8 +995,10 @@ def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
 def extract_ytjobs_stable_id(full_url: str) -> str:
     match = re.search(r"/job/(\d+)", full_url)
+
     if match:
         return f"ytjobs_{match.group(1)}"
+
     return f"ytjobs_{hashlib.sha256(full_url.encode('utf-8')).hexdigest()}"
 
 
@@ -869,6 +1026,7 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
 
     for a in soup.select('a[href*="/job/"]'):
         href = a.get("href") or ""
+
         if "/job/search" in href:
             continue
 
@@ -876,6 +1034,7 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
 
         card = a.parent
         context = clean_text(card.get_text(" ", strip=True) if card else a.get_text(" ", strip=True))
+
         if not context:
             continue
 
@@ -903,6 +1062,7 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
 
     jobs = dedupe_jobs(jobs)
     print(f"YTJobs found: {len(jobs)}")
+
     return jobs
 
 
@@ -918,17 +1078,20 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
         html = await page.content()
         Path("roster_debug.html").write_text(html, encoding="utf-8")
         body = await page.locator("body").inner_text()
+
         return body
 
     def parse_roster_block(block: str, idx: int) -> Dict[str, str]:
         block = clean_text(block)
 
         title = block
+
         for marker in ["📍", "💼", "👥", "$", "Apply"]:
             if marker in title:
                 title = title.split(marker)[0].strip()
 
         title = clip(title, 80)
+
         if not title:
             title = f"Roster Job {idx + 1}"
 
@@ -937,6 +1100,7 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
         pay = extract_pay(block)
 
         description = block
+
         if description.lower().startswith(title.lower()):
             description = description[len(title):].strip(" -—:|")
 
@@ -993,13 +1157,14 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
                 await page.wait_for_timeout(3000)
 
             after_url = page.url
+
             if after_url and after_url != before_url:
                 detail_url = after_url
 
-            # Return to job list for next Apply button.
             if page.url != ROSTER_URL:
                 await page.goto(ROSTER_URL, wait_until="domcontentloaded")
                 await page.wait_for_timeout(2000)
+
         except Exception as e:
             print(f"Roster click failed for block {i}: {e}")
 
@@ -1023,7 +1188,9 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
         )
 
     jobs = dedupe_jobs(jobs)
+
     print(f"Roster jobs found: {len(jobs)}")
+
     for job in jobs[:10]:
         print(f"Roster parsed job: {job['title']} | {job['pay']} | {job['location']} | {job['url']}")
 
@@ -1048,8 +1215,6 @@ async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
 
     soup = BeautifulSoup(html, "html.parser")
     jobs: List[Dict[str, Any]] = []
-
-    # Main strategy: collect links likely pointing to job detail pages.
     candidate_links: List[tuple[str, str]] = []
 
     for a in soup.select("a[href]"):
@@ -1062,52 +1227,90 @@ async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
         full_url = urljoin(YT_CAREERS_URL, href)
         lower = full_url.lower()
 
-        if any(skip in lower for skip in ["#mailto", "mailto:", "javascript:"]):
+        if "yt.careers" not in lower:
             continue
 
-        # Keep likely job detail links from yt.careers.
-        if "yt.careers" in lower and (
-            "/job" in lower
-            or "/jobs" in lower
-            or "/youtube-jobs/" in lower
-            or "/opportunities" in lower
-        ):
-            if full_url.rstrip("/") == YT_CAREERS_URL.rstrip("/"):
-                continue
+        blocked_parts = [
+            "/new",
+            "/create",
+            "/post",
+            "/submit",
+            "/login",
+            "/sign-in",
+            "/signin",
+            "/register",
+            "/pricing",
+            "/privacy",
+            "/terms",
+        ]
+
+        if any(part in lower for part in blocked_parts):
+            continue
+
+        if full_url.rstrip("/") == YT_CAREERS_URL.rstrip("/"):
+            continue
+
+        is_likely_job = (
+            "/youtube-jobs/" in lower
+            or "/jobs/" in lower
+            or re.search(r"/job/[^/]+", lower)
+        )
+
+        if is_likely_job and len(text) > 3:
             candidate_links.append((full_url, text))
 
-    # Fallback: use sections/cards containing common job words.
     seen_urls = set()
 
     for full_url, link_text in candidate_links:
         normalized_url = full_url.rstrip("/")
+
         if normalized_url in seen_urls:
             continue
+
         seen_urls.add(normalized_url)
 
-        # Try to use nearby card text.
         card_text = link_text
-        try:
-            locator = page.locator(f'a[href="{full_url}"]').first
-            count = await locator.count()
-            if count:
-                card_text = await locator.locator("xpath=ancestor::*[self::div or self::article or self::li][1]").inner_text(timeout=2000)
-        except Exception:
-            pass
+
+        matching_a = None
+
+        for a in soup.select("a[href]"):
+            href = (a.get("href") or "").strip()
+
+            if urljoin(YT_CAREERS_URL, href).rstrip("/") == normalized_url:
+                matching_a = a
+                break
+
+        if matching_a:
+            parent = matching_a
+
+            for _ in range(4):
+                if parent and parent.parent:
+                    parent = parent.parent
+                    text = clean_text(parent.get_text(" ", strip=True))
+
+                    if len(text) > len(card_text):
+                        card_text = text
+                else:
+                    break
 
         context = clean_text(card_text or link_text)
+
         if len(context) < 10:
             context = link_text
 
-        role = extract_role_only(context)
+        role = clean_source_specific_title("YTCareers", extract_role_only(context))
         pay = extract_pay(context)
         location = extract_location(context)
         job_type = extract_job_type(context)
         description = build_description(context, role)
 
         company = None
-        # Try simple company extraction.
-        company_match = re.search(r"(?:Company|Creator|Channel)\s*[:\-]?\s*([A-Za-z0-9 &.,'’\-]+)", context, flags=re.IGNORECASE)
+        company_match = re.search(
+            r"(?:Company|Creator|Channel)\s*[:\-]?\s*([A-Za-z0-9 &.,'’\-]+)",
+            context,
+            flags=re.IGNORECASE,
+        )
+
         if company_match:
             company = clip(company_match.group(1), 120)
 
@@ -1127,7 +1330,6 @@ async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
             }
         )
 
-    # Strong fallback if no links parse correctly:
     if not jobs:
         lines = [clean_text(line) for line in body_text.splitlines()]
         lines = [line for line in lines if len(line) > 4]
@@ -1139,13 +1341,20 @@ async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
             current.append(line)
             joined = " ".join(current)
 
-            if re.search(r"\b(Apply|View Job|Posted|Remote|Full-time|Part-time|Contract|Freelance)\b", joined, flags=re.IGNORECASE):
+            if re.search(
+                r"\b(Apply|View Job|Posted|Remote|Full-time|Part-time|Contract|Freelance)\b",
+                joined,
+                flags=re.IGNORECASE,
+            ):
                 if len(joined) > 35:
                     blocks.append(clean_text(joined))
                     current = []
 
-        for idx, block in enumerate(blocks[:50]):
-            role = extract_role_only(block)
+        for block in blocks[:50]:
+            if "create job offer" in block.lower():
+                continue
+
+            role = clean_source_specific_title("YTCareers", extract_role_only(block))
             pay = extract_pay(block)
             location = extract_location(block)
             job_type = extract_job_type(block)
@@ -1168,7 +1377,9 @@ async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
             )
 
     jobs = dedupe_jobs(jobs)
+
     print(f"YTCareers jobs found: {len(jobs)}")
+
     for job in jobs[:10]:
         print(f"YTCareers parsed job: {job['title']} | {job['pay']} | {job['location']} | {job['url']}")
 
@@ -1193,7 +1404,6 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
 
     soup = BeautifulSoup(html, "html.parser")
     jobs: List[Dict[str, Any]] = []
-
     candidate_links: List[tuple[str, str]] = []
 
     for a in soup.select("a[href]"):
@@ -1216,49 +1426,60 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
         ):
             if full_url.rstrip("/") == BOC_URL.rstrip("/"):
                 continue
+
             candidate_links.append((full_url, text))
 
     seen_urls = set()
 
     for full_url, link_text in candidate_links:
         normalized_url = full_url.rstrip("/")
+
         if normalized_url in seen_urls:
             continue
+
         seen_urls.add(normalized_url)
 
         card_text = link_text
-
-        # Try to find surrounding card text using BeautifulSoup.
         matching_a = None
+
         for a in soup.select("a[href]"):
             href = (a.get("href") or "").strip()
+
             if urljoin(BOC_URL, href).rstrip("/") == normalized_url:
                 matching_a = a
                 break
 
         if matching_a:
             parent = matching_a
-            for _ in range(4):
+
+            for _ in range(5):
                 if parent and parent.parent:
                     parent = parent.parent
                     text = clean_text(parent.get_text(" ", strip=True))
+
                     if len(text) > len(card_text):
                         card_text = text
                 else:
                     break
 
         context = clean_text(card_text or link_text)
+
         if len(context) < 10:
             context = link_text
 
-        role = extract_role_only(context)
+        role = clean_source_specific_title("BucketofCrabs", extract_role_only(context))
         pay = extract_pay(context)
         location = extract_location(context)
         job_type = extract_job_type(context)
         description = build_description(context, role)
 
         company = None
-        company_match = re.search(r"(?:Company|Studio|Creator|Channel|Team)\s*[:\-]?\s*([A-Za-z0-9 &.,'’\-]+)", context, flags=re.IGNORECASE)
+        company_match = re.search(
+            r"(?:Company|Studio|Creator|Channel|Team)\s*[:\-]?\s*([A-Za-z0-9 &.,'’\-]+)",
+            context,
+            flags=re.IGNORECASE,
+        )
+
         if company_match:
             company = clip(company_match.group(1), 120)
 
@@ -1278,7 +1499,6 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
             }
         )
 
-    # Fallback if links do not expose jobs clearly.
     if not jobs:
         lines = [clean_text(line) for line in body_text.splitlines()]
         lines = [line for line in lines if len(line) > 4]
@@ -1290,13 +1510,17 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
             current.append(line)
             joined = " ".join(current)
 
-            if re.search(r"\b(Apply|View Job|Posted|Remote|Full-time|Part-time|Contract|Freelance)\b", joined, flags=re.IGNORECASE):
+            if re.search(
+                r"\b(Apply|View Job|Posted|Remote|Full-time|Part-time|Contract|Freelance)\b",
+                joined,
+                flags=re.IGNORECASE,
+            ):
                 if len(joined) > 35:
                     blocks.append(clean_text(joined))
                     current = []
 
-        for idx, block in enumerate(blocks[:50]):
-            role = extract_role_only(block)
+        for block in blocks[:50]:
+            role = clean_source_specific_title("BucketofCrabs", extract_role_only(block))
             pay = extract_pay(block)
             location = extract_location(block)
             job_type = extract_job_type(block)
@@ -1319,7 +1543,9 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
             )
 
     jobs = dedupe_jobs(jobs)
+
     print(f"BucketofCrabs jobs found: {len(jobs)}")
+
     for job in jobs[:10]:
         print(f"BucketofCrabs parsed job: {job['title']} | {job['pay']} | {job['location']} | {job['url']}")
 
@@ -1329,6 +1555,7 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
 async def fetch_jobs() -> List[Dict[str, Any]]:
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
+
         page = await browser.new_page(
             user_agent=(
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -1360,6 +1587,7 @@ async def fetch_jobs() -> List[Dict[str, Any]]:
             print(f"BucketofCrabs scrape failed: {e}")
 
         await browser.close()
+
         return jobs
 
 
@@ -1368,14 +1596,17 @@ def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], pending: Dict[str, List[Dic
         source: {job.get("id") for job in pending.get(source, [])}
         for source in VALID_SOURCES
     }
+
     pending_urls = {
         source: {clean_text(job.get("url", "")).rstrip("/") for job in pending.get(source, [])}
         for source in VALID_SOURCES
     }
+
     added = {source: 0 for source in VALID_SOURCES}
 
     for job in all_jobs:
         source = job.get("source")
+
         if source not in pending_ids:
             continue
 
@@ -1390,8 +1621,10 @@ def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], pending: Dict[str, List[Dic
 
         pending[source].append(job)
         pending_ids[source].add(job["id"])
+
         if normalized_url:
             pending_urls[source].add(normalized_url)
+
         added[source] += 1
         print(f"Queued: {job['title']} ({source})")
 
@@ -1400,6 +1633,7 @@ def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], pending: Dict[str, List[Dic
 
 def post_next_job_for_source(source: str, pending: Dict[str, List[Dict[str, Any]]]) -> Optional[Dict[str, Any]]:
     queue = pending.get(source, [])
+
     if not queue:
         return None
 
