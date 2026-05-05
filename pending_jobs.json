@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "ytjobs_38534",
-      "title": "YouTube Channel Manager for Ambient",
-      "summary": "YouTube Channel Manager for Ambient / ADHD Focus $15-$40 Per Hour . Part-time Remote People & Blogs Howto & Style +19 more Scroll & Stone 10 subs",
-      "location": "Remote",
-      "job_type": "Part-time",
-      "pay": "$15-$40 Per Hour",
-      "url": "https://ytjobs.co/job/38534",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "ytjobs_38542",
       "title": "Narrative Story Editor",
       "summary": "Narrative Story Editor - Alaska Fishing Trip (Premiere Pro) $1,500-$1,500 Per project Remote Travel & Events People & Blogs +3 more Joseph Murphy 947 subs",
@@ -758,19 +745,6 @@
   "Roster": [],
   "YTCareers": [
     {
-      "id": "ytcareers_da1e5672df630cc56108cecbe356a5a4646c5d49f696f67634822c8542f114c9",
-      "title": "video game editor",
-      "summary": "video game editor",
-      "location": "Not listed",
-      "job_type": "Not listed",
-      "pay": "Not listed",
-      "url": "https://yt.careers/youtube-jobs/225",
-      "source": "YTCareers",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "ytcareers_2e9d8937c1f2240c02698a77e3c8658be4cfbe6a3da803d976e8edf2a08d920b",
       "title": "Gaming Video Editor",
       "summary": "Gaming Video Editor",
@@ -1081,22 +1055,22 @@
       "email": null,
       "email_source": null,
       "company": null
+    },
+    {
+      "id": "ytcareers_0d07026475edfb4a480cfb570a9608b7a55b6f1ffcd77b6e443e5a7a8e75291a",
+      "title": "two one three \u2022 1 Open job Full-time YouTube video",
+      "summary": "two one three \u2022 1 Open job Full-time YouTube video editor Full-time Los Angeles, California, US Worldwide remote $75k per year ASAP About 1 month ago Apply ->",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$75k per year",
+      "url": "https://yt.careers/youtube-jobs/208",
+      "source": "YTCareers",
+      "email": null,
+      "email_source": null,
+      "company": null
     }
   ],
   "BucketofCrabs": [
-    {
-      "id": "boc_144626e8be848cc799dcbb544a25cb3a9e978465401e88999a4704fc3d375cec",
-      "title": "Job Title & Info Game & Date Astrominer_12 Core Shader",
-      "summary": "Job Title & Info Game & Date Astrominer_12 Core Shader Artist - Long Term Remote Only $200-$600/Fixed Amount - quarterly Game Developer Plugin/Mod Developer Minecraft Java May 4th 2026 CubeCraft Games Head of CubeCraf...",
-      "location": "Remote",
-      "job_type": "Freelance",
-      "pay": "$200-$600",
-      "url": "https://www.bucketofcrabs.net/jobs/nWKnee13P8",
-      "source": "BucketofCrabs",
-      "email": null,
-      "email_source": null,
-      "company": "s Developer Remote Only 10"
-    },
     {
       "id": "boc_58686459931f080f176a0cceec75d022f9d0d5c3197eb0d82bcae945fb117262",
       "title": "Job Title & Info Game & Date Astrominer_12 Core Shader",
@@ -1261,6 +1235,19 @@
       "job_type": "Freelance",
       "pay": "$200-$600",
       "url": "https://www.bucketofcrabs.net/jobs/6dSV7MQwk5",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": "s Developer Remote Only 10"
+    },
+    {
+      "id": "boc_21bc1c1e0e974ab2fea079e978bc5184b59cdab479c96f129a6bc85ebfbdc87d",
+      "title": "Astrominer_12 Core Shader",
+      "summary": "Astrominer_12 Core Shader \u2014 Job Title & Info Game & Date Astrominer_12 Core Shader Artist - Long Term Remote Only $200-$600/Fixed Amount - quarterly Game Developer Plugin/Mod Developer Minecraft Java May 4th 2026 Cube...",
+      "location": "Remote",
+      "job_type": "Freelance",
+      "pay": "$200-$600",
+      "url": "https://www.bucketofcrabs.net/jobs/8shOC1hodr",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
