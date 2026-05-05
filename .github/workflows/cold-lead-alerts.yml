@@ -38,6 +38,9 @@ jobs:
         env:
           YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
           ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
+          YT_CAREERS_WEBHOOK_URL: ${{ secrets.YT_CAREERS_WEBHOOK_URL }}
+          BOC_WEBHOOK_URL: ${{ secrets.BOC_WEBHOOK_URL }}
+
           MONDAY_API_TOKEN: ${{ secrets.MONDAY_API_TOKEN }}
           MONDAY_BOARD_ID: ${{ secrets.MONDAY_BOARD_ID }}
           MONDAY_GROUP_ID: ${{ secrets.MONDAY_GROUP_ID }}
@@ -57,6 +60,9 @@ jobs:
         run: |
           if [ -z "$YTJOBS_WEBHOOK_URL" ]; then echo "YTJOBS_WEBHOOK_URL is missing"; else echo "YTJOBS_WEBHOOK_URL is set"; fi
           if [ -z "$ROSTER_WEBHOOK_URL" ]; then echo "ROSTER_WEBHOOK_URL is missing"; else echo "ROSTER_WEBHOOK_URL is set"; fi
+          if [ -z "$YT_CAREERS_WEBHOOK_URL" ]; then echo "YT_CAREERS_WEBHOOK_URL is missing"; else echo "YT_CAREERS_WEBHOOK_URL is set"; fi
+          if [ -z "$BOC_WEBHOOK_URL" ]; then echo "BOC_WEBHOOK_URL is missing"; else echo "BOC_WEBHOOK_URL is set"; fi
+
           if [ -z "$MONDAY_API_TOKEN" ]; then echo "MONDAY_API_TOKEN is missing"; else echo "MONDAY_API_TOKEN is set"; fi
           if [ -z "$MONDAY_BOARD_ID" ]; then echo "MONDAY_BOARD_ID is missing"; else echo "MONDAY_BOARD_ID is set"; fi
           if [ -z "$MONDAY_GROUP_ID" ]; then echo "MONDAY_GROUP_ID is missing (optional)"; else echo "MONDAY_GROUP_ID is set"; fi
@@ -78,6 +84,8 @@ jobs:
         env:
           YTJOBS_WEBHOOK_URL: ${{ secrets.YTJOBS_WEBHOOK_URL }}
           ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
+          YT_CAREERS_WEBHOOK_URL: ${{ secrets.YT_CAREERS_WEBHOOK_URL }}
+          BOC_WEBHOOK_URL: ${{ secrets.BOC_WEBHOOK_URL }}
           WEBHOOK_AVATAR_URL: ${{ secrets.WEBHOOK_AVATAR_URL }}
 
           MONDAY_API_TOKEN: ${{ secrets.MONDAY_API_TOKEN }}
@@ -99,14 +107,18 @@ jobs:
           MONDAY_COL_POST_DATE: ${{ secrets.MONDAY_COL_POST_DATE }}
         run: python creator_job_alerts.py
 
-      - name: Upload roster debug files
+      - name: Upload debug files
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: roster-debug
+          name: job-debug
           path: |
             roster_debug.html
             roster_debug.txt
+            ytcareers_debug.html
+            ytcareers_debug.txt
+            boc_debug.html
+            boc_debug.txt
           if-no-files-found: ignore
 
       - name: Commit queue state
