@@ -45,7 +45,6 @@ BOC_URL = "https://www.bucketofcrabs.net/jobs"
 
 HEADER_TEXT = "Cold leads, warm them up! 🔥"
 
-# These source names also match your Monday labels.
 VALID_SOURCES = ("YTJobs", "Roster", "YTCareers", "BucketofCrabs")
 
 ROLE_IDS = {
@@ -75,6 +74,9 @@ JUNK_TITLE_PATTERNS = [
     r"^submit job$",
     r"^job title",
     r"^job title & info",
+    r"^for creators",
+    r"^for talent",
+    r"^features",
 ]
 
 EMAIL_RE = re.compile(r"\b[A-Z0-9._%+\-]+@[A-Z0-9.\-]+\.[A-Z]{2,}\b", re.IGNORECASE)
@@ -106,7 +108,6 @@ def load_pending() -> Dict[str, List[Dict[str, Any]]]:
             items = data.get(source, [])
             normalized[source] = items if isinstance(items, list) else []
 
-        # Support older names if they ever got saved before.
         if "YT.Careers" in data and not normalized["YTCareers"]:
             normalized["YTCareers"] = data.get("YT.Careers", [])
 
@@ -184,6 +185,7 @@ def extract_role_only(text: str) -> str:
         r"\bInternship\b",
         r"\bPer project\b",
         r"\bPer hour\b",
+        r"\bOne[- ]?off project\b",
         r"\bApply\b",
         r"\bView\b",
         r"\bPosted\b",
@@ -202,8 +204,8 @@ def extract_role_only(text: str) -> str:
             text = text.split(sep)[0].strip()
 
     words = text.split()
-    if len(words) > 10:
-        text = " ".join(words[:10])
+    if len(words) > 12:
+        text = " ".join(words[:12])
 
     return clip(text, 80) if text else "New Job"
 
@@ -217,7 +219,7 @@ def clean_source_specific_title(source: str, text: str) -> str:
         text = re.sub(r"\s*Game\s*&\s*Date\s*", " ", text, flags=re.IGNORECASE)
         text = re.sub(r"\s*Posted\s+\w+\s+\d{1,2}(st|nd|rd|th)?\s+\d{4}.*$", "", text, flags=re.IGNORECASE)
         text = re.sub(r"\s*Remote Only.*$", "", text, flags=re.IGNORECASE)
-        text = re.sub(r"\s*Long Term.*$", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"\s*Long Term.*$", " Long Term", text, flags=re.IGNORECASE)
         text = re.sub(r"\s*\$\d.*$", "", text)
 
     if source == "YTCareers":
@@ -234,9 +236,10 @@ def extract_pay(text: str) -> str:
     text = clean_text(text)
 
     pay_patterns = [
-        r"(\$\d[\d,]*(?:\.\d+)?\s*(?:k|K)?\s*(?:-|to|–|—)\s*\$?\d[\d,]*(?:\.\d+)?\s*(?:k|K)?(?:\s*(?:/|per)\s*(?:hour|hr|project|month|year|video|short))?)",
-        r"(\$\d[\d,]*(?:\.\d+)?\s*(?:k|K)?(?:\s*(?:/|per)\s*(?:hour|hr|project|month|year|video|short))?)",
+        r"(\$\d[\d,]*(?:\.\d+)?\s*(?:k|K)?\s*(?:-|to|–|—)\s*\$?\d[\d,]*(?:\.\d+)?\s*(?:k|K)?(?:\s*(?:/|per)\s*(?:hour|hr|project|month|year|video|vid|short|episode))?)",
+        r"(\$\d[\d,]*(?:\.\d+)?\s*(?:k|K)?(?:\s*(?:/|per)\s*(?:hour|hr|project|month|year|video|vid|short|episode))?)",
         r"(\d[\d,]*(?:\.\d+)?\s*(?:k|K)\s*(?:-|to|–|—)\s*\d[\d,]*(?:\.\d+)?\s*(?:k|K))",
+        r"(\d+\s*-\s*\d+\s*(?:usd|USD|Euro|euro|INR|inr)?(?:\s*per\s*(?:vid|video|episode|month|project))?)",
     ]
 
     for pattern in pay_patterns:
@@ -244,8 +247,14 @@ def extract_pay(text: str) -> str:
         if pay_match:
             return clip(pay_match.group(1), 80)
 
-    if re.search(r"\bunpaid\b", text, flags=re.IGNORECASE):
-        return "Unpaid"
+    if re.search(r"\bnegotiable\b", text, flags=re.IGNORECASE):
+        return "Negotiable"
+
+    if re.search(r"\bvoluntary\b", text, flags=re.IGNORECASE):
+        return "Voluntary"
+
+    if re.search(r"\bsee job description\b", text, flags=re.IGNORECASE):
+        return "See job description"
 
     return "Not listed"
 
@@ -253,6 +262,9 @@ def extract_pay(text: str) -> str:
 def extract_location(text: str) -> str:
     text = clean_text(text)
     lower = text.lower()
+
+    if "worldwide remote" in lower or "remote only" in lower or "synchronous remote" in lower:
+        return "Remote"
 
     if "remote" in lower:
         return "Remote"
@@ -281,6 +293,9 @@ def extract_location(text: str) -> str:
 def extract_job_type(text: str) -> str:
     lower = text.lower()
 
+    if "one-off project" in lower or "one off project" in lower:
+        return "One-off project"
+
     if "part-time" in lower or "part time" in lower:
         return "Part-time"
 
@@ -298,6 +313,9 @@ def extract_job_type(text: str) -> str:
 
     if "per project" in lower:
         return "Per project"
+
+    if "voluntary" in lower:
+        return "Voluntary"
 
     return "Not listed"
 
@@ -360,7 +378,6 @@ def is_junk_job(job: Dict[str, Any]) -> bool:
 def detect_role_tag(title: str, summary: str) -> Optional[str]:
     text = f"{title} {summary}".lower()
 
-    # Thumbnail Designer
     if any(word in text for word in [
         "thumbnail",
         "thumbnail designer",
@@ -369,17 +386,16 @@ def detect_role_tag(title: str, summary: str) -> Optional[str]:
     ]):
         return "thumbnail_designer"
 
-    # Creative Director
     if any(word in text for word in [
         "creative director",
         "content director",
         "creative lead",
         "head of creative",
         "creative strategist",
+        "scene director",
     ]):
         return "creative_director"
 
-    # Channel Manager
     if any(word in text for word in [
         "channel manager",
         "youtube channel manager",
@@ -392,7 +408,6 @@ def detect_role_tag(title: str, summary: str) -> Optional[str]:
     ]):
         return "channel_manager"
 
-    # Strategist
     if any(word in text for word in [
         "strategist",
         "strategy",
@@ -404,7 +419,6 @@ def detect_role_tag(title: str, summary: str) -> Optional[str]:
     ]):
         return "strategist"
 
-    # Scriptwriter
     if any(word in text for word in [
         "scriptwriter",
         "script writer",
@@ -414,10 +428,10 @@ def detect_role_tag(title: str, summary: str) -> Optional[str]:
         "video essay writer",
         "story writer",
         "narrative designer",
+        "content writer",
     ]):
         return "scriptwriter"
 
-    # Editor
     if any(word in text for word in [
         "editor",
         "video editor",
@@ -433,10 +447,12 @@ def detect_role_tag(title: str, summary: str) -> Optional[str]:
         "after effects",
         "premiere pro",
         "davinci",
+        "trailer maker",
+        "clipper",
+        "promo video",
     ]):
         return "editor"
 
-    # Producer / Production Manager
     if any(word in text for word in [
         "producer",
         "production manager",
@@ -467,14 +483,8 @@ def build_role_line_and_mentions(title: str, summary: str) -> tuple[str, Dict[st
 def monday_company_name(job: Dict[str, Any]) -> str:
     company = clean_text(job.get("company", ""))
 
-    if company:
+    if company and company.lower() not in {"not listed", "unknown"}:
         return clip(company, 255)
-
-    title = clean_text(job.get("title", ""))
-    source = job.get("source", "")
-
-    if source in {"Roster", "YTCareers", "BucketofCrabs"} and title:
-        return clip(title, 255)
 
     return "Unknown"
 
@@ -483,13 +493,34 @@ def map_monday_type(job_type: str, pay: str) -> Optional[str]:
     jt = clean_text(job_type).lower()
     pay_text = clean_text(pay).lower()
 
-    if "per project" in jt or "per project" in pay_text:
+    if any(x in jt for x in ["one-off project", "one off project", "per project", "project"]):
         return "Per Project"
 
-    if "/hour" in pay_text or "per hour" in pay_text or "/hr" in pay_text:
+    if any(x in pay_text for x in [
+        "fixed amount",
+        "project based",
+        "per video",
+        "per vid",
+        "per youtube episode",
+        "per episode",
+        "per project",
+        "rate",
+    ]):
+        return "Per Project"
+
+    if any(x in pay_text for x in ["/hour", "per hour", "/hr", "hourly"]):
         return "Per Hour"
 
-    if "salary" in pay_text or "/year" in pay_text or "per year" in pay_text or "k" in pay_text:
+    if any(x in jt for x in ["full-time", "full time"]):
+        return "Salary"
+
+    if any(x in pay_text for x in ["salary", "/year", "per year", "yearly", "k per year"]):
+        return "Salary"
+
+    if any(x in jt for x in ["part-time", "part time", "contract", "freelance"]):
+        return "Per Project"
+
+    if "monthly" in pay_text or "per month" in pay_text:
         return "Salary"
 
     return None
@@ -537,7 +568,7 @@ def map_monday_category(job: Dict[str, Any]) -> Optional[str]:
         if any(word in text for word in ["startup", "saas", "founder"]):
             return "Startup"
 
-        if any(word in text for word in ["company", "brand", "business", "studio"]):
+        if any(word in text for word in ["company", "brand", "business", "studio", "games"]):
             return "Company"
 
         return "Creator"
@@ -548,7 +579,7 @@ def map_monday_category(job: Dict[str, Any]) -> Optional[str]:
 def map_monday_location(location: str) -> Optional[str]:
     loc = clean_text(location).lower()
 
-    if loc == "remote":
+    if loc in {"remote", "remote only", "worldwide remote", "synchronous remote"}:
         return "Remote"
 
     if loc == "hybrid":
@@ -577,9 +608,12 @@ def map_monday_role_label(job: Dict[str, Any]) -> str:
 
 
 def extract_numeric_pay(pay: str) -> Optional[float]:
-    text = clean_text(pay)
+    text = clean_text(pay).lower()
 
-    k_match = re.search(r"\$?(\d+(?:\.\d+)?)\s*[kK]\b", text)
+    if not text or text in {"not listed", "negotiable", "see job description", "voluntary"}:
+        return None
+
+    k_match = re.search(r"\$?(\d+(?:\.\d+)?)\s*k\b", text)
     if k_match:
         try:
             return float(k_match.group(1)) * 1000
@@ -831,7 +865,6 @@ def send_to_discord(job: Dict[str, Any]) -> None:
     description = clip(job.get("summary", "No description listed."), 220)
     url = (job.get("url") or "").strip()
 
-    # This is the important part: every source uses the same role-tag logic.
     role_line, allowed_mentions = build_role_line_and_mentions(title, description)
 
     content = (
@@ -1067,119 +1100,99 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
 
 
 async def scrape_roster(page) -> List[Dict[str, Any]]:
-    async def load_roster_list() -> str:
-        await page.goto(ROSTER_URL, wait_until="domcontentloaded")
-        await page.wait_for_timeout(5000)
+    await page.goto(ROSTER_URL, wait_until="domcontentloaded")
+    await page.wait_for_timeout(5000)
 
-        for _ in range(4):
-            await page.mouse.wheel(0, 3000)
-            await page.wait_for_timeout(1200)
+    for _ in range(4):
+        await page.mouse.wheel(0, 3000)
+        await page.wait_for_timeout(1200)
 
-        html = await page.content()
-        Path("roster_debug.html").write_text(html, encoding="utf-8")
-        body = await page.locator("body").inner_text()
+    html = await page.content()
+    Path("roster_debug.html").write_text(html, encoding="utf-8")
 
-        return body
-
-    def parse_roster_block(block: str, idx: int) -> Dict[str, str]:
-        block = clean_text(block)
-
-        title = block
-
-        for marker in ["📍", "💼", "👥", "$", "Apply"]:
-            if marker in title:
-                title = title.split(marker)[0].strip()
-
-        title = clip(title, 80)
-
-        if not title:
-            title = f"Roster Job {idx + 1}"
-
-        location = extract_location(block)
-        job_type = extract_job_type(block)
-        pay = extract_pay(block)
-
-        description = block
-
-        if description.lower().startswith(title.lower()):
-            description = description[len(title):].strip(" -—:|")
-
-        for marker in ["📍", "💼", "👥"]:
-            description = description.replace(marker, " ")
-
-        description = clean_text(description)
-        description = description.replace("About the Channel", " About the Channel")
-        description = description.replace("About the Job", " About the Job")
-        description = clip(description, 220)
-
-        if not description:
-            description = "No description listed."
-
-        return {
-            "title": title,
-            "summary": description,
-            "location": location,
-            "job_type": job_type,
-            "pay": pay,
-        }
-
-    body_text = await load_roster_list()
+    body_text = await page.locator("body").inner_text()
     Path("roster_debug.txt").write_text(body_text, encoding="utf-8")
 
     print(f"Roster body preview: {clip(body_text, 1200)}")
 
-    raw_blocks = [clean_text(x) for x in body_text.split("Apply")]
-    raw_blocks = [x for x in raw_blocks if x and len(x) > 30]
-
-    print(f"Roster raw blocks: {len(raw_blocks)}")
-
-    apply_count = await page.locator("text=Apply").count()
-    print(f"Roster apply buttons: {apply_count}")
-
+    soup = BeautifulSoup(html, "html.parser")
     jobs: List[Dict[str, Any]] = []
-    total = min(len(raw_blocks), apply_count)
 
-    for i in range(total):
-        apply_locator = page.locator("text=Apply").nth(i)
-        detail_url = ROSTER_URL
+    candidate_links: List[tuple[str, str]] = []
 
-        try:
-            await apply_locator.scroll_into_view_if_needed()
-            await page.wait_for_timeout(500)
+    for a in soup.select("a[href]"):
+        href = (a.get("href") or "").strip()
+        text = clean_text(a.get_text(" ", strip=True))
 
-            before_url = page.url
+        if not href or not text:
+            continue
 
-            try:
-                async with page.expect_navigation(wait_until="networkidle", timeout=10000):
-                    await apply_locator.click()
-            except Exception:
-                await apply_locator.click(force=True)
-                await page.wait_for_timeout(3000)
+        full_url = urljoin(ROSTER_URL, href)
+        lower = full_url.lower()
 
-            after_url = page.url
+        if "joinroster.co" not in lower:
+            continue
 
-            if after_url and after_url != before_url:
-                detail_url = after_url
+        if any(bad in lower for bad in ["/login", "/sign", "/register", "/pricing", "/privacy", "/terms"]):
+            continue
 
-            if page.url != ROSTER_URL:
-                await page.goto(ROSTER_URL, wait_until="domcontentloaded")
-                await page.wait_for_timeout(2000)
+        if full_url.rstrip("/") == ROSTER_URL.rstrip("/"):
+            continue
 
-        except Exception as e:
-            print(f"Roster click failed for block {i}: {e}")
+        if any(good in lower for good in ["/jobs/", "/job/"]):
+            candidate_links.append((full_url.rstrip("/"), text))
 
-        block = raw_blocks[i]
-        parsed = parse_roster_block(block, i)
+    seen_urls = set()
+
+    for full_url, link_text in candidate_links:
+        if full_url in seen_urls:
+            continue
+
+        seen_urls.add(full_url)
+
+        card_text = link_text
+        matching_a = None
+
+        for a in soup.select("a[href]"):
+            href = (a.get("href") or "").strip()
+
+            if urljoin(ROSTER_URL, href).rstrip("/") == full_url:
+                matching_a = a
+                break
+
+        if matching_a:
+            parent = matching_a
+
+            for _ in range(5):
+                if parent and parent.parent:
+                    parent = parent.parent
+                    text = clean_text(parent.get_text(" ", strip=True))
+
+                    if len(text) > len(card_text):
+                        card_text = text
+                else:
+                    break
+
+        context = clean_text(card_text)
+
+        if any(bad in context.lower() for bad in ["for creators", "for talent", "features", "pricing"]):
+            continue
+
+        role = extract_role_only(context)
+        pay = extract_pay(context)
+        location = extract_location(context)
+        job_type = extract_job_type(context)
+        description = build_description(context, role)
 
         jobs.append(
             {
-                "id": extract_roster_stable_id(detail_url),
-                "title": parsed["title"],
-                "summary": parsed["summary"],
-                "location": parsed["location"],
-                "job_type": parsed["job_type"],
-                "pay": parsed["pay"],
-                "url": detail_url,
+                "id": extract_roster_stable_id(full_url),
+                "title": role,
+                "summary": description,
+                "location": location,
+                "job_type": job_type,
+                "pay": pay,
+                "url": full_url,
                 "source": "Roster",
                 "email": None,
                 "email_source": None,
@@ -1213,157 +1226,175 @@ async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
 
     print(f"YTCareers body preview: {clip(body_text, 1200)}")
 
-    soup = BeautifulSoup(html, "html.parser")
+    lines = [clean_text(line) for line in body_text.splitlines()]
+    lines = [line for line in lines if line]
+
     jobs: List[Dict[str, Any]] = []
-    candidate_links: List[tuple[str, str]] = []
 
-    for a in soup.select("a[href]"):
-        href = (a.get("href") or "").strip()
-        text = clean_text(a.get_text(" ", strip=True))
+    start_idx = 0
+    for idx, line in enumerate(lines):
+        if line.lower() == "all available job offers":
+            start_idx = idx + 1
+            break
 
-        if not href:
+    stop_phrases = [
+        "get notified when new job offers are posted",
+        "receive a free weekly recap",
+        "partner site",
+        "find brands to sponsor",
+    ]
+
+    valid_types = {
+        "one-off project",
+        "part-time",
+        "full-time",
+        "contract",
+        "freelance",
+        "internship",
+    }
+
+    remote_markers = {
+        "worldwide remote",
+        "synchronous remote",
+        "hybrid",
+        "onsite",
+        "on-site",
+        "remote",
+    }
+
+    i = start_idx
+
+    while i < len(lines):
+        line = lines[i]
+        lower = line.lower()
+
+        if any(phrase in lower for phrase in stop_phrases):
+            break
+
+        if "open job" not in lower:
+            i += 1
             continue
 
-        full_url = urljoin(YT_CAREERS_URL, href)
-        lower = full_url.lower()
+        company = line.split("•")[0].strip()
+        company = clip(company, 120)
 
-        if "yt.careers" not in lower:
+        if i + 1 >= len(lines):
+            i += 1
             continue
 
-        blocked_parts = [
-            "/new",
-            "/create",
-            "/post",
-            "/submit",
-            "/login",
-            "/sign-in",
-            "/signin",
-            "/register",
-            "/pricing",
-            "/privacy",
-            "/terms",
-        ]
+        title = clean_source_specific_title("YTCareers", lines[i + 1])
+        job_type = "Not listed"
+        location_parts: List[str] = []
+        remote_status = "Not listed"
+        pay = "Not listed"
+        start_date = "Not listed"
+        posted_date = "Not listed"
 
-        if any(part in lower for part in blocked_parts):
-            continue
+        j = i + 2
 
-        if full_url.rstrip("/") == YT_CAREERS_URL.rstrip("/"):
-            continue
+        if j < len(lines) and lines[j].lower() in valid_types:
+            job_type = lines[j]
+            j += 1
 
-        is_likely_job = (
-            "/youtube-jobs/" in lower
-            or "/jobs/" in lower
-            or re.search(r"/job/[^/]+", lower)
-        )
+        while j < len(lines):
+            current = lines[j]
+            current_lower = current.lower()
 
-        if is_likely_job and len(text) > 3:
-            candidate_links.append((full_url, text))
-
-    seen_urls = set()
-
-    for full_url, link_text in candidate_links:
-        normalized_url = full_url.rstrip("/")
-
-        if normalized_url in seen_urls:
-            continue
-
-        seen_urls.add(normalized_url)
-
-        card_text = link_text
-
-        matching_a = None
-
-        for a in soup.select("a[href]"):
-            href = (a.get("href") or "").strip()
-
-            if urljoin(YT_CAREERS_URL, href).rstrip("/") == normalized_url:
-                matching_a = a
+            if "open job" in current_lower:
                 break
 
-        if matching_a:
-            parent = matching_a
+            if any(phrase in current_lower for phrase in stop_phrases):
+                break
 
-            for _ in range(4):
-                if parent and parent.parent:
-                    parent = parent.parent
-                    text = clean_text(parent.get_text(" ", strip=True))
-
-                    if len(text) > len(card_text):
-                        card_text = text
+            if current_lower in remote_markers:
+                if current_lower in {"worldwide remote", "synchronous remote", "remote"}:
+                    remote_status = "Remote"
+                elif current_lower in {"on-site", "onsite"}:
+                    remote_status = "On-site"
                 else:
-                    break
+                    remote_status = current
 
-        context = clean_text(card_text or link_text)
+                j += 1
+                break
 
-        if len(context) < 10:
-            context = link_text
+            location_parts.append(current.strip(","))
+            j += 1
 
-        role = clean_source_specific_title("YTCareers", extract_role_only(context))
-        pay = extract_pay(context)
-        location = extract_location(context)
-        job_type = extract_job_type(context)
-        description = build_description(context, role)
+        extras: List[str] = []
 
-        company = None
-        company_match = re.search(
-            r"(?:Company|Creator|Channel)\s*[:\-]?\s*([A-Za-z0-9 &.,'’\-]+)",
-            context,
-            flags=re.IGNORECASE,
-        )
+        while j < len(lines):
+            current = lines[j]
+            current_lower = current.lower()
 
-        if company_match:
-            company = clip(company_match.group(1), 120)
+            if "open job" in current_lower:
+                break
 
-        jobs.append(
-            {
-                "id": extract_ytcareers_stable_id(normalized_url),
-                "title": role,
-                "summary": description,
-                "location": location,
-                "job_type": job_type,
-                "pay": pay,
-                "url": normalized_url,
-                "source": "YTCareers",
-                "email": None,
-                "email_source": None,
-                "company": company,
-            }
-        )
+            if any(phrase in current_lower for phrase in stop_phrases):
+                break
 
-    if not jobs:
-        lines = [clean_text(line) for line in body_text.splitlines()]
-        lines = [line for line in lines if len(line) > 4]
+            extras.append(current)
+            j += 1
 
-        blocks: List[str] = []
-        current: List[str] = []
+            if len(extras) >= 4:
+                break
 
-        for line in lines:
-            current.append(line)
-            joined = " ".join(current)
+        for extra in extras:
+            extra_lower = extra.lower()
 
-            if re.search(
-                r"\b(Apply|View Job|Posted|Remote|Full-time|Part-time|Contract|Freelance)\b",
-                joined,
-                flags=re.IGNORECASE,
+            if pay == "Not listed" and (
+                "$" in extra
+                or "usd" in extra_lower
+                or "inr" in extra_lower
+                or "euro" in extra_lower
+                or "per " in extra_lower
+                or "negotiable" in extra_lower
+                or "rate" in extra_lower
+                or re.search(r"\d+\s*-\s*\d+", extra_lower)
             ):
-                if len(joined) > 35:
-                    blocks.append(clean_text(joined))
-                    current = []
-
-        for block in blocks[:50]:
-            if "create job offer" in block.lower():
+                pay = extra
                 continue
 
-            role = clean_source_specific_title("YTCareers", extract_role_only(block))
-            pay = extract_pay(block)
-            location = extract_location(block)
-            job_type = extract_job_type(block)
-            description = build_description(block, role)
+            if start_date == "Not listed" and (
+                extra_lower == "asap"
+                or "within" in extra_lower
+            ):
+                start_date = extra
+                continue
+
+            if posted_date == "Not listed" and (
+                "ago" in extra_lower
+                or re.search(r"\d+\s+days?", extra_lower)
+            ):
+                posted_date = extra
+                continue
+
+        location = clean_text(", ".join(location_parts))
+
+        if not location:
+            location = remote_status if remote_status != "Not listed" else "Not listed"
+
+        if remote_status == "Remote":
+            location = "Remote"
+        elif remote_status in {"Hybrid", "On-site", "Onsite"}:
+            location = remote_status
+
+        if title and title != "New Job":
+            description_parts = [
+                title,
+                f"Company: {company}" if company else "",
+                f"Type: {job_type}" if job_type != "Not listed" else "",
+                f"Location: {location}" if location != "Not listed" else "",
+                f"Pay: {pay}" if pay != "Not listed" else "",
+                f"Start: {start_date}" if start_date != "Not listed" else "",
+                f"Posted: {posted_date}" if posted_date != "Not listed" else "",
+            ]
+
+            description = clip(" | ".join([x for x in description_parts if x]), 220)
 
             jobs.append(
                 {
-                    "id": extract_ytcareers_stable_id(make_id("ytcareers", role, block[:120])),
-                    "title": role,
+                    "id": extract_ytcareers_stable_id(make_id("ytcareers", company, title, job_type, pay, posted_date)),
+                    "title": title,
                     "summary": description,
                     "location": location,
                     "job_type": job_type,
@@ -1372,16 +1403,18 @@ async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
                     "source": "YTCareers",
                     "email": None,
                     "email_source": None,
-                    "company": None,
+                    "company": company,
                 }
             )
+
+        i = max(j, i + 1)
 
     jobs = dedupe_jobs(jobs)
 
     print(f"YTCareers jobs found: {len(jobs)}")
 
     for job in jobs[:10]:
-        print(f"YTCareers parsed job: {job['title']} | {job['pay']} | {job['location']} | {job['url']}")
+        print(f"YTCareers parsed job: {job['title']} | {job['company']} | {job['pay']} | {job['location']}")
 
     return jobs
 
@@ -1402,96 +1435,159 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
 
     print(f"BucketofCrabs body preview: {clip(body_text, 1200)}")
 
-    soup = BeautifulSoup(html, "html.parser")
+    lines = [clean_text(line) for line in body_text.splitlines()]
+    lines = [line for line in lines if line]
+
     jobs: List[Dict[str, Any]] = []
-    candidate_links: List[tuple[str, str]] = []
 
-    for a in soup.select("a[href]"):
-        href = (a.get("href") or "").strip()
-        text = clean_text(a.get_text(" ", strip=True))
+    start_idx = 0
+    for idx, line in enumerate(lines):
+        if "job opportunities" in line.lower():
+            start_idx = idx + 1
+            break
 
-        if not href:
-            continue
+    stop_phrases = [
+        "load more",
+        "privacy policy",
+        "terms",
+        "find a job",
+        "browse employers",
+        "browse companies",
+        "contact us",
+        "register",
+        "sign in",
+    ]
 
-        full_url = urljoin(BOC_URL, href)
-        lower = full_url.lower()
+    category_words = {
+        "game developer",
+        "plugin/mod developer",
+        "operations",
+        "other",
+        "3d models/animator",
+        "video",
+        "game art",
+        "design",
+        "talent/actors",
+        "world builder",
+        "writer",
+    }
 
-        if any(skip in lower for skip in ["mailto:", "javascript:", "#"]):
-            continue
+    game_markers = {
+        "minecraft java",
+        "minecraft bedrock",
+        "multiple games",
+    }
 
-        if "bucketofcrabs.net" in lower and (
-            "/jobs/" in lower
-            or "/job/" in lower
-            or "jobs" in lower
-        ):
-            if full_url.rstrip("/") == BOC_URL.rstrip("/"):
-                continue
-
-            candidate_links.append((full_url, text))
-
-    seen_urls = set()
-
-    for full_url, link_text in candidate_links:
-        normalized_url = full_url.rstrip("/")
-
-        if normalized_url in seen_urls:
-            continue
-
-        seen_urls.add(normalized_url)
-
-        card_text = link_text
-        matching_a = None
-
-        for a in soup.select("a[href]"):
-            href = (a.get("href") or "").strip()
-
-            if urljoin(BOC_URL, href).rstrip("/") == normalized_url:
-                matching_a = a
-                break
-
-        if matching_a:
-            parent = matching_a
-
-            for _ in range(5):
-                if parent and parent.parent:
-                    parent = parent.parent
-                    text = clean_text(parent.get_text(" ", strip=True))
-
-                    if len(text) > len(card_text):
-                        card_text = text
-                else:
-                    break
-
-        context = clean_text(card_text or link_text)
-
-        if len(context) < 10:
-            context = link_text
-
-        role = clean_source_specific_title("BucketofCrabs", extract_role_only(context))
-        pay = extract_pay(context)
-        location = extract_location(context)
-        job_type = extract_job_type(context)
-        description = build_description(context, role)
-
-        company = None
-        company_match = re.search(
-            r"(?:Company|Studio|Creator|Channel|Team)\s*[:\-]?\s*([A-Za-z0-9 &.,'’\-]+)",
-            context,
-            flags=re.IGNORECASE,
+    def looks_like_pay(value: str) -> bool:
+        value_lower = value.lower()
+        return (
+            "$" in value
+            or "%" in value
+            or "voluntary" in value_lower
+            or "fixed amount" in value_lower
+            or "project based" in value_lower
         )
 
-        if company_match:
-            company = clip(company_match.group(1), 120)
+    def looks_like_location(value: str) -> bool:
+        value_lower = value.lower()
+        return (
+            "remote only" in value_lower
+            or value_lower == "remote"
+            or "," in value
+            or "uk" in value_lower
+            or "usa" in value_lower
+            or "canada" in value_lower
+        )
+
+    i = start_idx
+
+    while i < len(lines):
+        line = lines[i]
+        lower = line.lower()
+
+        if any(phrase == lower or phrase in lower for phrase in stop_phrases):
+            break
+
+        if i + 3 >= len(lines):
+            break
+
+        company = lines[i]
+        title = lines[i + 1]
+        location = lines[i + 2]
+        pay = lines[i + 3]
+
+        if not looks_like_location(location) or not looks_like_pay(pay):
+            i += 1
+            continue
+
+        company = clip(company, 120)
+        title = clean_source_specific_title("BucketofCrabs", title)
+        location = "Remote" if location.lower() == "remote only" else location
+        pay = clip(pay, 80)
+
+        j = i + 4
+        categories: List[str] = []
+        game = "Not listed"
+        posted_date = "Not listed"
+
+        while j < len(lines):
+            current = lines[j]
+            current_lower = current.lower()
+
+            if any(phrase == current_lower or phrase in current_lower for phrase in stop_phrases):
+                break
+
+            if (
+                j + 3 < len(lines)
+                and looks_like_location(lines[j + 2])
+                and looks_like_pay(lines[j + 3])
+                and current_lower not in category_words
+                and current_lower not in game_markers
+            ):
+                break
+
+            if current_lower in category_words:
+                categories.append(current)
+            elif current_lower in game_markers:
+                game = current
+            elif re.search(r"\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\b", current_lower):
+                posted_date = current
+
+            j += 1
+
+        category_text = ", ".join(categories) if categories else "Not listed"
+
+        job_type = "Freelance"
+        pay_lower = pay.lower()
+
+        if "yearly" in pay_lower:
+            job_type = "Full-time"
+        elif "monthly" in pay_lower:
+            job_type = "Contract"
+        elif "project based" in pay_lower or "fixed amount" in pay_lower:
+            job_type = "Freelance"
+        elif "voluntary" in pay_lower:
+            job_type = "Voluntary"
+
+        description_parts = [
+            title,
+            f"Company: {company}",
+            f"Category: {category_text}" if category_text != "Not listed" else "",
+            f"Game: {game}" if game != "Not listed" else "",
+            f"Posted: {posted_date}" if posted_date != "Not listed" else "",
+        ]
+
+        description = clip(" | ".join([x for x in description_parts if x]), 220)
 
         jobs.append(
             {
-                "id": extract_boc_stable_id(normalized_url),
-                "title": role,
+                "id": extract_boc_stable_id(make_id("boc", company, title, pay, posted_date)),
+                "title": title,
                 "summary": description,
                 "location": location,
                 "job_type": job_type,
                 "pay": pay,
-                "url": normalized_url,
+                "url": BOC_URL,
                 "source": "BucketofCrabs",
                 "email": None,
                 "email_source": None,
@@ -1499,55 +1595,14 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
             }
         )
 
-    if not jobs:
-        lines = [clean_text(line) for line in body_text.splitlines()]
-        lines = [line for line in lines if len(line) > 4]
-
-        blocks: List[str] = []
-        current: List[str] = []
-
-        for line in lines:
-            current.append(line)
-            joined = " ".join(current)
-
-            if re.search(
-                r"\b(Apply|View Job|Posted|Remote|Full-time|Part-time|Contract|Freelance)\b",
-                joined,
-                flags=re.IGNORECASE,
-            ):
-                if len(joined) > 35:
-                    blocks.append(clean_text(joined))
-                    current = []
-
-        for block in blocks[:50]:
-            role = clean_source_specific_title("BucketofCrabs", extract_role_only(block))
-            pay = extract_pay(block)
-            location = extract_location(block)
-            job_type = extract_job_type(block)
-            description = build_description(block, role)
-
-            jobs.append(
-                {
-                    "id": extract_boc_stable_id(make_id("boc", role, block[:120])),
-                    "title": role,
-                    "summary": description,
-                    "location": location,
-                    "job_type": job_type,
-                    "pay": pay,
-                    "url": BOC_URL,
-                    "source": "BucketofCrabs",
-                    "email": None,
-                    "email_source": None,
-                    "company": None,
-                }
-            )
+        i = max(j, i + 1)
 
     jobs = dedupe_jobs(jobs)
 
     print(f"BucketofCrabs jobs found: {len(jobs)}")
 
     for job in jobs[:10]:
-        print(f"BucketofCrabs parsed job: {job['title']} | {job['pay']} | {job['location']} | {job['url']}")
+        print(f"BucketofCrabs parsed job: {job['title']} | {job['company']} | {job['pay']} | {job['location']}")
 
     return jobs
 
