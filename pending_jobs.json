@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "ytjobs_21040",
-      "title": "Funny Moments Gaming Video Editor",
-      "summary": "Funny Moments Gaming Video Editor $50-$100 Per project Remote Gaming Comedy +8 more MrVideoFreak 12.1K subs",
-      "location": "Remote",
-      "job_type": "Per project",
-      "pay": "$50-$100 Per project",
-      "url": "https://ytjobs.co/job/21040",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "ytjobs_38579",
       "title": "YouTube Idea Strategist (Minecraft Shorts) Per project",
       "summary": "YouTube Idea Strategist (Minecraft Shorts) Per project Remote Gaming Shorts YouTube +3 more CJL 404K subs",
@@ -693,19 +680,6 @@
   "Roster": [],
   "YTCareers": [
     {
-      "id": "ytcareers_9a207d7328b36aebb30572d84d0e2c3fe70fec913b7cf47f62fd06e773f5cfdb",
-      "title": "Video Editor using Davinci",
-      "summary": "Video Editor using Davinci",
-      "location": "Not listed",
-      "job_type": "Not listed",
-      "pay": "Not listed",
-      "url": "https://yt.careers/youtube-jobs/218",
-      "source": "YTCareers",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "ytcareers_75099be3646bc1d72d59eecf1a46006b1b3a576c443db36d182d947feaa564cb",
       "title": "Video Editor",
       "summary": "Video Editor",
@@ -1016,22 +990,22 @@
       "email": null,
       "email_source": null,
       "company": null
+    },
+    {
+      "id": "ytcareers_2d9c67b8a6e301deabd5615134e0a566c8f9fdd51dec894a6d52a22099c7530a",
+      "title": "Green Dot Aviation \u2022 1 Open job Motion Graphics Editor",
+      "summary": "Green Dot Aviation \u2022 1 Open job Motion Graphics Editor Part-time Dublin, IE Worldwide remote 300-600 per YouTube episode Within a month 16 days ago Apply ->",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/219",
+      "source": "YTCareers",
+      "email": null,
+      "email_source": null,
+      "company": null
     }
   ],
   "BucketofCrabs": [
-    {
-      "id": "boc_67a310648f0e2b75926ac381a758dba3b66a8a4689028f924247a1b2f6bb78a1",
-      "title": "Job Title & Info Game & Date Astrominer_12 Core Shader",
-      "summary": "Job Title & Info Game & Date Astrominer_12 Core Shader Artist - Long Term Remote Only $200-$600/Fixed Amount - quarterly Game Developer Plugin/Mod Developer Minecraft Java May 4th 2026 CubeCraft Games Head of CubeCraf...",
-      "location": "Remote",
-      "job_type": "Freelance",
-      "pay": "$200-$600",
-      "url": "https://www.bucketofcrabs.net/jobs/S438F57kwY",
-      "source": "BucketofCrabs",
-      "email": null,
-      "email_source": null,
-      "company": "s Developer Remote Only 10"
-    },
     {
       "id": "boc_9fd09d68af7a33b5bd0bed900233d67492fa554ec4ce030eaedc70388168ca90",
       "title": "Job Title & Info Game & Date Astrominer_12 Core Shader",
@@ -1261,6 +1235,19 @@
       "job_type": "Freelance",
       "pay": "$20-$80",
       "url": "https://www.bucketofcrabs.net/jobs/mQWGYHWxru",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": "s Skin Maker"
+    },
+    {
+      "id": "boc_6a9568cdf6106599a714a982e509701dc621d322b8fbbe8fceae29d2cd5758b7",
+      "title": "UnderBlocks Studios Skin",
+      "summary": "UnderBlocks Studios Skin \u2014 Job Title & Info Game & Date UnderBlocks Studios Skin Maker / Pixel Artist | UnderBlocks Studios Remote Only $20-$80/Fixed Amount Game Art Design Minecraft Bedrock May 6th 2026 Simply Brilli...",
+      "location": "Remote",
+      "job_type": "Freelance",
+      "pay": "$20-$80",
+      "url": "https://www.bucketofcrabs.net/jobs/joOsNugsGu",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
