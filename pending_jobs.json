@@ -1,19 +1,6 @@
 {
   "YTJobs": [
     {
-      "id": "ytjobs_38569",
-      "title": "Video Editor Short Form Part-time",
-      "summary": "Video Editor Short Form Part-time Remote fitness People & Blogs Vlog Q&A +3 more WarriorBabe 116K subs",
-      "location": "Remote",
-      "job_type": "Part-time",
-      "pay": "Not listed",
-      "url": "https://ytjobs.co/job/38569",
-      "source": "YTJobs",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "ytjobs_21040",
       "title": "Funny Moments Gaming Video Editor",
       "summary": "Funny Moments Gaming Video Editor $50-$100 Per project Remote Gaming Comedy +8 more MrVideoFreak 12.1K subs",
@@ -706,19 +693,6 @@
   "Roster": [],
   "YTCareers": [
     {
-      "id": "ytcareers_2d9c67b8a6e301deabd5615134e0a566c8f9fdd51dec894a6d52a22099c7530a",
-      "title": "Motion Graphics Editor",
-      "summary": "Motion Graphics Editor",
-      "location": "Not listed",
-      "job_type": "Not listed",
-      "pay": "Not listed",
-      "url": "https://yt.careers/youtube-jobs/219",
-      "source": "YTCareers",
-      "email": null,
-      "email_source": null,
-      "company": null
-    },
-    {
       "id": "ytcareers_9a207d7328b36aebb30572d84d0e2c3fe70fec913b7cf47f62fd06e773f5cfdb",
       "title": "Video Editor using Davinci",
       "summary": "Video Editor using Davinci",
@@ -1029,22 +1003,22 @@
       "email": null,
       "email_source": null,
       "company": null
+    },
+    {
+      "id": "ytcareers_b8741e14f5aff97272802b7a753626cf922237dee9235d542ed75b03ca614eca",
+      "title": "Dhruv Gupta \u2022 1 Open job Content Writer (short form)",
+      "summary": "Dhruv Gupta \u2022 1 Open job Content Writer (short form) Part-time Mumbai, Maharashtra, IN Synchronous remote ASAP 16 days ago Apply ->",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/220",
+      "source": "YTCareers",
+      "email": null,
+      "email_source": null,
+      "company": null
     }
   ],
   "BucketofCrabs": [
-    {
-      "id": "boc_6a9568cdf6106599a714a982e509701dc621d322b8fbbe8fceae29d2cd5758b7",
-      "title": "Job Title & Info Game & Date Astrominer_12 Core Shader",
-      "summary": "Job Title & Info Game & Date Astrominer_12 Core Shader Artist - Long Term Remote Only $200-$600/Fixed Amount - quarterly Game Developer Plugin/Mod Developer Minecraft Java May 4th 2026 CubeCraft Games Head of CubeCraf...",
-      "location": "Remote",
-      "job_type": "Freelance",
-      "pay": "$200-$600",
-      "url": "https://www.bucketofcrabs.net/jobs/joOsNugsGu",
-      "source": "BucketofCrabs",
-      "email": null,
-      "email_source": null,
-      "company": "s Developer Remote Only 10"
-    },
     {
       "id": "boc_67a310648f0e2b75926ac381a758dba3b66a8a4689028f924247a1b2f6bb78a1",
       "title": "Job Title & Info Game & Date Astrominer_12 Core Shader",
@@ -1252,6 +1226,45 @@
       "email": null,
       "email_source": null,
       "company": "s 3D Model Texture Artist for Minecraft Bedrock Remote Only"
+    },
+    {
+      "id": "boc_003b12ae1900a80c41631fe7676258c956f93caf2cee883c4a1159bee5b916fd",
+      "title": "UnderBlocks Studios Skin",
+      "summary": "UnderBlocks Studios Skin \u2014 Job Title & Info Game & Date UnderBlocks Studios Skin Maker / Pixel Artist | UnderBlocks Studios Remote Only $20-$80/Fixed Amount Game Art Design Minecraft Bedrock May 6th 2026 Simply Brilli...",
+      "location": "Remote",
+      "job_type": "Freelance",
+      "pay": "$20-$80",
+      "url": "https://www.bucketofcrabs.net/jobs/fOd3devmeR",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": "s Skin Maker"
+    },
+    {
+      "id": "boc_d25a2de3a5d891dc6ec5bc0bb21a2e83d6555c164964707a3367266062d96f8f",
+      "title": "UnderBlocks Studios Skin",
+      "summary": "UnderBlocks Studios Skin \u2014 Job Title & Info Game & Date UnderBlocks Studios Skin Maker / Pixel Artist | UnderBlocks Studios Remote Only $20-$80/Fixed Amount Game Art Design Minecraft Bedrock May 6th 2026 Simply Brilli...",
+      "location": "Remote",
+      "job_type": "Freelance",
+      "pay": "$20-$80",
+      "url": "https://www.bucketofcrabs.net/jobs/vXjKGLnjsH",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": "s Skin Maker"
+    },
+    {
+      "id": "boc_b8c3650ecd680d5374e2a45eb2e17269af15bd5eaf425b9627c5bd4dc526e0cd",
+      "title": "UnderBlocks Studios Skin",
+      "summary": "UnderBlocks Studios Skin \u2014 Job Title & Info Game & Date UnderBlocks Studios Skin Maker / Pixel Artist | UnderBlocks Studios Remote Only $20-$80/Fixed Amount Game Art Design Minecraft Bedrock May 6th 2026 Simply Brilli...",
+      "location": "Remote",
+      "job_type": "Freelance",
+      "pay": "$20-$80",
+      "url": "https://www.bucketofcrabs.net/jobs/mQWGYHWxru",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": "s Skin Maker"
     }
   ]
 }
