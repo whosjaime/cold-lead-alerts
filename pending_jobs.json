@@ -101,7 +101,9 @@
       "source": "YTJobs",
       "email": null,
       "email_source": null,
-      "company": null
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-07"
     },
     {
       "id": "ytjobs_38670",
@@ -460,6 +462,20 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/38541",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38798",
+      "title": "Opt Digital",
+      "summary": "Opt Digital | Video Editor Per project Remote Business and Finance Talking head Opt Digital Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38798",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
