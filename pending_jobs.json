@@ -11,7 +11,9 @@
       "source": "YTJobs",
       "email": null,
       "email_source": null,
-      "company": null
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-07"
     },
     {
       "id": "ytjobs_38686",
@@ -285,9 +287,55 @@
       "email": null,
       "email_source": null,
       "company": null
+    },
+    {
+      "id": "ytjobs_37620",
+      "title": "YouTube Strategist",
+      "summary": "YouTube Strategist $72,000-$108,000 Per Year . Full-time Remote Travel & Events People & Blogs +11 more Breaking and Building Leaders 1.3K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$72,000-$108,000 Per Year",
+      "url": "https://ytjobs.co/job/37620",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "Roster": [],
-  "YTCareers": [],
-  "BucketofCrabs": []
+  "YTCareers": [
+    {
+      "id": "ytcareers_6386b7529aba008cff153a9d7cd3d7cb35af01aab85053a07b46e50c2ad9fa02",
+      "title": "video game editor",
+      "summary": "video game editor | Company: Rivals University | Type: One-off project | Location: Remote | Pay: negotiable | Start: ASAP | Posted: 2 days ago",
+      "location": "Remote",
+      "job_type": "One-off project",
+      "pay": "negotiable",
+      "url": "https://yt.careers/youtube-jobs",
+      "source": "YTCareers",
+      "email": null,
+      "email_source": null,
+      "company": "Rivals University",
+      "posted": true,
+      "posted_date": "2026-05-07"
+    }
+  ],
+  "BucketofCrabs": [
+    {
+      "id": "boc_87ecde20eafccbdd3ee43b40e1ad9d4e05e28b98ad055766847dc9bcebd14e3b",
+      "title": "Skin Maker / Pixel Artist | UnderBlocks Studios",
+      "summary": "Skin Maker / Pixel Artist | UnderBlocks Studios | Company: UNDERBLOCKS STUDIOS | Category: GAME ART, DESIGN | Game: Minecraft Bedrock | Posted: May 6th 2026",
+      "location": "Remote",
+      "job_type": "Freelance",
+      "pay": "$20-$80/Fixed Amount",
+      "url": "https://www.bucketofcrabs.net/jobs",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": "UNDERBLOCKS STUDIOS",
+      "posted": true,
+      "posted_date": "2026-05-07"
+    }
+  ]
 }
