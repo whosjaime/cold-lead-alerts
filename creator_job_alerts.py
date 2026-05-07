@@ -135,6 +135,10 @@ def save_pending(items: Dict[str, List[Dict[str, Any]]]) -> None:
     PENDING_FILE.write_text(json.dumps(normalized, indent=2))
 
 
+def count_unposted(pending: Dict[str, List[Dict[str, Any]]], source: str) -> int:
+    return sum(1 for job in pending.get(source, []) if not job.get("posted"))
+
+
 def make_id(*parts: str) -> str:
     base = " | ".join(parts)
     return hashlib.sha256(base.encode("utf-8")).hexdigest()
@@ -1090,6 +1094,7 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
                 "email": None,
                 "email_source": None,
                 "company": None,
+                "posted": False,
             }
         )
 
@@ -1197,6 +1202,7 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
                 "email": None,
                 "email_source": None,
                 "company": None,
+                "posted": False,
             }
         )
 
@@ -1404,6 +1410,7 @@ async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
                     "email": None,
                     "email_source": None,
                     "company": company,
+                    "posted": False,
                 }
             )
 
@@ -1592,6 +1599,7 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
                 "email": None,
                 "email_source": None,
                 "company": company,
+                "posted": False,
             }
         )
 
@@ -1674,6 +1682,8 @@ def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], pending: Dict[str, List[Dic
             print(f"Skipped duplicate URL already queued: {job['title']} ({source}) | {normalized_url}")
             continue
 
+        job["posted"] = False
+
         pending[source].append(job)
         pending_ids[source].add(job["id"])
 
@@ -1692,15 +1702,22 @@ def post_next_job_for_source(source: str, pending: Dict[str, List[Dict[str, Any]
     if not queue:
         return None
 
-    job = queue[0]
+    job = None
+
+    for candidate in queue:
+        if not candidate.get("posted"):
+            job = candidate
+            break
+
+    if not job:
+        print(f"No unposted {source} jobs available.")
+        return None
 
     try:
         send_to_discord(job)
     except Exception as e:
         print(f"Discord post failed for {source}, will retry next run: {e}")
         return None
-
-    queue.pop(0)
 
     try:
         enrich_public_email(job)
@@ -1711,6 +1728,11 @@ def post_next_job_for_source(source: str, pending: Dict[str, List[Dict[str, Any]
         send_to_monday(job)
     except Exception as e:
         print(f"Monday create failed for {source}: {e}")
+
+    job["posted"] = True
+    job["posted_date"] = str(date.today())
+
+    print(f"Marked as posted: {job.get('title')} ({source})")
 
     return job
 
@@ -1739,11 +1761,11 @@ async def main() -> None:
     )
 
     print(
-        "Pending queue sizes before post: "
-        f"YTJobs={len(pending['YTJobs'])}, "
-        f"Roster={len(pending['Roster'])}, "
-        f"YTCareers={len(pending['YTCareers'])}, "
-        f"BucketofCrabs={len(pending['BucketofCrabs'])}"
+        "Unposted queue sizes before post: "
+        f"YTJobs={count_unposted(pending, 'YTJobs')}, "
+        f"Roster={count_unposted(pending, 'Roster')}, "
+        f"YTCareers={count_unposted(pending, 'YTCareers')}, "
+        f"BucketofCrabs={count_unposted(pending, 'BucketofCrabs')}"
     )
 
     posted_ytjobs = post_next_job_for_source("YTJobs", pending)
@@ -1774,11 +1796,11 @@ async def main() -> None:
         print("No BucketofCrabs post sent this run.")
 
     print(
-        "Pending queue sizes after post: "
-        f"YTJobs={len(pending['YTJobs'])}, "
-        f"Roster={len(pending['Roster'])}, "
-        f"YTCareers={len(pending['YTCareers'])}, "
-        f"BucketofCrabs={len(pending['BucketofCrabs'])}"
+        "Unposted queue sizes after post: "
+        f"YTJobs={count_unposted(pending, 'YTJobs')}, "
+        f"Roster={count_unposted(pending, 'Roster')}, "
+        f"YTCareers={count_unposted(pending, 'YTCareers')}, "
+        f"BucketofCrabs={count_unposted(pending, 'BucketofCrabs')}"
     )
 
 
