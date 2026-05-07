@@ -86,7 +86,9 @@
       "source": "YTJobs",
       "email": null,
       "email_source": null,
-      "company": null
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-07"
     },
     {
       "id": "ytjobs_33667",
@@ -444,6 +446,20 @@
       "job_type": "Full-time",
       "pay": "$40,000-$110,000 Per Year",
       "url": "https://ytjobs.co/job/37711",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38541",
+      "title": "Video Editor Per project",
+      "summary": "Video Editor Per project Remote Film & Animation Gaming +12 more Inferno Jae 1.38M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38541",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
