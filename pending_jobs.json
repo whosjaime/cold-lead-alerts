@@ -116,7 +116,9 @@
       "source": "YTJobs",
       "email": null,
       "email_source": null,
-      "company": null
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-07"
     },
     {
       "id": "ytjobs_38172",
