@@ -6,7 +6,7 @@ import re
 from datetime import date
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse, urlunparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -75,6 +75,9 @@ JUNK_TITLE_PATTERNS = [
     r"^job title",
     r"^job title & info",
     r"^for creators",
+    r"^for creators for talent",
+    r"^find your next opportunity",
+    r"^use our interactive ai tool",
     r"^for talent",
     r"^features",
 ]
@@ -157,6 +160,33 @@ def clip(text: str, max_len: int) -> str:
     return text[: max_len - 3].rstrip() + "..."
 
 
+def normalize_url_for_dedupe(url: str) -> str:
+    url = clean_text(url).strip()
+
+    if not url:
+        return ""
+
+    parsed = urlparse(url)
+    clean_parsed = parsed._replace(query="", fragment="")
+    normalized = urlunparse(clean_parsed).rstrip("/")
+
+    return normalized
+
+
+def normalize_signature_value(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", clean_text(text).lower()).strip()
+
+
+def job_signature(job: Dict[str, Any]) -> str:
+    source = normalize_signature_value(job.get("source", ""))
+    title = normalize_signature_value(job.get("title", ""))
+    company = normalize_signature_value(job.get("company", ""))
+    pay = normalize_signature_value(job.get("pay", ""))
+    location = normalize_signature_value(job.get("location", ""))
+
+    return " | ".join([source, title, company, pay, location])
+
+
 def get_webhook_url(source: str) -> str:
     if source == "YTJobs":
         return YTJOBS_WEBHOOK_URL
@@ -230,6 +260,10 @@ def clean_source_specific_title(source: str, text: str) -> str:
         text = re.sub(r"^Create job offer$", "", text, flags=re.IGNORECASE)
         text = re.sub(r"\s*Apply Now.*$", "", text, flags=re.IGNORECASE)
         text = re.sub(r"\s*View Job.*$", "", text, flags=re.IGNORECASE)
+
+    if source == "Roster":
+        text = re.sub(r"^For creators For talent Features Login Get started Jobs\s*", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"^Find your next opportunity in the creator economy\s*", "", text, flags=re.IGNORECASE)
 
     text = clean_text(text)
 
@@ -338,7 +372,32 @@ def build_description(text: str, role: str) -> str:
     return clip(f"{role} — {text}", 220)
 
 
+def is_known_bad_listing_url(source: str, url: str) -> bool:
+    normalized = normalize_url_for_dedupe(url).lower()
+
+    bad_urls = {
+        "https://www.joinroster.co/jobs",
+        "https://joinroster.co/jobs",
+        "https://yt.careers/youtube-jobs",
+        "https://www.yt.careers/youtube-jobs",
+        "https://www.bucketofcrabs.net/jobs",
+        "https://bucketofcrabs.net/jobs",
+    }
+
+    if normalized in bad_urls:
+        return True
+
+    if source == "Roster" and re.fullmatch(r"https?://(www\.)?joinroster\.co/jobs/?", normalized):
+        return True
+
+    if source == "YTCareers" and re.fullmatch(r"https?://(www\.)?yt\.careers/youtube-jobs/?", normalized):
+        return True
+
+    return False
+
+
 def is_junk_job(job: Dict[str, Any]) -> bool:
+    source = clean_text(job.get("source", ""))
     title = clean_text(job.get("title", "")).lower()
     summary = clean_text(job.get("summary", "")).lower()
     url = clean_text(job.get("url", "")).lower()
@@ -349,6 +408,9 @@ def is_junk_job(job: Dict[str, Any]) -> bool:
     for pattern in JUNK_TITLE_PATTERNS:
         if re.search(pattern, title, flags=re.IGNORECASE):
             return True
+
+    if is_known_bad_listing_url(source, url):
+        return True
 
     bad_url_parts = [
         "/new",
@@ -368,6 +430,12 @@ def is_junk_job(job: Dict[str, Any]) -> bool:
         return True
 
     if "privacy terms of service" in summary:
+        return True
+
+    if "for creators for talent features login" in summary:
+        return True
+
+    if "use our interactive ai tool" in summary:
         return True
 
     if title.count(" ") < 1 and len(title) < 4:
@@ -1014,10 +1082,21 @@ def send_to_monday(job: Dict[str, Any]) -> None:
 
 def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     seen_ids = set()
+    seen_urls = set()
+    seen_signatures = set()
     cleaned: List[Dict[str, Any]] = []
 
     for job in jobs:
+        normalized_url = normalize_url_for_dedupe(job.get("url", ""))
+        signature = job_signature(job)
+
         if job["id"] in seen_ids:
+            continue
+
+        if normalized_url and normalized_url in seen_urls:
+            continue
+
+        if signature and signature in seen_signatures:
             continue
 
         if is_junk_job(job):
@@ -1025,9 +1104,67 @@ def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
             continue
 
         seen_ids.add(job["id"])
+
+        if normalized_url:
+            seen_urls.add(normalized_url)
+
+        if signature:
+            seen_signatures.add(signature)
+
         cleaned.append(job)
 
     return cleaned
+
+
+def clean_pending_queues(pending: Dict[str, List[Dict[str, Any]]]) -> Dict[str, int]:
+    removed = {source: 0 for source in VALID_SOURCES}
+
+    for source in VALID_SOURCES:
+        cleaned_queue = []
+        seen_ids = set()
+        seen_urls = set()
+        seen_signatures = set()
+
+        for job in pending.get(source, []):
+            if not isinstance(job, dict):
+                removed[source] += 1
+                continue
+
+            normalized_url = normalize_url_for_dedupe(job.get("url", ""))
+            signature = job_signature(job)
+            job_id = job.get("id")
+
+            if is_junk_job(job):
+                print(f"Removed junk pending job: {job.get('title', 'Unknown')} ({source}) | {job.get('url', '')}")
+                removed[source] += 1
+                continue
+
+            if job_id and job_id in seen_ids:
+                removed[source] += 1
+                continue
+
+            if normalized_url and normalized_url in seen_urls:
+                removed[source] += 1
+                continue
+
+            if signature and signature in seen_signatures:
+                removed[source] += 1
+                continue
+
+            if job_id:
+                seen_ids.add(job_id)
+
+            if normalized_url:
+                seen_urls.add(normalized_url)
+
+            if signature:
+                seen_signatures.add(signature)
+
+            cleaned_queue.append(job)
+
+        pending[source] = cleaned_queue
+
+    return removed
 
 
 def extract_ytjobs_stable_id(full_url: str) -> str:
@@ -1036,22 +1173,59 @@ def extract_ytjobs_stable_id(full_url: str) -> str:
     if match:
         return f"ytjobs_{match.group(1)}"
 
-    return f"ytjobs_{hashlib.sha256(full_url.encode('utf-8')).hexdigest()}"
+    normalized = normalize_url_for_dedupe(full_url)
+    return f"ytjobs_{hashlib.sha256(normalized.encode('utf-8')).hexdigest()}"
 
 
-def extract_roster_stable_id(detail_url: str) -> str:
-    normalized = clean_text(detail_url).rstrip("/")
-    return f"roster_{hashlib.sha256(normalized.encode('utf-8')).hexdigest()}"
+def extract_roster_stable_id(detail_url: str, title: str = "", company: str = "") -> str:
+    normalized_url = normalize_url_for_dedupe(detail_url).lower()
+    normalized_title = normalize_signature_value(title)
+    normalized_company = normalize_signature_value(company)
+
+    base = " | ".join([normalized_url, normalized_title, normalized_company])
+    return f"roster_{hashlib.sha256(base.encode('utf-8')).hexdigest()}"
 
 
-def extract_ytcareers_stable_id(detail_url: str) -> str:
-    normalized = clean_text(detail_url).rstrip("/")
-    return f"ytcareers_{hashlib.sha256(normalized.encode('utf-8')).hexdigest()}"
+def extract_ytcareers_stable_id(detail_url: str, title: str = "", company: str = "") -> str:
+    normalized_url = normalize_url_for_dedupe(detail_url).lower()
+    normalized_title = normalize_signature_value(title)
+    normalized_company = normalize_signature_value(company)
+
+    base = " | ".join([normalized_url, normalized_title, normalized_company])
+    return f"ytcareers_{hashlib.sha256(base.encode('utf-8')).hexdigest()}"
 
 
 def extract_boc_stable_id(detail_url: str) -> str:
-    normalized = clean_text(detail_url).rstrip("/")
+    normalized = normalize_url_for_dedupe(detail_url)
     return f"boc_{hashlib.sha256(normalized.encode('utf-8')).hexdigest()}"
+
+
+def get_card_context(a) -> str:
+    candidates = []
+
+    for parent_name in ["article", "li", "div", "section"]:
+        parent = a.find_parent(parent_name)
+        if parent:
+            text = clean_text(parent.get_text(" ", strip=True))
+            if text:
+                candidates.append(text)
+
+    link_text = clean_text(a.get_text(" ", strip=True))
+    if link_text:
+        candidates.append(link_text)
+
+    if not candidates:
+        return ""
+
+    candidates = sorted(candidates, key=len)
+
+    for candidate in candidates:
+        lower = candidate.lower()
+
+        if len(candidate) <= 600 and "privacy terms" not in lower:
+            return candidate
+
+    return candidates[0]
 
 
 async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
@@ -1067,10 +1241,9 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
         if "/job/search" in href:
             continue
 
-        full_url = href if href.startswith("http") else f"https://ytjobs.co{href}"
+        full_url = normalize_url_for_dedupe(href if href.startswith("http") else f"https://ytjobs.co{href}")
 
-        card = a.parent
-        context = clean_text(card.get_text(" ", strip=True) if card else a.get_text(" ", strip=True))
+        context = get_card_context(a)
 
         if not context:
             continue
@@ -1121,10 +1294,13 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
     for a in soup.select("a[href]"):
         href = a.get("href") or ""
 
-        full_url = urljoin(ROSTER_URL, href).rstrip("/")
+        full_url = normalize_url_for_dedupe(urljoin(ROSTER_URL, href))
         lower = full_url.lower()
 
         if "joinroster.co" not in lower:
+            continue
+
+        if is_known_bad_listing_url("Roster", full_url):
             continue
 
         if any(bad in lower for bad in [
@@ -1138,26 +1314,18 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
         ]):
             continue
 
-        if full_url.rstrip("/") == ROSTER_URL.rstrip("/"):
+        # Important: only specific detail URLs. Never allow the generic /jobs page.
+        if not re.search(r"/jobs/[^/?#]+", lower):
             continue
 
-        if not any(good in lower for good in [
-            "/job/",
-            "/jobs/",
-            "/role/",
-            "/roles/",
-            "/opportunity/",
-            "/opportunities/",
-        ]):
-            continue
-
-        card = a.parent
-        context = clean_text(card.get_text(" ", strip=True) if card else a.get_text(" ", strip=True))
+        context = get_card_context(a)
 
         if not context:
             continue
 
         role = extract_role_only(context)
+        role = clean_source_specific_title("Roster", role)
+
         pay = extract_pay(context)
         location = extract_location(context)
         job_type = extract_job_type(context)
@@ -1165,7 +1333,7 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
 
         jobs.append(
             {
-                "id": extract_roster_stable_id(full_url),
+                "id": extract_roster_stable_id(full_url, role, ""),
                 "title": role,
                 "summary": description,
                 "location": location,
@@ -1206,10 +1374,13 @@ async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
     for a in soup.select("a[href]"):
         href = a.get("href") or ""
 
-        full_url = urljoin(YT_CAREERS_URL, href).rstrip("/")
+        full_url = normalize_url_for_dedupe(urljoin(YT_CAREERS_URL, href))
         lower = full_url.lower()
 
         if "yt.careers" not in lower:
+            continue
+
+        if is_known_bad_listing_url("YTCareers", full_url):
             continue
 
         if any(bad in lower for bad in [
@@ -1225,20 +1396,19 @@ async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
         ]):
             continue
 
-        if full_url.rstrip("/") == YT_CAREERS_URL.rstrip("/"):
+        # Important: allow only specific job/detail URLs, not the main /youtube-jobs page.
+        allowed_detail_patterns = [
+            r"/youtube-jobs/[^/?#]+",
+            r"/job/[^/?#]+",
+            r"/jobs/[^/?#]+",
+            r"/offer/[^/?#]+",
+            r"/offers/[^/?#]+",
+        ]
+
+        if not any(re.search(pattern, lower) for pattern in allowed_detail_patterns):
             continue
 
-        if not any(good in lower for good in [
-            "/job/",
-            "/jobs/",
-            "/youtube-jobs/",
-            "/offer/",
-            "/offers/",
-        ]):
-            continue
-
-        card = a.parent
-        context = clean_text(card.get_text(" ", strip=True) if card else a.get_text(" ", strip=True))
+        context = get_card_context(a)
 
         if not context:
             continue
@@ -1253,7 +1423,7 @@ async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
 
         jobs.append(
             {
-                "id": extract_ytcareers_stable_id(full_url),
+                "id": extract_ytcareers_stable_id(full_url, role, ""),
                 "title": role,
                 "summary": description,
                 "location": location,
@@ -1294,10 +1464,13 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
     for a in soup.select("a[href]"):
         href = a.get("href") or ""
 
-        full_url = urljoin(BOC_URL, href).rstrip("/")
+        full_url = normalize_url_for_dedupe(urljoin(BOC_URL, href))
         lower = full_url.lower()
 
         if "bucketofcrabs.net" not in lower:
+            continue
+
+        if is_known_bad_listing_url("BucketofCrabs", full_url):
             continue
 
         if any(bad in lower for bad in [
@@ -1311,9 +1484,6 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
         ]):
             continue
 
-        if full_url.rstrip("/") == BOC_URL.rstrip("/"):
-            continue
-
         if not any(good in lower for good in [
             "/job/",
             "/jobs/",
@@ -1324,8 +1494,7 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
         ]):
             continue
 
-        card = a.parent
-        context = clean_text(card.get_text(" ", strip=True) if card else a.get_text(" ", strip=True))
+        context = get_card_context(a)
 
         if not context:
             continue
@@ -1410,7 +1579,12 @@ def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], pending: Dict[str, List[Dic
     }
 
     pending_urls = {
-        source: {clean_text(job.get("url", "")).rstrip("/") for job in pending.get(source, [])}
+        source: {normalize_url_for_dedupe(job.get("url", "")) for job in pending.get(source, [])}
+        for source in VALID_SOURCES
+    }
+
+    pending_signatures = {
+        source: {job_signature(job) for job in pending.get(source, [])}
         for source in VALID_SOURCES
     }
 
@@ -1422,13 +1596,22 @@ def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], pending: Dict[str, List[Dic
         if source not in pending_ids:
             continue
 
-        normalized_url = clean_text(job.get("url", "")).rstrip("/")
+        if is_junk_job(job):
+            print(f"Skipped junk job before queue: {job.get('title', 'Unknown')} ({source})")
+            continue
+
+        normalized_url = normalize_url_for_dedupe(job.get("url", ""))
+        signature = job_signature(job)
 
         if job["id"] in pending_ids[source]:
             continue
 
         if normalized_url and normalized_url in pending_urls[source]:
             print(f"Skipped duplicate URL already queued: {job['title']} ({source}) | {normalized_url}")
+            continue
+
+        if signature and signature in pending_signatures[source]:
+            print(f"Skipped duplicate signature already queued: {job['title']} ({source}) | {signature}")
             continue
 
         job["posted"] = False
@@ -1438,6 +1621,9 @@ def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], pending: Dict[str, List[Dic
 
         if normalized_url:
             pending_urls[source].add(normalized_url)
+
+        if signature:
+            pending_signatures[source].add(signature)
 
         added[source] += 1
         print(f"Queued: {job['title']} ({source})")
@@ -1454,9 +1640,17 @@ def post_next_job_for_source(source: str, pending: Dict[str, List[Dict[str, Any]
     job = None
 
     for candidate in queue:
-        if not candidate.get("posted"):
-            job = candidate
-            break
+        if candidate.get("posted"):
+            continue
+
+        if is_junk_job(candidate):
+            candidate["posted"] = True
+            candidate["skipped_reason"] = "junk_job"
+            print(f"Skipped old junk queued job: {candidate.get('title')} ({source})")
+            continue
+
+        job = candidate
+        break
 
     if not job:
         print(f"No unposted {source} jobs available.")
@@ -1495,6 +1689,16 @@ async def main() -> None:
         f"Roster={len(pending['Roster'])}, "
         f"YTCareers={len(pending['YTCareers'])}, "
         f"BucketofCrabs={len(pending['BucketofCrabs'])}"
+    )
+
+    removed = clean_pending_queues(pending)
+
+    print(
+        "Cleaned pending jobs: "
+        f"YTJobs removed={removed['YTJobs']}, "
+        f"Roster removed={removed['Roster']}, "
+        f"YTCareers removed={removed['YTCareers']}, "
+        f"BucketofCrabs removed={removed['BucketofCrabs']}"
     )
 
     jobs = await fetch_jobs()
