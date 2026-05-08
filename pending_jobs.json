@@ -191,7 +191,9 @@
       "source": "YTJobs",
       "email": null,
       "email_source": null,
-      "company": null
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-08"
     },
     {
       "id": "ytjobs_38703",
@@ -608,7 +610,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-08"
     },
     {
       "id": "ytcareers_0d3acba0663ab11876257c98d32467ecb073fb8c14728ccf0a0277648561ca5d",
@@ -963,7 +966,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-08"
     },
     {
       "id": "boc_aac0347f57a87255efec951c99c362b618935dd3767d122728fba692c30cf039",
