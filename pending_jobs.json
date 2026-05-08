@@ -131,7 +131,9 @@
       "source": "YTJobs",
       "email": null,
       "email_source": null,
-      "company": null
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-08"
     },
     {
       "id": "ytjobs_38739",
@@ -478,6 +480,20 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/38798",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38802",
+      "title": "YouTube Scriptwriter",
+      "summary": "YouTube Scriptwriter $100-$500 Per project Remote News & Politics Education +4 more Dragonfruit Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$500 Per project",
+      "url": "https://ytjobs.co/job/38802",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
