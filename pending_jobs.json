@@ -146,7 +146,9 @@
       "source": "YTJobs",
       "email": null,
       "email_source": null,
-      "company": null
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-08"
     },
     {
       "id": "ytjobs_38738",
@@ -494,6 +496,34 @@
       "job_type": "Per project",
       "pay": "$100-$500 Per project",
       "url": "https://ytjobs.co/job/38802",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_34753",
+      "title": "Group Challange Video Editor",
+      "summary": "Group Challange Video Editor $200-$250 Per project Remote Gaming Comedy Shorts +5 more TooCozy 137 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$200-$250 Per project",
+      "url": "https://ytjobs.co/job/34753",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38804",
+      "title": "High-Energy YouTube Editor (Roblox) \u2013 Sebee",
+      "summary": "High-Energy YouTube Editor (Roblox) \u2013 Sebee / Markiplier $100-$100 Per project Remote Gaming Roblox Commentary +6 more effsin 2 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$100 Per project",
+      "url": "https://ytjobs.co/job/38804",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
