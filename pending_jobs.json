@@ -206,7 +206,9 @@
       "source": "YTJobs",
       "email": null,
       "email_source": null,
-      "company": null
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-08"
     },
     {
       "id": "ytjobs_38702",
@@ -522,6 +524,20 @@
       "email_source": null,
       "company": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_38837",
+      "title": "Experienced Editor for Platinum Trophy & Challenge Videos",
+      "summary": "Experienced Editor for Platinum Trophy & Challenge Videos $100-$600 Per project Remote Gaming Challenge Gameplay George Tibbles 860 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$600 Per project",
+      "url": "https://ytjobs.co/job/38837",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -598,7 +614,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-08"
     },
     {
       "id": "ytcareers_b8741e14f5aff97272802b7a753626cf922237dee9235d542ed75b03ca614eca",
@@ -926,7 +943,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-08"
     },
     {
       "id": "boc_7f500865526d2f536edff779a800ff58e93bec6fb5552e170b5f947de76503b1",
