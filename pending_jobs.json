@@ -296,7 +296,9 @@
       "source": "YTJobs",
       "email": null,
       "email_source": null,
-      "company": null
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-09"
     },
     {
       "id": "ytjobs_32278",
@@ -590,6 +592,76 @@
       "email_source": null,
       "company": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_38860",
+      "title": "Promotional Video Editor Per project",
+      "summary": "Promotional Video Editor Per project Remote Film & Animation Anime/Animation +5 more Mr Morj 241K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38860",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38853",
+      "title": "Long-Form YouTube Gaming Editor",
+      "summary": "Long-Form YouTube Gaming Editor $40-$100 Per project Remote Gaming Videoblogging +11 more KevTheNPC 7 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$40-$100 Per project",
+      "url": "https://ytjobs.co/job/38853",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38097",
+      "title": "Military",
+      "summary": "Military - Defense Video Editor and Creator Full-time Remote News & Politics +11 more Harry J. Kazianis 65 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38097",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_37798",
+      "title": "Reacts Clip Aggregator Per project",
+      "summary": "Reacts Clip Aggregator Per project Remote Sports Gaming Comedy +6 more RGS 221K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/37798",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38094",
+      "title": "Video Editor for Bilal Dawson",
+      "summary": "Video Editor for Bilal Dawson $500-$1,500 Per project Remote Comedy Entertainment +4 more Bilal Dawson 75K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$500-$1,500 Per project",
+      "url": "https://ytjobs.co/job/38094",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -756,7 +828,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-09"
     },
     {
       "id": "ytcareers_4fe52b0260053a48e4639f7f925167d7b6a6efecc19a4050fe6c3ea0991ca135",
@@ -1090,7 +1163,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-09"
     },
     {
       "id": "boc_21bc1c1e0e974ab2fea079e978bc5184b59cdab479c96f129a6bc85ebfbdc87d",
@@ -1184,6 +1258,20 @@
       "job_type": "Not listed",
       "pay": "Not listed",
       "url": "https://www.bucketofcrabs.net/jobs/S438F57kwY",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_563fcf80035ebe7251ab2ada05cc1cd36d0388d58a196382bd01a37cbfb24a17",
+      "title": "Dodo Studios Particle VFX Designer Amersfoort, The Netherlands",
+      "summary": "Dodo Studios Particle VFX Designer Amersfoort, The Netherlands $10-$500/Fixed Amount 3D Models/Animator Design",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "$10-$500",
+      "url": "https://www.bucketofcrabs.net/jobs/DSnteAAVdW",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
