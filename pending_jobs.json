@@ -281,7 +281,9 @@
       "source": "YTJobs",
       "email": null,
       "email_source": null,
-      "company": null
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-09"
     },
     {
       "id": "ytjobs_38749",
@@ -574,6 +576,20 @@
       "email_source": null,
       "company": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_38846",
+      "title": "Video Editor",
+      "summary": "Video Editor $200-$1,000 Per project Remote Vlog Documentary Q&A Challenge +4 more Alex1Leg 1.5M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$200-$1,000 Per project",
+      "url": "https://ytjobs.co/job/38846",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -725,7 +741,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-09"
     },
     {
       "id": "ytcareers_8bc534a1dffb9947a644de2abd56b4a3a865ca6cf298585227e644ccd516c20f",
@@ -1058,7 +1075,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-09"
     },
     {
       "id": "boc_ee537a1f0e01fede133d62f33a0f053ac82ec2e639d7a50f0cae63e5589c0d08",
@@ -1152,6 +1170,20 @@
       "job_type": "Not listed",
       "pay": "$300-$1200",
       "url": "https://www.bucketofcrabs.net/jobs/pRPX937THM",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_67a310648f0e2b75926ac381a758dba3b66a8a4689028f924247a1b2f6bb78a1",
+      "title": "Manifest Media Talent Manager",
+      "summary": "Manifest Media Talent Manager Remote Only 20%-40%/Project based Talent/Actors",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/S438F57kwY",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
