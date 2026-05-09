@@ -387,7 +387,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-09"
     },
     {
       "id": "ytjobs_38771",
@@ -668,6 +669,20 @@
       "email_source": null,
       "company": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_38866",
+      "title": "Video Editor NFL Chargers football Content Per project",
+      "summary": "Video Editor NFL Chargers football Content Per project Remote Bolt Bros Chargers Podcast 9.36K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38866",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -924,7 +939,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-09"
     },
     {
       "id": "ytcareers_4aadae4fc77375cba1917b1877015565f32a624c77869a5e585bfcfb19c4516a",
@@ -1264,7 +1280,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-09"
     },
     {
       "id": "boc_67a310648f0e2b75926ac381a758dba3b66a8a4689028f924247a1b2f6bb78a1",
