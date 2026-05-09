@@ -251,7 +251,9 @@
       "source": "YTJobs",
       "email": null,
       "email_source": null,
-      "company": null
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-09"
     },
     {
       "id": "ytjobs_37623",
@@ -542,6 +544,34 @@
       "email_source": null,
       "company": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_38064",
+      "title": "YouTube Programming Contractor",
+      "summary": "YouTube Programming Contractor \u2014 B/R W Sports $2,500-$2,500 Per Hour . Part-time Remote Film & Animation B/R W Sports 144K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$2,500-$2,500 Per Hour",
+      "url": "https://ytjobs.co/job/38064",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38844",
+      "title": "Nintendo Gaming Video Editor",
+      "summary": "Nintendo Gaming Video Editor $100-$250 Per project Remote Gaming Challenge Gameplay Arrowstotle 354K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$250 Per project",
+      "url": "https://ytjobs.co/job/38844",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -663,7 +693,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-09"
     },
     {
       "id": "ytcareers_75099be3646bc1d72d59eecf1a46006b1b3a576c443db36d182d947feaa564cb",
@@ -994,7 +1025,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-09"
     },
     {
       "id": "boc_144626e8be848cc799dcbb544a25cb3a9e978465401e88999a4704fc3d375cec",
@@ -1102,6 +1134,20 @@
       "job_type": "Not listed",
       "pay": "$100-$1000",
       "url": "https://www.bucketofcrabs.net/jobs/sfFJZAahU5",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_41e017af9bbfc9431a261e678e59c60c6f825123ec4c294758ff0678c5445073",
+      "title": "Crimson Creative Minecraft Artist",
+      "summary": "Crimson Creative Minecraft Artist - Long Term Remote Only $300-$1200/Fixed Amount Game Art",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$300-$1200",
+      "url": "https://www.bucketofcrabs.net/jobs/pRPX937THM",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
