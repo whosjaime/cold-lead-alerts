@@ -477,7 +477,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-10"
     },
     {
       "id": "ytjobs_38802",
@@ -725,6 +726,20 @@
       "job_type": "Per project",
       "pay": "$50-$300 Per project",
       "url": "https://ytjobs.co/job/38872",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38892",
+      "title": "Editor",
+      "summary": "Editor: 30k Subs Film Documentary Channel (ScreenPuff) Full-time Remote Movies Documentary Documentary Screen Pruff 0 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38892",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -1076,7 +1091,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-10"
     }
   ],
   "BucketofCrabs": [
