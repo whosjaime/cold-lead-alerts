@@ -462,7 +462,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-10"
     },
     {
       "id": "ytjobs_38798",
@@ -710,6 +711,20 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/38869",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38872",
+      "title": "Video Editor",
+      "summary": "Video Editor $50-$300 Per project Remote Comedy Entertainment Gambling +5 more Leaping Lizards 2.41K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$300 Per project",
+      "url": "https://ytjobs.co/job/38872",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -1046,7 +1061,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-10"
     },
     {
       "id": "ytcareers_8c6280ac86ce42e09b738f3898f11234b3fc4e5a78f5ec76f81dd20462264ffa",
