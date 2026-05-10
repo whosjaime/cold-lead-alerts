@@ -447,7 +447,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-10"
     },
     {
       "id": "ytjobs_37711",
@@ -695,6 +696,20 @@
       "job_type": "Full-time",
       "pay": "$60,000-$75,000 Per Year",
       "url": "https://ytjobs.co/job/38123",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38869",
+      "title": "Video Editor for Gaming Channel Full-time",
+      "summary": "Video Editor for Gaming Channel Full-time Remote Gaming Comedy People & Blogs +3 more imaginary friends 86.8K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38869",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -1016,7 +1031,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-10"
     },
     {
       "id": "ytcareers_3df7faf4bbe3d1ce8618e19285062c0f2776e23a1579acedf81c96177d0cf4c6",
