@@ -522,7 +522,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-10"
     },
     {
       "id": "ytjobs_38818",
@@ -742,6 +743,20 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/38892",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38900",
+      "title": "Video Editor",
+      "summary": "Video Editor | LosingLoonies $100-$1,000 Per project Remote Comedy Education +12 more LosingLoonies 28.4K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$1,000 Per project",
+      "url": "https://ytjobs.co/job/38900",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
