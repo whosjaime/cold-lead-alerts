@@ -717,7 +717,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-11"
     },
     {
       "id": "ytjobs_38869",
@@ -867,6 +868,20 @@
       "job_type": "Per project",
       "pay": "$20-$1,000 Per project",
       "url": "https://ytjobs.co/job/38943",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38957",
+      "title": "Travel",
+      "summary": "Travel / Vlog Video Editor Full-time Remote Short Movies Travel & Events +10 more Brian Carmichael 14.1K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38957",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
