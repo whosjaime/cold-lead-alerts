@@ -642,7 +642,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-11"
     },
     {
       "id": "ytjobs_38097",
@@ -764,6 +765,20 @@
       "job_type": "Per project",
       "pay": "$100-$1,000 Per project",
       "url": "https://ytjobs.co/job/38900",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38915",
+      "title": "Thumbnail Designer for Educational content",
+      "summary": "Thumbnail Designer for Educational content $6,000-$12,000 Per Year . Full-time Remote Howto & Style Education +7 more Affluent Studio 263K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$6,000-$12,000 Per Year",
+      "url": "https://ytjobs.co/job/38915",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
