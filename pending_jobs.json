@@ -687,7 +687,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-11"
     },
     {
       "id": "ytjobs_38866",
@@ -851,6 +852,20 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/38919",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38943",
+      "title": "Podcast Video Editor ( Long/Shorts )",
+      "summary": "Podcast Video Editor ( Long/Shorts ) $20-$1,000 Per project Remote Film & Animation People & Blogs +3 more Content HQ Studio 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$20-$1,000 Per project",
+      "url": "https://ytjobs.co/job/38943",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
