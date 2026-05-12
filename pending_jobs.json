@@ -807,7 +807,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-12"
     },
     {
       "id": "ytjobs_37959",
@@ -1013,6 +1014,20 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/38974",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_37776",
+      "title": "Short Form Video Editor Part-time",
+      "summary": "Short Form Video Editor Part-time Remote . US Entertainment Howto & Style +5 more The Tarot Ship w/ Jimmy (Astrology + Tarot) 280K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/37776",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
