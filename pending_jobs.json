@@ -732,7 +732,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-12"
     },
     {
       "id": "ytjobs_38872",
@@ -882,6 +883,20 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/38957",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38958",
+      "title": "Video Editor",
+      "summary": "Video Editor $250-$500 Per project Remote Sports Documentary Talking head +4 more Gridiron 7.38K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$250-$500 Per project",
+      "url": "https://ytjobs.co/job/38958",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
