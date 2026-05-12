@@ -822,7 +822,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-12"
     },
     {
       "id": "ytjobs_38018",
@@ -1028,6 +1029,20 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/37776",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39003",
+      "title": "Video Editor/clipper",
+      "summary": "Video Editor/clipper $1-$10,000 Per project Remote Clipping Pure Logic 135K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$1-$10,000 Per project",
+      "url": "https://ytjobs.co/job/39003",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
