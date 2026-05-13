@@ -912,7 +912,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-13"
     },
     {
       "id": "ytjobs_38992",
@@ -1132,6 +1133,48 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39023",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39031",
+      "title": "Youtube Video Editor",
+      "summary": "Youtube Video Editor - Hard Jewelry (2 mil total followers) $200-$1,000 Per project Remote Travel & Events Videoblogging +9 more Hard Jewelry 22K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$200-$1,000 Per project",
+      "url": "https://ytjobs.co/job/39031",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39030",
+      "title": "Long Form and Shorts Video Editor For Growing YT Channel Per project",
+      "summary": "Long Form and Shorts Video Editor For Growing YT Channel Per project Remote Entertainment Howto & Style +6 more High Integrity Skills 42.3K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39030",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39029",
+      "title": "Social media video editor",
+      "summary": "Social media video editor $50-$500 Per project Remote Shorts IRL Vlog Live stream Interview Hard Jewelry 22K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$500 Per project",
+      "url": "https://ytjobs.co/job/39029",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
