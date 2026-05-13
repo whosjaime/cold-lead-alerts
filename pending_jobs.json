@@ -867,7 +867,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-13"
     },
     {
       "id": "ytjobs_38943",
