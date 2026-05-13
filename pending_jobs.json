@@ -957,7 +957,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-13"
     },
     {
       "id": "ytjobs_38986",
@@ -1233,6 +1234,34 @@
       "job_type": "Per project",
       "pay": "$400-$800 Per project",
       "url": "https://ytjobs.co/job/39035",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39038",
+      "title": "Creative Strategist Full-time",
+      "summary": "Creative Strategist Full-time Remote Digital Media social content Video Content Shorthand Studios Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39038",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39036",
+      "title": "Video Editor",
+      "summary": "Video Editor \u2014 Travel Storytelling $1,500-$4,000 Per project Remote Short Movies Travel & Events +25 more aliashourkw 471 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$1,500-$4,000 Per project",
+      "url": "https://ytjobs.co/job/39036",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
