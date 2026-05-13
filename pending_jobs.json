@@ -897,7 +897,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-13"
     },
     {
       "id": "ytjobs_38958",
@@ -1075,6 +1076,62 @@
       "job_type": "Per project",
       "pay": "$1-$30 Per project",
       "url": "https://ytjobs.co/job/39014",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39019",
+      "title": "Long-Form YouTube Documentary Video Editor for Business",
+      "summary": "Long-Form YouTube Documentary Video Editor for Business / Mo $700-$1,500 Per project Remote Entertainment Education +3 more Bombing Science Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$700-$1,500 Per project",
+      "url": "https://ytjobs.co/job/39019",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39026",
+      "title": "Video Editor",
+      "summary": "Video Editor \u2014 Product Launches & Features $40-$100 Per Hour . Part-time Remote Entertainment Education +5 more Locket Camera 1.6K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$40-$100 Per Hour",
+      "url": "https://ytjobs.co/job/39026",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39025",
+      "title": "Video Editor",
+      "summary": "Video Editor \u2014 Short-Form Social (TikTok / Reels / Shorts) $30-$100 Per Hour . Part-time Remote Film & Animation Music +13 more Kyle Sanok 0 subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$30-$100 Per Hour",
+      "url": "https://ytjobs.co/job/39025",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39023",
+      "title": "Video Editor for Gaming Channel (Long Form, Cozy Games) Per project",
+      "summary": "Video Editor for Gaming Channel (Long Form, Cozy Games) Per project Remote Gaming Live stream Challenge +2 more lummi 305K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39023",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -1715,6 +1772,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-09"
+    },
+    {
+      "id": "boc_7382390c3e6dd43db67c8a714d56186b11ad1b70caab891b8e52ecccc652dbf1",
+      "title": "Talking Saloon Cinematic Set Designer (Minecraft & Blender)",
+      "summary": "Talking Saloon Cinematic Set Designer (Minecraft & Blender) Remote Only $350-$3500/Fixed Amount World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$350-$3500",
+      "url": "https://www.bucketofcrabs.net/jobs/y3rAudSDae",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-13"
     }
   ]
 }
