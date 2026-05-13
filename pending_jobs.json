@@ -942,7 +942,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-13"
     },
     {
       "id": "ytjobs_38990",
@@ -1204,6 +1205,34 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39010",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_37626",
+      "title": "Cinematic Video Editor for Personal Brand (Short-Form & Storytelling Focus)",
+      "summary": "Cinematic Video Editor for Personal Brand (Short-Form & Storytelling Focus) $700 Per project Remote Videoblogging Shorts +7 more Michael Aririguzo 103 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$700 Per project",
+      "url": "https://ytjobs.co/job/37626",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39035",
+      "title": "Youtube Story Producer",
+      "summary": "Youtube Story Producer / Co-Editor $400-$800 Per project Remote Travel & Events Videoblogging +8 more Jordan King 1.74K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$400-$800 Per project",
+      "url": "https://ytjobs.co/job/39035",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
