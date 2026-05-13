@@ -852,7 +852,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-13"
     },
     {
       "id": "ytjobs_38919",
@@ -1044,6 +1045,20 @@
       "job_type": "Per project",
       "pay": "$1-$10,000 Per project",
       "url": "https://ytjobs.co/job/39003",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39012",
+      "title": "Youtube Long-Form Video Editor",
+      "summary": "Youtube Long-Form Video Editor $1,000-$2,000 Per project Remote Entertainment Food Blake Menard 3.66M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$1,000-$2,000 Per project",
+      "url": "https://ytjobs.co/job/39012",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
