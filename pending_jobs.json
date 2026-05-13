@@ -927,7 +927,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-13"
     },
     {
       "id": "ytjobs_38991",
@@ -1175,6 +1176,34 @@
       "job_type": "Per project",
       "pay": "$50-$500 Per project",
       "url": "https://ytjobs.co/job/39029",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38979",
+      "title": "Scriptwriter",
+      "summary": "Scriptwriter $60,000-$70,000 Per Year . Full-time Onsite . Kelowna, BC, Canada Videoblogging People & Blogs +12 more Martell Group Company",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "$60,000-$70,000 Per Year",
+      "url": "https://ytjobs.co/job/38979",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39010",
+      "title": "Social Media Coordinator",
+      "summary": "Social Media Coordinator / Short-Form Video Editor Part-time Remote Comedy News & Politics +6 more The God Show 19.5K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39010",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
