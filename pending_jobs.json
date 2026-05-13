@@ -882,7 +882,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-13"
     },
     {
       "id": "ytjobs_38957",
@@ -1060,6 +1061,20 @@
       "job_type": "Per project",
       "pay": "$1,000-$2,000 Per project",
       "url": "https://ytjobs.co/job/39012",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39014",
+      "title": "Thumbnail Designer For Path Of Exile Videos",
+      "summary": "Thumbnail Designer For Path Of Exile Videos $1-$30 Per project Remote Gaming Entertainment +4 more Raid Boss Cannon 3 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$1-$30 Per project",
+      "url": "https://ytjobs.co/job/39014",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
