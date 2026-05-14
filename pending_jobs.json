@@ -1077,7 +1077,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-14"
     },
     {
       "id": "ytjobs_39014",
