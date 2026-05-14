@@ -1047,7 +1047,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-14"
     },
     {
       "id": "ytjobs_39003",
@@ -1351,6 +1352,20 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/38913",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39074",
+      "title": "Full-Time YouTube Editor",
+      "summary": "Full-Time YouTube Editor \u2014 Talking Head Specialist $20,000-$40,000 Per Year . Full-time Remote Howto & Style Education +4 more Richard Yu 159K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$20,000-$40,000 Per Year",
+      "url": "https://ytjobs.co/job/39074",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
