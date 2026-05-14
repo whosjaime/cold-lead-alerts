@@ -1062,7 +1062,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-14"
     },
     {
       "id": "ytjobs_39012",
@@ -2021,6 +2022,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-13"
+    },
+    {
+      "id": "boc_02cb590e9dbd1b543392d554fb2f426199bc377674410433fcc678b9839aa55d",
+      "title": "Simply Brilliant Bedrock Asset Creator",
+      "summary": "Simply Brilliant Bedrock Asset Creator Remote Only $1000-$5000/Fixed Amount Game Art 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1000-$5000",
+      "url": "https://www.bucketofcrabs.net/jobs/opxpEfEk1Z",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-14"
     }
   ]
 }
