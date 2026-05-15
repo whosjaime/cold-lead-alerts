@@ -118,10 +118,14 @@ jobs:
           path: |
             roster_debug.html
             roster_debug.txt
+            roster_debug.png
             ytcareers_debug.html
             ytcareers_debug.txt
+            ytcareers_debug.png
             boc_debug.html
             boc_debug.txt
+            x_debug.html
+            x_debug.png
           if-no-files-found: ignore
 
       - name: Commit queue state
