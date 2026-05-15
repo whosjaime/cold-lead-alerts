@@ -1122,7 +1122,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-15"
     },
     {
       "id": "ytjobs_39025",
@@ -1398,6 +1399,20 @@
       "job_type": "Full-time",
       "pay": "$120,000-$140,000 Per Year",
       "url": "https://ytjobs.co/job/39080",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_14957",
+      "title": "YouTube Producer",
+      "summary": "YouTube Producer $500-$1,000 Per project Onsite . Los Angeles, CA, US Film & Animation People & Blogs Comedy The Gabriels 3.48M subs",
+      "location": "On-site",
+      "job_type": "Per project",
+      "pay": "$500-$1,000 Per project",
+      "url": "https://ytjobs.co/job/14957",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
