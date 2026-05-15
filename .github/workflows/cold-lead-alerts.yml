@@ -16,7 +16,7 @@ concurrency:
 jobs:
   run-alerts:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repo
@@ -40,6 +40,7 @@ jobs:
           ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
           YT_CAREERS_WEBHOOK_URL: ${{ secrets.YT_CAREERS_WEBHOOK_URL }}
           BOC_WEBHOOK_URL: ${{ secrets.BOC_WEBHOOK_URL }}
+          X_WEBHOOK_URL: ${{ secrets.X_WEBHOOK_URL }}
 
           MONDAY_API_TOKEN: ${{ secrets.MONDAY_API_TOKEN }}
           MONDAY_BOARD_ID: ${{ secrets.MONDAY_BOARD_ID }}
@@ -62,6 +63,7 @@ jobs:
           if [ -z "$ROSTER_WEBHOOK_URL" ]; then echo "ROSTER_WEBHOOK_URL is missing"; else echo "ROSTER_WEBHOOK_URL is set"; fi
           if [ -z "$YT_CAREERS_WEBHOOK_URL" ]; then echo "YT_CAREERS_WEBHOOK_URL is missing"; else echo "YT_CAREERS_WEBHOOK_URL is set"; fi
           if [ -z "$BOC_WEBHOOK_URL" ]; then echo "BOC_WEBHOOK_URL is missing"; else echo "BOC_WEBHOOK_URL is set"; fi
+          if [ -z "$X_WEBHOOK_URL" ]; then echo "X_WEBHOOK_URL is missing"; else echo "X_WEBHOOK_URL is set"; fi
 
           if [ -z "$MONDAY_API_TOKEN" ]; then echo "MONDAY_API_TOKEN is missing"; else echo "MONDAY_API_TOKEN is set"; fi
           if [ -z "$MONDAY_BOARD_ID" ]; then echo "MONDAY_BOARD_ID is missing"; else echo "MONDAY_BOARD_ID is set"; fi
@@ -86,6 +88,7 @@ jobs:
           ROSTER_WEBHOOK_URL: ${{ secrets.ROSTER_WEBHOOK_URL }}
           YT_CAREERS_WEBHOOK_URL: ${{ secrets.YT_CAREERS_WEBHOOK_URL }}
           BOC_WEBHOOK_URL: ${{ secrets.BOC_WEBHOOK_URL }}
+          X_WEBHOOK_URL: ${{ secrets.X_WEBHOOK_URL }}
           WEBHOOK_AVATAR_URL: ${{ secrets.WEBHOOK_AVATAR_URL }}
 
           MONDAY_API_TOKEN: ${{ secrets.MONDAY_API_TOKEN }}
