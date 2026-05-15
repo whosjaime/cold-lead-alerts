@@ -1167,7 +1167,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-15"
     },
     {
       "id": "ytjobs_39030",
@@ -1429,6 +1430,20 @@
       "job_type": "Full-time",
       "pay": "$2000",
       "url": "https://ytjobs.co/job/39100",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39102",
+      "title": "YouTube Channel Manager Part-time",
+      "summary": "YouTube Channel Manager Part-time Remote Education Tutorial Talking head +2 more Fastrack IELTS 1.97M subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39102",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -1807,10 +1822,11 @@
       "pay": "Not listed",
       "url": "https://yt.careers/youtube-jobs/205",
       "source": "YTCareers",
-      "email": null,
-      "email_source": null,
+      "email": "hello@sponsorship.so",
+      "email_source": "website_contact",
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-15"
     }
   ],
   "BucketofCrabs": [
