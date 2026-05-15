@@ -1107,7 +1107,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-15"
     },
     {
       "id": "ytjobs_39026",
@@ -1369,6 +1370,34 @@
       "job_type": "Full-time",
       "pay": "$20,000-$40,000 Per Year",
       "url": "https://ytjobs.co/job/39074",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39041",
+      "title": "YouTube Producer for Family Channel Full-time",
+      "summary": "YouTube Producer for Family Channel Full-time Hybrid . Texas City, TX, US The Karshna Family 1.63M subs",
+      "location": "Hybrid",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39041",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39080",
+      "title": "Senior Video Editor",
+      "summary": "Senior Video Editor $120,000-$140,000 Per Year . Full-time Onsite . San Francisco, CA, US Documentary Documentary +3 more Sam Eckholm 1.68M subs",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "$120,000-$140,000 Per Year",
+      "url": "https://ytjobs.co/job/39080",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
