@@ -1182,7 +1182,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-15"
     },
     {
       "id": "ytjobs_39029",
@@ -1444,6 +1445,20 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39102",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_29703",
+      "title": "Script Writer",
+      "summary": "Script Writer \u2014 Single-Case True Crime Documentaries $800-$1,500 Per project Remote Crime Documentary Faceless Catching Killers 1.58M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$800-$1,500 Per project",
+      "url": "https://ytjobs.co/job/29703",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
