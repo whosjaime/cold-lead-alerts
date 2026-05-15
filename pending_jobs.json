@@ -1227,7 +1227,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-15"
     },
     {
       "id": "ytjobs_37626",
@@ -1489,6 +1490,20 @@
       "job_type": "Per project",
       "pay": "$300-$500 Per project",
       "url": "https://ytjobs.co/job/39108",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39118",
+      "title": "SCRIPTWRITER WITH POKEMON-KNOWLEDGE NEEDED Part-time",
+      "summary": "SCRIPTWRITER WITH POKEMON-KNOWLEDGE NEEDED Part-time Remote Gaming Entertainment Shorts +3 more GTC Cards 364K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39118",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
