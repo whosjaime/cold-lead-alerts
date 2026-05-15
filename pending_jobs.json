@@ -1197,7 +1197,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-15"
     },
     {
       "id": "ytjobs_38979",
@@ -1459,6 +1460,34 @@
       "job_type": "Per project",
       "pay": "$800-$1,500 Per project",
       "url": "https://ytjobs.co/job/29703",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39112",
+      "title": "Video Editor for Educational Science Channel",
+      "summary": "Video Editor for Educational Science Channel $14,000-$24,000 Per Year . Full-time Remote Education Documentary Shorts +4 more Lectec | Everyday Science 62.7K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$14,000-$24,000 Per Year",
+      "url": "https://ytjobs.co/job/39112",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39108",
+      "title": "Video Editor",
+      "summary": "Video Editor - Between Two COO's Podcast $300-$500 Per project Remote Business and Finance Interview Podcast Michael Koenig 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300-$500 Per project",
+      "url": "https://ytjobs.co/job/39108",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -2159,6 +2188,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-14"
+    },
+    {
+      "id": "boc_dd714f0a8f295295aa0eb6f9e5c449bbfcff3aa22eaf68d5e58f26c2af1e7b0f",
+      "title": "Managing Up Bedrock Add-on Developer",
+      "summary": "Managing Up Bedrock Add-on Developer Remote Only $1000-$2000/Fixed Amount QA/Testing Game Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1000-$2000",
+      "url": "https://www.bucketofcrabs.net/jobs/uYXmV7aC6u",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-15"
     }
   ],
   "X": []
