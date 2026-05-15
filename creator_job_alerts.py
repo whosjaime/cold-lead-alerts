@@ -40,7 +40,7 @@ MONDAY_COL_LINK = os.getenv("MONDAY_COL_LINK", "")
 MONDAY_COL_POST_DATE = os.getenv("MONDAY_COL_POST_DATE", "")
 
 YTJOBS_URL = "https://ytjobs.co/job/search"
-ROSTER_URL = "https://www.joinroster.co/jobs"
+ROSTER_URL = "https://app.joinroster.co/jobs"
 YT_CAREERS_URL = "https://yt.careers/youtube-jobs"
 BOC_URL = "https://www.bucketofcrabs.net/jobs"
 
@@ -67,10 +67,16 @@ X_SEARCH_QUERIES = [
     '"shorts editor"',
     '"short-form editor"',
     '"short form editor"',
+    '"editor recommendations"',
+    '"need editing help"',
+    '"looking for a youtube editor"',
+    '"need shorts editor"',
+    '"looking for shorts editor"',
     '"hiring thumbnail designer"',
     '"looking for thumbnail designer"',
     '"thumbnail designer needed"',
     '"thumbnail artist needed"',
+    '"need thumbnail help"',
     '"hiring scriptwriter"',
     '"looking for scriptwriter"',
     '"youtube writer needed"',
@@ -419,6 +425,7 @@ def is_known_bad_listing_url(source: str, url: str) -> bool:
     bad_urls = {
         "https://www.joinroster.co/jobs",
         "https://joinroster.co/jobs",
+        "https://app.joinroster.co/jobs",
         "https://yt.careers/youtube-jobs",
         "https://www.yt.careers/youtube-jobs",
         "https://www.bucketofcrabs.net/jobs",
@@ -428,7 +435,7 @@ def is_known_bad_listing_url(source: str, url: str) -> bool:
     if normalized in bad_urls:
         return True
 
-    if source == "Roster" and re.fullmatch(r"https?://(www\.)?joinroster\.co/jobs/?", normalized):
+    if source == "Roster" and re.fullmatch(r"https?://(www\.|app\.)?joinroster\.co/jobs/?", normalized):
         return True
 
     if source == "YTCareers" and re.fullmatch(r"https?://(www\.)?yt\.careers/youtube-jobs/?", normalized):
@@ -1169,6 +1176,7 @@ def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     cleaned: List[Dict[str, Any]] = []
 
     for job in jobs:
+        source = job.get("source", "")
         normalized_url = normalize_url_for_dedupe(job.get("url", ""))
         signature = job_signature(job)
 
@@ -1178,11 +1186,12 @@ def dedupe_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         if normalized_url and normalized_url in seen_urls:
             continue
 
-        if signature and signature in seen_signatures:
-            continue
+        if source not in {"YTCareers", "X"}:
+            if signature and signature in seen_signatures:
+                continue
 
         if is_junk_job(job):
-            print(f"Skipped junk job: {job.get('title', 'Unknown')} ({job.get('source', 'Unknown')})")
+            print(f"Skipped junk job: {job.get('title', 'Unknown')} ({source})")
             continue
 
         seen_ids.add(job["id"])
@@ -1229,9 +1238,10 @@ def clean_pending_queues(pending: Dict[str, List[Dict[str, Any]]]) -> Dict[str, 
                 removed[source] += 1
                 continue
 
-            if signature and signature in seen_signatures:
-                removed[source] += 1
-                continue
+            if source not in {"YTCareers", "X"}:
+                if signature and signature in seen_signatures:
+                    removed[source] += 1
+                    continue
 
             if job_id:
                 seen_ids.add(job_id)
@@ -1331,29 +1341,20 @@ def is_bad_x_post(text: str) -> bool:
     if any(term in lower for term in X_BAD_TERMS):
         return True
 
-    hiring_terms = [
-        "hiring",
-        "looking for",
-        "need",
-        "needed",
-        "searching for",
-        "seeking",
-        "want to hire",
-        "trying to hire",
-    ]
-
     role_terms = [
         "editor",
         "thumbnail",
         "scriptwriter",
         "script writer",
         "writer",
+        "video editor",
+        "youtube editor",
+        "shorts editor",
+        "short-form editor",
+        "short form editor",
     ]
 
-    return not (
-        any(term in lower for term in hiring_terms)
-        and any(term in lower for term in role_terms)
-    )
+    return not any(term in lower for term in role_terms)
 
 
 def x_title_from_text(text: str) -> str:
@@ -1378,6 +1379,15 @@ def x_title_from_text(text: str) -> str:
         return "Video Editor"
 
     return "Creator Hiring Lead"
+
+
+async def save_page_debug(page, html_path: str, png_path: str) -> None:
+    try:
+        await page.screenshot(path=png_path, full_page=True)
+        html = await page.content()
+        Path(html_path).write_text(html, encoding="utf-8")
+    except Exception as e:
+        print(f"Could not save debug files {html_path}/{png_path}: {e}")
 
 
 async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
@@ -1431,9 +1441,11 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
 
 async def scrape_roster(page) -> List[Dict[str, Any]]:
     await page.goto(ROSTER_URL, wait_until="networkidle")
-    await page.wait_for_timeout(3000)
+    await page.wait_for_timeout(5000)
 
-    for _ in range(4):
+    await save_page_debug(page, "roster_debug.html", "roster_debug.png")
+
+    for _ in range(5):
         await page.mouse.wheel(0, 3000)
         await page.wait_for_timeout(1000)
 
@@ -1511,6 +1523,8 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
 async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
     await page.goto(YT_CAREERS_URL, wait_until="networkidle")
     await page.wait_for_timeout(3000)
+
+    await save_page_debug(page, "ytcareers_debug.html", "ytcareers_debug.png")
 
     for _ in range(5):
         await page.mouse.wheel(0, 2500)
@@ -1686,13 +1700,17 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
 async def scrape_x(page) -> List[Dict[str, Any]]:
     jobs: List[Dict[str, Any]] = []
 
-    for query in X_SEARCH_QUERIES:
+    for index, query in enumerate(X_SEARCH_QUERIES):
         search_url = build_x_search_url(query)
         print(f"Searching X: {query}")
 
         try:
             await page.goto(search_url, wait_until="domcontentloaded", timeout=45000)
             await page.wait_for_timeout(7000)
+
+            if index == 0:
+                await save_page_debug(page, "x_debug.html", "x_debug.png")
+
         except Exception as e:
             print(f"X search failed for {query}: {e}")
             continue
@@ -1710,7 +1728,9 @@ async def scrape_x(page) -> List[Dict[str, Any]]:
             print(f"Could not find X tweet articles for {query}: {e}")
             continue
 
-        for article in articles[:15]:
+        print(f"X articles found for {query}: {len(articles)}")
+
+        for article in articles[:40]:
             try:
                 text = clean_text(await article.inner_text())
             except Exception:
@@ -1862,9 +1882,10 @@ def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], pending: Dict[str, List[Dic
             print(f"Skipped duplicate URL already queued: {job['title']} ({source}) | {normalized_url}")
             continue
 
-        if signature and signature in pending_signatures[source]:
-            print(f"Skipped duplicate signature already queued: {job['title']} ({source}) | {signature}")
-            continue
+        if source not in {"YTCareers", "X"}:
+            if signature and signature in pending_signatures[source]:
+                print(f"Skipped duplicate signature already queued: {job['title']} ({source}) | {signature}")
+                continue
 
         job["posted"] = False
 
