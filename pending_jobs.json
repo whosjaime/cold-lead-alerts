@@ -1152,7 +1152,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-15"
     },
     {
       "id": "ytjobs_39031",
@@ -1414,6 +1415,20 @@
       "job_type": "Per project",
       "pay": "$500-$1,000 Per project",
       "url": "https://ytjobs.co/job/14957",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39100",
+      "title": "Long Form Video Editor |",
+      "summary": "Long Form Video Editor | $2000/mo + Performance Bonuses $24,000 Per Year . Full-time Remote Education Business and Finance Lewis Mountstephens 3 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$2000",
+      "url": "https://ytjobs.co/job/39100",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -1767,6 +1782,35 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-10"
+    },
+    {
+      "id": "ytcareers_63396baa7fbb373870030d4c2168615774122d9b28baf84dbde9f389dc1bf717",
+      "title": "Video Editor",
+      "summary": "Video Editor",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/226",
+      "source": "YTCareers",
+      "email": "hello@sponsorship.so",
+      "email_source": "website_contact",
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-15"
+    },
+    {
+      "id": "ytcareers_f6218c42d7a603e4b3ec946acce9801b56d3bdf2e11b517c0eb42034c4cbb067",
+      "title": "Video Editor",
+      "summary": "Video Editor",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/205",
+      "source": "YTCareers",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "BucketofCrabs": [
