@@ -6,7 +6,7 @@ import re
 from datetime import date
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
-from urllib.parse import urljoin, urlparse, urlunparse
+from urllib.parse import quote, urljoin, urlparse, urlunparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -18,6 +18,7 @@ YTJOBS_WEBHOOK_URL = os.getenv("YTJOBS_WEBHOOK_URL", "")
 ROSTER_WEBHOOK_URL = os.getenv("ROSTER_WEBHOOK_URL", "")
 YT_CAREERS_WEBHOOK_URL = os.getenv("YT_CAREERS_WEBHOOK_URL", "")
 BOC_WEBHOOK_URL = os.getenv("BOC_WEBHOOK_URL", "")
+X_WEBHOOK_URL = os.getenv("X_WEBHOOK_URL", "")
 WEBHOOK_AVATAR_URL = os.getenv("WEBHOOK_AVATAR_URL", "")
 
 MONDAY_API_TOKEN = os.getenv("MONDAY_API_TOKEN", "")
@@ -45,7 +46,7 @@ BOC_URL = "https://www.bucketofcrabs.net/jobs"
 
 HEADER_TEXT = "Cold leads, warm them up! 🔥"
 
-VALID_SOURCES = ("YTJobs", "Roster", "YTCareers", "BucketofCrabs")
+VALID_SOURCES = ("YTJobs", "Roster", "YTCareers", "BucketofCrabs", "X")
 
 ROLE_IDS = {
     "channel_manager": "1482015129150427166",
@@ -56,6 +57,43 @@ ROLE_IDS = {
     "production_manager": "1482015133889986753",
     "strategist": "1482015134452023296",
 }
+
+X_SEARCH_QUERIES = [
+    '"hiring editor"',
+    '"looking for editor"',
+    '"need an editor"',
+    '"video editor needed"',
+    '"youtube editor needed"',
+    '"shorts editor"',
+    '"short-form editor"',
+    '"short form editor"',
+    '"hiring thumbnail designer"',
+    '"looking for thumbnail designer"',
+    '"thumbnail designer needed"',
+    '"thumbnail artist needed"',
+    '"hiring scriptwriter"',
+    '"looking for scriptwriter"',
+    '"youtube writer needed"',
+    '"hiring writer"',
+]
+
+X_BAD_TERMS = [
+    "nft",
+    "crypto",
+    "forex",
+    "casino",
+    "gambling",
+    "onlyfans",
+    "hire me",
+    "available for work",
+    "my portfolio",
+    "commission me",
+    "i am an editor",
+    "i'm an editor",
+    "dm me for editing",
+    "looking for work",
+    "open for work",
+]
 
 JUNK_TITLE_PATTERNS = [
     r"^company about us",
@@ -199,6 +237,9 @@ def get_webhook_url(source: str) -> str:
 
     if source == "BucketofCrabs":
         return BOC_WEBHOOK_URL
+
+    if source == "X":
+        return X_WEBHOOK_URL
 
     return ""
 
@@ -402,6 +443,15 @@ def is_junk_job(job: Dict[str, Any]) -> bool:
     summary = clean_text(job.get("summary", "")).lower()
     url = clean_text(job.get("url", "")).lower()
 
+    if source == "X":
+        if not url or "x.com/" not in url or "/status/" not in url:
+            return True
+
+        if not summary:
+            return True
+
+        return False
+
     if not title or title == "new job":
         return True
 
@@ -602,6 +652,9 @@ def map_monday_platform(source: str) -> Optional[str]:
     if source in {"YTJobs", "Roster", "YTCareers", "BucketofCrabs"}:
         return "YouTube"
 
+    if source == "X":
+        return "X"
+
     return "Other"
 
 
@@ -618,6 +671,9 @@ def map_monday_sourced_from(source: str) -> Optional[str]:
     if source == "BucketofCrabs":
         return "BucketofCrabs"
 
+    if source == "X":
+        return "X"
+
     return None
 
 
@@ -626,6 +682,9 @@ def map_monday_category(job: Dict[str, Any]) -> Optional[str]:
     title = clean_text(job.get("title", ""))
     summary = clean_text(job.get("summary", ""))
     text = f"{title} {summary}".lower()
+
+    if source == "X":
+        return "Creator"
 
     if source == "YTJobs":
         return "YouTuber"
@@ -781,6 +840,8 @@ def find_candidate_links(html: str, base_url: str) -> Dict[str, Optional[str]]:
                 and "bucketofcrabs.net" not in lower
                 and "youtube.com" not in lower
                 and "youtu.be" not in lower
+                and "x.com" not in lower
+                and "twitter.com" not in lower
             ):
                 links["website"] = full
 
@@ -839,6 +900,12 @@ def safe_get(url: str, timeout: int = 20) -> Optional[requests.Response]:
 
 
 def enrich_public_email(job: Dict[str, Any]) -> None:
+    if job.get("source") == "X":
+        print("Skipping public email enrichment for X source.")
+        job["email"] = None
+        job["email_source"] = None
+        return
+
     checked_urls: Set[str] = set()
     sources_checked: List[str] = []
 
@@ -939,17 +1006,32 @@ def send_to_discord(job: Dict[str, Any]) -> None:
 
     role_line, allowed_mentions = build_role_line_and_mentions(title, description)
 
-    content = (
-        f"{HEADER_TEXT}\n\n"
-        f"{role_line}\n"
-        f"**Company:** {company}\n"
-        f"**Source:** {source}\n"
-        f"**Type:** {job_type}\n"
-        f"**Location:** {location}\n"
-        f"**Pay:** {pay}\n"
-        f"**Description:** {description}\n"
-        f"**Link:** {url if url else 'Not listed'}"
-    )
+    if source == "X":
+        matched_query = job.get("matched_query", "Not listed")
+        content = (
+            f"{HEADER_TEXT}\n\n"
+            f"{role_line}\n"
+            f"**Creator/Profile:** {company}\n"
+            f"**Source:** X\n"
+            f"**Type:** {job_type}\n"
+            f"**Location:** {location}\n"
+            f"**Pay:** {pay}\n"
+            f"**Matched Keyword:** {matched_query}\n"
+            f"**Post:** {description}\n"
+            f"**Link:** {url if url else 'Not listed'}"
+        )
+    else:
+        content = (
+            f"{HEADER_TEXT}\n\n"
+            f"{role_line}\n"
+            f"**Company:** {company}\n"
+            f"**Source:** {source}\n"
+            f"**Type:** {job_type}\n"
+            f"**Location:** {location}\n"
+            f"**Pay:** {pay}\n"
+            f"**Description:** {description}\n"
+            f"**Link:** {url if url else 'Not listed'}"
+        )
 
     payload = {
         "username": "Manifest Media Leads",
@@ -1200,6 +1282,16 @@ def extract_boc_stable_id(detail_url: str) -> str:
     return f"boc_{hashlib.sha256(normalized.encode('utf-8')).hexdigest()}"
 
 
+def extract_x_stable_id(tweet_url: str) -> str:
+    match = re.search(r"/status/(\d+)", tweet_url)
+
+    if match:
+        return f"x_{match.group(1)}"
+
+    normalized = normalize_url_for_dedupe(tweet_url)
+    return f"x_{hashlib.sha256(normalized.encode('utf-8')).hexdigest()}"
+
+
 def get_card_context(a) -> str:
     candidates = []
 
@@ -1226,6 +1318,66 @@ def get_card_context(a) -> str:
             return candidate
 
     return candidates[0]
+
+
+def build_x_search_url(query: str) -> str:
+    full_query = f"{query} lang:en -filter:replies"
+    return f"https://x.com/search?q={quote(full_query)}&src=typed_query&f=live"
+
+
+def is_bad_x_post(text: str) -> bool:
+    lower = clean_text(text).lower()
+
+    if any(term in lower for term in X_BAD_TERMS):
+        return True
+
+    hiring_terms = [
+        "hiring",
+        "looking for",
+        "need",
+        "needed",
+        "searching for",
+        "seeking",
+        "want to hire",
+        "trying to hire",
+    ]
+
+    role_terms = [
+        "editor",
+        "thumbnail",
+        "scriptwriter",
+        "script writer",
+        "writer",
+    ]
+
+    return not (
+        any(term in lower for term in hiring_terms)
+        and any(term in lower for term in role_terms)
+    )
+
+
+def x_title_from_text(text: str) -> str:
+    lower = text.lower()
+
+    if "thumbnail" in lower:
+        return "Thumbnail Designer"
+
+    if "scriptwriter" in lower or "script writer" in lower:
+        return "Scriptwriter"
+
+    if "writer" in lower:
+        return "Writer"
+
+    if "shorts editor" in lower or "short-form editor" in lower or "short form editor" in lower:
+        return "Short-Form Video Editor"
+
+    if "youtube editor" in lower:
+        return "YouTube Video Editor"
+
+    if "video editor" in lower or "editor" in lower:
+        return "Video Editor"
+
+    return "Creator Hiring Lead"
 
 
 async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
@@ -1314,7 +1466,6 @@ async def scrape_roster(page) -> List[Dict[str, Any]]:
         ]):
             continue
 
-        # Important: only specific detail URLs. Never allow the generic /jobs page.
         if not re.search(r"/jobs/[^/?#]+", lower):
             continue
 
@@ -1396,7 +1547,6 @@ async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
         ]):
             continue
 
-        # Important: allow only specific job/detail URLs, not the main /youtube-jobs page.
         allowed_detail_patterns = [
             r"/youtube-jobs/[^/?#]+",
             r"/job/[^/?#]+",
@@ -1533,15 +1683,112 @@ async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
     return jobs
 
 
+async def scrape_x(page) -> List[Dict[str, Any]]:
+    jobs: List[Dict[str, Any]] = []
+
+    for query in X_SEARCH_QUERIES:
+        search_url = build_x_search_url(query)
+        print(f"Searching X: {query}")
+
+        try:
+            await page.goto(search_url, wait_until="domcontentloaded", timeout=45000)
+            await page.wait_for_timeout(7000)
+        except Exception as e:
+            print(f"X search failed for {query}: {e}")
+            continue
+
+        for _ in range(2):
+            try:
+                await page.mouse.wheel(0, 1800)
+                await page.wait_for_timeout(2000)
+            except Exception:
+                pass
+
+        try:
+            articles = await page.locator('article[data-testid="tweet"]').all()
+        except Exception as e:
+            print(f"Could not find X tweet articles for {query}: {e}")
+            continue
+
+        for article in articles[:15]:
+            try:
+                text = clean_text(await article.inner_text())
+            except Exception:
+                continue
+
+            if not text:
+                continue
+
+            if is_bad_x_post(text):
+                continue
+
+            try:
+                links = await article.locator('a[href*="/status/"]').evaluate_all(
+                    """els => els.map(a => a.href)"""
+                )
+            except Exception:
+                links = []
+
+            if not links:
+                continue
+
+            tweet_url = normalize_url_for_dedupe(links[0])
+            if not tweet_url:
+                continue
+
+            username_match = re.search(r"x\.com/([^/]+)/status", tweet_url)
+            username = username_match.group(1) if username_match else "unknown"
+
+            title = x_title_from_text(text)
+            pay = extract_pay(text)
+            location = extract_location(text)
+            job_type = extract_job_type(text)
+
+            jobs.append(
+                {
+                    "id": extract_x_stable_id(tweet_url),
+                    "title": title,
+                    "summary": clip(text, 260),
+                    "location": location,
+                    "job_type": job_type,
+                    "pay": pay,
+                    "url": tweet_url,
+                    "source": "X",
+                    "email": None,
+                    "email_source": None,
+                    "company": f"@{username}",
+                    "matched_query": query,
+                    "posted": False,
+                }
+            )
+
+        await page.wait_for_timeout(2500)
+
+    jobs = dedupe_jobs(jobs)
+    print(f"X jobs found: {len(jobs)}")
+
+    for job in jobs[:10]:
+        print(f"X parsed job: {job['title']} | {job['company']} | {job['url']}")
+
+    return jobs
+
+
 async def fetch_jobs() -> List[Dict[str, Any]]:
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
+        browser = await p.chromium.launch(
+            headless=True,
+            args=[
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-blink-features=AutomationControlled",
+            ],
+        )
 
         page = await browser.new_page(
             user_agent=(
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                 "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/120.0.0.0 Safari/537.36"
+                "Chrome/124.0.0.0 Safari/537.36"
             )
         )
 
@@ -1566,6 +1813,11 @@ async def fetch_jobs() -> List[Dict[str, Any]]:
             jobs.extend(await scrape_bucketofcrabs(page))
         except Exception as e:
             print(f"BucketofCrabs scrape failed: {e}")
+
+        try:
+            jobs.extend(await scrape_x(page))
+        except Exception as e:
+            print(f"X scrape failed: {e}")
 
         await browser.close()
 
@@ -1688,7 +1940,8 @@ async def main() -> None:
         f"YTJobs={len(pending['YTJobs'])}, "
         f"Roster={len(pending['Roster'])}, "
         f"YTCareers={len(pending['YTCareers'])}, "
-        f"BucketofCrabs={len(pending['BucketofCrabs'])}"
+        f"BucketofCrabs={len(pending['BucketofCrabs'])}, "
+        f"X={len(pending['X'])}"
     )
 
     removed = clean_pending_queues(pending)
@@ -1698,7 +1951,8 @@ async def main() -> None:
         f"YTJobs removed={removed['YTJobs']}, "
         f"Roster removed={removed['Roster']}, "
         f"YTCareers removed={removed['YTCareers']}, "
-        f"BucketofCrabs removed={removed['BucketofCrabs']}"
+        f"BucketofCrabs removed={removed['BucketofCrabs']}, "
+        f"X removed={removed['X']}"
     )
 
     jobs = await fetch_jobs()
@@ -1710,7 +1964,8 @@ async def main() -> None:
         f"YTJobs={queued_count['YTJobs']}, "
         f"Roster={queued_count['Roster']}, "
         f"YTCareers={queued_count['YTCareers']}, "
-        f"BucketofCrabs={queued_count['BucketofCrabs']}"
+        f"BucketofCrabs={queued_count['BucketofCrabs']}, "
+        f"X={queued_count['X']}"
     )
 
     print(
@@ -1718,13 +1973,15 @@ async def main() -> None:
         f"YTJobs={count_unposted(pending, 'YTJobs')}, "
         f"Roster={count_unposted(pending, 'Roster')}, "
         f"YTCareers={count_unposted(pending, 'YTCareers')}, "
-        f"BucketofCrabs={count_unposted(pending, 'BucketofCrabs')}"
+        f"BucketofCrabs={count_unposted(pending, 'BucketofCrabs')}, "
+        f"X={count_unposted(pending, 'X')}"
     )
 
     posted_ytjobs = post_next_job_for_source("YTJobs", pending)
     posted_roster = post_next_job_for_source("Roster", pending)
     posted_ytcareers = post_next_job_for_source("YTCareers", pending)
     posted_boc = post_next_job_for_source("BucketofCrabs", pending)
+    posted_x = post_next_job_for_source("X", pending)
 
     save_pending(pending)
 
@@ -1748,12 +2005,18 @@ async def main() -> None:
     else:
         print("No BucketofCrabs post sent this run.")
 
+    if posted_x:
+        print(f"Posted X: {posted_x['title']}")
+    else:
+        print("No X post sent this run.")
+
     print(
         "Unposted queue sizes after post: "
         f"YTJobs={count_unposted(pending, 'YTJobs')}, "
         f"Roster={count_unposted(pending, 'Roster')}, "
         f"YTCareers={count_unposted(pending, 'YTCareers')}, "
-        f"BucketofCrabs={count_unposted(pending, 'BucketofCrabs')}"
+        f"BucketofCrabs={count_unposted(pending, 'BucketofCrabs')}, "
+        f"X={count_unposted(pending, 'X')}"
     )
 
 
