@@ -1362,7 +1362,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-16"
     },
     {
       "id": "ytjobs_38913",
@@ -1652,6 +1653,20 @@
       "job_type": "Per project",
       "pay": "$10-$45 Per project",
       "url": "https://ytjobs.co/job/39081",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_37950",
+      "title": "Video Editor",
+      "summary": "Video Editor - Football $50-$60 Per project Remote Sports Shorts People & Blogs Education Futbol Media 2.27M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$60 Per project",
+      "url": "https://ytjobs.co/job/37950",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
