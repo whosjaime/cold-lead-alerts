@@ -1242,7 +1242,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-16"
     },
     {
       "id": "ytjobs_39035",
@@ -1504,6 +1505,34 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39118",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39114",
+      "title": "Scriptwriter",
+      "summary": "Scriptwriter $50,000-$90,000 Per Year . Full-time Remote . New York City, NY, US Howto & Style Education +6 more Shown Media LLC Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$50,000-$90,000 Per Year",
+      "url": "https://ytjobs.co/job/39114",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39119",
+      "title": "VIDEO EDITOR WITH POKEMON-KNOWLEDGE NEEDED Full-time",
+      "summary": "VIDEO EDITOR WITH POKEMON-KNOWLEDGE NEEDED Full-time Remote Gaming Entertainment Shorts +3 more GTC Cards 364K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39119",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
