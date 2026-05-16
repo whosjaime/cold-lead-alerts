@@ -1317,7 +1317,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-16"
     },
     {
       "id": "ytjobs_39067",
@@ -1621,6 +1622,20 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39135",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39143",
+      "title": "We're hiring the best thumbnail Designers on YouTube Per project",
+      "summary": "We're hiring the best thumbnail Designers on YouTube Per project Remote Anime/Animation Animation +2 more His Story 1.59M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39143",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
