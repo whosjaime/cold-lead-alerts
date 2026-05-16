@@ -1347,7 +1347,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-16"
     },
     {
       "id": "ytjobs_39061",
@@ -1637,6 +1638,20 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39143",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39081",
+      "title": "Shorts/Tiktok Editor for Dog Grooming content",
+      "summary": "Shorts/Tiktok Editor for Dog Grooming content $10-$45 Per project Remote Pets & Animals Shorts Gaming IRL +3 more Arang 12 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$10-$45 Per project",
+      "url": "https://ytjobs.co/job/39081",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
