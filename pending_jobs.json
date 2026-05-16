@@ -1272,7 +1272,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-16"
     },
     {
       "id": "ytjobs_39036",
@@ -1534,6 +1535,34 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39119",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39130",
+      "title": "Video Editor",
+      "summary": "Video Editor $1,800-$3,700 Per Year . Full-time Onsite . Patna, India Howto & Style Science & Technology +7 more Digidoty 128K subs",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "$1,800-$3,700 Per Year",
+      "url": "https://ytjobs.co/job/39130",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39125",
+      "title": "Short Form Video Editor (Clipper)",
+      "summary": "Short Form Video Editor (Clipper) $600-$3,000 Per project Remote Shorts Live stream Review +4 more ClippedIn Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$600-$3,000 Per project",
+      "url": "https://ytjobs.co/job/39125",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
