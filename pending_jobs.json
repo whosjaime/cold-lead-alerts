@@ -1287,7 +1287,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-16"
     },
     {
       "id": "ytjobs_38112",
@@ -1563,6 +1564,62 @@
       "job_type": "Per project",
       "pay": "$600-$3,000 Per project",
       "url": "https://ytjobs.co/job/39125",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39140",
+      "title": "Improv Movie Editor",
+      "summary": "Improv Movie Editor $2,500-$4,000 Per project Remote Film & Animation Short Movies +7 more Grace Reiter 677K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$2,500-$4,000 Per project",
+      "url": "https://ytjobs.co/job/39140",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39137",
+      "title": "Video Editor for Crosshair X Social Media",
+      "summary": "Video Editor for Crosshair X Social Media $75 Per project Remote Gaming Gameplay Motion Graphics Zikzip Media 4 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$75 Per project",
+      "url": "https://ytjobs.co/job/39137",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39136",
+      "title": "Looking for Educational Content Video Editor",
+      "summary": "Looking for Educational Content Video Editor $500-$1,000 Per project Remote Education Science & Technology +10 more Danny Why 144K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$500-$1,000 Per project",
+      "url": "https://ytjobs.co/job/39136",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39135",
+      "title": "YouTube Thumbnail Strategist",
+      "summary": "YouTube Thumbnail Strategist \u2014 Soccer Performance Channel Per project Remote Sports Education Entertainment Talking head Mark Bowden | Football Mind Gym 6.93K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39135",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -2278,6 +2335,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-15"
+    },
+    {
+      "id": "boc_b1d69a05a9660518118655e3b4808960bf1758f4d02410f0844562f1db96afd2",
+      "title": "Chillcraft Minecraft Bedrock Developer",
+      "summary": "Chillcraft Minecraft Bedrock Developer - ChillCraft Remote Only $1-$1000/Fixed Amount Game Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1-$1000",
+      "url": "https://www.bucketofcrabs.net/jobs/WaFAxbauxC",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-16"
     }
   ],
   "X": []
