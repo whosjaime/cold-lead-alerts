@@ -1302,7 +1302,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-16"
     },
     {
       "id": "ytjobs_39068",
@@ -2344,6 +2345,21 @@
       "job_type": "Not listed",
       "pay": "$1-$1000",
       "url": "https://www.bucketofcrabs.net/jobs/WaFAxbauxC",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-16"
+    },
+    {
+      "id": "boc_7b46e50e6cd0ca6b37aacd269cd6f1da43a6e9c2a90b75dc02e01f327cc86a98",
+      "title": "Peach Tree Development LLC Java Server Dev/Configurator",
+      "summary": "Peach Tree Development LLC Java Server Dev/Configurator Remote Only $1-$10000/Fixed Amount - monthly Game Art Game Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1-$10000",
+      "url": "https://www.bucketofcrabs.net/jobs/hnyfwnWd7h",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
