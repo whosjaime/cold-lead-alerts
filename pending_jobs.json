@@ -1467,7 +1467,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-17"
     },
     {
       "id": "ytjobs_29703",
@@ -2504,7 +2505,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-17"
     },
     {
       "id": "boc_dd6c2bdcbb2ee3205f938eecb56bef31b688e905a2b582d7c1d5aa997906e565",
