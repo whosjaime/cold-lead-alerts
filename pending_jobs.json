@@ -1527,7 +1527,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-17"
     },
     {
       "id": "ytjobs_39114",
@@ -1719,6 +1720,20 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39175",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39178",
+      "title": "Channel Manager/ Youtube Operator",
+      "summary": "Channel Manager/ Youtube Operator / Youtube Funnel operator $72,000-$250,000 Per Year . Full-time Remote Education fitness Tutorial How-to +2 more SouthpawHuncho 80.2K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$72,000-$250,000 Per Year",
+      "url": "https://ytjobs.co/job/39178",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
