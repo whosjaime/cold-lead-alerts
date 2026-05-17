@@ -1452,7 +1452,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-17"
     },
     {
       "id": "ytjobs_39102",
@@ -1686,6 +1687,20 @@
       "job_type": "Per project",
       "pay": "$100-$650 Per project",
       "url": "https://ytjobs.co/job/39153",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39170",
+      "title": "Minecraft Shorts Video Editor",
+      "summary": "Minecraft Shorts Video Editor $100-$200 Per project Remote Minecraft Science & Technology +2 more KnavishMantis 1.72K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$200 Per project",
+      "url": "https://ytjobs.co/job/39170",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -2474,7 +2489,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-17"
     },
     {
       "id": "boc_96be9d8991fb1e78e5e1e9a48c5b7b857460aa1079050621ea7a11bd07bf1520",
@@ -2484,6 +2500,48 @@
       "job_type": "Not listed",
       "pay": "$50-$1500",
       "url": "https://www.bucketofcrabs.net/jobs/YVg1dsOKJE",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_dd6c2bdcbb2ee3205f938eecb56bef31b688e905a2b582d7c1d5aa997906e565",
+      "title": "Environ Studios Minecraft Bedrock Developer",
+      "summary": "Environ Studios Minecraft Bedrock Developer Remote Only $1-$1/Fixed Amount Game Developer Plugin/Mod Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1-$1",
+      "url": "https://www.bucketofcrabs.net/jobs/ooHzZk5HZO",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_a9bcfc2f25fd9b4a6b4a4d62ec94de03e2e6bc8ee4a924b2a7e124ffd4ca5b2f",
+      "title": "KnightyBuilds Part-Time Personal Assistant (Minecraft Content & Media) Remote...",
+      "summary": "KnightyBuilds Part-Time Personal Assistant (Minecraft Content & Media) Remote... \u2014 KnightyBuilds Part-Time Personal Assistant (Minecraft Content & Media) Remote Only $350-$650/Fixed Amount - monthly Operations Design",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$350-$650",
+      "url": "https://www.bucketofcrabs.net/jobs/hHMeqPBsZW",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_3cd6499681d70ab0f298309bbf7088d6b526f61d0e08f9e8ba53418ecc14569a",
+      "title": "Environ Studios Minecraft Model Artist",
+      "summary": "Environ Studios Minecraft Model Artist Remote Only $1-$1/Fixed Amount 3D Models/Animator Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1-$1",
+      "url": "https://www.bucketofcrabs.net/jobs/LfST99JPfe",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
