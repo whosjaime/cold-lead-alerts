@@ -1437,7 +1437,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-17"
     },
     {
       "id": "ytjobs_39100",
@@ -1671,6 +1672,20 @@
       "job_type": "Per project",
       "pay": "$50-$60 Per project",
       "url": "https://ytjobs.co/job/37950",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39153",
+      "title": "Video Editor",
+      "summary": "Video Editor $100-$650 Per project Remote Comedy Entertainment Education +6 more Metta Beshay 351K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$650 Per project",
+      "url": "https://ytjobs.co/job/39153",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -2444,7 +2459,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-17"
     },
     {
       "id": "boc_3035e85c4923705b1de93e43725c29eadc0b54001834d0a661b655599fcc74a7",
