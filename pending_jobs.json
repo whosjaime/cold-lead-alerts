@@ -1482,7 +1482,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-17"
     },
     {
       "id": "ytjobs_39112",
@@ -1702,6 +1703,20 @@
       "job_type": "Per project",
       "pay": "$100-$200 Per project",
       "url": "https://ytjobs.co/job/39170",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39175",
+      "title": "Thumbnail Designer Per project",
+      "summary": "Thumbnail Designer Per project Remote Gaming Challenge Gameplay RoBrax 206 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39175",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -2520,7 +2535,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-17"
     },
     {
       "id": "boc_a9bcfc2f25fd9b4a6b4a4d62ec94de03e2e6bc8ee4a924b2a7e124ffd4ca5b2f",
