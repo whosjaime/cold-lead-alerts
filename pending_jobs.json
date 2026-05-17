@@ -1422,7 +1422,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-17"
     },
     {
       "id": "ytjobs_14957",
@@ -2415,6 +2416,63 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-16"
+    },
+    {
+      "id": "boc_b6bff6b058264dcc76eef5acd7be331a14eb7523f3624310274347cdd54b46a2",
+      "title": "CrackedCubes Ltd Unity Developer \u2013 Games, Interactive Experiences, & Educatio...",
+      "summary": "CrackedCubes Ltd Unity Developer \u2013 Games, Interactive Experiences, & Educatio... \u2014 CrackedCubes Ltd Unity Developer \u2013 Games, Interactive Experiences, & Educational Projects Remote Only $20-$45/Hourly Game Developer Pl...",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$20-$45/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/d195ZmKehJ",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-17"
+    },
+    {
+      "id": "boc_a5feae322b41d124a5e4048c218d2f8aa330d11168285d7fc54f5a3a04eee6f3",
+      "title": "CrackedCubes Ltd Model Artist \u2013 Minecraft Maps & Add-Ons",
+      "summary": "CrackedCubes Ltd Model Artist \u2013 Minecraft Maps & Add-Ons Remote Only $20-$40/Hourly 3D Models/Animator Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$20-$40/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/921PBBD2k9",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_3035e85c4923705b1de93e43725c29eadc0b54001834d0a661b655599fcc74a7",
+      "title": "CrackedCubes Ltd Texture Artist \u2013 Minecraft Maps & Add-Ons",
+      "summary": "CrackedCubes Ltd Texture Artist \u2013 Minecraft Maps & Add-Ons Remote Only $25-$45/Hourly Game Art Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$25-$45/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/xDVaKvOtNu",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_96be9d8991fb1e78e5e1e9a48c5b7b857460aa1079050621ea7a11bd07bf1520",
+      "title": "OrioniX Services Minecraft Java Builders",
+      "summary": "OrioniX Services Minecraft Java Builders Remote Only $50-$1500/Fixed Amount World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$50-$1500",
+      "url": "https://www.bucketofcrabs.net/jobs/YVg1dsOKJE",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
