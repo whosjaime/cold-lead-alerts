@@ -1647,7 +1647,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-18"
     },
     {
       "id": "ytjobs_39143",
@@ -1783,6 +1784,20 @@
       "job_type": "Per project",
       "pay": "$350-$500 Per project",
       "url": "https://ytjobs.co/job/39196",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39218",
+      "title": "Engineering/Tech",
+      "summary": "Engineering/Tech \u2014 YouTube Manager $30-$45 Per Hour . Part-time Remote Software Engineering Coding +4 more Exponent 492K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$30-$45 Per Hour",
+      "url": "https://ytjobs.co/job/39218",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -2687,6 +2702,21 @@
       "job_type": "Not listed",
       "pay": "$20-$5000",
       "url": "https://www.bucketofcrabs.net/jobs/XBNdo2QsbW",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-18"
+    },
+    {
+      "id": "boc_3ccd46643bf1a01bfcbcec5388a82889ef65e72b692f4c9e925d5a179bde2d44",
+      "title": "BeBlock Studio Minecraft Bedrock",
+      "summary": "BeBlock Studio Minecraft Bedrock / Trailer Maker Remote Only $20-$30/Hourly Video",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$20-$30/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/fZwqm2y1Wm",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
