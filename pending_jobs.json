@@ -1602,7 +1602,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-18"
     },
     {
       "id": "ytjobs_39137",
@@ -1738,6 +1739,48 @@
       "job_type": "Full-time",
       "pay": "$72,000-$250,000 Per Year",
       "url": "https://ytjobs.co/job/39178",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39206",
+      "title": "Video Editor For Vlogs",
+      "summary": "Video Editor For Vlogs $100-$500 Per project Remote Gaming Howto & Style John Hague 433 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$500 Per project",
+      "url": "https://ytjobs.co/job/39206",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39204",
+      "title": "Thumbnail Designer For Vlogs",
+      "summary": "Thumbnail Designer For Vlogs $40-$100 Per project Remote John Hague 433 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$40-$100 Per project",
+      "url": "https://ytjobs.co/job/39204",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39196",
+      "title": "Biaheza Style Editor",
+      "summary": "Biaheza Style Editor - AI Tutorial Niche $350-$500 Per project Remote Comedy Education +14 more Dubibubii 7.76K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$350-$500 Per project",
+      "url": "https://ytjobs.co/job/39196",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -2121,6 +2164,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-15"
+    },
+    {
+      "id": "ytcareers_abc34250b5fc95ce386585e4805205c7b715deb08a35e252e19c14ac8705bbd3",
+      "title": "Long-Form YouTube Video Editor",
+      "summary": "Long-Form YouTube Video Editor",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/227",
+      "source": "YTCareers",
+      "email": "hello@sponsorship.so",
+      "email_source": "website_contact",
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-18"
     }
   ],
   "BucketofCrabs": [
@@ -2612,6 +2670,21 @@
       "job_type": "Not listed",
       "pay": "$300-$1600",
       "url": "https://www.bucketofcrabs.net/jobs/nlHOPUBQXs",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-18"
+    },
+    {
+      "id": "boc_7ac9c140ddefb50ae198beffe7d9cef0204686bf04b950755e97c234e77a187e",
+      "title": "Lua Studios 3D Modeler Bedrock Minecraft",
+      "summary": "Lua Studios 3D Modeler Bedrock Minecraft Remote Only $20-$5000/Fixed Amount 3D Models/Animator Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$20-$5000",
+      "url": "https://www.bucketofcrabs.net/jobs/XBNdo2QsbW",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
