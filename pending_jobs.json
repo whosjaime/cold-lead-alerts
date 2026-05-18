@@ -1572,7 +1572,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-18"
     },
     {
       "id": "ytjobs_39125",
@@ -2586,6 +2587,35 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-17"
+    },
+    {
+      "id": "boc_a9d535c448f3244ead3b6365458fa74d5a19fcfdb59faf8ffd3f2d3fdbed0347",
+      "title": "RiftFall Studios Modeler (Freelance)",
+      "summary": "RiftFall Studios Modeler (Freelance) Remote Only $20-$3000/Fixed Amount Game Art Design",
+      "location": "Remote",
+      "job_type": "Freelance",
+      "pay": "$20-$3000",
+      "url": "https://www.bucketofcrabs.net/jobs/9UoJUqw2Hd",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-18"
+    },
+    {
+      "id": "boc_4aa330ed9d66a81fe73df4cf45871d6a0164bec26b93eb0ce771638bb6676f6a",
+      "title": "Crimson Creative Minecraft Bedrock Trailer Maker",
+      "summary": "Crimson Creative Minecraft Bedrock Trailer Maker Remote Only $300-$1600/Fixed Amount Marketing Art Video",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$300-$1600",
+      "url": "https://www.bucketofcrabs.net/jobs/nlHOPUBQXs",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
