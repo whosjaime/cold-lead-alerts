@@ -1707,7 +1707,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-19"
     },
     {
       "id": "ytjobs_39170",
@@ -1815,6 +1816,20 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39224",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39228",
+      "title": "HIRING LONG-TERM ROBLOX SHORTS EDITORS (specific sub niche)",
+      "summary": "HIRING LONG-TERM ROBLOX SHORTS EDITORS (specific sub niche) $30-$60 Per project Remote Shorts Gaming Skit Scripted Cheesymembey 6.88M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$30-$60 Per project",
+      "url": "https://ytjobs.co/job/39228",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
