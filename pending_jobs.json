@@ -1752,7 +1752,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-19"
     },
     {
       "id": "ytjobs_39206",
@@ -1916,6 +1917,20 @@
       "job_type": "Per project",
       "pay": "$500-$600 Per project",
       "url": "https://ytjobs.co/job/39235",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39254",
+      "title": "YouTube Content Manager",
+      "summary": "YouTube Content Manager $30,000-$48,000 Per Year . Full-time Remote Entertainment Anime/Animation +9 more KEDOO ENTERTAINMENT Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$30,000-$48,000 Per Year",
+      "url": "https://ytjobs.co/job/39254",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
