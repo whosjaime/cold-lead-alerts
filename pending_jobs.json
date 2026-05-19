@@ -1692,7 +1692,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-19"
     },
     {
       "id": "ytjobs_39153",
@@ -1800,6 +1801,20 @@
       "job_type": "Part-time",
       "pay": "$30-$45 Per Hour",
       "url": "https://ytjobs.co/job/39218",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39224",
+      "title": "2D Animator Needed Per project",
+      "summary": "2D Animator Needed Per project Remote Sports Gaming Documentary Animation The Fighting Business 272K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39224",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
