@@ -1782,7 +1782,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-19"
     },
     {
       "id": "ytjobs_39196",
@@ -1932,6 +1933,20 @@
       "job_type": "Full-time",
       "pay": "$30,000-$48,000 Per Year",
       "url": "https://ytjobs.co/job/39254",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39267",
+      "title": "Editor",
+      "summary": "Editor | Long & Shorts | Fixed + AdSense Percentage Pay $100-$2,000 Per project Remote People & Blogs Entertainment +7 more Devin Street 31.6K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$2,000 Per project",
+      "url": "https://ytjobs.co/job/39267",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
