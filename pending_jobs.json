@@ -1842,7 +1842,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-20"
     },
     {
       "id": "ytjobs_39245",
@@ -2034,6 +2035,34 @@
       "job_type": "Per project",
       "pay": "$100-$150 Per project",
       "url": "https://ytjobs.co/job/39280",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39243",
+      "title": "Creative Director",
+      "summary": "Creative Director $15-$35 Per Hour . Part-time Remote Creator Atlas Company",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$15-$35 Per Hour",
+      "url": "https://ytjobs.co/job/39243",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39241",
+      "title": "YouTube Business Strategist",
+      "summary": "YouTube Business Strategist $20-$45 Per Hour . Part-time Remote Marketing Business and Finance Creator Atlas Company",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$20-$45 Per Hour",
+      "url": "https://ytjobs.co/job/39241",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
