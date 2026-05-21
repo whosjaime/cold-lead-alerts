@@ -38,6 +38,8 @@ MONDAY_COL_LOCATION = os.getenv("MONDAY_COL_LOCATION", "")
 MONDAY_COL_DESCRIPTION = os.getenv("MONDAY_COL_DESCRIPTION", "")
 MONDAY_COL_LINK = os.getenv("MONDAY_COL_LINK", "")
 MONDAY_COL_POST_DATE = os.getenv("MONDAY_COL_POST_DATE", "")
+MONDAY_COL_SUBSCRIBERS = os.getenv("MONDAY_COL_SUBSCRIBERS", "")
+MONDAY_COL_REFERRAL_BONUS = os.getenv("MONDAY_COL_REFERRAL_BONUS", "")
 
 YTJOBS_URL = "https://ytjobs.co/job/search"
 ROSTER_URL = "https://app.joinroster.co/jobs"
@@ -769,6 +771,99 @@ def extract_numeric_pay(pay: str) -> Optional[float]:
         return None
 
 
+def extract_numeric_referral_bonus(text: str) -> Optional[float]:
+    """Extract numeric referral bonus from text like '$200 Referral Bonus'"""
+    if not text:
+        return None
+
+    text = clean_text(text).lower()
+
+    # Look for dollar amounts before "referral bonus"
+    match = re.search(r"\$(\d+(?:,\d+)*(?:\.\d+)?)\s*(?:referral|bonus)", text)
+    if match:
+        try:
+            return float(match.group(1).replace(",", ""))
+        except ValueError:
+            return None
+
+    return None
+
+
+def extract_subscriber_count_from_text(text: str) -> Optional[int]:
+    """Extract subscriber count from text like '1.36K subscribers' or '1.36k subs'"""
+    if not text:
+        return None
+
+    text = clean_text(text).lower()
+
+    # Match patterns like "1.36K", "1.36k", "1360", "2M", "500", etc.
+    match = re.search(r"(\d+(?:\.\d+)?)\s*([km]?)\s*(?:subscribers|subs)", text)
+    if match:
+        try:
+            number = float(match.group(1))
+            multiplier = match.group(2).lower()
+
+            if multiplier == "k":
+                return int(number * 1000)
+            elif multiplier == "m":
+                return int(number * 1000000)
+            else:
+                return int(number)
+        except (ValueError, AttributeError):
+            return None
+
+    return None
+
+
+async def extract_ytjobs_enrichment_from_html(html: str) -> Dict[str, Optional[Any]]:
+    """Parse YTJobs job detail page HTML to extract referral bonus and subscriber count"""
+    soup = BeautifulSoup(html, "html.parser")
+
+    referral_bonus = None
+    subscribers = None
+
+    # Look for referral bonus - typically in format "$XXX Referral Bonus"
+    page_text = soup.get_text(" ")
+    referral_bonus = extract_numeric_referral_bonus(page_text)
+
+    # Look for subscriber count in "Posted by" section
+    # Look for patterns like "1.36K subscribers"
+    subscribers = extract_subscriber_count_from_text(page_text)
+
+    return {
+        "referral_bonus": referral_bonus,
+        "subscribers": subscribers,
+    }
+
+
+async def enrich_ytjobs_with_page_data(page, job: Dict[str, Any]) -> None:
+    """Navigate to YTJobs job detail page and extract referral bonus and subscriber count"""
+    if job.get("source") != "YTJobs":
+        return
+
+    url = job.get("url", "").strip()
+    if not url:
+        return
+
+    try:
+        await page.goto(url, wait_until="domcontentloaded", timeout=30000)
+        await page.wait_for_timeout(2000)
+
+        html = await page.content()
+        enrichment = await extract_ytjobs_enrichment_from_html(html)
+
+        if enrichment.get("referral_bonus"):
+            job["referral_bonus"] = enrichment["referral_bonus"]
+            print(f"Found referral bonus for {job.get('title')}: ${enrichment['referral_bonus']}")
+
+        if enrichment.get("subscribers"):
+            job["subscribers"] = enrichment["subscribers"]
+            print(f"Found subscribers for {job.get('title')}: {enrichment['subscribers']}")
+
+    except Exception as e:
+        print(f"Failed to enrich YTJobs job {job.get('title')}: {e}")
+
+
 def normalize_email(email: str) -> Optional[str]:
     email = clean_text(email).strip(".,;:()[]{}<>\"'")
     lower = email.lower()
@@ -1078,6 +1173,8 @@ def send_to_monday(job: Dict[str, Any]) -> None:
     monday_location = map_monday_location(location)
     post_date = str(date.today())
     numeric_pay = extract_numeric_pay(pay)
+    referral_bonus = job.get("referral_bonus")
+    subscribers = job.get("subscribers")
 
     column_values: Dict[str, Any] = {}
 
@@ -1122,6 +1219,12 @@ def send_to_monday(job: Dict[str, Any]) -> None:
             "email": email,
             "text": email,
         }
+
+    if MONDAY_COL_SUBSCRIBERS and subscribers is not None:
+        column_values[MONDAY_COL_SUBSCRIBERS] = str(subscribers)
+
+    if MONDAY_COL_REFERRAL_BONUS and referral_bonus is not None:
+        column_values[MONDAY_COL_REFERRAL_BONUS] = f"${referral_bonus}"
 
     query = """
     mutation CreateItem($board_id: ID!, $group_id: String, $item_name: String!, $column_values: JSON!) {
@@ -1431,6 +1534,8 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
                 "email": None,
                 "email_source": None,
                 "company": None,
+                "referral_bonus": None,
+                "subscribers": None,
                 "posted": False,
             }
         )
@@ -1698,55 +1803,35 @@ async def scrape_x(page) -> List[Dict[str, Any]]:
     return jobs
 
 
-async def fetch_jobs() -> List[Dict[str, Any]]:
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(
-            headless=True,
-            args=[
-                "--no-sandbox",
-                "--disable-dev-shm-usage",
-                "--disable-blink-features=AutomationControlled",
-            ],
-        )
+async def fetch_jobs(page) -> List[Dict[str, Any]]:
+    jobs: List[Dict[str, Any]] = []
 
-        page = await browser.new_page(
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/124.0.0.0 Safari/537.36"
-            )
-        )
+    try:
+        jobs.extend(await scrape_ytjobs(page))
+    except Exception as e:
+        print(f"YTJobs scrape failed: {e}")
 
-        jobs: List[Dict[str, Any]] = []
+    try:
+        jobs.extend(await scrape_roster(page))
+    except Exception as e:
+        print(f"Roster scrape failed: {e}")
 
-        try:
-            jobs.extend(await scrape_ytjobs(page))
-        except Exception as e:
-            print(f"YTJobs scrape failed: {e}")
+    try:
+        jobs.extend(await scrape_ytcareers(page))
+    except Exception as e:
+        print(f"YTCareers scrape failed: {e}")
 
-        try:
-            jobs.extend(await scrape_roster(page))
-        except Exception as e:
-            print(f"Roster scrape failed: {e}")
+    try:
+        jobs.extend(await scrape_bucketofcrabs(page))
+    except Exception as e:
+        print(f"BucketofCrabs scrape failed: {e}")
 
-        try:
-            jobs.extend(await scrape_ytcareers(page))
-        except Exception as e:
-            print(f"YTCareers scrape failed: {e}")
+    try:
+        jobs.extend(await scrape_x(page))
+    except Exception as e:
+        print(f"X scrape failed: {e}")
 
-        try:
-            jobs.extend(await scrape_bucketofcrabs(page))
-        except Exception as e:
-            print(f"BucketofCrabs scrape failed: {e}")
-
-        try:
-            jobs.extend(await scrape_x(page))
-        except Exception as e:
-            print(f"X scrape failed: {e}")
-
-        await browser.close()
-
-        return jobs
+    return jobs
 
 
 def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], pending: Dict[str, List[Dict[str, Any]]]) -> Dict[str, int]:
@@ -1809,7 +1894,7 @@ def enqueue_new_jobs(all_jobs: List[Dict[str, Any]], pending: Dict[str, List[Dic
     return added
 
 
-def post_next_job_for_source(source: str, pending: Dict[str, List[Dict[str, Any]]]) -> Optional[Dict[str, Any]]:
+async def post_next_job_for_source(source: str, pending: Dict[str, List[Dict[str, Any]]], page) -> Optional[Dict[str, Any]]:
     queue = pending.get(source, [])
 
     if not queue:
@@ -1845,6 +1930,13 @@ def post_next_job_for_source(source: str, pending: Dict[str, List[Dict[str, Any]
     except Exception as e:
         print(f"Email enrichment failed for {source}: {e}")
 
+    # Enrich YTJobs with subscriber and referral bonus data
+    if source == "YTJobs":
+        try:
+            await enrich_ytjobs_with_page_data(page, job)
+        except Exception as e:
+            print(f"YTJobs enrichment failed for {source}: {e}")
+
     try:
         send_to_monday(job)
     except Exception as e:
@@ -1859,91 +1951,111 @@ def post_next_job_for_source(source: str, pending: Dict[str, List[Dict[str, Any]
 
 
 async def main() -> None:
-    pending = load_pending()
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(
+            headless=True,
+            args=[
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-blink-features=AutomationControlled",
+            ],
+        )
 
-    print(
-        "Pending jobs loaded: "
-        f"YTJobs={len(pending['YTJobs'])}, "
-        f"Roster={len(pending['Roster'])}, "
-        f"YTCareers={len(pending['YTCareers'])}, "
-        f"BucketofCrabs={len(pending['BucketofCrabs'])}, "
-        f"X={len(pending['X'])}"
-    )
+        page = await browser.new_page(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            )
+        )
 
-    removed = clean_pending_queues(pending)
+        pending = load_pending()
 
-    print(
-        "Cleaned pending jobs: "
-        f"YTJobs removed={removed['YTJobs']}, "
-        f"Roster removed={removed['Roster']}, "
-        f"YTCareers removed={removed['YTCareers']}, "
-        f"BucketofCrabs removed={removed['BucketofCrabs']}, "
-        f"X removed={removed['X']}"
-    )
+        print(
+            "Pending jobs loaded: "
+            f"YTJobs={len(pending['YTJobs'])}, "
+            f"Roster={len(pending['Roster'])}, "
+            f"YTCareers={len(pending['YTCareers'])}, "
+            f"BucketofCrabs={len(pending['BucketofCrabs'])}, "
+            f"X={len(pending['X'])}"
+        )
 
-    jobs = await fetch_jobs()
-    queued_count = enqueue_new_jobs(jobs, pending)
-    save_pending(pending)
+        removed = clean_pending_queues(pending)
 
-    print(
-        "Queued new jobs: "
-        f"YTJobs={queued_count['YTJobs']}, "
-        f"Roster={queued_count['Roster']}, "
-        f"YTCareers={queued_count['YTCareers']}, "
-        f"BucketofCrabs={queued_count['BucketofCrabs']}, "
-        f"X={queued_count['X']}"
-    )
+        print(
+            "Cleaned pending jobs: "
+            f"YTJobs removed={removed['YTJobs']}, "
+            f"Roster removed={removed['Roster']}, "
+            f"YTCareers removed={removed['YTCareers']}, "
+            f"BucketofCrabs removed={removed['BucketofCrabs']}, "
+            f"X removed={removed['X']}"
+        )
 
-    print(
-        "Unposted queue sizes before post: "
-        f"YTJobs={count_unposted(pending, 'YTJobs')}, "
-        f"Roster={count_unposted(pending, 'Roster')}, "
-        f"YTCareers={count_unposted(pending, 'YTCareers')}, "
-        f"BucketofCrabs={count_unposted(pending, 'BucketofCrabs')}, "
-        f"X={count_unposted(pending, 'X')}"
-    )
+        jobs = await fetch_jobs(page)
+        queued_count = enqueue_new_jobs(jobs, pending)
+        save_pending(pending)
 
-    posted_ytjobs = post_next_job_for_source("YTJobs", pending)
-    posted_roster = post_next_job_for_source("Roster", pending)
-    posted_ytcareers = post_next_job_for_source("YTCareers", pending)
-    posted_boc = post_next_job_for_source("BucketofCrabs", pending)
-    posted_x = post_next_job_for_source("X", pending)
+        print(
+            "Queued new jobs: "
+            f"YTJobs={queued_count['YTJobs']}, "
+            f"Roster={queued_count['Roster']}, "
+            f"YTCareers={queued_count['YTCareers']}, "
+            f"BucketofCrabs={queued_count['BucketofCrabs']}, "
+            f"X={queued_count['X']}"
+        )
 
-    save_pending(pending)
+        print(
+            "Unposted queue sizes before post: "
+            f"YTJobs={count_unposted(pending, 'YTJobs')}, "
+            f"Roster={count_unposted(pending, 'Roster')}, "
+            f"YTCareers={count_unposted(pending, 'YTCareers')}, "
+            f"BucketofCrabs={count_unposted(pending, 'BucketofCrabs')}, "
+            f"X={count_unposted(pending, 'X')}"
+        )
 
-    if posted_ytjobs:
-        print(f"Posted YTJobs: {posted_ytjobs['title']}")
-    else:
-        print("No YTJobs post sent this run.")
+        posted_ytjobs = await post_next_job_for_source("YTJobs", pending, page)
+        posted_roster = await post_next_job_for_source("Roster", pending, page)
+        posted_ytcareers = await post_next_job_for_source("YTCareers", pending, page)
+        posted_boc = await post_next_job_for_source("BucketofCrabs", pending, page)
+        posted_x = await post_next_job_for_source("X", pending, page)
 
-    if posted_roster:
-        print(f"Posted Roster: {posted_roster['title']}")
-    else:
-        print("No Roster post sent this run.")
+        save_pending(pending)
 
-    if posted_ytcareers:
-        print(f"Posted YTCareers: {posted_ytcareers['title']}")
-    else:
-        print("No YTCareers post sent this run.")
+        if posted_ytjobs:
+            print(f"Posted YTJobs: {posted_ytjobs['title']}")
+        else:
+            print("No YTJobs post sent this run.")
 
-    if posted_boc:
-        print(f"Posted BucketofCrabs: {posted_boc['title']}")
-    else:
-        print("No BucketofCrabs post sent this run.")
+        if posted_roster:
+            print(f"Posted Roster: {posted_roster['title']}")
+        else:
+            print("No Roster post sent this run.")
 
-    if posted_x:
-        print(f"Posted X: {posted_x['title']}")
-    else:
-        print("No X post sent this run.")
+        if posted_ytcareers:
+            print(f"Posted YTCareers: {posted_ytcareers['title']}")
+        else:
+            print("No YTCareers post sent this run.")
 
-    print(
-        "Unposted queue sizes after post: "
-        f"YTJobs={count_unposted(pending, 'YTJobs')}, "
-        f"Roster={count_unposted(pending, 'Roster')}, "
-        f"YTCareers={count_unposted(pending, 'YTCareers')}, "
-        f"BucketofCrabs={count_unposted(pending, 'BucketofCrabs')}, "
-        f"X={count_unposted(pending, 'X')}"
-    )
+        if posted_boc:
+            print(f"Posted BucketofCrabs: {posted_boc['title']}")
+        else:
+            print("No BucketofCrabs post sent this run.")
+
+        if posted_x:
+            print(f"Posted X: {posted_x['title']}")
+        else:
+            print("No X post sent this run.")
+
+        print(
+            "Unposted queue sizes after post: "
+            f"YTJobs={count_unposted(pending, 'YTJobs')}, "
+            f"Roster={count_unposted(pending, 'Roster')}, "
+            f"YTCareers={count_unposted(pending, 'YTCareers')}, "
+            f"BucketofCrabs={count_unposted(pending, 'BucketofCrabs')}, "
+            f"X={count_unposted(pending, 'X')}"
+        )
+
+        await browser.close()
 
 
 if __name__ == "__main__":
