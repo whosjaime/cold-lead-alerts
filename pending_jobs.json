@@ -2008,7 +2008,9 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "subscribers": 9870000,
+      "posted_date": "2026-05-21"
     },
     {
       "id": "ytjobs_39286",
