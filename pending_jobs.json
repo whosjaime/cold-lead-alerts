@@ -2024,7 +2024,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "referral_bonus": 350.0,
+      "subscribers": 3000000,
+      "posted_date": "2026-05-21"
     },
     {
       "id": "ytjobs_39281",
@@ -2164,6 +2167,22 @@
       "email": null,
       "email_source": null,
       "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39346",
+      "title": "YouTube Producer (Vox-like Explainers) Part-time",
+      "summary": "YouTube Producer (Vox-like Explainers) Part-time Remote Science & Technology Documentary +5 more Kora 55 subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39346",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
       "posted": false
     }
   ],
@@ -3100,6 +3119,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-18"
+    },
+    {
+      "id": "boc_acb2f175ac1fd02350683479a6cbce6c95b52dfa08dfbe3756e74dc6e7fdac0d",
+      "title": "Lua Studios Art Lead Minecraft Bedrock",
+      "summary": "Lua Studios Art Lead Minecraft Bedrock Remote Only $16-$25/Hourly 3D Models/Animator Operations",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$16-$25/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/mghsYUXEd3",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-21"
     }
   ],
   "X": []
