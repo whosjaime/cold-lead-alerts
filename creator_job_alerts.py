@@ -1391,9 +1391,8 @@ async def save_page_debug(page, html_path: str, png_path: str) -> None:
 
 
 async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
-    await page.goto(YTJOBS_URL, wait_until="networkidle")
-    html = await page.content()
-    soup = BeautifulSoup(html, "html.parser")
+   await page.goto(YTJOBS_URL, wait_until="domcontentloaded", timeout=60000)
+await page.wait_for_timeout(3000)
 
     jobs: List[Dict[str, Any]] = []
 
@@ -1440,259 +1439,217 @@ async def scrape_ytjobs(page) -> List[Dict[str, Any]]:
 
 
 async def scrape_roster(page) -> List[Dict[str, Any]]:
-    await page.goto(ROSTER_URL, wait_until="networkidle")
-    await page.wait_for_timeout(5000)
+    print("Starting Roster scrape...")
 
-    await save_page_debug(page, "roster_debug.html", "roster_debug.png")
+    # Roster no longer exposes a clean public no-login job feed at /jobs.
+    # The public /jobs page is a marketing/post-a-job page, not actual job listings.
+    # Returning [] prevents fake/junk posts and keeps the rest of the scraper running.
+    print("Roster public jobs page does not expose no-login job listings. Skipping Roster for now.")
 
-    for _ in range(5):
-        await page.mouse.wheel(0, 3000)
-        await page.wait_for_timeout(1000)
-
-    html = await page.content()
-    Path("roster_debug.html").write_text(html, encoding="utf-8")
-
-    soup = BeautifulSoup(html, "html.parser")
-    jobs: List[Dict[str, Any]] = []
-
-    for a in soup.select("a[href]"):
-        href = a.get("href") or ""
-
-        full_url = normalize_url_for_dedupe(urljoin(ROSTER_URL, href))
-        lower = full_url.lower()
-
-        if "joinroster.co" not in lower:
-            continue
-
-        if is_known_bad_listing_url("Roster", full_url):
-            continue
-
-        if any(bad in lower for bad in [
-            "/login",
-            "/sign",
-            "/register",
-            "/pricing",
-            "/privacy",
-            "/terms",
-            "/features",
-        ]):
-            continue
-
-        if not re.search(r"/jobs/[^/?#]+", lower):
-            continue
-
-        context = get_card_context(a)
-
-        if not context:
-            continue
-
-        role = extract_role_only(context)
-        role = clean_source_specific_title("Roster", role)
-
-        pay = extract_pay(context)
-        location = extract_location(context)
-        job_type = extract_job_type(context)
-        description = build_description(context, role)
-
-        jobs.append(
-            {
-                "id": extract_roster_stable_id(full_url, role, ""),
-                "title": role,
-                "summary": description,
-                "location": location,
-                "job_type": job_type,
-                "pay": pay,
-                "url": full_url,
-                "source": "Roster",
-                "email": None,
-                "email_source": None,
-                "company": None,
-                "posted": False,
-            }
-        )
-
-    jobs = dedupe_jobs(jobs)
-    print(f"Roster jobs found: {len(jobs)}")
-
-    for job in jobs[:10]:
-        print(f"Roster parsed job: {job['title']} | {job['pay']} | {job['location']} | {job['url']}")
-
-    return jobs
+    return []
 
 
 async def scrape_ytcareers(page) -> List[Dict[str, Any]]:
-    await page.goto(YT_CAREERS_URL, wait_until="networkidle")
-    await page.wait_for_timeout(3000)
+    print("Starting YTCareers scrape...")
 
-    await save_page_debug(page, "ytcareers_debug.html", "ytcareers_debug.png")
+    jobs: List[Dict[str, Any]] = []
 
-    for _ in range(5):
-        await page.mouse.wheel(0, 2500)
-        await page.wait_for_timeout(1000)
+    response = safe_get(YT_CAREERS_URL)
 
-    html = await page.content()
+    if not response:
+        print("YTCareers safe_get failed. Trying Playwright fallback...")
+
+        await page.goto(
+            YT_CAREERS_URL,
+            wait_until="domcontentloaded",
+            timeout=60000,
+        )
+
+        await page.wait_for_timeout(5000)
+
+        html = await page.content()
+    else:
+        html = response.text
+
     Path("ytcareers_debug.html").write_text(html, encoding="utf-8")
 
     soup = BeautifulSoup(html, "html.parser")
-    jobs: List[Dict[str, Any]] = []
+
+    detail_urls: List[str] = []
 
     for a in soup.select("a[href]"):
         href = a.get("href") or ""
-
         full_url = normalize_url_for_dedupe(urljoin(YT_CAREERS_URL, href))
-        lower = full_url.lower()
 
-        if "yt.careers" not in lower:
-            continue
+        if re.search(r"/youtube-jobs/\d+$", full_url):
+            if full_url not in detail_urls:
+                detail_urls.append(full_url)
 
-        if is_known_bad_listing_url("YTCareers", full_url):
-            continue
+    print(f"YTCareers detail URLs found: {len(detail_urls)}")
 
-        if any(bad in lower for bad in [
-            "/login",
-            "/sign",
-            "/register",
-            "/pricing",
-            "/privacy",
-            "/terms",
-            "/create",
-            "/post",
-            "/submit",
-        ]):
-            continue
+    for detail_url in detail_urls[:30]:
+        try:
+            detail_response = safe_get(detail_url)
 
-        allowed_detail_patterns = [
-            r"/youtube-jobs/[^/?#]+",
-            r"/job/[^/?#]+",
-            r"/jobs/[^/?#]+",
-            r"/offer/[^/?#]+",
-            r"/offers/[^/?#]+",
-        ]
+            if not detail_response:
+                print(f"Could not fetch YTCareers detail page: {detail_url}")
+                continue
 
-        if not any(re.search(pattern, lower) for pattern in allowed_detail_patterns):
-            continue
+            detail_soup = BeautifulSoup(detail_response.text, "html.parser")
+            detail_text = clean_text(detail_soup.get_text(" ", strip=True))
 
-        context = get_card_context(a)
+            page_title = clean_text(detail_soup.title.get_text(" ", strip=True)) if detail_soup.title else ""
 
-        if not context:
-            continue
+            if " - " in page_title:
+                role = page_title.split(" - ")[0].strip()
+            elif "·" in page_title:
+                role = page_title.split("·")[0].strip()
+            else:
+                role = extract_role_only(detail_text)
 
-        role = extract_role_only(context)
-        role = clean_source_specific_title("YTCareers", role)
+            role = clean_source_specific_title("YTCareers", role)
 
-        pay = extract_pay(context)
-        location = extract_location(context)
-        job_type = extract_job_type(context)
-        description = build_description(context, role)
+            if not role or role.lower() in {"yt.careers", "job posts", "youtube jobs"}:
+                role = "New YouTube Job"
 
-        jobs.append(
-            {
-                "id": extract_ytcareers_stable_id(full_url, role, ""),
-                "title": role,
-                "summary": description,
-                "location": location,
-                "job_type": job_type,
-                "pay": pay,
-                "url": full_url,
-                "source": "YTCareers",
-                "email": None,
-                "email_source": None,
-                "company": None,
-                "posted": False,
-            }
-        )
+            pay = extract_pay(detail_text)
+            location = extract_location(detail_text)
+            job_type = extract_job_type(detail_text)
+            description = build_description(detail_text, role)
+
+            jobs.append(
+                {
+                    "id": extract_ytcareers_stable_id(detail_url, role, ""),
+                    "title": role,
+                    "summary": description,
+                    "location": location,
+                    "job_type": job_type,
+                    "pay": pay,
+                    "url": detail_url,
+                    "source": "YTCareers",
+                    "email": None,
+                    "email_source": None,
+                    "company": None,
+                    "posted": False,
+                }
+            )
+
+            print(f"YTCareers parsed job: {role} | {pay} | {location} | {detail_url}")
+
+        except Exception as e:
+            print(f"YTCareers detail parse failed for {detail_url}: {e}")
 
     jobs = dedupe_jobs(jobs)
-    print(f"YTCareers jobs found: {len(jobs)}")
 
-    for job in jobs[:10]:
-        print(f"YTCareers parsed job: {job['title']} | {job['pay']} | {job['location']} | {job['url']}")
+    print(f"YTCareers jobs found after dedupe: {len(jobs)}")
 
     return jobs
 
 
 async def scrape_bucketofcrabs(page) -> List[Dict[str, Any]]:
-    await page.goto(BOC_URL, wait_until="networkidle")
-    await page.wait_for_timeout(3000)
+    print("Starting BucketofCrabs scrape...")
 
-    for _ in range(5):
+    await page.goto(
+        BOC_URL,
+        wait_until="domcontentloaded",
+        timeout=60000,
+    )
+
+    await page.wait_for_timeout(8000)
+
+    for _ in range(6):
         await page.mouse.wheel(0, 2500)
-        await page.wait_for_timeout(1000)
+        await page.wait_for_timeout(1500)
 
-    html = await page.content()
-    Path("boc_debug.html").write_text(html, encoding="utf-8")
+    await save_page_debug(page, "boc_debug.html", "boc_debug.png")
 
-    soup = BeautifulSoup(html, "html.parser")
     jobs: List[Dict[str, Any]] = []
 
-    for a in soup.select("a[href]"):
-        href = a.get("href") or ""
+    anchors = await page.locator("a[href]").all()
 
-        full_url = normalize_url_for_dedupe(urljoin(BOC_URL, href))
-        lower = full_url.lower()
+    print(f"BucketofCrabs anchors found: {len(anchors)}")
 
-        if "bucketofcrabs.net" not in lower:
-            continue
+    for anchor in anchors:
+        try:
+            href = await anchor.get_attribute("href")
 
-        if is_known_bad_listing_url("BucketofCrabs", full_url):
-            continue
+            if not href:
+                continue
 
-        if any(bad in lower for bad in [
-            "/login",
-            "/sign",
-            "/register",
-            "/pricing",
-            "/privacy",
-            "/terms",
-            "/contact",
-        ]):
-            continue
+            full_url = normalize_url_for_dedupe(urljoin(BOC_URL, href))
+            lower = full_url.lower()
 
-        if not any(good in lower for good in [
-            "/job/",
-            "/jobs/",
-            "/role/",
-            "/roles/",
-            "/opportunity/",
-            "/opportunities/",
-        ]):
-            continue
+            if "bucketofcrabs.net" not in lower:
+                continue
 
-        context = get_card_context(a)
+            if is_known_bad_listing_url("BucketofCrabs", full_url):
+                continue
 
-        if not context:
-            continue
+            if any(bad in lower for bad in [
+                "/login",
+                "/sign",
+                "/register",
+                "/pricing",
+                "/privacy",
+                "/terms",
+                "/contact",
+                "/about",
+            ]):
+                continue
 
-        role = extract_role_only(context)
-        role = clean_source_specific_title("BucketofCrabs", role)
+            try:
+                context = await anchor.evaluate(
+                    """
+                    el => {
+                        const parent = el.closest('article, li, div, section');
+                        return parent ? parent.innerText : el.innerText;
+                    }
+                    """
+                )
+            except Exception:
+                context = await anchor.inner_text()
 
-        pay = extract_pay(context)
-        location = extract_location(context)
-        job_type = extract_job_type(context)
-        description = build_description(context, role)
+            context = clean_text(context)
 
-        jobs.append(
-            {
-                "id": extract_boc_stable_id(full_url),
-                "title": role,
-                "summary": description,
-                "location": location,
-                "job_type": job_type,
-                "pay": pay,
-                "url": full_url,
-                "source": "BucketofCrabs",
-                "email": None,
-                "email_source": None,
-                "company": None,
-                "posted": False,
-            }
-        )
+            if not context or len(context) < 20:
+                continue
+
+            role = extract_role_only(context)
+            role = clean_source_specific_title("BucketofCrabs", role)
+
+            if not role or role.lower() == "new job":
+                continue
+
+            pay = extract_pay(context)
+            location = extract_location(context)
+            job_type = extract_job_type(context)
+            description = build_description(context, role)
+
+            jobs.append(
+                {
+                    "id": extract_boc_stable_id(full_url),
+                    "title": role,
+                    "summary": description,
+                    "location": location,
+                    "job_type": job_type,
+                    "pay": pay,
+                    "url": full_url,
+                    "source": "BucketofCrabs",
+                    "email": None,
+                    "email_source": None,
+                    "company": None,
+                    "posted": False,
+                }
+            )
+
+            print(f"BucketofCrabs parsed job: {role} | {pay} | {location} | {full_url}")
+
+        except Exception as e:
+            print(f"BucketofCrabs anchor parse failed: {e}")
 
     jobs = dedupe_jobs(jobs)
-    print(f"BucketofCrabs jobs found: {len(jobs)}")
 
-    for job in jobs[:10]:
-        print(f"BucketofCrabs parsed job: {job['title']} | {job['pay']} | {job['location']} | {job['url']}")
+    print(f"BucketofCrabs jobs found after dedupe: {len(jobs)}")
 
     return jobs
 
