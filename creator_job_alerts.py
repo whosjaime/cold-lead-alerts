@@ -1221,7 +1221,7 @@ def send_to_monday(job: Dict[str, Any]) -> None:
         }
 
     if MONDAY_COL_SUBSCRIBERS and subscribers is not None:
-        column_values[MONDAY_COL_SUBSCRIBERS] = str(subscribers)
+        column_values[MONDAY_COL_SUBSCRIBERS] = subscribers
 
     if MONDAY_COL_REFERRAL_BONUS and referral_bonus is not None:
         column_values[MONDAY_COL_REFERRAL_BONUS] = f"${referral_bonus}"
