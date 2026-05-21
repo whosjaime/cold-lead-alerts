@@ -1947,7 +1947,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-21"
     },
     {
       "id": "ytjobs_39267",
@@ -2125,6 +2126,34 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39297",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39344",
+      "title": "Short Form Editor Part-time",
+      "summary": "Short Form Editor Part-time Remote News & Politics Film & Animation +9 more Keith Edwards 1.28M subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39344",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39071",
+      "title": "Video Shorts Editor",
+      "summary": "Video Shorts Editor $150-$500 Per project Remote News & Politics Education +4 more Lincoln Institute of Land Policy 10.6K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$150-$500 Per project",
+      "url": "https://ytjobs.co/job/39071",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -2523,6 +2552,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-18"
+    },
+    {
+      "id": "ytcareers_5d0d2525a3dedb07c18ad4dc0f38208ad12fb7513e4fc175e152fcb7023a9d7b",
+      "title": "Script Writer",
+      "summary": "Script Writer \u2014 Single-Case True Crime Documentaries | Catching Killers",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/228",
+      "source": "YTCareers",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-21"
     }
   ],
   "BucketofCrabs": [
