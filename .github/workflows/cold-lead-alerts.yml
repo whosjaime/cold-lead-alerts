@@ -58,6 +58,8 @@ jobs:
           MONDAY_COL_DESCRIPTION: ${{ secrets.MONDAY_COL_DESCRIPTION }}
           MONDAY_COL_LINK: ${{ secrets.MONDAY_COL_LINK }}
           MONDAY_COL_POST_DATE: ${{ secrets.MONDAY_COL_POST_DATE }}
+          MONDAY_COL_SUBSCRIBERS: ${{ secrets.MONDAY_COL_SUBSCRIBERS }}
+          MONDAY_COL_REFERRAL_BONUS: ${{ secrets.MONDAY_COL_REFERRAL_BONUS }}
         run: |
           if [ -z "$YTJOBS_WEBHOOK_URL" ]; then echo "YTJOBS_WEBHOOK_URL is missing"; else echo "YTJOBS_WEBHOOK_URL is set"; fi
           if [ -z "$ROSTER_WEBHOOK_URL" ]; then echo "ROSTER_WEBHOOK_URL is missing"; else echo "ROSTER_WEBHOOK_URL is set"; fi
@@ -81,6 +83,8 @@ jobs:
           if [ -z "$MONDAY_COL_DESCRIPTION" ]; then echo "MONDAY_COL_DESCRIPTION is missing"; else echo "MONDAY_COL_DESCRIPTION is set"; fi
           if [ -z "$MONDAY_COL_LINK" ]; then echo "MONDAY_COL_LINK is missing"; else echo "MONDAY_COL_LINK is set"; fi
           if [ -z "$MONDAY_COL_POST_DATE" ]; then echo "MONDAY_COL_POST_DATE is missing"; else echo "MONDAY_COL_POST_DATE is set"; fi
+          if [ -z "$MONDAY_COL_SUBSCRIBERS" ]; then echo "MONDAY_COL_SUBSCRIBERS is missing"; else echo "MONDAY_COL_SUBSCRIBERS is set"; fi
+          if [ -z "$MONDAY_COL_REFERRAL_BONUS" ]; then echo "MONDAY_COL_REFERRAL_BONUS is missing"; else echo "MONDAY_COL_REFERRAL_BONUS is set"; fi
 
       - name: Run job monitor
         env:
@@ -108,6 +112,8 @@ jobs:
           MONDAY_COL_DESCRIPTION: ${{ secrets.MONDAY_COL_DESCRIPTION }}
           MONDAY_COL_LINK: ${{ secrets.MONDAY_COL_LINK }}
           MONDAY_COL_POST_DATE: ${{ secrets.MONDAY_COL_POST_DATE }}
+          MONDAY_COL_SUBSCRIBERS: ${{ secrets.MONDAY_COL_SUBSCRIBERS }}
+          MONDAY_COL_REFERRAL_BONUS: ${{ secrets.MONDAY_COL_REFERRAL_BONUS }}
         run: python creator_job_alerts.py
 
       - name: Upload debug files
