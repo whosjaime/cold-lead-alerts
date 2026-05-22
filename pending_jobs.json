@@ -2168,7 +2168,9 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "subscribers": 1280000,
+      "posted_date": "2026-05-22"
     },
     {
       "id": "ytjobs_39071",
@@ -2320,6 +2322,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39372",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39343",
+      "title": "Scriptwriter for EDU Science/Architecture",
+      "summary": "Scriptwriter for EDU Science/Architecture $15,000-$40,000 Per Year . Full-time Remote Education Science & Technology +27 more Lectec | Everyday Science 91.8K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$15,000-$40,000 Per Year",
+      "url": "https://ytjobs.co/job/39343",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
