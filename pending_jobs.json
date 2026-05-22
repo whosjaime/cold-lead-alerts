@@ -2153,7 +2153,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-22"
     },
     {
       "id": "ytjobs_39344",
