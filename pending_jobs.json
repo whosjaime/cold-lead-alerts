@@ -2075,7 +2075,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-22"
     },
     {
       "id": "ytjobs_39241",
@@ -2231,6 +2232,54 @@
       "job_type": "Full-time",
       "pay": "$40,000-$80,000 Per Year",
       "url": "https://ytjobs.co/job/39354",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39365",
+      "title": "Documentary Video Editor",
+      "summary": "Documentary Video Editor $200-$350 Per project Remote Science & Technology Documentary +8 more Teejay B 1 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$200-$350 Per project",
+      "url": "https://ytjobs.co/job/39365",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39364",
+      "title": "Story-Driven Video Editor for Automotive YouTube Channel",
+      "summary": "Story-Driven Video Editor for Automotive YouTube Channel $15-$50 Per Hour . Part-time Remote Autos & Vehicles Comedy +7 more Misha RPM 0 subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$15-$50 Per Hour",
+      "url": "https://ytjobs.co/job/39364",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39358",
+      "title": "Short-form editor for indie cozy mobile game (ongoing)",
+      "summary": "Short-form editor for indie cozy mobile game (ongoing) $40-$60 Per project Remote Gaming Shorts People & Blogs +4 more Axolkin 19 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$40-$60 Per project",
+      "url": "https://ytjobs.co/job/39358",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -2646,6 +2695,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-21"
+    },
+    {
+      "id": "ytcareers_82ecd5213f896ca091daace60f58fcec70d0315d9acf094c65a8df92c66ec00f",
+      "title": "youtube blogger collaboration",
+      "summary": "youtube blogger collaboration",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/229",
+      "source": "YTCareers",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-22"
     }
   ],
   "BucketofCrabs": [
