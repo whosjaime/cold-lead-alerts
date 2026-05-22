@@ -2090,7 +2090,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-22"
     },
     {
       "id": "ytjobs_39309",
@@ -2280,6 +2281,38 @@
       "job_type": "Per project",
       "pay": "$40-$60 Per project",
       "url": "https://ytjobs.co/job/39358",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39375",
+      "title": "Expert Video Editor for True Crime Channel",
+      "summary": "Expert Video Editor for True Crime Channel $180-$200 Per project Remote Documentary Crime Documentary +2 more True Crime Chronicles 268K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$180-$200 Per project",
+      "url": "https://ytjobs.co/job/39375",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39372",
+      "title": "VSL Video Editor Per project",
+      "summary": "VSL Video Editor Per project Remote Music Education VSL +4 more Stephen Ridley 520K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39372",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
