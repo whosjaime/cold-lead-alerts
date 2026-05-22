@@ -2121,7 +2121,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "referral_bonus": 175.0,
+      "subscribers": 26600,
+      "posted_date": "2026-05-22"
     },
     {
       "id": "ytjobs_39299",
