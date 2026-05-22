@@ -2041,7 +2041,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "referral_bonus": 10.0,
+      "subscribers": 4,
+      "posted_date": "2026-05-22"
     },
     {
       "id": "ytjobs_39280",
@@ -2177,6 +2180,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39346",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39348",
+      "title": "Thumbnail Designer Full-time",
+      "summary": "Thumbnail Designer Full-time Remote Pets & Animals People & Blogs +32 more Wackawackamunv2 2.37M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39348",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
