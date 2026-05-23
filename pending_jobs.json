@@ -2184,7 +2184,9 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "subscribers": 10600,
+      "posted_date": "2026-05-23"
     },
     {
       "id": "ytjobs_39346",
@@ -2338,6 +2340,22 @@
       "job_type": "Full-time",
       "pay": "$15,000-$40,000 Per Year",
       "url": "https://ytjobs.co/job/39343",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39383",
+      "title": "Reels Editor and Content Strategist",
+      "summary": "Reels Editor and Content Strategist $21,600-$28,500 Per Year . Full-time Remote Education Public Speaking Clips Yasir Khan 87.4K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$21,600-$28,500 Per Year",
+      "url": "https://ytjobs.co/job/39383",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
