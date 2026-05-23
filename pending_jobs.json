@@ -2337,8 +2337,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 520000,
+      "posted": true,
+      "posted_date": "2026-05-23"
     },
     {
       "id": "ytjobs_39343",
@@ -2492,6 +2493,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39428",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39426",
+      "title": "Video Editor Part-time",
+      "summary": "Video Editor Part-time Remote Music Tutorial Talking head +2 more Finbar Horgan 55.6K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39426",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
