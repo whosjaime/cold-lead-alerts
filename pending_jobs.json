@@ -2303,8 +2303,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 19,
+      "posted": true,
+      "posted_date": "2026-05-23"
     },
     {
       "id": "ytjobs_39375",
