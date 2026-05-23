@@ -2218,8 +2218,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 2370000,
+      "posted": true,
+      "posted_date": "2026-05-23"
     },
     {
       "id": "ytjobs_39163",
@@ -2357,6 +2358,22 @@
       "job_type": "Full-time",
       "pay": "$21,600-$28,500 Per Year",
       "url": "https://ytjobs.co/job/39383",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39394",
+      "title": "Comedy Gaming Editor for Weekly Uploads",
+      "summary": "Comedy Gaming Editor for Weekly Uploads $150-$400 Per project Remote Family Film & Animation +2 more ODTV 29 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$150-$400 Per project",
+      "url": "https://ytjobs.co/job/39394",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
