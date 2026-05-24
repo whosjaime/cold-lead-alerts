@@ -2422,8 +2422,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 6760,
+      "posted": true,
+      "posted_date": "2026-05-24"
     },
     {
       "id": "ytjobs_39402",
@@ -3532,6 +3533,35 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-24"
+    },
+    {
+      "id": "boc_858d5499f6ad94b93c90dd1ce6f106eae078ceef1f2db5d088c68f660d452e5d",
+      "title": "Lusciana \ud835\udc01\ud835\udc14\ud835\udc08\ud835\udc0b\ud835\udc03\ud835\udc04\ud835\udc11 \ud835\udc11\ud835\udc04\ud835\udc02\ud835\udc11\ud835\udc14\ud835\udc08\ud835\udc13\ud835\udc0c\ud835\udc04\ud835\udc0d\ud835\udc13",
+      "summary": "Lusciana \ud835\udc01\ud835\udc14\ud835\udc08\ud835\udc0b\ud835\udc03\ud835\udc04\ud835\udc11 \ud835\udc11\ud835\udc04\ud835\udc02\ud835\udc11\ud835\udc14\ud835\udc08\ud835\udc13\ud835\udc0c\ud835\udc04\ud835\udc0d\ud835\udc13 \u2014 LuscianaBT Remote Only 10%-15%/Project based World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/oskqXbeBdu",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-24"
+    },
+    {
+      "id": "boc_c5bfc886089eaae1f781a59ee1de471f93fe090a4d1ac8b6655b4d58a2a5bd65",
+      "title": "Lumina Studio VFX Artist",
+      "summary": "Lumina Studio VFX Artist | Minecraft Bedrock Remote Only $15-$20/Hourly 3D Models/Animator Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$15-$20/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/E3JxoXPp7f",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
