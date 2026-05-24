@@ -2405,8 +2405,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 1450000,
+      "posted": true,
+      "posted_date": "2026-05-24"
     },
     {
       "id": "ytjobs_39403",
@@ -2528,6 +2529,22 @@
       "job_type": "Per project",
       "pay": "$67-$100 Per project",
       "url": "https://ytjobs.co/job/39440",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39446",
+      "title": "Video Editor",
+      "summary": "Video Editor - Minecraft Long Form $36,000 Per Year . Full-time Remote Gaming Minecraft Scripted Gameplay Shulkercraft 2.49M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$36,000 Per Year",
+      "url": "https://ytjobs.co/job/39446",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
