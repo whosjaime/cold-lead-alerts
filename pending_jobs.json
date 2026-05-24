@@ -2354,8 +2354,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 91800,
+      "posted": true,
+      "posted_date": "2026-05-24"
     },
     {
       "id": "ytjobs_39383",
@@ -3481,6 +3482,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-21"
+    },
+    {
+      "id": "boc_5c6ec0ee984f56fbbdb404f58bc3d5a80a3f74824fe592acbd4eadc8eef10c05",
+      "title": "ISMN Creative Director Romania, Bucuresti",
+      "summary": "ISMN Creative Director Romania, Bucuresti $1000-$3000/Fixed Amount - monthly Writer Operations",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "$1000-$3000",
+      "url": "https://www.bucketofcrabs.net/jobs/8GsA9RhEL9",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-24"
     }
   ],
   "X": []
