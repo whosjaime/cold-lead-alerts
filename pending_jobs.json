@@ -2438,9 +2438,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 20.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-24"
     },
     {
       "id": "ytjobs_39430",
@@ -2976,6 +2977,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-22"
+    },
+    {
+      "id": "ytcareers_3600ef0101ffee22dce56f0035005477cd3cce5870a29a08582d185bc8b5a924",
+      "title": "Video editor",
+      "summary": "Video editor",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/230",
+      "source": "YTCareers",
+      "email": "hello@sponsorship.so",
+      "email_source": "website_contact",
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-24"
     }
   ],
   "BucketofCrabs": [
@@ -3561,7 +3577,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-24"
     }
   ],
   "X": []
