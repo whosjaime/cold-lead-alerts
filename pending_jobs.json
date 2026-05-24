@@ -2387,9 +2387,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 29,
+      "posted": true,
+      "posted_date": "2026-05-24"
     },
     {
       "id": "ytjobs_39408",
@@ -2511,6 +2512,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39426",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39440",
+      "title": "YT Shorts & Reels for AI Tutorial Channel",
+      "summary": "YT Shorts & Reels for AI Tutorial Channel - 85k subs $67-$100 Per project Remote Education Film & Animation +5 more Simon Scrapes 83.3K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$67-$100 Per project",
+      "url": "https://ytjobs.co/job/39440",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
