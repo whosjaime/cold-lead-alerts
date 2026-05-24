@@ -2472,9 +2472,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 200.0,
+      "subscribers": 8060,
+      "posted": true,
+      "posted_date": "2026-05-24"
     },
     {
       "id": "ytjobs_39432",
@@ -2548,6 +2549,22 @@
       "job_type": "Full-time",
       "pay": "$36,000 Per Year",
       "url": "https://ytjobs.co/job/39446",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39260",
+      "title": "Video Editor",
+      "summary": "Video Editor $30 Per project Remote Documentary Luxury +7 more Capital Archive 6 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$30 Per project",
+      "url": "https://ytjobs.co/job/39260",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
