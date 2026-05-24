@@ -2457,7 +2457,8 @@
       "company": null,
       "referral_bonus": null,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-24"
     },
     {
       "id": "ytjobs_39431",
