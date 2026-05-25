@@ -2643,8 +2643,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 254000,
+      "posted": true,
+      "posted_date": "2026-05-25"
     },
     {
       "id": "ytjobs_39300",
@@ -3773,6 +3774,21 @@
       "job_type": "Not listed",
       "pay": "Not listed",
       "url": "https://www.bucketofcrabs.net/jobs/EKGXTb4BDd",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-25"
+    },
+    {
+      "id": "boc_de16303db6b5ec0ebd4cc45b6f6be5a2ac16c6459e16f757d8279ba2ff5af790",
+      "title": "Eternal Creations Producer",
+      "summary": "Eternal Creations Producer Remote Only $20-$25/Hourly Operations QA/Testing",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$20-$25/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/87UU7q8lue",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
