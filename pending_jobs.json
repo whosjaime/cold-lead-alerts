@@ -2558,8 +2558,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 2490000,
+      "posted": true,
+      "posted_date": "2026-05-25"
     },
     {
       "id": "ytjobs_39260",
@@ -2585,6 +2586,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39246",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39461",
+      "title": "YouTube Packaging Expert",
+      "summary": "YouTube Packaging Expert $250-$300 Per project Remote Education Self Improvement Sports +32 more Shane Melaugh 11.7K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$250-$300 Per project",
+      "url": "https://ytjobs.co/job/39461",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
