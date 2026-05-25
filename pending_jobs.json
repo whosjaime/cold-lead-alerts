@@ -2524,8 +2524,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 55600,
+      "posted": true,
+      "posted_date": "2026-05-25"
     },
     {
       "id": "ytjobs_39440",
@@ -2567,6 +2568,22 @@
       "job_type": "Per project",
       "pay": "$30 Per project",
       "url": "https://ytjobs.co/job/39260",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39246",
+      "title": "Scriptwriter Per project",
+      "summary": "Scriptwriter Per project Remote Gaming Entertainment Challenge +2 more Zenith 163K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39246",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -3599,6 +3616,35 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-24"
+    },
+    {
+      "id": "boc_2e9bcc606e850f7c2df2160890e22a8eec52bac342d504b0d569d4295215b168",
+      "title": "HoraceCreations Professional Builder (Fixed Pay)",
+      "summary": "HoraceCreations Professional Builder (Fixed Pay) Remote Only $1500-$2800/Fixed Amount - monthly World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1500-$2800",
+      "url": "https://www.bucketofcrabs.net/jobs/KSjgEHTb8O",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-25"
+    },
+    {
+      "id": "boc_3b5d43b2c67a1de0296e37d32c9237e3117be2b32c4774337c7737e4a08f10d1",
+      "title": "Nether Ninjas Bedrock Developer",
+      "summary": "Nether Ninjas Bedrock Developer Remote Only 1%-30%/Project based Game Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/UoxHyj3g2Q",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
