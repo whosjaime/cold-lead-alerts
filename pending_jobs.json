@@ -2763,7 +2763,8 @@
       "company": null,
       "referral_bonus": null,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-26"
     },
     {
       "id": "ytjobs_39502",
@@ -3954,6 +3955,21 @@
       "job_type": "Not listed",
       "pay": "$50-$200",
       "url": "https://www.bucketofcrabs.net/jobs/QwenEwCC2V",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-26"
+    },
+    {
+      "id": "boc_5cd6ba12e320ed1ad84cf47e21c75025d728ce464aeff6ab574de15ec934499a",
+      "title": "OneBlockMc Java Developer",
+      "summary": "OneBlockMc Java Developer Remote Only $500-$1000/Fixed Amount Game Developer Plugin/Mod Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$500-$1000",
+      "url": "https://www.bucketofcrabs.net/jobs/43EENW2yrQ",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
