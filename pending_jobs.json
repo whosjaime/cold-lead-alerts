@@ -2660,8 +2660,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 254000,
+      "posted": true,
+      "posted_date": "2026-05-26"
     },
     {
       "id": "ytjobs_39476",
@@ -2703,6 +2704,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39482",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39489",
+      "title": "Scriptwriter for multiple channels Full-time",
+      "summary": "Scriptwriter for multiple channels Full-time Remote Film & Animation Entertainment +6 more Faraon Academy 0 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39489",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
