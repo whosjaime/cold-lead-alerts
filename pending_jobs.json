@@ -2729,7 +2729,8 @@
       "company": null,
       "referral_bonus": null,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-26"
     },
     {
       "id": "ytjobs_39494",
@@ -2803,6 +2804,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/37033",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39525",
+      "title": "Dark-Documentary Video Editor",
+      "summary": "Dark-Documentary Video Editor $450-$650 Per project Remote News & Politics Documentary +4 more Fortune 215K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$450-$650 Per project",
+      "url": "https://ytjobs.co/job/39525",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
