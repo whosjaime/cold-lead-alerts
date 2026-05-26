@@ -2746,7 +2746,8 @@
       "company": null,
       "referral_bonus": null,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-26"
     },
     {
       "id": "ytjobs_39507",
@@ -2820,6 +2821,38 @@
       "job_type": "Per project",
       "pay": "$450-$650 Per project",
       "url": "https://ytjobs.co/job/39525",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39521",
+      "title": "Long-Form YouTube Editor for High-Ticket Creators",
+      "summary": "Long-Form YouTube Editor for High-Ticket Creators $20,000-$40,000 Per Year . Full-time Remote Videoblogging People & Blogs +7 more Colin Shipp 71 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$20,000-$40,000 Per Year",
+      "url": "https://ytjobs.co/job/39521",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39528",
+      "title": "Scriptwriter /Researcher",
+      "summary": "Scriptwriter /Researcher - Mario Gaming Per project Remote Gaming Horror Nintendo Music +8 more Infinite Bits 759K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39528",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
