@@ -2694,8 +2694,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 13200,
+      "posted": true,
+      "posted_date": "2026-05-26"
     },
     {
       "id": "ytjobs_39482",
@@ -2721,6 +2722,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39489",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39494",
+      "title": "Video Editor (Adult Content)",
+      "summary": "Video Editor (Adult Content) $12,000-$24,000 Per Year . Full-time Remote Adult Adult AI Videos Gaming +4 more Secret Labs Inc Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$12,000-$24,000 Per Year",
+      "url": "https://ytjobs.co/job/39494",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
