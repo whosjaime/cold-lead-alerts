@@ -2864,8 +2864,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 759000,
+      "posted": true,
+      "posted_date": "2026-05-27"
     },
     {
       "id": "ytjobs_39508",
@@ -2987,6 +2988,38 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39575",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_1374",
+      "title": "Sports Long-Form YouTube Editor",
+      "summary": "Sports Long-Form YouTube Editor $1,000-$5,000 Per project Remote Sports Music People & Blogs Entertainment Bleacher Report 4.93M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$1,000-$5,000 Per project",
+      "url": "https://ytjobs.co/job/1374",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_21667",
+      "title": "Sports Short-Form Video Editor Per project",
+      "summary": "Sports Short-Form Video Editor Per project Remote Sports Q&A Shorts/Reels Bleacher Report 4.93M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/21667",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -4169,6 +4202,35 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-27"
+    },
+    {
+      "id": "boc_fa6fb3644620c20285fa4ce2b227bef51a3fbed0cb0e7e6d7c0084002be9daa7",
+      "title": "Chillcraft Minecraft Bedrock Builder",
+      "summary": "Chillcraft Minecraft Bedrock Builder Remote Only $1-$500/Fixed Amount World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1-$500",
+      "url": "https://www.bucketofcrabs.net/jobs/Up6rYONwms",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-27"
+    },
+    {
+      "id": "boc_f6e6a31ea1cdf31a01498a59f2fdb83406720ddad7c4b7683ba73ab4ca20e54d",
+      "title": "Voldex Brand Partnerships Specialist United States",
+      "summary": "Voldex Brand Partnerships Specialist United States $100000-$130000/Fixed Amount - yearly Other",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "$100000-$130000",
+      "url": "https://www.bucketofcrabs.net/jobs/awp7fnoOrR",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
