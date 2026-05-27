@@ -2813,8 +2813,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 21800,
+      "posted": true,
+      "posted_date": "2026-05-27"
     },
     {
       "id": "ytjobs_39525",
@@ -2888,6 +2889,22 @@
       "job_type": "Per project",
       "pay": "$250-$800 Per project",
       "url": "https://ytjobs.co/job/39540",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39496",
+      "title": "Female Beauty Video Editor",
+      "summary": "Female Beauty Video Editor $200-$300 Per project Remote Howto & Style Beauty Music +3 more Lex Looks 8 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$200-$300 Per project",
+      "url": "https://ytjobs.co/job/39496",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -4010,6 +4027,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-26"
+    },
+    {
+      "id": "boc_fc6951a45734660aee63ca6925d1a9dae1fc22b50edfcbb0fd93a492bfc38f17",
+      "title": "Shardons Studio Minecraft Developer (Models & Animation Integration)",
+      "summary": "Shardons Studio Minecraft Developer (Models & Animation Integration) Remote Only $100-$1500/Fixed Amount Game Developer Plugin/Mod Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$100-$1500",
+      "url": "https://www.bucketofcrabs.net/jobs/fFmNqGgbRN",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-27"
     }
   ],
   "X": []
