@@ -2897,9 +2897,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 500.0,
+      "subscribers": 1,
+      "posted": true,
+      "posted_date": "2026-05-28"
     },
     {
       "id": "ytjobs_39496",
@@ -3021,6 +3022,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/21667",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39433",
+      "title": "Video Editor",
+      "summary": "Video Editor $10,000-$30,000 Per Year . Full-time Remote Shorts Shorts/Reels Icon Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$10,000-$30,000 Per Year",
+      "url": "https://ytjobs.co/job/39433",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -3481,6 +3498,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-27"
+    },
+    {
+      "id": "ytcareers_f8b98191dd6e7ac100ff18f95334917c0fbef19be7cba7438aef1e0e824a1acd",
+      "title": "Short-form video editor",
+      "summary": "Short-form video editor",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/232",
+      "source": "YTCareers",
+      "email": "hello@sponsorship.so",
+      "email_source": "website_contact",
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-28"
     }
   ],
   "BucketofCrabs": [
