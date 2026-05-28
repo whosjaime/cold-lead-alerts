@@ -3000,8 +3000,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 4,
+      "posted": true,
+      "posted_date": "2026-05-28"
     },
     {
       "id": "ytjobs_1374",
@@ -3139,6 +3140,22 @@
       "job_type": "Per project",
       "pay": "$400-$1,000 Per project",
       "url": "https://ytjobs.co/job/39604",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39627",
+      "title": "YOUTUBE STRATEGIST WITH POKEMON-KNOWLEDGE NEEDED Part-time",
+      "summary": "YOUTUBE STRATEGIST WITH POKEMON-KNOWLEDGE NEEDED Part-time Remote Gaming Entertainment Shorts +6 more GTC Cards 364K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39627",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
