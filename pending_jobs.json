@@ -2932,8 +2932,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 173000,
+      "posted": true,
+      "posted_date": "2026-05-28"
     },
     {
       "id": "ytjobs_39571",
@@ -3039,6 +3040,22 @@
       "job_type": "Full-time",
       "pay": "$10,000-$30,000 Per Year",
       "url": "https://ytjobs.co/job/39433",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_21096",
+      "title": "Video Editors for 10 Year Global Travel Series",
+      "summary": "Video Editors for 10 Year Global Travel Series $75,000-$200,000 Per Year . Full-time Remote Travel & Events Videoblogging +15 more TFIL (Traveling to EVERY COUNTRY in A-Z Order) 4.03M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$75,000-$200,000 Per Year",
+      "url": "https://ytjobs.co/job/21096",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
