@@ -3152,9 +3152,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 34,
+      "posted": true,
+      "posted_date": "2026-05-29"
     },
     {
       "id": "ytjobs_39627",
@@ -3244,6 +3245,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39665",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39659",
+      "title": "Thumbnail Design for Planet Scale",
+      "summary": "Thumbnail Design for Planet Scale $25-$150 Per project Remote Entertainment Science & Technology +4 more PlanetScale 39.5K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$25-$150 Per project",
+      "url": "https://ytjobs.co/job/39659",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
