@@ -3034,8 +3034,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 4930000,
+      "posted": true,
+      "posted_date": "2026-05-29"
     },
     {
       "id": "ytjobs_39433",
@@ -3157,6 +3158,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39627",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39636",
+      "title": "VIDEO PRODUCER? Ever wanted to start your own business?",
+      "summary": "VIDEO PRODUCER? Ever wanted to start your own business? $75,000-$100,000 Per Year . Full-time Onsite . Houston, TX, US Lee Ackerley 0 subs",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "$75,000-$100,000 Per Year",
+      "url": "https://ytjobs.co/job/39636",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
