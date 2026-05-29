@@ -7,6 +7,7 @@ from typing import Any, Dict, List, Optional
 import creator_job_alerts as alerts
 import creator_job_alerts_referral as referral
 
+_original_send_to_discord = alerts.send_to_discord
 _original_send_to_monday = alerts.send_to_monday
 
 
@@ -14,7 +15,7 @@ def detect_location_label(job: Dict[str, Any]) -> str:
     """Use the existing Monday Location field: Remote if the post says remote, otherwise On-site."""
     text = " ".join(
         str(job.get(key, ""))
-        for key in ["location", "summary", "title", "job_type", "company", "url"]
+        for key in ["location", "summary", "title", "job_type", "company", "url", "detail_text"]
     ).lower()
 
     if re.search(r"\bremote\b", text):
@@ -30,6 +31,60 @@ def normalize_location_for_monday(job: Dict[str, Any]) -> None:
         job["location"] = detect_location_label(job)
 
 
+def enrich_bucketofcrabs_from_detail_page(job: Dict[str, Any]) -> None:
+    """Fetch the BucketofCrabs detail page so Remote/On-site is based on the full post, not just feed text."""
+    if job.get("source") != "BucketofCrabs":
+        return
+
+    url = (job.get("url") or "").strip()
+    if not url:
+        return
+
+    try:
+        response = alerts.requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
+        response.raise_for_status()
+
+        soup = alerts.BeautifulSoup(response.text, "html.parser")
+        page_text = alerts.clean_text(soup.get_text(" "))
+
+        if page_text:
+            job["detail_text"] = page_text
+
+            if job.get("summary") in {None, "", "No description listed."}:
+                job["summary"] = alerts.build_description(page_text, job.get("title", "BucketofCrabs lead"))
+
+            extracted_location = alerts.extract_location(page_text)
+            if extracted_location and extracted_location != "Not listed":
+                job["location"] = extracted_location
+
+            extracted_type = alerts.extract_job_type(page_text)
+            if extracted_type and extracted_type != "Not listed":
+                job["job_type"] = extracted_type
+
+            extracted_pay = alerts.extract_pay(page_text)
+            if extracted_pay and extracted_pay != "Not listed":
+                job["pay"] = extracted_pay
+
+        normalize_location_for_monday(job)
+
+        print(
+            "Enriched BucketofCrabs: "
+            f"{job.get('title')} | {job.get('location')} | "
+            f"{alerts.clip(job.get('summary', ''), 120)}"
+        )
+
+    except Exception as e:
+        print(f"BucketofCrabs detail enrichment failed for {job.get('title')}: {e}")
+        normalize_location_for_monday(job)
+
+
+def send_to_discord_with_bucketofcrabs_enrichment(job: Dict[str, Any]) -> None:
+    if job.get("source") == "BucketofCrabs":
+        enrich_bucketofcrabs_from_detail_page(job)
+
+    _original_send_to_discord(job)
+
+
 def monday_create_item_with_existing_location(job: Dict[str, Any]) -> None:
     """Create Monday item using the existing MONDAY_COL_LOCATION mapping."""
     source = job.get("source", "Unknown")
@@ -41,6 +96,9 @@ def monday_create_item_with_existing_location(job: Dict[str, Any]) -> None:
     if not alerts.MONDAY_API_TOKEN or not alerts.MONDAY_BOARD_ID:
         print("Monday not configured, skipping.")
         return
+
+    if source == "BucketofCrabs" and not job.get("detail_text"):
+        enrich_bucketofcrabs_from_detail_page(job)
 
     normalize_location_for_monday(job)
 
@@ -171,6 +229,7 @@ async def post_next_job_for_source_with_existing_location(
     return job
 
 
+alerts.send_to_discord = send_to_discord_with_bucketofcrabs_enrichment
 alerts.send_to_monday = monday_create_item_with_existing_location
 alerts.post_next_job_for_source = post_next_job_for_source_with_existing_location
 
