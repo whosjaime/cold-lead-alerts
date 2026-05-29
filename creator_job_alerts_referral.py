@@ -22,6 +22,11 @@ def referral_bonus_number(value: Any) -> float:
         return 0
 
 
+def referral_bonus_text(value: Any) -> str:
+    """Return the referral bonus as text for Monday text columns."""
+    return f"{referral_bonus_number(value):.0f}"
+
+
 def format_referral_bonus(value: Any) -> str:
     return f"${referral_bonus_number(value):,.0f}"
 
@@ -81,7 +86,7 @@ def send_to_discord_with_referral_fee(job: Dict[str, Any]) -> None:
 
 
 def send_to_monday_with_referral_bonus(job: Dict[str, Any]) -> None:
-    """Send YTJobs to Monday with a numeric referral bonus, defaulting to 0."""
+    """Send YTJobs to Monday with referral bonus text, defaulting to 0."""
     if job.get("source") != "YTJobs":
         _original_send_to_monday(job)
         return
@@ -111,7 +116,7 @@ def send_to_monday_with_referral_bonus(job: Dict[str, Any]) -> None:
     monday_location = alerts.map_monday_location(location)
     post_date = str(date.today())
     numeric_pay = alerts.extract_numeric_pay(pay)
-    referral_bonus = referral_bonus_number(job.get("referral_bonus"))
+    referral_bonus = referral_bonus_text(job.get("referral_bonus"))
     subscribers = job.get("subscribers")
 
     column_values: Dict[str, Any] = {}
