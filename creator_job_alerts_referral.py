@@ -1,5 +1,6 @@
 import asyncio
 import json
+import re
 from datetime import date
 from typing import Any, Dict, List, Optional
 
@@ -29,6 +30,45 @@ def referral_bonus_text(value: Any) -> str:
 
 def format_referral_bonus(value: Any) -> str:
     return f"${referral_bonus_number(value):,.0f}"
+
+
+def extract_referral_bonus_from_text(text: str) -> Optional[float]:
+    """Extract flexible YTJobs referral bonus amounts from page text."""
+    if not text:
+        return None
+
+    text = alerts.clean_text(text).lower()
+
+    patterns = [
+        r"\$\s*(\d[\d,]*(?:\.\d+)?)\s*(?:referral\s*)?bonus",
+        r"\$\s*(\d[\d,]*(?:\.\d+)?)\s*referral",
+        r"referral\s*bonus\s*[:\-]?\s*\$?\s*(\d[\d,]*(?:\.\d+)?)",
+        r"bonus\s*[:\-]?\s*\$?\s*(\d[\d,]*(?:\.\d+)?)",
+        r"(\d[\d,]*(?:\.\d+)?)\s*(?:referral\s*)?bonus",
+        r"(\d[\d,]*(?:\.\d+)?)\s*referral",
+    ]
+
+    for pattern in patterns:
+        match = re.search(pattern, text, flags=re.IGNORECASE)
+        if not match:
+            continue
+
+        value = referral_bonus_number(match.group(1))
+        if value > 0:
+            return value
+
+    return None
+
+
+async def extract_ytjobs_enrichment_from_html(html: str) -> Dict[str, Optional[Any]]:
+    """Parse YTJobs job detail HTML with flexible referral bonus formats."""
+    soup = alerts.BeautifulSoup(html, "html.parser")
+    page_text = soup.get_text(" ")
+
+    return {
+        "referral_bonus": extract_referral_bonus_from_text(page_text),
+        "subscribers": alerts.extract_subscriber_count_from_text(page_text),
+    }
 
 
 _original_send_to_discord = alerts.send_to_discord
@@ -246,10 +286,15 @@ async def post_next_job_for_source_with_ytjobs_referral(
 
     # Enrich YTJobs before Discord/Monday so referral bonus and subscribers are available.
     if source == "YTJobs":
+        original_extractor = alerts.extract_ytjobs_enrichment_from_html
+        alerts.extract_ytjobs_enrichment_from_html = extract_ytjobs_enrichment_from_html
+
         try:
             await alerts.enrich_ytjobs_with_page_data(page, job)
         except Exception as e:
             print(f"YTJobs enrichment failed for {source}: {e}")
+        finally:
+            alerts.extract_ytjobs_enrichment_from_html = original_extractor
 
         # Keep a clean number in Discord and Monday, even when no bonus exists.
         job["referral_bonus"] = referral_bonus_number(job.get("referral_bonus"))
