@@ -3017,8 +3017,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 4930000,
+      "posted": true,
+      "posted_date": "2026-05-29"
     },
     {
       "id": "ytjobs_21667",
