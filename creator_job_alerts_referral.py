@@ -75,8 +75,55 @@ _original_send_to_discord = alerts.send_to_discord
 _original_send_to_monday = alerts.send_to_monday
 
 
+def send_ytcareers_to_discord(job: Dict[str, Any]) -> None:
+    """Send a fuller YTCareers alert when the listing only has a title/link."""
+    source = "YTCareers"
+    webhook_url = alerts.get_webhook_url(source)
+
+    if not webhook_url:
+        raise RuntimeError(f"Missing webhook URL for source: {source}")
+
+    title = alerts.clip(job.get("title", "New YTCareers lead"), 120)
+    summary = alerts.clip(job.get("summary", ""), 260)
+    url = (job.get("url") or "").strip()
+    role_line, allowed_mentions = alerts.build_role_line_and_mentions(title, summary)
+
+    if not summary or summary.strip().lower() == title.strip().lower():
+        description = "YTCareers listing is sparse. Open the link for full details and application instructions."
+    else:
+        description = summary
+
+    content = (
+        f"{alerts.HEADER_TEXT}\n\n"
+        f"{role_line}\n"
+        f"**Source:** {source}\n"
+        f"**Type:** Not listed on feed\n"
+        f"**Location:** Not listed on feed\n"
+        f"**Pay:** Not listed on feed\n"
+        f"**Description:** {description}\n"
+        f"**Link:** {url if url else 'Not listed'}"
+    )
+
+    payload = {
+        "username": "Manifest Media Leads",
+        "content": content,
+        "allowed_mentions": allowed_mentions,
+    }
+
+    if alerts.WEBHOOK_AVATAR_URL:
+        payload["avatar_url"] = alerts.WEBHOOK_AVATAR_URL
+
+    response = alerts.requests.post(webhook_url, json=payload, timeout=30)
+    print(f"Discord response for {source}: {response.status_code}")
+    response.raise_for_status()
+
+
 def send_to_discord_with_referral_fee(job: Dict[str, Any]) -> None:
     """Always show a YTJobs referral fee line in Discord, using $0 when none exists."""
+    if job.get("source") == "YTCareers":
+        send_ytcareers_to_discord(job)
+        return
+
     if job.get("source") != "YTJobs":
         _original_send_to_discord(job)
         return
