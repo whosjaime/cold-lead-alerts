@@ -3135,9 +3135,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 542000,
+      "posted": true,
+      "posted_date": "2026-05-29"
     },
     {
       "id": "ytjobs_39604",
@@ -3227,6 +3228,22 @@
       "job_type": "Per project",
       "pay": "$75-$150 Per project",
       "url": "https://ytjobs.co/job/39660",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39665",
+      "title": "Narrative YouTube Editor for Gaming",
+      "summary": "Narrative YouTube Editor for Gaming + Food Trailer Content Per project Remote Entertainment Shorts +9 more Zion 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39665",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
