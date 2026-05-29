@@ -3068,8 +3068,9 @@
       "email_source": null,
       "company": null,
       "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "subscribers": 4030000,
+      "posted": true,
+      "posted_date": "2026-05-29"
     },
     {
       "id": "ytjobs_28021",
@@ -3191,6 +3192,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39657",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39625",
+      "title": "Video Editor",
+      "summary": "Video Editor: Talking Head / Vlogs / Podcasts $125-$250 Per project Remote Education Business and Finance +3 more Nikola Milojkovic 207 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$125-$250 Per project",
+      "url": "https://ytjobs.co/job/39625",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
