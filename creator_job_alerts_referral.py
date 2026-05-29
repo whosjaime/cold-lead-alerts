@@ -60,6 +60,35 @@ def extract_referral_bonus_from_text(text: str) -> Optional[float]:
     return None
 
 
+def first_meta_content(soup, selectors: List[str]) -> str:
+    for selector in selectors:
+        tag = soup.select_one(selector)
+        if not tag:
+            continue
+
+        content = alerts.clean_text(tag.get("content", ""))
+        if content:
+            return content
+
+    return ""
+
+
+def clean_ytcareers_title(raw_title: str, fallback: str) -> tuple[str, Optional[str]]:
+    """Split titles like 'Short-form video editor - Andrew Li Racing - YTCareers'."""
+    raw_title = alerts.clean_text(raw_title)
+
+    if not raw_title:
+        return alerts.clean_text(fallback) or "New YTCareers lead", None
+
+    raw_title = re.sub(r"\s*[-|]\s*YT\.?Careers\s*$", "", raw_title, flags=re.IGNORECASE).strip()
+    parts = [alerts.clean_text(part) for part in re.split(r"\s+-\s+", raw_title) if alerts.clean_text(part)]
+
+    if len(parts) >= 2:
+        return parts[0], parts[1]
+
+    return raw_title, None
+
+
 async def extract_ytjobs_enrichment_from_html(html: str) -> Dict[str, Optional[Any]]:
     """Parse YTJobs job detail HTML with flexible referral bonus formats."""
     soup = alerts.BeautifulSoup(html, "html.parser")
@@ -71,12 +100,70 @@ async def extract_ytjobs_enrichment_from_html(html: str) -> Dict[str, Optional[A
     }
 
 
+async def enrich_ytcareers_with_page_data(page, job: Dict[str, Any]) -> None:
+    """Open the YTCareers detail page and pull richer title/company/description metadata."""
+    if job.get("source") != "YTCareers":
+        return
+
+    url = str(job.get("url", "")).strip()
+    if not url:
+        return
+
+    try:
+        await page.goto(url, wait_until="domcontentloaded", timeout=30000)
+        await page.wait_for_timeout(2500)
+
+        html = await page.content()
+        soup = alerts.BeautifulSoup(html, "html.parser")
+
+        meta_title = first_meta_content(
+            soup,
+            [
+                'meta[property="og:title"]',
+                'meta[name="twitter:title"]',
+                'meta[name="title"]',
+            ],
+        )
+
+        if not meta_title and soup.title:
+            meta_title = alerts.clean_text(soup.title.get_text(" ", strip=True))
+
+        meta_description = first_meta_content(
+            soup,
+            [
+                'meta[property="og:description"]',
+                'meta[name="twitter:description"]',
+                'meta[name="description"]',
+            ],
+        )
+
+        title, company = clean_ytcareers_title(meta_title, job.get("title", ""))
+
+        if title:
+            job["title"] = title
+
+        if company and company.lower() not in {"yt.careers", "yt careers", "youtube jobs"}:
+            job["company"] = company
+
+        if meta_description:
+            job["summary"] = meta_description
+
+        print(
+            "Enriched YTCareers: "
+            f"{job.get('title')} | {job.get('company') or 'No company'} | "
+            f"{alerts.clip(job.get('summary', ''), 120)}"
+        )
+
+    except Exception as e:
+        print(f"YTCareers detail enrichment failed for {job.get('title')}: {e}")
+
+
 _original_send_to_discord = alerts.send_to_discord
 _original_send_to_monday = alerts.send_to_monday
 
 
 def send_ytcareers_to_discord(job: Dict[str, Any]) -> None:
-    """Send a fuller YTCareers alert when the listing only has a title/link."""
+    """Send a fuller YTCareers alert using detail-page metadata when available."""
     source = "YTCareers"
     webhook_url = alerts.get_webhook_url(source)
 
@@ -84,22 +171,27 @@ def send_ytcareers_to_discord(job: Dict[str, Any]) -> None:
         raise RuntimeError(f"Missing webhook URL for source: {source}")
 
     title = alerts.clip(job.get("title", "New YTCareers lead"), 120)
-    summary = alerts.clip(job.get("summary", ""), 260)
+    company = alerts.clip(job.get("company", "") or "Not listed", 90)
+    summary = alerts.clip(job.get("summary", ""), 300)
+    location = alerts.clip(job.get("location", "Not listed") or "Not listed", 80)
+    job_type = alerts.clip(job.get("job_type", "Not listed") or "Not listed", 80)
+    pay = alerts.clip(job.get("pay", "Not listed") or "Not listed", 80)
     url = (job.get("url") or "").strip()
     role_line, allowed_mentions = alerts.build_role_line_and_mentions(title, summary)
 
     if not summary or summary.strip().lower() == title.strip().lower():
-        description = "YTCareers listing is sparse. Open the link for full details and application instructions."
+        description = "Open the link for full details and application instructions."
     else:
         description = summary
 
     content = (
         f"{alerts.HEADER_TEXT}\n\n"
         f"{role_line}\n"
+        f"**Company:** {company}\n"
         f"**Source:** {source}\n"
-        f"**Type:** Not listed on feed\n"
-        f"**Location:** Not listed on feed\n"
-        f"**Pay:** Not listed on feed\n"
+        f"**Type:** {job_type}\n"
+        f"**Location:** {location}\n"
+        f"**Pay:** {pay}\n"
         f"**Description:** {description}\n"
         f"**Link:** {url if url else 'Not listed'}"
     )
@@ -119,7 +211,7 @@ def send_ytcareers_to_discord(job: Dict[str, Any]) -> None:
 
 
 def send_to_discord_with_referral_fee(job: Dict[str, Any]) -> None:
-    """Always show a YTJobs referral fee line in Discord, using $0 when none exists."""
+    """Route custom YTJobs/YTCareers Discord alerts, otherwise use original sender."""
     if job.get("source") == "YTCareers":
         send_ytcareers_to_discord(job)
         return
@@ -352,6 +444,9 @@ async def post_next_job_for_source_with_ytjobs_referral(
     if not job:
         print(f"No unposted {source} jobs available.")
         return None
+
+    if source == "YTCareers":
+        await enrich_ytcareers_with_page_data(page, job)
 
     # Enrich YTJobs before Discord/Monday so referral bonus and subscribers are available.
     if source == "YTJobs":
