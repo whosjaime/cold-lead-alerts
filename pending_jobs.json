@@ -3186,9 +3186,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 2500.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-05-29"
     },
     {
       "id": "ytjobs_39657",
