@@ -55,6 +55,7 @@ jobs:
           MONDAY_COL_COMPANY: ${{ secrets.MONDAY_COL_COMPANY }}
           MONDAY_COL_ROLE: ${{ secrets.MONDAY_COL_ROLE }}
           MONDAY_COL_LOCATION: ${{ secrets.MONDAY_COL_LOCATION }}
+          MONDAY_COL_LOCATION_TYPE: ${{ secrets.MONDAY_COL_LOCATION_TYPE }}
           MONDAY_COL_DESCRIPTION: ${{ secrets.MONDAY_COL_DESCRIPTION }}
           MONDAY_COL_LINK: ${{ secrets.MONDAY_COL_LINK }}
           MONDAY_COL_POST_DATE: ${{ secrets.MONDAY_COL_POST_DATE }}
@@ -80,6 +81,7 @@ jobs:
           if [ -z "$MONDAY_COL_COMPANY" ]; then echo "MONDAY_COL_COMPANY is missing"; else echo "MONDAY_COL_COMPANY is set"; fi
           if [ -z "$MONDAY_COL_ROLE" ]; then echo "MONDAY_COL_ROLE is missing"; else echo "MONDAY_COL_ROLE is set"; fi
           if [ -z "$MONDAY_COL_LOCATION" ]; then echo "MONDAY_COL_LOCATION is missing"; else echo "MONDAY_COL_LOCATION is set"; fi
+          if [ -z "$MONDAY_COL_LOCATION_TYPE" ]; then echo "MONDAY_COL_LOCATION_TYPE is missing"; else echo "MONDAY_COL_LOCATION_TYPE is set"; fi
           if [ -z "$MONDAY_COL_DESCRIPTION" ]; then echo "MONDAY_COL_DESCRIPTION is missing"; else echo "MONDAY_COL_DESCRIPTION is set"; fi
           if [ -z "$MONDAY_COL_LINK" ]; then echo "MONDAY_COL_LINK is missing"; else echo "MONDAY_COL_LINK is set"; fi
           if [ -z "$MONDAY_COL_POST_DATE" ]; then echo "MONDAY_COL_POST_DATE is missing"; else echo "MONDAY_COL_POST_DATE is set"; fi
@@ -109,12 +111,13 @@ jobs:
           MONDAY_COL_COMPANY: ${{ secrets.MONDAY_COL_COMPANY }}
           MONDAY_COL_ROLE: ${{ secrets.MONDAY_COL_ROLE }}
           MONDAY_COL_LOCATION: ${{ secrets.MONDAY_COL_LOCATION }}
+          MONDAY_COL_LOCATION_TYPE: ${{ secrets.MONDAY_COL_LOCATION_TYPE }}
           MONDAY_COL_DESCRIPTION: ${{ secrets.MONDAY_COL_DESCRIPTION }}
           MONDAY_COL_LINK: ${{ secrets.MONDAY_COL_LINK }}
           MONDAY_COL_POST_DATE: ${{ secrets.MONDAY_COL_POST_DATE }}
           MONDAY_COL_SUBSCRIBERS: ${{ secrets.MONDAY_COL_SUBSCRIBERS }}
           MONDAY_COL_REFERRAL_BONUS: ${{ secrets.MONDAY_COL_REFERRAL_BONUS }}
-        run: python creator_job_alerts_referral.py
+        run: python creator_job_alerts_location.py
 
       - name: Upload debug files
         if: always()
