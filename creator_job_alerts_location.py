@@ -7,13 +7,11 @@ from typing import Any, Dict, List, Optional
 import creator_job_alerts as alerts
 import creator_job_alerts_referral as referral
 
-MONDAY_COL_LOCATION_TYPE = alerts.os.getenv("MONDAY_COL_LOCATION_TYPE", "")
-
 _original_send_to_monday = alerts.send_to_monday
 
 
-def detect_location_type(job: Dict[str, Any]) -> str:
-    """Remote if the listing says remote. Otherwise Onsite."""
+def detect_location_label(job: Dict[str, Any]) -> str:
+    """Use the existing Monday Location field: Remote if the post says remote, otherwise On-site."""
     text = " ".join(
         str(job.get(key, ""))
         for key in ["location", "summary", "title", "job_type", "company", "url"]
@@ -22,18 +20,18 @@ def detect_location_type(job: Dict[str, Any]) -> str:
     if re.search(r"\bremote\b", text):
         return "Remote"
 
-    return "Onsite"
+    return "On-site"
 
 
-def add_location_type_to_job(job: Dict[str, Any]) -> None:
+def normalize_location_for_monday(job: Dict[str, Any]) -> None:
     source = job.get("source")
 
     if source in {"YTCareers", "BucketofCrabs", "YTJobs"}:
-        job["location_type"] = detect_location_type(job)
+        job["location"] = detect_location_label(job)
 
 
-def monday_create_item_with_location_type(job: Dict[str, Any]) -> None:
-    """Create Monday item with Location Type support for YTCareers/BucketofCrabs/YTJobs."""
+def monday_create_item_with_existing_location(job: Dict[str, Any]) -> None:
+    """Create Monday item using the existing MONDAY_COL_LOCATION mapping."""
     source = job.get("source", "Unknown")
 
     if source not in {"YTCareers", "BucketofCrabs", "YTJobs"}:
@@ -44,7 +42,7 @@ def monday_create_item_with_location_type(job: Dict[str, Any]) -> None:
         print("Monday not configured, skipping.")
         return
 
-    add_location_type_to_job(job)
+    normalize_location_for_monday(job)
 
     if source == "YTJobs":
         job["referral_bonus"] = referral.referral_bonus_number(job.get("referral_bonus"))
@@ -65,7 +63,6 @@ def monday_create_item_with_location_type(job: Dict[str, Any]) -> None:
     monday_sourced_from = alerts.map_monday_sourced_from(source)
     monday_category = alerts.map_monday_category(job)
     monday_location = alerts.map_monday_location(location)
-    location_type = job.get("location_type") or detect_location_type(job)
     post_date = str(date.today())
     numeric_pay = alerts.extract_numeric_pay(pay)
     subscribers = job.get("subscribers")
@@ -77,9 +74,6 @@ def monday_create_item_with_location_type(job: Dict[str, Any]) -> None:
 
     if alerts.MONDAY_COL_TYPE and monday_type:
         column_values[alerts.MONDAY_COL_TYPE] = {"labels": [monday_type]}
-
-    if MONDAY_COL_LOCATION_TYPE:
-        column_values[MONDAY_COL_LOCATION_TYPE] = {"labels": [location_type]}
 
     if alerts.MONDAY_COL_PRIMARY_SKILL and primary_skill:
         column_values[alerts.MONDAY_COL_PRIMARY_SKILL] = {"labels": [primary_skill]}
@@ -164,7 +158,7 @@ def monday_create_item_with_location_type(job: Dict[str, Any]) -> None:
     print(f"Monday item created for: {role_title}")
 
 
-async def post_next_job_for_source_with_location_type(
+async def post_next_job_for_source_with_existing_location(
     source: str,
     pending: Dict[str, List[Dict[str, Any]]],
     page,
@@ -172,13 +166,13 @@ async def post_next_job_for_source_with_location_type(
     job = await referral.post_next_job_for_source_with_ytjobs_referral(source, pending, page)
 
     if job and source in {"YTCareers", "BucketofCrabs", "YTJobs"}:
-        add_location_type_to_job(job)
+        normalize_location_for_monday(job)
 
     return job
 
 
-alerts.send_to_monday = monday_create_item_with_location_type
-alerts.post_next_job_for_source = post_next_job_for_source_with_location_type
+alerts.send_to_monday = monday_create_item_with_existing_location
+alerts.post_next_job_for_source = post_next_job_for_source_with_existing_location
 
 
 if __name__ == "__main__":
