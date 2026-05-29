@@ -255,11 +255,33 @@ def send_to_monday_with_referral_bonus(job: Dict[str, Any]) -> None:
     print(f"Monday item created for: {role_title}")
 
 
+def recover_missed_ytcareers_post(pending: Dict[str, List[Dict[str, Any]]]) -> None:
+    """Requeue the newest YTCareers job once if it was marked posted but missed Discord."""
+    queue = pending.get("YTCareers", [])
+
+    if not queue:
+        return
+
+    if any(not job.get("posted") for job in queue):
+        return
+
+    for job in reversed(queue):
+        url = str(job.get("url", ""))
+        if "/youtube-jobs/232" in url and job.get("posted") is True and job.get("posted_date") == "2026-05-28":
+            job["posted"] = False
+            job["repost_reason"] = "missed_discord_recovery"
+            print("Requeued YTCareers /youtube-jobs/232 for missed Discord recovery.")
+            return
+
+
 async def post_next_job_for_source_with_ytjobs_referral(
     source: str,
     pending: Dict[str, List[Dict[str, Any]]],
     page,
 ) -> Optional[Dict[str, Any]]:
+    if source == "YTCareers":
+        recover_missed_ytcareers_post(pending)
+
     queue = pending.get(source, [])
 
     if not queue:
