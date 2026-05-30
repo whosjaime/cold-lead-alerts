@@ -3305,6 +3305,23 @@
       "email": null,
       "email_source": null,
       "company": null,
+      "referral_bonus": 0.0,
+      "subscribers": 3990,
+      "posted": true,
+      "posted_date": "2026-05-30"
+    },
+    {
+      "id": "ytjobs_39701",
+      "title": "Football (Soccer) Video Editor Full-time",
+      "summary": "Football (Soccer) Video Editor Full-time Remote Sports Football Soccer Gaming +3 more P\u00eache Football 603K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39701",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
       "referral_bonus": null,
       "subscribers": null,
       "posted": false
