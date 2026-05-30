@@ -3203,9 +3203,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 26600,
+      "posted": true,
+      "posted_date": "2026-05-30"
     },
     {
       "id": "ytjobs_39625",
@@ -4491,6 +4492,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-05-27"
+    },
+    {
+      "id": "boc_b8c3650ecd680d5374e2a45eb2e17269af15bd5eaf425b9627c5bd4dc526e0cd",
+      "title": "RiftFall Studios Particle VFX Artist (Freelance)",
+      "summary": "RiftFall Studios Particle VFX Artist (Freelance) Remote Only $20-$500/Fixed Amount Game Art Design",
+      "location": "Remote",
+      "job_type": "Freelance",
+      "pay": "$20-$500",
+      "url": "https://www.bucketofcrabs.net/jobs/mQWGYHWxru",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-05-30"
     }
   ],
   "X": []
