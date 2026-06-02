@@ -3526,9 +3526,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 8540,
+      "posted": true,
+      "posted_date": "2026-06-02"
     },
     {
       "id": "ytjobs_39787",
@@ -3698,6 +3699,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39804",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39836",
+      "title": "YouTube Strategist",
+      "summary": "YouTube Strategist $100-$200 Per Hour . Part-time Remote People & Blogs Howto & Style +10 more Harmony With Food Company",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$100-$200 Per Hour",
+      "url": "https://ytjobs.co/job/39836",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
