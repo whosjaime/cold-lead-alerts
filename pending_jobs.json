@@ -3543,9 +3543,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 500.0,
+      "subscribers": 194000,
+      "posted": true,
+      "posted_date": "2026-06-02"
     },
     {
       "id": "ytjobs_39802",
@@ -3715,6 +3716,22 @@
       "job_type": "Part-time",
       "pay": "$100-$200 Per Hour",
       "url": "https://ytjobs.co/job/39836",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39850",
+      "title": "YouTube Video Finisher",
+      "summary": "YouTube Video Finisher / Polisher (Rough Cut Provided) $100-$150 Per project Remote Gaming Comedy SCP Gameplay +1 more Bran 39.5K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$150 Per project",
+      "url": "https://ytjobs.co/job/39850",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
