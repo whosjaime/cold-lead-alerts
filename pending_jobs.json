@@ -3594,9 +3594,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 361000,
+      "posted": true,
+      "posted_date": "2026-06-03"
     },
     {
       "id": "ytjobs_39825",
@@ -3798,6 +3799,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39861",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39899",
+      "title": "videographer/editor Part-time",
+      "summary": "videographer/editor Part-time Onsite . Austin, TX, US Short Movies Videoblogging +5 more Stack Health Company",
+      "location": "On-site",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39899",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
