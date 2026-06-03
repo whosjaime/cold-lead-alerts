@@ -3611,9 +3611,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 582000,
+      "posted": true,
+      "posted_date": "2026-06-03"
     },
     {
       "id": "ytjobs_39823",
@@ -3815,6 +3816,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39899",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39902",
+      "title": "Gaming YouTube Editor for Dramatic/comedy Challenge Series Per project",
+      "summary": "Gaming YouTube Editor for Dramatic/comedy Challenge Series Per project Remote Gaming Comedy Entertainment +28 more dante 1.79K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39902",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
