@@ -3560,9 +3560,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 250.0,
+      "subscribers": 5800,
+      "posted": true,
+      "posted_date": "2026-06-03"
     },
     {
       "id": "ytjobs_39795",
@@ -3732,6 +3733,22 @@
       "job_type": "Per project",
       "pay": "$100-$150 Per project",
       "url": "https://ytjobs.co/job/39850",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39855",
+      "title": "YouTube Creative Editor \u2013 Comedy, Retention & Storytelling Full-time",
+      "summary": "YouTube Creative Editor \u2013 Comedy, Retention & Storytelling Full-time Remote Film & Animation Travel & Events +13 more Isabella Busty 91.6K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39855",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -4238,6 +4255,21 @@
       "company": "parannouls \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-06-01"
+    },
+    {
+      "id": "ytcareers_f75a99e6ce2c345dbe85cd09ced850b1ecc75b8e23e731a8664adea489dad933",
+      "title": "Lead YouTube Editor \u2013 Storytelling, Comedy & Retention",
+      "summary": "The Isabella Busty YouTube channel is hiring for the following role: Lead YouTube Editor \u2013 Storytelling, Comedy & Retention.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/235",
+      "source": "YTCareers",
+      "email": "hello@sponsorship.so",
+      "email_source": "website_contact",
+      "company": "Isabella Busty \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-06-03"
     }
   ],
   "BucketofCrabs": [
