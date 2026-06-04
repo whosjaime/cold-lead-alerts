@@ -3620,7 +3620,7 @@
       "id": "ytjobs_39823",
       "title": "Video Producer & Editor",
       "summary": "Video Producer & Editor $45,000-$85,000 Per Year . Full-time Hybrid . Madison, WI, US Gaming Science & Technology +7 more City Planner Plays 909K subs",
-      "location": "Hybrid",
+      "location": "On-site",
       "job_type": "Full-time",
       "pay": "$45,000-$85,000 Per Year",
       "url": "https://ytjobs.co/job/39823",
@@ -3628,9 +3628,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 909000,
+      "posted": true,
+      "posted_date": "2026-06-04"
     },
     {
       "id": "ytjobs_39824",
