@@ -3713,9 +3713,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 14900000,
+      "posted": true,
+      "posted_date": "2026-06-05"
     },
     {
       "id": "ytjobs_39836",
@@ -5324,7 +5325,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-06-05"
     }
   ],
   "X": []
