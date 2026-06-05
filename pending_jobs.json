@@ -3764,9 +3764,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 91600,
+      "posted": true,
+      "posted_date": "2026-06-05"
     },
     {
       "id": "ytjobs_39854",
@@ -3952,6 +3953,22 @@
       "job_type": "Part-time",
       "pay": "$10-$20 Per Hour",
       "url": "https://ytjobs.co/job/39949",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39959",
+      "title": "Short Form Video Editor News Niche Per project",
+      "summary": "Short Form Video Editor News Niche Per project Remote Travel & Events News & Politics +5 more NewsDaddy Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39959",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
