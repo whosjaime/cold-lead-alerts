@@ -3747,9 +3747,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 216000,
+      "posted": true,
+      "posted_date": "2026-06-05"
     },
     {
       "id": "ytjobs_39855",
@@ -3935,6 +3936,22 @@
       "job_type": "Part-time",
       "pay": "$10-$25 Per Hour",
       "url": "https://ytjobs.co/job/39927",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39949",
+      "title": "Short-Form Video Editor",
+      "summary": "Short-Form Video Editor: Ads/Reels/Shorts (Remote) $10-$20 Per Hour . Part-time Remote People & Blogs Howto & Style +13 more Zorali 2.77K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$10-$20 Per Hour",
+      "url": "https://ytjobs.co/job/39949",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
