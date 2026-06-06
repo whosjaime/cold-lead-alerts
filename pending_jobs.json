@@ -3900,9 +3900,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 17800,
+      "posted": true,
+      "posted_date": "2026-06-06"
     },
     {
       "id": "ytjobs_39910",
@@ -4088,6 +4089,22 @@
       "job_type": "Full-time",
       "pay": "$12,000-$36,000 Per Year",
       "url": "https://ytjobs.co/job/39996",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40002",
+      "title": "Video Editor",
+      "summary": "Video Editor - Rocket League YouTube Channel. $100-$500 Per project Remote Gaming Entertainment Live stream +2 more Fays Plays 1.08K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$500 Per project",
+      "url": "https://ytjobs.co/job/40002",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
