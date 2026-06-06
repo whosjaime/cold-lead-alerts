@@ -3968,9 +3968,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2770,
+      "posted": true,
+      "posted_date": "2026-06-06"
     },
     {
       "id": "ytjobs_39959",
@@ -4156,6 +4157,22 @@
       "job_type": "Per project",
       "pay": "$200-$300 Per project",
       "url": "https://ytjobs.co/job/40013",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_3642",
+      "title": "Video editor",
+      "summary": "Video editor $75-$100 Per project Remote IRL Vlog Angelica Hale 3.43M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$75-$100 Per project",
+      "url": "https://ytjobs.co/job/3642",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
