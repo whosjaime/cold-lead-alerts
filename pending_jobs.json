@@ -3849,9 +3849,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1790,
+      "posted": true,
+      "posted_date": "2026-06-06"
     },
     {
       "id": "ytjobs_39925",
@@ -4053,6 +4054,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39958",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39989",
+      "title": "Video Editor for my Channel",
+      "summary": "Video Editor for my Channel $200-$300 Per project Remote Education Tattoos Gaming +3 more Inked Abroad 140K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$200-$300 Per project",
+      "url": "https://ytjobs.co/job/39989",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
