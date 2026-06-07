@@ -4104,9 +4104,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-06-07"
     },
     {
       "id": "ytjobs_40002",
@@ -5669,6 +5670,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-06-05"
+    },
+    {
+      "id": "boc_178462dc276dddbd21de92c74718697dfdff0ea4af0ae9135957e05ed4ee2c57",
+      "title": "VertmixStudio Youtube Story Script Writer",
+      "summary": "VertmixStudio Youtube Story Script Writer Remote Only $20-$25/Hourly Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$20-$25/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/3M2sqUdSnO",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-06-07"
     }
   ],
   "X": []
