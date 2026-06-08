@@ -4155,9 +4155,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-06-08"
     },
     {
       "id": "ytjobs_40013",
@@ -4279,6 +4280,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/40069",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40080",
+      "title": "Video Editor for long form gaming Youtube productions Per project",
+      "summary": "Video Editor for long form gaming Youtube productions Per project Remote Short Movies Gaming Comedy +6 more Quaeiouyngo 21 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/40080",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
