@@ -4240,9 +4240,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 2180000,
+      "posted": true,
+      "posted_date": "2026-06-08"
     },
     {
       "id": "ytjobs_40005",
@@ -4460,6 +4461,22 @@
       "job_type": "Per project",
       "pay": "$30-$55 Per project",
       "url": "https://ytjobs.co/job/40091",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40122",
+      "title": "Thumbnail Sketch Artist for StanleyMOV",
+      "summary": "Thumbnail Sketch Artist for StanleyMOV $20-$30 Per Hour . Part-time Remote Film & Animation Gaming +9 more StanleyMOV Live 444K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$20-$30 Per Hour",
+      "url": "https://ytjobs.co/job/40122",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
