@@ -4189,9 +4189,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 3430000,
+      "posted": true,
+      "posted_date": "2026-06-08"
     },
     {
       "id": "ytjobs_40063",
@@ -4313,6 +4314,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/40083",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40088",
+      "title": "Freelance Video Editor",
+      "summary": "Freelance Video Editor + Thumbnail Designer $100-$200 Per project Remote Videoblogging People & Blogs +6 more Luke van Zyl 376 subs",
+      "location": "Remote",
+      "job_type": "Freelance",
+      "pay": "$100-$200 Per project",
+      "url": "https://ytjobs.co/job/40088",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
