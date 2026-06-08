@@ -4223,9 +4223,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-06-08"
     },
     {
       "id": "ytjobs_40045",
@@ -5867,6 +5868,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-06-07"
+    },
+    {
+      "id": "boc_a3a5c022ce0109529bdf514bb10913725f3b827b40eebe45c77569db438d1332",
+      "title": "PlonixBuilds Minecraft Bedrock Coder",
+      "summary": "PlonixBuilds Minecraft Bedrock Coder Remote Only $50-$600/Fixed Amount Game Developer Plugin/Mod Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$50-$600",
+      "url": "https://www.bucketofcrabs.net/jobs/b4FT8Cjs7Q",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-06-08"
     }
   ],
   "X": []
