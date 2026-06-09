@@ -4308,9 +4308,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 50.0,
+      "subscribers": 1940,
+      "posted": true,
+      "posted_date": "2026-06-09"
     },
     {
       "id": "ytjobs_40083",
