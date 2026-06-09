@@ -4274,9 +4274,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 139,
+      "posted": true,
+      "posted_date": "2026-06-09"
     },
     {
       "id": "ytjobs_40069",
@@ -4542,6 +4543,22 @@
       "job_type": "Full-time",
       "pay": "$12,000-$48,000 Per Year",
       "url": "https://ytjobs.co/job/40126",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40134",
+      "title": "Gaming Greenscreen Commentary",
+      "summary": "Gaming Greenscreen Commentary $150-$300 Per project Remote Gaming Comedy Horror Crime +7 more ABCDave 604 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$150-$300 Per project",
+      "url": "https://ytjobs.co/job/40134",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
