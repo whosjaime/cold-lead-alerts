@@ -4376,9 +4376,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 480000,
+      "posted": true,
+      "posted_date": "2026-06-09"
     },
     {
       "id": "ytjobs_40104",
@@ -4772,6 +4773,22 @@
       "job_type": "Per project",
       "pay": "$100-$250 Per project",
       "url": "https://ytjobs.co/job/40176",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40178",
+      "title": "Video Editor",
+      "summary": "Video Editor - Long Form Testimonial (15-20min) $100-$300 Per project Remote Social media Music People & Blogs +3 more Daniel Coffeen 7.6K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$300 Per project",
+      "url": "https://ytjobs.co/job/40178",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
