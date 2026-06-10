@@ -4461,9 +4461,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 13500,
+      "posted": true,
+      "posted_date": "2026-06-10"
     },
     {
       "id": "ytjobs_40091",
@@ -4937,6 +4938,22 @@
       "job_type": "Per project",
       "pay": "$500-$600 Per project",
       "url": "https://ytjobs.co/job/40201",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39977",
+      "title": "YouTube Producer",
+      "summary": "YouTube Producer \u2014 Science & Curiosity Content Full-time Hybrid . Toronto, ON, Canada Education Science & Technology +4 more What If 8.91M subs",
+      "location": "Hybrid",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/39977",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -6390,6 +6407,49 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-06-10"
+    },
+    {
+      "id": "boc_2b368932172720b4fe37222ffafaea14aeace44378609b7c892a5553a53d6826",
+      "title": "Rockhopper Marketplace Developer",
+      "summary": "Rockhopper Marketplace Developer Remote Only $300-$800/Fixed Amount Game Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$300-$800",
+      "url": "https://www.bucketofcrabs.net/jobs/RaXDN7QFd4",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-06-10"
+    },
+    {
+      "id": "boc_8dc7667b1f786c66e6cf8b9166214aae2afc12585cc80a98a43d725b8a980938",
+      "title": "CYCLONE Marketing Artist",
+      "summary": "CYCLONE Marketing Artist Remote Only $20-$25/Hourly Marketing Art Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$20-$25/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/NjD2ju3Xyy",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_b0796ab78cab29a7583b8af3dc144b9fdd6f07da07f095475b716f316f47cab8",
+      "title": "Pathway Studios Seeking Freelance Key Artist Talent Roster for Minecraft Mark...",
+      "summary": "Pathway Studios Seeking Freelance Key Artist Talent Roster for Minecraft Mark... \u2014 Pathway Studios Seeking Freelance Key Artist Talent Roster for Minecraft Marketplace Remote Only $1-$1000/Fixed Amount Marketing Art",
+      "location": "Remote",
+      "job_type": "Freelance",
+      "pay": "$1-$1000",
+      "url": "https://www.bucketofcrabs.net/jobs/FVTgyZFhKq",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
