@@ -4393,9 +4393,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1,
+      "posted": true,
+      "posted_date": "2026-06-10"
     },
     {
       "id": "ytjobs_40103",
@@ -4789,6 +4790,22 @@
       "job_type": "Per project",
       "pay": "$100-$300 Per project",
       "url": "https://ytjobs.co/job/40178",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40187",
+      "title": "Video Editor for Crime Bodycam",
+      "summary": "Video Editor for Crime Bodycam $20-$100 Per project Remote Aura Studios 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$20-$100 Per project",
+      "url": "https://ytjobs.co/job/40187",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
