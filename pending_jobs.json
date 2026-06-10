@@ -4478,9 +4478,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 200.0,
+      "subscribers": 236000,
+      "posted": true,
+      "posted_date": "2026-06-10"
     },
     {
       "id": "ytjobs_40122",
@@ -6435,7 +6436,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-06-10"
     },
     {
       "id": "boc_b0796ab78cab29a7583b8af3dc144b9fdd6f07da07f095475b716f316f47cab8",
