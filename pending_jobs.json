@@ -4410,9 +4410,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 25400,
+      "posted": true,
+      "posted_date": "2026-06-10"
     },
     {
       "id": "ytjobs_40099",
@@ -4806,6 +4807,22 @@
       "job_type": "Per project",
       "pay": "$20-$100 Per project",
       "url": "https://ytjobs.co/job/40187",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_32413",
+      "title": "Video Editor for Reaction Channel",
+      "summary": "Video Editor for Reaction Channel $93,600 Per Year . Full-time Remote Gaming Comedy Entertainment +2 more 7-ElevenZ 1.08M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$93,600 Per Year",
+      "url": "https://ytjobs.co/job/32413",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
