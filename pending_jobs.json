@@ -4699,9 +4699,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 547000,
+      "posted": true,
+      "posted_date": "2026-06-12"
     },
     {
       "id": "ytjobs_40174",
@@ -5255,6 +5256,22 @@
       "job_type": "Part-time",
       "pay": "$15-$50 Per Hour",
       "url": "https://ytjobs.co/job/40307",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40312",
+      "title": "Video Editor",
+      "summary": "Video Editor $40,000-$90,000 Per Year . Full-time Remote . Santaquin, UT, US Short Movies Entertainment +12 more Bastian Builders 19.5K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$40,000-$90,000 Per Year",
+      "url": "https://ytjobs.co/job/40312",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
