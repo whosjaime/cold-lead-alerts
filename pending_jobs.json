@@ -4682,9 +4682,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 200.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-06-12"
     },
     {
       "id": "ytjobs_40152",
@@ -5238,6 +5239,22 @@
       "job_type": "Per project",
       "pay": "$80-$120 Per project",
       "url": "https://ytjobs.co/job/40283",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40307",
+      "title": "Short-Form Video Editor for Pokemon TCG YouTube Channel",
+      "summary": "Short-Form Video Editor for Pokemon TCG YouTube Channel $15-$50 Per Hour . Part-time Remote Gaming Videoblogging Shorts +6 more Eva's Binder 12.2K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$15-$50 Per Hour",
+      "url": "https://ytjobs.co/job/40307",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
