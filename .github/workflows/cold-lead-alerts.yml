@@ -60,7 +60,7 @@ jobs:
           MONDAY_COL_LINK: ${{ secrets.MONDAY_COL_LINK }}
           MONDAY_COL_POST_DATE: ${{ secrets.MONDAY_COL_POST_DATE }}
           MONDAY_COL_SUBSCRIBERS: ${{ secrets.MONDAY_COL_SUBSCRIBERS }}
-          MONDAY_COL_REFERRAL_BONUS: ${{ secrets.MONDDAY_COL_REFERRAL_BONUS }}
+          MONDAY_COL_REFERRAL_BONUS: ${{ secrets.MONDAY_COL_REFERRAL_BONUS || secrets.COL_REFERRAL_BONUS || 'text_mm33jner' }}
         run: |
           if [ -z "$YTJOBS_WEBHOOK_URL" ]; then echo "YTJOBS_WEBHOOK_URL is missing"; else echo "YTJOBS_WEBHOOK_URL is set"; fi
           if [ -z "$ROSTER_WEBHOOK_URL" ]; then echo "ROSTER_WEBHOOK_URL is missing"; else echo "ROSTER_WEBHOOK_URL is set"; fi
@@ -116,7 +116,7 @@ jobs:
           MONDAY_COL_LINK: ${{ secrets.MONDAY_COL_LINK }}
           MONDAY_COL_POST_DATE: ${{ secrets.MONDAY_COL_POST_DATE }}
           MONDAY_COL_SUBSCRIBERS: ${{ secrets.MONDAY_COL_SUBSCRIBERS }}
-          MONDAY_COL_REFERRAL_BONUS: ${{ secrets.MONDAY_COL_REFERRAL_BONUS }}
+          MONDAY_COL_REFERRAL_BONUS: ${{ secrets.MONDAY_COL_REFERRAL_BONUS || secrets.COL_REFERRAL_BONUS || 'text_mm33jner' }}
         run: python creator_job_alerts_location.py
 
       - name: Upload debug files
