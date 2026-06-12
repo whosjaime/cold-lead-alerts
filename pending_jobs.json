@@ -4631,9 +4631,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 200.0,
+      "subscribers": 1430000,
+      "posted": true,
+      "posted_date": "2026-06-12"
     },
     {
       "id": "ytjobs_40160",
@@ -5171,6 +5172,22 @@
       "job_type": "Freelance",
       "pay": "$500-$3,000 Per project",
       "url": "https://ytjobs.co/job/39941",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40276",
+      "title": "Resolve Story Editor \u2013 Cinematic Documentary Family Vlog Per project",
+      "summary": "Resolve Story Editor \u2013 Cinematic Documentary Family Vlog Per project Remote Travel & Events Videoblogging +3 more Kieser Family 2.56K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/40276",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
