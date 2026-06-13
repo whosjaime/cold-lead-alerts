@@ -4767,9 +4767,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 52200,
+      "posted": true,
+      "posted_date": "2026-06-13"
     },
     {
       "id": "ytjobs_40165",
@@ -5291,6 +5292,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/40317",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40326",
+      "title": "Short-Form",
+      "summary": "Short-Form / UGC Video Editor \u2014 Ongoing (Remote) $20-$25 Per project Remote Pets & Animals Short Movies +14 more Shila Susannah 27 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$20-$25 Per project",
+      "url": "https://ytjobs.co/job/40326",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
