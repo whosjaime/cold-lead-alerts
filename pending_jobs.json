@@ -4818,9 +4818,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 50.0,
+      "subscribers": 7600,
+      "posted": true,
+      "posted_date": "2026-06-13"
     },
     {
       "id": "ytjobs_40187",
@@ -5326,6 +5327,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/40332",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40341",
+      "title": "Editor/Producer/Channel Manager for TwoPatShakur Part-time",
+      "summary": "Editor/Producer/Channel Manager for TwoPatShakur Part-time Remote Gaming Sports Gameplay TwoPatShakur 1.67K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/40341",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -6869,6 +6886,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-06-11"
+    },
+    {
+      "id": "boc_2fc9207091f50db03d8d78e406da607f3633eeb1d016bbc93c5a4b28e71384e8",
+      "title": "AzureBuilds Minecraft Java Builder",
+      "summary": "AzureBuilds Minecraft Java Builder Remote Only Voluntary World Builder",
+      "location": "Remote",
+      "job_type": "Voluntary",
+      "pay": "Voluntary",
+      "url": "https://www.bucketofcrabs.net/jobs/tedT3WQp4f",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-06-13"
     }
   ],
   "X": []
