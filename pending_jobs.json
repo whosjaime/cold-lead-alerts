@@ -4733,9 +4733,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 654000,
+      "posted": true,
+      "posted_date": "2026-06-13"
     },
     {
       "id": "ytjobs_40169",
@@ -5273,6 +5274,22 @@
       "job_type": "Full-time",
       "pay": "$40,000-$90,000 Per Year",
       "url": "https://ytjobs.co/job/40312",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40317",
+      "title": "Golf Video Editor Full-time",
+      "summary": "Golf Video Editor Full-time Remote Sports People & Blogs Comedy +2 more Eric Sim 1.09M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/40317",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
