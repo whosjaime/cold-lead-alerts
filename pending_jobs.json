@@ -4784,9 +4784,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 42,
+      "posted": true,
+      "posted_date": "2026-06-13"
     },
     {
       "id": "ytjobs_40176",
@@ -5308,6 +5309,22 @@
       "job_type": "Per project",
       "pay": "$20-$25 Per project",
       "url": "https://ytjobs.co/job/40326",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40332",
+      "title": "Content Lead Full-time",
+      "summary": "Content Lead Full-time Remote Real Estate Business and Finance +2 more Forever Estates UAE 10.3K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/40332",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -5859,6 +5876,21 @@
       "company": "Lewis Kelly \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-06-11"
+    },
+    {
+      "id": "ytcareers_9915ce8ff27d2dee0e23212b835622bb7330b33a7b4c771e7e89aa290ffbb1be",
+      "title": "Gaming Video Editor",
+      "summary": "The Lejitzombie YouTube channel is hiring for the following role: Gaming Video Editor.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/238",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Lejitzombie \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-06-13"
     }
   ],
   "BucketofCrabs": [
