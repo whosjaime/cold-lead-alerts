@@ -4801,9 +4801,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2620000,
+      "posted": true,
+      "posted_date": "2026-06-13"
     },
     {
       "id": "ytjobs_40178",
@@ -5889,6 +5890,21 @@
       "email": "hello@yt.careers",
       "email_source": "job_post",
       "company": "Lejitzombie \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-06-13"
+    },
+    {
+      "id": "ytcareers_2c0f31fec3db839ed1af6986dd4be47b583b6f280c7cf45ed1dbb7990a7a4bc9",
+      "title": "AI Content Specialist & Video Editor ($25/video)",
+      "summary": "The Videiro YouTube channel is hiring for the following role: AI Content Specialist & Video Editor ($25/video).",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "$25/video",
+      "url": "https://yt.careers/youtube-jobs/239",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Videiro \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-06-13"
     }
