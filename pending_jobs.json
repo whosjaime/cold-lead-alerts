@@ -4937,9 +4937,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-06-14"
     },
     {
       "id": "ytjobs_40205",
@@ -5397,6 +5398,22 @@
       "job_type": "Per project",
       "pay": "$75-$125 Per project",
       "url": "https://ytjobs.co/job/40357",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40369",
+      "title": "Hiring",
+      "summary": "Hiring - Long Term Video Editor $250-$400 Per project Remote Film & Animation Education +4 more Tech Through The Lens 287K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$250-$400 Per project",
+      "url": "https://ytjobs.co/job/40369",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -6955,6 +6972,35 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-06-13"
+    },
+    {
+      "id": "boc_653f2247b12807563a6baf568d9545d8a7064026deaa6a54d00a94986eb1b2da",
+      "title": "Environ Studios Minecraft Builder",
+      "summary": "Environ Studios Minecraft Builder Remote Only $1-$1000/Fixed Amount World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1-$1000",
+      "url": "https://www.bucketofcrabs.net/jobs/esL2b8LBsl",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-06-14"
+    },
+    {
+      "id": "boc_0f1ee4f45dc5d866240bc17e1f1b5f4d42464fc7f48c18afc362f7c385807c98",
+      "title": "Environ Studios Minecraft Skin Artist",
+      "summary": "Environ Studios Minecraft Skin Artist Remote Only $1-$1000/Fixed Amount Game Art Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1-$1000",
+      "url": "https://www.bucketofcrabs.net/jobs/CGgsX5wUkB",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
