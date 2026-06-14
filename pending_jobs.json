@@ -4971,9 +4971,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 200.0,
+      "subscribers": 92800,
+      "posted": true,
+      "posted_date": "2026-06-14"
     },
     {
       "id": "ytjobs_39977",
@@ -5415,6 +5416,22 @@
       "job_type": "Per project",
       "pay": "$250-$400 Per project",
       "url": "https://ytjobs.co/job/40369",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40195",
+      "title": "Interviewing YouTubers for",
+      "summary": "Interviewing YouTubers for $250 Per project Remote Gaming People & Blogs Entertainment Dialogue Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$250 Per project",
+      "url": "https://ytjobs.co/job/40195",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
