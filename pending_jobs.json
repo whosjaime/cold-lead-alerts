@@ -4980,7 +4980,7 @@
       "id": "ytjobs_39977",
       "title": "YouTube Producer",
       "summary": "YouTube Producer \u2014 Science & Curiosity Content Full-time Hybrid . Toronto, ON, Canada Education Science & Technology +4 more What If 8.91M subs",
-      "location": "Hybrid",
+      "location": "On-site",
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/39977",
@@ -4988,9 +4988,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 8910000,
+      "posted": true,
+      "posted_date": "2026-06-14"
     },
     {
       "id": "ytjobs_40239",
