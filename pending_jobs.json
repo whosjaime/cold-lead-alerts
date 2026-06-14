@@ -4920,9 +4920,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 216000,
+      "posted": true,
+      "posted_date": "2026-06-14"
     },
     {
       "id": "ytjobs_39917",
@@ -5380,6 +5381,22 @@
       "job_type": "Per project",
       "pay": "$150-$250 Per project",
       "url": "https://ytjobs.co/job/40349",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40357",
+      "title": "Video Editor",
+      "summary": "Video Editor $75-$125 Per project Remote Film & Animation Gaming +4 more Gospel of Bob 1.06K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$75-$125 Per project",
+      "url": "https://ytjobs.co/job/40357",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
