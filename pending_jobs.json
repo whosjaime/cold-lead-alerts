@@ -5005,9 +5005,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 15700,
+      "posted": true,
+      "posted_date": "2026-06-14"
     },
     {
       "id": "ytjobs_40237",
