@@ -5124,9 +5124,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-06-16"
     },
     {
       "id": "ytjobs_40263",
@@ -6197,6 +6198,21 @@
       "company": "Videiro \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-06-13"
+    },
+    {
+      "id": "ytcareers_5e72213cab10d31b6ad50fe47014015d0071aad5892665078311e8a469c29f2c",
+      "title": "VIDEO EDITORS",
+      "summary": "The Alex Ardenti YouTube channel is hiring for the following role: VIDEO EDITORS.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/240",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Alex Ardenti \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-06-16"
     }
   ],
   "BucketofCrabs": [
