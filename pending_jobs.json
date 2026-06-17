@@ -5243,9 +5243,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 1000.0,
+      "subscribers": 3530,
+      "posted": true,
+      "posted_date": "2026-06-17"
     },
     {
       "id": "ytjobs_40287",
@@ -5751,6 +5752,22 @@
       "job_type": "Part-time",
       "pay": "$15-$30 Per Hour",
       "url": "https://ytjobs.co/job/40462",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40507",
+      "title": "Long Form Reaction Video Editor",
+      "summary": "Long Form Reaction Video Editor $50-$200 Per project Remote Film & Animation Comedy +5 more Soul Tayshi 73.6K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$200 Per project",
+      "url": "https://ytjobs.co/job/40507",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
