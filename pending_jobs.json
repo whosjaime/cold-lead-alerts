@@ -5345,9 +5345,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 27,
+      "posted": true,
+      "posted_date": "2026-06-18"
     },
     {
       "id": "ytjobs_40332",
@@ -5885,6 +5886,38 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/40521",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_30780",
+      "title": "Video Editor for Roblox Content",
+      "summary": "Video Editor for Roblox Content $100-$350 Per project Remote Gaming Comedy Roblox Gaming +8 more PolarCub 605K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$350 Per project",
+      "url": "https://ytjobs.co/job/30780",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_39628",
+      "title": "Story Producer for Global Adventures",
+      "summary": "Story Producer for Global Adventures $1,000-$3,000 Per project Remote Travel & Events Entertainment +8 more aliashourkw 544 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$1,000-$3,000 Per project",
+      "url": "https://ytjobs.co/job/39628",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -7518,6 +7551,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-06-16"
+    },
+    {
+      "id": "boc_145b506f8c2567b3846be94a6e7d7bca2a6ca9b3259096fbb0f474682781c6de",
+      "title": "BlockFactory Animator",
+      "summary": "BlockFactory Animator Remote Only $17-$25/Hourly 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$17-$25/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/rg6wSklHqO",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-06-18"
     }
   ],
   "X": []
