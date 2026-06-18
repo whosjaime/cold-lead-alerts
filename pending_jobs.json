@@ -5362,9 +5362,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 1000.0,
+      "subscribers": 10300,
+      "posted": true,
+      "posted_date": "2026-06-18"
     },
     {
       "id": "ytjobs_40341",
@@ -5918,6 +5919,22 @@
       "job_type": "Per project",
       "pay": "$1,000-$3,000 Per project",
       "url": "https://ytjobs.co/job/39628",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40542",
+      "title": "Shorts/Reels Editor for Sports Medicine Channel",
+      "summary": "Shorts/Reels Editor for Sports Medicine Channel $50-$250 Per project Remote Sports Travel & Events Education +11 more Doctor Dynamo 12.2K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$250 Per project",
+      "url": "https://ytjobs.co/job/40542",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
