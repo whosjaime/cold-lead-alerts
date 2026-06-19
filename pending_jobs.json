@@ -5464,9 +5464,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 500,
+      "posted": true,
+      "posted_date": "2026-06-19"
     },
     {
       "id": "ytjobs_40410",
@@ -6020,6 +6021,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/40593",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40579",
+      "title": "Production Assistant",
+      "summary": "Production Assistant $100-$150 Per project Onsite . Miami, FL, US Food Howto & Style Education IRL +3 more The Food Theorists 5.53M subs",
+      "location": "On-site",
+      "job_type": "Per project",
+      "pay": "$100-$150 Per project",
+      "url": "https://ytjobs.co/job/40579",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
