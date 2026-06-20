@@ -5583,9 +5583,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 596000,
+      "posted": true,
+      "posted_date": "2026-06-20"
     },
     {
       "id": "ytjobs_40415",
@@ -6059,6 +6060,22 @@
       "job_type": "Per project",
       "pay": "$150-$200 Per project",
       "url": "https://ytjobs.co/job/40612",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40617",
+      "title": "YouTube Strategist & Script Architect -Turnaround Plan",
+      "summary": "YouTube Strategist & Script Architect -Turnaround Plan $280-$280 Per project Remote Pets & Animals Entertainment Vlog +1 more Ariana\u2019s Doggos \ud83d\udc3e 4.53K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$280-$280 Per project",
+      "url": "https://ytjobs.co/job/40617",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
