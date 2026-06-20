@@ -5617,9 +5617,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 826,
+      "posted": true,
+      "posted_date": "2026-06-20"
     },
     {
       "id": "ytjobs_40356",
@@ -6093,6 +6094,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/40558",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_36277",
+      "title": "Long-Form Documentary Video Editor for YouTube Channel Per project",
+      "summary": "Long-Form Documentary Video Editor for YouTube Channel Per project Remote Short Movies Travel & Events +10 more Brett Garamella 63K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/36277",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
