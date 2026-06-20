@@ -5566,9 +5566,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 324000,
+      "posted": true,
+      "posted_date": "2026-06-20"
     },
     {
       "id": "ytjobs_40302",
@@ -6042,6 +6043,22 @@
       "job_type": "Per project",
       "pay": "$100-$150 Per project",
       "url": "https://ytjobs.co/job/40579",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40612",
+      "title": "Dark Documentary/True Crime Scriptwriter",
+      "summary": "Dark Documentary/True Crime Scriptwriter $150-$200 Per project Remote Documentary True Crime +6 more Creator Atlas Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$150-$200 Per project",
+      "url": "https://ytjobs.co/job/40612",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
