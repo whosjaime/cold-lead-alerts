@@ -5600,9 +5600,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 6260,
+      "posted": true,
+      "posted_date": "2026-06-20"
     },
     {
       "id": "ytjobs_40413",
@@ -6076,6 +6077,22 @@
       "job_type": "Per project",
       "pay": "$280-$280 Per project",
       "url": "https://ytjobs.co/job/40617",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40558",
+      "title": "YouTube Thumbnail Designer Part-time",
+      "summary": "YouTube Thumbnail Designer Part-time Remote Gambling Casino IRL Vlog Internet Skater 93.3K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/40558",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
