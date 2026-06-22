@@ -5821,9 +5821,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 154000,
+      "posted": true,
+      "posted_date": "2026-06-22"
     },
     {
       "id": "ytjobs_40506",
@@ -7848,6 +7849,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-06-19"
+    },
+    {
+      "id": "boc_b090a630afb6389cf06bae93732e5e36c58697ee11b8208e507f37210337417f",
+      "title": "GoE-Craft Key-art",
+      "summary": "GoE-Craft Key-art / Banner Maker Remote Only $1-$1000000/Fixed Amount Marketing Art Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1-$1000000",
+      "url": "https://www.bucketofcrabs.net/jobs/JSQRuP9UdS",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-06-22"
     }
   ],
   "X": []
