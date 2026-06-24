@@ -6110,9 +6110,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 4530,
+      "posted": true,
+      "posted_date": "2026-06-24"
     },
     {
       "id": "ytjobs_40558",
@@ -6682,6 +6683,22 @@
       "job_type": "Per project",
       "pay": "$150-$450 Per project",
       "url": "https://ytjobs.co/job/40820",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40828",
+      "title": "YouTube Scriptwriter (Reality TV",
+      "summary": "YouTube Scriptwriter (Reality TV / Viral Content / Social Ex $50-$150 Per project Remote Drama Thriller People & Blogs +5 more Bryguy 40.2K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$150 Per project",
+      "url": "https://ytjobs.co/job/40828",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
