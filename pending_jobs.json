@@ -6127,9 +6127,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 93300,
+      "posted": true,
+      "posted_date": "2026-06-24"
     },
     {
       "id": "ytjobs_36277",
@@ -6699,6 +6700,22 @@
       "job_type": "Per project",
       "pay": "$50-$150 Per project",
       "url": "https://ytjobs.co/job/40828",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40826",
+      "title": "Thumbnail Designer For Minecraft Horror Mod channel!",
+      "summary": "Thumbnail Designer For Minecraft Horror Mod channel! $80-$100 Per project Remote Minecraft Gameplay DonaldDucc 3.27M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$80-$100 Per project",
+      "url": "https://ytjobs.co/job/40826",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
