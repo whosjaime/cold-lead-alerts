@@ -6042,9 +6042,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-06-24"
     },
     {
       "id": "ytjobs_40593",
@@ -6582,6 +6583,22 @@
       "job_type": "Per project",
       "pay": "$600-$1,300 Per project",
       "url": "https://ytjobs.co/job/37064",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40794",
+      "title": "Reality TV",
+      "summary": "Reality TV / YouTube Editor (Multi-Cam) \"Loyalty Tests\" $300-$500 Per project Remote Film & Animation Thriller Trailers +7 more Bryguy 40.2K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300-$500 Per project",
+      "url": "https://ytjobs.co/job/40794",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
