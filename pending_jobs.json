@@ -6076,9 +6076,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 5530000,
+      "posted": true,
+      "posted_date": "2026-06-24"
     },
     {
       "id": "ytjobs_40612",
@@ -6616,6 +6617,22 @@
       "job_type": "Per project",
       "pay": "$250-$500 Per project",
       "url": "https://ytjobs.co/job/40788",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40817",
+      "title": "Video Editor/Clipper Full-time",
+      "summary": "Video Editor/Clipper Full-time Remote Gaming Comedy Anime/Animation +6 more Janki 39 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/40817",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
