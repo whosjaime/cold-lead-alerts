@@ -6025,9 +6025,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2190,
+      "posted": true,
+      "posted_date": "2026-06-24"
     },
     {
       "id": "ytjobs_40566",
@@ -6565,6 +6566,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/38389",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_37064",
+      "title": "Video Editor for Police Bodycam Channel",
+      "summary": "Video Editor for Police Bodycam Channel $600-$1,300 Per project Remote Entertainment Action/Adventure +8 more Code Blue Cam 3.28M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$600-$1,300 Per project",
+      "url": "https://ytjobs.co/job/37064",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
