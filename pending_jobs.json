@@ -6229,9 +6229,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 44600,
+      "posted": true,
+      "posted_date": "2026-06-25"
     },
     {
       "id": "ytjobs_40707",
@@ -6833,6 +6834,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/40860",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40868",
+      "title": "Video Editor",
+      "summary": "Video Editor $150-$250 Per project Remote Movies Shows Trailers Review +3 more krayonz 2 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$150-$250 Per project",
+      "url": "https://ytjobs.co/job/40868",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
