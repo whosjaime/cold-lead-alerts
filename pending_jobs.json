@@ -6348,9 +6348,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 43600,
+      "posted": true,
+      "posted_date": "2026-06-26"
     },
     {
       "id": "ytjobs_40685",
@@ -7016,6 +7017,22 @@
       "job_type": "Full-time",
       "pay": "$24,000-$36,000 Per Year",
       "url": "https://ytjobs.co/job/40530",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40929",
+      "title": "Challenge Style Video Editor",
+      "summary": "Challenge Style Video Editor $100-$200 Per project Remote Travel & Events Entertainment +4 more Portholes and Pixie Dust 10.9K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$200 Per project",
+      "url": "https://ytjobs.co/job/40929",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -8752,7 +8769,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-06-26"
     },
     {
       "id": "boc_58642476052fbb8205d54053af70940181efba28e7187f3e779ba5491dba9238",
