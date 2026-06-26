@@ -6280,9 +6280,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 150.0,
+      "subscribers": 7020000,
+      "posted": true,
+      "posted_date": "2026-06-26"
     },
     {
       "id": "ytjobs_40693",
@@ -6900,6 +6901,22 @@
       "job_type": "Per project",
       "pay": "$75-$150 Per project",
       "url": "https://ytjobs.co/job/40858",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40881",
+      "title": "Scriptwriter for youtube commentary",
+      "summary": "Scriptwriter for youtube commentary $90-$140 Per project Remote Short Movies Comedy +11 more krayonz 2 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$90-$140 Per project",
+      "url": "https://ytjobs.co/job/40881",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
