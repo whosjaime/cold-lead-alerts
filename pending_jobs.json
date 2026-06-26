@@ -6382,9 +6382,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 5.0,
+      "subscribers": 5860,
+      "posted": true,
+      "posted_date": "2026-06-26"
     },
     {
       "id": "ytjobs_40720",
