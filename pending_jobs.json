@@ -6399,9 +6399,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 300.0,
+      "subscribers": 1590000,
+      "posted": true,
+      "posted_date": "2026-06-27"
     },
     {
       "id": "ytjobs_40371",
@@ -7035,6 +7036,22 @@
       "job_type": "Per project",
       "pay": "$100-$200 Per project",
       "url": "https://ytjobs.co/job/40929",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40937",
+      "title": "EDITOR VIDEO PRO, STORYTELLING PARA VIDEOS DE MISTERIOS \ud83d\udc7b Per project",
+      "summary": "EDITOR VIDEO PRO, STORYTELLING PARA VIDEOS DE MISTERIOS \ud83d\udc7b Per project Remote Action/Adventure Humor Misterio +6 more Nachano 5.05M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/40937",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
