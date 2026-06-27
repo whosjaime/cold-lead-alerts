@@ -6484,9 +6484,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 3700,
+      "posted": true,
+      "posted_date": "2026-06-27"
     },
     {
       "id": "ytjobs_40754",
@@ -7152,6 +7153,22 @@
       "job_type": "Full-time",
       "pay": "$70,000-$95,000 Per Year",
       "url": "https://ytjobs.co/job/40962",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40947",
+      "title": "Video Editor For Cartoon Channel (Long-Form)",
+      "summary": "Video Editor For Cartoon Channel (Long-Form) $225-$500 Per project Remote Film & Animation Entertainment +9 more Miracle Charm 379K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$225-$500 Per project",
+      "url": "https://ytjobs.co/job/40947",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
