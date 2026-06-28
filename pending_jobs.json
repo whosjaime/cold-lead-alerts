@@ -6603,9 +6603,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 200.0,
+      "subscribers": 12000000,
+      "posted": true,
+      "posted_date": "2026-06-28"
     },
     {
       "id": "ytjobs_37064",
@@ -7255,6 +7256,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/40997",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41006",
+      "title": "Lead Video Editor",
+      "summary": "Lead Video Editor $24,000-$120,000 Per Year . Full-time Remote Gaming Gambling Review +3 more SimpliHow 797K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$24,000-$120,000 Per Year",
+      "url": "https://ytjobs.co/job/41006",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
