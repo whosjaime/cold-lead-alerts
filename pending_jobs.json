@@ -6586,9 +6586,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 79000,
+      "posted": true,
+      "posted_date": "2026-06-28"
     },
     {
       "id": "ytjobs_38389",
@@ -7238,6 +7239,22 @@
       "job_type": "Part-time",
       "pay": "$25-$75 Per Hour",
       "url": "https://ytjobs.co/job/40988",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40997",
+      "title": "Long-form Video Editor needed for Fantasy maker channel Per project",
+      "summary": "Long-form Video Editor needed for Fantasy maker channel Per project Remote Sci-Fi/Fantasy Cinematic Makers +4 more Skill Tree Studios 45 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/40997",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
