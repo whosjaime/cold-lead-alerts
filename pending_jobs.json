@@ -6773,9 +6773,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2,
+      "posted": true,
+      "posted_date": "2026-06-29"
     },
     {
       "id": "ytjobs_40857",
@@ -7313,6 +7314,22 @@
       "job_type": "Per project",
       "pay": "$200-$350 Per project",
       "url": "https://ytjobs.co/job/40825",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41062",
+      "title": "Channel Manager",
+      "summary": "Channel Manager - Brawl Stars Part-time Remote Gaming brawlstars supercell +4 more Kevin Brawl Stars 21.9K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41062",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
