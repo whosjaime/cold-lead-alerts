@@ -6739,9 +6739,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 40200,
+      "posted": true,
+      "posted_date": "2026-06-29"
     },
     {
       "id": "ytjobs_40826",
@@ -7295,6 +7296,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/41026",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_40825",
+      "title": "Gaming Video Editor",
+      "summary": "Gaming Video Editor - GTA VI $200-$350 Per project Remote Gaming Autos & Vehicles Music +30 more HenkeGTA 15 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$200-$350 Per project",
+      "url": "https://ytjobs.co/job/40825",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
