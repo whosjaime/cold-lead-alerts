@@ -6824,9 +6824,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 46900,
+      "posted": true,
+      "posted_date": "2026-06-30"
     },
     {
       "id": "ytjobs_40813",
