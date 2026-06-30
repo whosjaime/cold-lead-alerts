@@ -6892,9 +6892,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 2,
+      "posted": true,
+      "posted_date": "2026-06-30"
     },
     {
       "id": "ytjobs_40847",
@@ -9255,6 +9256,21 @@
       "job_type": "Not listed",
       "pay": "$3340-$4200",
       "url": "https://www.bucketofcrabs.net/jobs/ewA8E6JBPd",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-06-30"
+    },
+    {
+      "id": "boc_1768429fa2dc37802a13c59e0c87471113f45abea5f0e0d33b1bd51af374503d",
+      "title": "XP Games Set Builder",
+      "summary": "XP Games Set Builder - XP GAMES Remote Only $25-$32/Hourly World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$25-$32/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/sjdRdGmquX",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
