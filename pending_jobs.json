@@ -7011,9 +7011,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 4670000,
+      "posted": true,
+      "posted_date": "2026-07-01"
     },
     {
       "id": "ytjobs_40909",
@@ -9331,6 +9332,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-06-30"
+    },
+    {
+      "id": "boc_33148ad556f6bfbdf2a6d3a47f02b4f758b0f0e48fb233fe6d8e702fd0653c5d",
+      "title": "Saturn Studios Trailer and promotional video creator",
+      "summary": "Saturn Studios Trailer and promotional video creator Remote Only $100-$5000/Fixed Amount Marketing Art Video",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$100-$5000",
+      "url": "https://www.bucketofcrabs.net/jobs/VO3xXV8hx1",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-01"
     }
   ],
   "X": []
