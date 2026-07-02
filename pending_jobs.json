@@ -7181,9 +7181,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 4,
+      "posted": true,
+      "posted_date": "2026-07-02"
     },
     {
       "id": "ytjobs_40962",
@@ -7705,6 +7706,22 @@
       "job_type": "Per project",
       "pay": "$500 Per project",
       "url": "https://ytjobs.co/job/41123",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41189",
+      "title": "Documentary Video Editor",
+      "summary": "Documentary Video Editor $25-$65 Per Hour . Part-time Remote Documentary Crime People & Blogs +4 more Tracy Rodriguez 10.5K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$25-$65 Per Hour",
+      "url": "https://ytjobs.co/job/41189",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
