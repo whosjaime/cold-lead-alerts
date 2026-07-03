@@ -7224,7 +7224,7 @@
       "id": "ytjobs_40970",
       "title": "Junior Video Editor",
       "summary": "Junior Video Editor $150-$300 Per project Hybrid . Cambridge, United Kingdom Film & Animation Videoblogging +6 more Mythica Entertainment 196K subs",
-      "location": "Hybrid",
+      "location": "On-site",
       "job_type": "Per project",
       "pay": "$150-$300 Per project",
       "url": "https://ytjobs.co/job/40970",
@@ -7232,9 +7232,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 196000,
+      "posted": true,
+      "posted_date": "2026-07-03"
     },
     {
       "id": "ytjobs_40978",
