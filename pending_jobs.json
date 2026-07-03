@@ -7300,9 +7300,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 50.0,
+      "subscribers": 34100,
+      "posted": true,
+      "posted_date": "2026-07-03"
     },
     {
       "id": "ytjobs_41006",
@@ -7872,6 +7873,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/37315",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41226",
+      "title": "2D Animator & Video Editor Per project",
+      "summary": "2D Animator & Video Editor Per project Remote Film & Animation Entertainment +8 more yikes 1.81M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41226",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -8511,6 +8528,21 @@
       "email": "hello@yt.careers",
       "email_source": "job_post",
       "company": "Lectec | Everyday Science \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-07-03"
+    },
+    {
+      "id": "ytcareers_3f452f6012be33b9faadfa76ca6fc18f70bdf4cc2751475be8529b2f78bb8789",
+      "title": "YouTube Long Form Video Editor",
+      "summary": "The Dinner Notes YouTube channel is hiring for the following role: YouTube Long Form Video Editor.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/244",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Dinner Notes \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-07-03"
     }
@@ -9788,7 +9820,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-03"
     },
     {
       "id": "boc_fb34a7fafbe65b959b7d6a1179b5c753cdc54e426b7c19f5090ff37f2f6dc532",
