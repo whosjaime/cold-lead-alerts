@@ -7334,9 +7334,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 60600,
+      "posted": true,
+      "posted_date": "2026-07-03"
     },
     {
       "id": "ytjobs_40825",
@@ -7954,6 +7955,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/41225",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41235",
+      "title": "Video Editor (Colorist)",
+      "summary": "Video Editor (Colorist) $25-$150 Per project Remote Videoblogging People & Blogs +6 more EximusPro Studios Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$25-$150 Per project",
+      "url": "https://ytjobs.co/job/41235",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
