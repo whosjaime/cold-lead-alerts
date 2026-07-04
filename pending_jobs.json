@@ -7402,9 +7402,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 300.0,
+      "subscribers": 155000,
+      "posted": true,
+      "posted_date": "2026-07-04"
     },
     {
       "id": "ytjobs_41092",
@@ -8646,6 +8647,21 @@
       "company": "Dinner Notes \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-07-03"
+    },
+    {
+      "id": "ytcareers_01c403494620739f83b60db95e46553b9e4ecbb5ee3b1180f55d4f93660287fe",
+      "title": "Junior Video Editor for Sport YouTube Channel",
+      "summary": "The Maz Mirzadeh YouTube channel is hiring for the following role: Junior Video Editor for Sport YouTube Channel.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/245",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Maz Mirzadeh \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-07-04"
     }
   ],
   "BucketofCrabs": [
