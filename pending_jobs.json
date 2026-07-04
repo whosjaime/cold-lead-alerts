@@ -7368,9 +7368,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 25300,
+      "posted": true,
+      "posted_date": "2026-07-04"
     },
     {
       "id": "ytjobs_41076",
@@ -7972,6 +7973,22 @@
       "job_type": "Per project",
       "pay": "$25-$150 Per project",
       "url": "https://ytjobs.co/job/41235",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41239",
+      "title": "Video Editor for KickFlix Full-time",
+      "summary": "Video Editor for KickFlix Full-time Remote Sports People & Blogs Comedy +5 more KickFlix 1.42M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41239",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
