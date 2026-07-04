@@ -7436,9 +7436,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 549,
+      "posted": true,
+      "posted_date": "2026-07-04"
     },
     {
       "id": "ytjobs_41086",
@@ -7992,6 +7993,38 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/41239",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41259",
+      "title": "Video Editor for Filmmaking Channel",
+      "summary": "Video Editor for Filmmaking Channel $250-$350 Per project Remote Film & Animation Education +10 more Darren Durlach 27 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$250-$350 Per project",
+      "url": "https://ytjobs.co/job/41259",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41258",
+      "title": "Long-Form YouTube Video Editor (Remote)",
+      "summary": "Long-Form YouTube Video Editor (Remote) \u2014 Real Estate & Loca $17,500-$21,000 Per Year . Full-time Remote People & Blogs News & Politics +8 more Wilson Leung - bayareawilson 13.9K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$17,500-$21,000 Per Year",
+      "url": "https://ytjobs.co/job/41258",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -9983,7 +10016,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-04"
     }
   ],
   "X": []
