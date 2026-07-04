@@ -7479,7 +7479,7 @@
       "id": "ytjobs_41083",
       "title": "Head Of Content",
       "summary": "Head Of Content $80,000 Per Year . Full-time Hybrid . London, United Kingdom Gaming People & Blogs +17 more WillNE 5.32M subs",
-      "location": "Hybrid",
+      "location": "On-site",
       "job_type": "Full-time",
       "pay": "$80,000 Per Year",
       "url": "https://ytjobs.co/job/41083",
@@ -7487,9 +7487,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 500.0,
+      "subscribers": 5320000,
+      "posted": true,
+      "posted_date": "2026-07-04"
     },
     {
       "id": "ytjobs_41104",
