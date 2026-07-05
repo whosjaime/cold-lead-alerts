@@ -7606,9 +7606,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1230000,
+      "posted": true,
+      "posted_date": "2026-07-05"
     },
     {
       "id": "ytjobs_41155",
@@ -8066,6 +8067,22 @@
       "job_type": "Per project",
       "pay": "$650 Per project",
       "url": "https://ytjobs.co/job/41273",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41290",
+      "title": "Scriptwriter",
+      "summary": "Scriptwriter $50-$100 Per project Remote Gaming Gaming Faceless Mack 1.05K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$100 Per project",
+      "url": "https://ytjobs.co/job/41290",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
