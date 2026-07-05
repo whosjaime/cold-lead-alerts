@@ -7674,9 +7674,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 10.0,
+      "subscribers": 1950,
+      "posted": true,
+      "posted_date": "2026-07-05"
     },
     {
       "id": "ytjobs_4606",
