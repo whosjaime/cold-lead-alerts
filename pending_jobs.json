@@ -7623,9 +7623,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-05"
     },
     {
       "id": "ytjobs_41175",
@@ -8083,6 +8084,22 @@
       "job_type": "Per project",
       "pay": "$50-$100 Per project",
       "url": "https://ytjobs.co/job/41290",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41293",
+      "title": "Lead Video Editor (TradeMomentum.org)",
+      "summary": "Lead Video Editor (TradeMomentum.org) $78,000-$114,000 Per Year . Full-time Remote . US Education Business and Finance +7 more kevin cabana 0 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$78,000-$114,000 Per Year",
+      "url": "https://ytjobs.co/job/41293",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -10076,6 +10093,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-04"
+    },
+    {
+      "id": "boc_12299e2d4bd699478dc7e9172d365be8ba5e3aae407a597f6ab2ec316b021dd0",
+      "title": "Spark Studios Senior Builder",
+      "summary": "Spark Studios Senior Builder Remote Only $100-$4000/Fixed Amount World Builder Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$100-$4000",
+      "url": "https://www.bucketofcrabs.net/jobs/kXPuDBqNdK",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-05"
     }
   ],
   "X": []
