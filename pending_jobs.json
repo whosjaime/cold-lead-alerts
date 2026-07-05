@@ -7572,9 +7572,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 8,
+      "posted": true,
+      "posted_date": "2026-07-05"
     },
     {
       "id": "ytjobs_41132",
@@ -8048,6 +8049,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/40718",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41273",
+      "title": "Video Editor",
+      "summary": "Video Editor $650 Per project Remote Sports Short Movies +12 more FlipSide Football 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$650 Per project",
+      "url": "https://ytjobs.co/job/41273",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
