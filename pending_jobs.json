@@ -7776,9 +7776,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 803000,
+      "posted": true,
+      "posted_date": "2026-07-06"
     },
     {
       "id": "ytjobs_41199",
@@ -8236,6 +8237,22 @@
       "job_type": "Per project",
       "pay": "$700-$800 Per project",
       "url": "https://ytjobs.co/job/41334",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41321",
+      "title": "Junior Youtube Strategist Full-time",
+      "summary": "Junior Youtube Strategist Full-time Remote News & Politics Howto & Style +15 more Joshua Lessard 2.57K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41321",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
