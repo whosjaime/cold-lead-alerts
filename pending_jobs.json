@@ -7708,9 +7708,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 1000.0,
+      "subscribers": 2820000,
+      "posted": true,
+      "posted_date": "2026-07-06"
     },
     {
       "id": "ytjobs_41172",
@@ -8104,6 +8105,22 @@
       "job_type": "Full-time",
       "pay": "$78,000-$114,000 Per Year",
       "url": "https://ytjobs.co/job/41293",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_31968",
+      "title": "Thumbnail Designer Blake Rocha Fin Kwong Hudson Cosper style",
+      "summary": "Thumbnail Designer Blake Rocha Fin Kwong Hudson Cosper style $15-$80 Per project Remote Travel & Events Videoblogging +10 more Trey Colley 2.39K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$15-$80 Per project",
+      "url": "https://ytjobs.co/job/31968",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
