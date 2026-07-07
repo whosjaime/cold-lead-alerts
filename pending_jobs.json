@@ -7827,9 +7827,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1200,
+      "posted": true,
+      "posted_date": "2026-07-07"
     },
     {
       "id": "ytjobs_41205",
@@ -8287,6 +8288,22 @@
       "job_type": "Full-time",
       "pay": "$120,000-$240,000 Per Year",
       "url": "https://ytjobs.co/job/41350",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41354",
+      "title": "Video Editor",
+      "summary": "Video Editor $50 Per project Remote Gaming Howto & Style Movies +11 more Tonit0 1 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50 Per project",
+      "url": "https://ytjobs.co/job/41354",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
