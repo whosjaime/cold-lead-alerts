@@ -7912,9 +7912,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-08"
     },
     {
       "id": "ytjobs_41226",
@@ -8500,6 +8501,22 @@
       "job_type": "Full-time",
       "pay": "$8-12k/month",
       "url": "https://ytjobs.co/job/41381",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41390",
+      "title": "Video/Thumbnail Editor",
+      "summary": "Video/Thumbnail Editor - WEEKLY $150-$250 Per project Remote Movies Shows Review Shorts/Reels Alter Ego Bros 9.86K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$150-$250 Per project",
+      "url": "https://ytjobs.co/job/41390",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
