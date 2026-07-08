@@ -8031,9 +8031,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 500.0,
+      "subscribers": 1420000,
+      "posted": true,
+      "posted_date": "2026-07-08"
     },
     {
       "id": "ytjobs_41259",
@@ -8603,6 +8604,22 @@
       "job_type": "Full-time",
       "pay": "$90,000-$100,000 Per Year",
       "url": "https://ytjobs.co/job/41430",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41433",
+      "title": "Short and Long form Video Editor",
+      "summary": "Short and Long form Video Editor $150-$2,000 Per project Remote Science & Technology Shorts Q&A +5 more GetPeakHealth 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$150-$2,000 Per project",
+      "url": "https://ytjobs.co/job/41433",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
