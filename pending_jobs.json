@@ -7980,9 +7980,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 711000,
+      "posted": true,
+      "posted_date": "2026-07-08"
     },
     {
       "id": "ytjobs_41225",
@@ -8552,6 +8553,22 @@
       "job_type": "Per project",
       "pay": "$300-$600 Per project",
       "url": "https://ytjobs.co/job/41407",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41422",
+      "title": "Video Editor for Podcast",
+      "summary": "Video Editor for Podcast $500-$1,000 Per project Remote Sports Entertainment Education +6 more Viral Vision Inc. Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$500-$1,000 Per project",
+      "url": "https://ytjobs.co/job/41422",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
