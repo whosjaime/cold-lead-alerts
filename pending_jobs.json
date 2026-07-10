@@ -8303,9 +8303,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 115,
+      "posted": true,
+      "posted_date": "2026-07-10"
     },
     {
       "id": "ytjobs_41350",
@@ -8779,6 +8780,22 @@
       "job_type": "Per project",
       "pay": "$500-$1,000 Per project",
       "url": "https://ytjobs.co/job/41505",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41508",
+      "title": "Video Editor",
+      "summary": "Video Editor $150-$300 Per project Remote Education Documentary Crime +7 more Ruins of Reign 43 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$150-$300 Per project",
+      "url": "https://ytjobs.co/job/41508",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
