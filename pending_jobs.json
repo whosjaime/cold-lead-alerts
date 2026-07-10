@@ -8184,9 +8184,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-10"
     },
     {
       "id": "ytjobs_41332",
