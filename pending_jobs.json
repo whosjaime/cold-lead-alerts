@@ -8235,9 +8235,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 5750000,
+      "posted": true,
+      "posted_date": "2026-07-10"
     },
     {
       "id": "ytjobs_41337",
@@ -8695,6 +8696,38 @@
       "job_type": "Part-time",
       "pay": "$20-$29 Per Hour",
       "url": "https://ytjobs.co/job/41479",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41489",
+      "title": "Video Editor for Long-Form Horror Walkthrough Channel",
+      "summary": "Video Editor for Long-Form Horror Walkthrough Channel $6,000-$10,000 Per Year . Full-time Remote Gaming Reaction Walkthrough +2 more AwesomeTOM 3.47K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$6,000-$10,000 Per Year",
+      "url": "https://ytjobs.co/job/41489",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41486",
+      "title": "Researcher True Crime Per project",
+      "summary": "Researcher True Crime Per project Remote Documentary Crime Police Prime 30.1K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41486",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -10763,6 +10796,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-09"
+    },
+    {
+      "id": "boc_af5ba07718bc911e0f5a4bcf1b8f9fda0b8c23227406378b310e579c13cce378",
+      "title": "Gamefam Marketing Artist",
+      "summary": "Gamefam Marketing Artist Remote Only $50-$500/Fixed Amount Marketing Art",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$50-$500",
+      "url": "https://www.bucketofcrabs.net/jobs/FMBwBJCXtL",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-10"
     }
   ],
   "X": []
