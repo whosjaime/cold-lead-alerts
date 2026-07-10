@@ -8252,9 +8252,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 25.0,
+      "subscribers": 30,
+      "posted": true,
+      "posted_date": "2026-07-10"
     },
     {
       "id": "ytjobs_41334",
@@ -8728,6 +8729,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/41486",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_27861",
+      "title": "Thumbnail Designer \u2013 Gaming & AI",
+      "summary": "Thumbnail Designer \u2013 Gaming & AI | VersusAI $35-$50 Per project Remote Gaming Science & Technology +10 more VersusAI 2.19K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$35-$50 Per project",
+      "url": "https://ytjobs.co/job/27861",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
