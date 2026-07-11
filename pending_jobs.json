@@ -8490,9 +8490,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 7140,
+      "posted": true,
+      "posted_date": "2026-07-11"
     },
     {
       "id": "ytjobs_41383",
@@ -8902,6 +8903,22 @@
       "job_type": "Per project",
       "pay": "$70-$200 Per project",
       "url": "https://ytjobs.co/job/41530",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_38421",
+      "title": "Video Editor For FOOD CHANNEL Per project",
+      "summary": "Video Editor For FOOD CHANNEL Per project Remote Film & Animation Food IRL Vlog +1 more Zenith 184K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/38421",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
