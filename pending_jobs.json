@@ -8507,9 +8507,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 294000,
+      "posted": true,
+      "posted_date": "2026-07-11"
     },
     {
       "id": "ytjobs_41385",
@@ -8919,6 +8920,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/38421",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41547",
+      "title": "Thumbnail Designer",
+      "summary": "Thumbnail Designer $10,000-$10,000 Per Year . Full-time Remote Entertainment Education +22 more Veritas Creative Media Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$10,000-$10,000 Per Year",
+      "url": "https://ytjobs.co/job/41547",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
