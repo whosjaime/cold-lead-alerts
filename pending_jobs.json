@@ -8456,9 +8456,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 223000,
+      "posted": true,
+      "posted_date": "2026-07-11"
     },
     {
       "id": "ytjobs_39822",
@@ -10983,6 +10984,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-10"
+    },
+    {
+      "id": "boc_9b5c6213cb9473639ddd808764ad1c0cdf0167e69a23c04c8c75d264ca78a838",
+      "title": "W Studio Bedrock Developer",
+      "summary": "W Studio Bedrock Developer Remote Only $20-$25/Hourly Game Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$20-$25/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/Rzq4UqLgpU",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-11"
     }
   ],
   "X": []
