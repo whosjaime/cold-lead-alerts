@@ -8320,9 +8320,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 14900000,
+      "posted": true,
+      "posted_date": "2026-07-11"
     },
     {
       "id": "ytjobs_41354",
