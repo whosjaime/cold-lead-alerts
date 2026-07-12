@@ -8643,9 +8643,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 100.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-12"
     },
     {
       "id": "ytjobs_41335",
@@ -11105,6 +11106,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-11"
+    },
+    {
+      "id": "boc_28d59ed1d3764e2b39418e03d9a395a61cefc2bf9bc794fb97042b7797b75d45",
+      "title": "AGF Studios App Designer, Developer, 3D, 2D, QA",
+      "summary": "AGF Studios App Designer, Developer, 3D, 2D, QA Remote Only $100-$10000/Fixed Amount - yearly QA/Testing Game Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$100-$10000",
+      "url": "https://www.bucketofcrabs.net/jobs/2AJy1fJoWb",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-12"
     }
   ],
   "X": []
