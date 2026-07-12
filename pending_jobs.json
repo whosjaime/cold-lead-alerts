@@ -8618,7 +8618,7 @@
       "id": "ytjobs_41427",
       "title": "YouTube Producer Per project",
       "summary": "YouTube Producer Per project Hybrid . Toronto, ON, Canada Documentary Crime Fathom Film Group Company",
-      "location": "Hybrid",
+      "location": "On-site",
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/41427",
@@ -8626,9 +8626,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-12"
     },
     {
       "id": "ytjobs_41430",
