@@ -8558,9 +8558,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 10.0,
+      "subscribers": 9860,
+      "posted": true,
+      "posted_date": "2026-07-12"
     },
     {
       "id": "ytjobs_41417",
@@ -8938,6 +8939,22 @@
       "job_type": "Full-time",
       "pay": "$10,000-$10,000 Per Year",
       "url": "https://ytjobs.co/job/41547",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41552",
+      "title": "FormAWin Client Testimonial Video",
+      "summary": "FormAWin Client Testimonial Video $50-$100 Per project Remote Q&A Interview Podcast Cinematic FormaWin 162 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$100 Per project",
+      "url": "https://ytjobs.co/job/41552",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
