@@ -8677,9 +8677,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 18300,
+      "posted": true,
+      "posted_date": "2026-07-12"
     },
     {
       "id": "ytjobs_41445",
@@ -9009,6 +9010,22 @@
       "job_type": "Full-time",
       "pay": "$36,000-$72,000 Per Year",
       "url": "https://ytjobs.co/job/41570",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41438",
+      "title": "Assistant YouTube Strategist",
+      "summary": "Assistant YouTube Strategist - Scripts, Packaging, Ideation $50,000-$60,000 Per Year . Full-time Remote Entertainment Education +13 more YT Pros Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$50,000-$60,000 Per Year",
+      "url": "https://ytjobs.co/job/41438",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
