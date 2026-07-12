@@ -8592,9 +8592,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-12"
     },
     {
       "id": "ytjobs_41422",
@@ -9004,6 +9005,22 @@
       "job_type": "Per project",
       "pay": "$200-$350 Per project",
       "url": "https://ytjobs.co/job/41561",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41570",
+      "title": "Creative Director",
+      "summary": "Creative Director / Animatic Artist (Animation) $36,000-$72,000 Per Year . Full-time Remote Comedy Education +4 more Probably Fine 7 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$36,000-$72,000 Per Year",
+      "url": "https://ytjobs.co/job/41570",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
