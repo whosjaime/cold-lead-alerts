@@ -8762,9 +8762,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2190,
+      "posted": true,
+      "posted_date": "2026-07-13"
     },
     {
       "id": "ytjobs_41507",
@@ -9078,6 +9079,22 @@
       "job_type": "Part-time",
       "pay": "$2-$5 Per Hour",
       "url": "https://ytjobs.co/job/41585",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41601",
+      "title": "Channel Manager & Video Editor Full-time",
+      "summary": "Channel Manager & Video Editor Full-time Remote Gaming Unboxing Gameplay Wynnsanity 1.82M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41601",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -11191,6 +11208,49 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-12"
+    },
+    {
+      "id": "boc_2db44328873e4c7e10d49ce0d163697e083381d46d7283da6097cf70f0ef9a9e",
+      "title": "Myteria Network 3D Modeler",
+      "summary": "Myteria Network 3D Modeler Remote Only Voluntary 3D Models/Animator Design",
+      "location": "Remote",
+      "job_type": "Voluntary",
+      "pay": "Voluntary",
+      "url": "https://www.bucketofcrabs.net/jobs/swlJTWSUrx",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-13"
+    },
+    {
+      "id": "boc_b5317ae6a8895b4197bb6e2c3ac67059a0308f8d3f44575b32aecad470e06edd",
+      "title": "Myteria Network 2D Artist",
+      "summary": "Myteria Network 2D Artist Remote Only Voluntary Game Art Design",
+      "location": "Remote",
+      "job_type": "Voluntary",
+      "pay": "Voluntary",
+      "url": "https://www.bucketofcrabs.net/jobs/Kd3sAxWAx7",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_d5c0534ed7b871e8e2930693822d05472c15050e56778eb7b63afe627b25eea1",
+      "title": "Myteria Network Java Game Developer",
+      "summary": "Myteria Network Java Game Developer Remote Only Voluntary Operations Game Developer",
+      "location": "Remote",
+      "job_type": "Voluntary",
+      "pay": "Voluntary",
+      "url": "https://www.bucketofcrabs.net/jobs/K1uDEdEZRa",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
