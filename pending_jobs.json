@@ -8779,9 +8779,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 158,
+      "posted": true,
+      "posted_date": "2026-07-13"
     },
     {
       "id": "ytjobs_41505",
@@ -9095,6 +9096,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/41601",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41604",
+      "title": "Startup Entrepreneurship Clipper",
+      "summary": "Startup Entrepreneurship Clipper $20-$1,000 Per project Remote Videoblogging Science & Technology +12 more Founders, Inc. 75.2K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$20-$1,000 Per project",
+      "url": "https://ytjobs.co/job/41604",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -11236,7 +11253,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-13"
     },
     {
       "id": "boc_d5c0534ed7b871e8e2930693822d05472c15050e56778eb7b63afe627b25eea1",
@@ -11246,6 +11264,20 @@
       "job_type": "Voluntary",
       "pay": "Voluntary",
       "url": "https://www.bucketofcrabs.net/jobs/K1uDEdEZRa",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_7ff57b43306ad4da304c27a24e21c709166d4c67cb727cbfc3ee8c34070fa94b",
+      "title": "Myteria Network Professional Builder",
+      "summary": "Myteria Network Professional Builder Remote Only Voluntary World Builder Design",
+      "location": "Remote",
+      "job_type": "Voluntary",
+      "pay": "Voluntary",
+      "url": "https://www.bucketofcrabs.net/jobs/JdqF8dxUJO",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
