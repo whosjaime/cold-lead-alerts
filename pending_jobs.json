@@ -8932,9 +8932,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 184000,
+      "posted": true,
+      "posted_date": "2026-07-14"
     },
     {
       "id": "ytjobs_41547",
@@ -9232,6 +9233,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/41614",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41633",
+      "title": "Video Editor",
+      "summary": "Video Editor \u2014 Short-Form Paid Ads $36,000-$50,000 Per Year . Full-time Remote Education Shorts Heath +5 more Fountain Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$36,000-$50,000 Per Year",
+      "url": "https://ytjobs.co/job/41633",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
