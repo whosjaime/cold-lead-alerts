@@ -8949,9 +8949,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-14"
     },
     {
       "id": "ytjobs_41552",
@@ -9249,6 +9250,22 @@
       "job_type": "Full-time",
       "pay": "$36,000-$50,000 Per Year",
       "url": "https://ytjobs.co/job/41633",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41644",
+      "title": "Story-focused editor for a long-form YouTube adventure Per project",
+      "summary": "Story-focused editor for a long-form YouTube adventure Per project Remote . US Travel & Events Action/Adventure +5 more Kelso Bradshaw 11 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41644",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
