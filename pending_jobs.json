@@ -8966,9 +8966,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2570,
+      "posted": true,
+      "posted_date": "2026-07-14"
     },
     {
       "id": "ytjobs_41564",
@@ -9266,6 +9267,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/41644",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41641",
+      "title": "Video Editor for Twitch Channel",
+      "summary": "Video Editor for Twitch Channel $50-$100 Per project Remote Music Entertainment Streaming +6 more Yxng Dman 2.38K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$100 Per project",
+      "url": "https://ytjobs.co/job/41641",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
