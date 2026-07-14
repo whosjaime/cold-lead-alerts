@@ -8915,9 +8915,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2040,
+      "posted": true,
+      "posted_date": "2026-07-14"
     },
     {
       "id": "ytjobs_38421",
@@ -11413,6 +11414,21 @@
       "job_type": "Not listed",
       "pay": "$67000-$94000",
       "url": "https://www.bucketofcrabs.net/jobs/zqzEmt3jzx",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-14"
+    },
+    {
+      "id": "boc_0700326902a50f0183c739e19b974f4a580c7e713ce0ccddcf66aeda70be5fd9",
+      "title": "Myteria Network Game Sound Designer",
+      "summary": "Myteria Network Game Sound Designer Remote Only Voluntary Audio Design",
+      "location": "Remote",
+      "job_type": "Voluntary",
+      "pay": "Voluntary",
+      "url": "https://www.bucketofcrabs.net/jobs/X2vSbMLoYw",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
