@@ -9136,9 +9136,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 75200,
+      "posted": true,
+      "posted_date": "2026-07-15"
     },
     {
       "id": "ytjobs_36942",
