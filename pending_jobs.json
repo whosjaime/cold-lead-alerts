@@ -9034,9 +9034,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 200.0,
+      "subscribers": 7,
+      "posted": true,
+      "posted_date": "2026-07-15"
     },
     {
       "id": "ytjobs_41438",
@@ -11505,6 +11506,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-14"
+    },
+    {
+      "id": "boc_341450cb62b38d30c932630b14ff71ce46f7d5783d8f87332a86d2ba5b0f7da7",
+      "title": "Hoplite Network Scriptwriter",
+      "summary": "Hoplite Network Scriptwriter Remote Only $25-$25/Hourly Writer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$25-$25/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/G45BfbbAEO",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-15"
     }
   ],
   "X": []
