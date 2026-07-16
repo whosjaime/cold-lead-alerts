@@ -9289,9 +9289,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 250.0,
+      "subscribers": 11,
+      "posted": true,
+      "posted_date": "2026-07-16"
     },
     {
       "id": "ytjobs_41641",
@@ -11878,6 +11879,21 @@
       "job_type": "Not listed",
       "pay": "$10-$2000",
       "url": "https://www.bucketofcrabs.net/jobs/lJaOdM7heD",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-16"
+    },
+    {
+      "id": "boc_2c5db4e5d5d280f186591b191116f87daf42cca7bf38ce72cb04e2e9aa6cafd6",
+      "title": "Spright Builder",
+      "summary": "Spright Builder Remote Only $100-$5000/Fixed Amount World Builder Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$100-$5000",
+      "url": "https://www.bucketofcrabs.net/jobs/6xMUdvrdgm",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
