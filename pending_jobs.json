@@ -9204,9 +9204,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 105.0,
+      "subscribers": 8250,
+      "posted": true,
+      "posted_date": "2026-07-16"
     },
     {
       "id": "ytjobs_41628",
@@ -9456,6 +9457,22 @@
       "job_type": "Per project",
       "pay": "$300 Per project",
       "url": "https://ytjobs.co/job/41691",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41704",
+      "title": "Short Form Video Editor Full-time",
+      "summary": "Short Form Video Editor Full-time Remote Marketing Business and Finance +8 more GoBIG Systems 5.63K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41704",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
