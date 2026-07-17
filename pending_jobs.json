@@ -9476,9 +9476,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 481000,
+      "posted": true,
+      "posted_date": "2026-07-17"
     },
     {
       "id": "ytjobs_41704",
@@ -9680,6 +9681,22 @@
       "job_type": "Per project",
       "pay": "$30-$50 Per project",
       "url": "https://ytjobs.co/job/41712",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41788",
+      "title": "Video Editor",
+      "summary": "Video Editor $8-$10 Per Hour . Part-time Remote Sports Gaming Shorts/Reels Nick Knows Ball 20.1K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$8-$10 Per Hour",
+      "url": "https://ytjobs.co/job/41788",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
