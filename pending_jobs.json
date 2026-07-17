@@ -9340,9 +9340,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 15.0,
+      "subscribers": 767000,
+      "posted": true,
+      "posted_date": "2026-07-17"
     },
     {
       "id": "ytjobs_41667",
@@ -9624,6 +9625,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/41733",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41746",
+      "title": "Scriptwriter",
+      "summary": "Scriptwriter $25-$25 Per Hour . Part-time Remote Gaming Entertainment Minecraft +2 more SpeedSilver 3.99M subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$25-$25 Per Hour",
+      "url": "https://ytjobs.co/job/41746",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
