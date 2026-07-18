@@ -9629,9 +9629,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 3350,
+      "posted": true,
+      "posted_date": "2026-07-18"
     },
     {
       "id": "ytjobs_41733",
@@ -9833,6 +9834,22 @@
       "job_type": "Per project",
       "pay": "$30-$40 Per project",
       "url": "https://ytjobs.co/job/41807",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41834",
+      "title": "YouTube Scriptwriter",
+      "summary": "YouTube Scriptwriter \u2014 Finance & Tech Explainers $300-$450 Per project Remote Comedy Entertainment +13 more HD Acquisitions LLC Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300-$450 Per project",
+      "url": "https://ytjobs.co/job/41834",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
