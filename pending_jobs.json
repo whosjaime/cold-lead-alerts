@@ -9680,9 +9680,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2580,
+      "posted": true,
+      "posted_date": "2026-07-18"
     },
     {
       "id": "ytjobs_41712",
@@ -9884,6 +9885,22 @@
       "job_type": "Per project",
       "pay": "$100-$150 Per project",
       "url": "https://ytjobs.co/job/41837",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41839",
+      "title": "Lead YouTube Strategist for Business & Finance Part-time",
+      "summary": "Lead YouTube Strategist for Business & Finance Part-time Remote Science & Technology +3 more Khurram Javed Mir 83 subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41839",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
