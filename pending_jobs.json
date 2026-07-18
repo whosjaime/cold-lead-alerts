@@ -9510,9 +9510,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 280000,
+      "posted": true,
+      "posted_date": "2026-07-18"
     },
     {
       "id": "ytjobs_41721",
@@ -9698,6 +9699,22 @@
       "job_type": "Part-time",
       "pay": "$8-$10 Per Hour",
       "url": "https://ytjobs.co/job/41788",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41795",
+      "title": "Thumbnail Designer",
+      "summary": "Thumbnail Designer $100-$1,000 Per project Remote Business and Finance Podcast Ponder Network 87 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$1,000 Per project",
+      "url": "https://ytjobs.co/job/41795",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
