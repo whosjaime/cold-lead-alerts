@@ -9578,9 +9578,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 10400,
+      "posted": true,
+      "posted_date": "2026-07-18"
     },
     {
       "id": "ytjobs_41229",
@@ -12108,6 +12109,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-16"
+    },
+    {
+      "id": "boc_0e76b82af24c3c4ecfb9d4c04c783255bf1f2077feda902f8e31b33b94464648",
+      "title": "BlockFactory Manager",
+      "summary": "BlockFactory Manager Remote Only $15-$25/Hourly Operations Other",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$15-$25/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/EwHdyUnRtg",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-18"
     }
   ],
   "X": []
