@@ -9799,9 +9799,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 50.0,
+      "subscribers": 9240,
+      "posted": true,
+      "posted_date": "2026-07-19"
     },
     {
       "id": "ytjobs_41812",
