@@ -9782,9 +9782,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 15900000,
+      "posted": true,
+      "posted_date": "2026-07-19"
     },
     {
       "id": "ytjobs_41821",
@@ -9970,6 +9971,22 @@
       "job_type": "Per project",
       "pay": "$500-$1,000 Per project",
       "url": "https://ytjobs.co/job/41850",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41866",
+      "title": "Video Editor f\u00fcr Lang-Videos (ca. 20 Minuten)",
+      "summary": "Video Editor f\u00fcr Lang-Videos (ca. 20 Minuten) $250-$350 Per project Remote People & Blogs DoktorWeigl 1.31M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$250-$350 Per project",
+      "url": "https://ytjobs.co/job/41866",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
