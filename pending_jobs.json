@@ -9816,9 +9816,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 102000,
+      "posted": true,
+      "posted_date": "2026-07-19"
     },
     {
       "id": "ytjobs_41810",
@@ -9988,6 +9989,22 @@
       "job_type": "Per project",
       "pay": "$250-$350 Per project",
       "url": "https://ytjobs.co/job/41866",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41873",
+      "title": "Gaming Video Editor",
+      "summary": "Gaming Video Editor $250-$300 Per project Remote Gaming VKL 5.14K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$250-$300 Per project",
+      "url": "https://ytjobs.co/job/41873",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
