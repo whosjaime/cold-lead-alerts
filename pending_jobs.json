@@ -9952,9 +9952,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 197,
+      "posted": true,
+      "posted_date": "2026-07-20"
     },
     {
       "id": "ytjobs_41860",
@@ -10300,6 +10301,22 @@
       "job_type": "Per project",
       "pay": "$100-$250 Per project",
       "url": "https://ytjobs.co/job/41921",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41935",
+      "title": "Podcast Thumbnail Designer",
+      "summary": "Podcast Thumbnail Designer $40 Per project Remote Gaming Comedy Artizt - Ivan Patriki 4.07K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$40 Per project",
+      "url": "https://ytjobs.co/job/41935",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
