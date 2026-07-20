@@ -9969,9 +9969,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 150,
+      "posted": true,
+      "posted_date": "2026-07-20"
     },
     {
       "id": "ytjobs_41850",
@@ -10317,6 +10318,22 @@
       "job_type": "Per project",
       "pay": "$40 Per project",
       "url": "https://ytjobs.co/job/41935",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41939",
+      "title": "Short Form Creative Strategist Part-time",
+      "summary": "Short Form Creative Strategist Part-time Remote Entertainment Shorts John Rusanov 2.6M subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41939",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
