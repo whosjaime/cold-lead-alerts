@@ -9884,9 +9884,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 585000,
+      "posted": true,
+      "posted_date": "2026-07-20"
     },
     {
       "id": "ytjobs_41837",
@@ -10056,6 +10057,22 @@
       "job_type": "Per project",
       "pay": "$125 Per project",
       "url": "https://ytjobs.co/job/41880",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41881",
+      "title": "Video Editor for Twitch VODs",
+      "summary": "Video Editor for Twitch VODs $50-$100 Per project Remote Gaming Entertainment IRL +4 more BUDDY101 2.72K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$100 Per project",
+      "url": "https://ytjobs.co/job/41881",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
