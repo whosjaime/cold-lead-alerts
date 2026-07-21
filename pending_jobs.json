@@ -10105,9 +10105,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-21"
     },
     {
       "id": "ytjobs_41916",
@@ -10421,6 +10422,22 @@
       "job_type": "Per project",
       "pay": "$1,000-$2,000 Per project",
       "url": "https://ytjobs.co/job/41952",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41972",
+      "title": "YouTube Producer (Pre-Production) Per project",
+      "summary": "YouTube Producer (Pre-Production) Per project Remote People & Blogs Sean Andrew 7.32M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41972",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
