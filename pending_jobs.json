@@ -10037,9 +10037,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1110000,
+      "posted": true,
+      "posted_date": "2026-07-21"
     },
     {
       "id": "ytjobs_41876",
@@ -10353,6 +10354,22 @@
       "job_type": "Full-time",
       "pay": "$60,000-$96,000 Per Year",
       "url": "https://ytjobs.co/job/41941",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41945",
+      "title": "Video Editor for Food & Travel Challenge Channel",
+      "summary": "Video Editor for Food & Travel Challenge Channel $100-$250 Per project Remote Travel & Events Videoblogging +10 more Dinner Notes 18.4K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$250 Per project",
+      "url": "https://ytjobs.co/job/41945",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -11039,6 +11056,21 @@
       "company": "Stories Untold \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-07-15"
+    },
+    {
+      "id": "ytcareers_bc57901eb91ae395f5347b23a3c8efb60d96864aaed773176e8a34e1e021a7e3",
+      "title": "Cartoon Commentary Channel Video Editor",
+      "summary": "The Gumball Universe YouTube channel is hiring for the following role: Cartoon Commentary Channel Video Editor.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/247",
+      "source": "YTCareers",
+      "email": "readthejobdesc@gmail.com",
+      "email_source": "job_post",
+      "company": "Gumball Universe \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-07-21"
     }
   ],
   "BucketofCrabs": [
