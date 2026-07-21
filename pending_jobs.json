@@ -10003,9 +10003,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1310000,
+      "posted": true,
+      "posted_date": "2026-07-21"
     },
     {
       "id": "ytjobs_41873",
@@ -10335,6 +10336,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/41939",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41941",
+      "title": "YouTube Line Producer",
+      "summary": "YouTube Line Producer $60,000-$96,000 Per Year . Full-time Remote Education Science & Technology +6 more Dragonfruit Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$60,000-$96,000 Per Year",
+      "url": "https://ytjobs.co/job/41941",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
