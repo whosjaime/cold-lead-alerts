@@ -10088,9 +10088,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2720,
+      "posted": true,
+      "posted_date": "2026-07-21"
     },
     {
       "id": "ytjobs_41886",
@@ -12743,6 +12744,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-20"
+    },
+    {
+      "id": "boc_999bc04c51d45780443dee9e5f4b87f89a3aea8719b4dbb75cf97bb17158432f",
+      "title": "Peach Tree Development LLC Java Showcase/Trailer Maker",
+      "summary": "Peach Tree Development LLC Java Showcase/Trailer Maker Remote Only $1-$500/Fixed Amount Video",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1-$500",
+      "url": "https://www.bucketofcrabs.net/jobs/xE3sSn2OV5",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-21"
     }
   ],
   "X": []
