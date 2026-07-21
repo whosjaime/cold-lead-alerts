@@ -10122,9 +10122,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 100.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-21"
     },
     {
       "id": "ytjobs_41915",
@@ -10438,6 +10439,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/41972",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41975",
+      "title": "Minecraft Story Game Writer",
+      "summary": "Minecraft Story Game Writer $100 Per project Remote Gaming Minecraft Sports Gaming Gameplay Dash 1.81M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100 Per project",
+      "url": "https://ytjobs.co/job/41975",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
