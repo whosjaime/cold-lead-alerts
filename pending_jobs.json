@@ -10190,9 +10190,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 250000,
+      "posted": true,
+      "posted_date": "2026-07-22"
     },
     {
       "id": "ytjobs_41906",
@@ -10458,6 +10459,22 @@
       "job_type": "Per project",
       "pay": "$100 Per project",
       "url": "https://ytjobs.co/job/41975",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41992",
+      "title": "Fulltime Video Editor",
+      "summary": "Fulltime Video Editor $50,000-$55,000 Per Year . Full-time Remote Gaming Gaming Skit Gameplay +1 more The Boys Gaming 1.35M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$50,000-$55,000 Per Year",
+      "url": "https://ytjobs.co/job/41992",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -12796,6 +12813,49 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-21"
+    },
+    {
+      "id": "boc_4291c63f56f5d2ac310ab5497086c9e77689bea1439a64e7d2af4424e2859bc4",
+      "title": "BlockFactory Game Designer",
+      "summary": "BlockFactory Game Designer Remote Only $15-$30/Hourly Game Art Writer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$15-$30/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/bY7DKYVU6d",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-22"
+    },
+    {
+      "id": "boc_ecd066401789de13dbf3bec1924208bab0cf4cd0c7a4a5105f84a594ecb542f1",
+      "title": "BlockFactory Java Minecraft Developer",
+      "summary": "BlockFactory Java Minecraft Developer Remote Only $15-$25/Hourly Plugin/Mod Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$15-$25/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/RgEbZ85JK6",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_d38260300ecf078f18e1888a772953d6117e416e73e490769c326159ab91b46f",
+      "title": "BlockFactory Community",
+      "summary": "BlockFactory Community / Relation Manager Remote Only $15-$20/Hourly Other",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$15-$20/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/dK4smEdn9E",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
