@@ -10258,9 +10258,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 3470,
+      "posted": true,
+      "posted_date": "2026-07-22"
     },
     {
       "id": "ytjobs_41927",
@@ -10606,6 +10607,22 @@
       "job_type": "Full-time",
       "pay": "$95,000-$120,000 Per Year",
       "url": "https://ytjobs.co/job/42028",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42034",
+      "title": "Videographer",
+      "summary": "Videographer / Field Producer \u2014 Orlando, FL Per project Onsite . Orlando, FL, US News & Politics Education +26 more Palette Media Company",
+      "location": "On-site",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42034",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -13017,7 +13034,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-22"
     },
     {
       "id": "boc_8b2bcf51ff5c370ceee75f633d2bee6158db795cf67a7e363d060c48506f3eb9",
