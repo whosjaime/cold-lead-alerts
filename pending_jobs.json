@@ -10411,9 +10411,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 13700,
+      "posted": true,
+      "posted_date": "2026-07-23"
     },
     {
       "id": "ytjobs_41944",
@@ -10775,6 +10776,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42035",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42073",
+      "title": "Editor for a women's fitness creator",
+      "summary": "Editor for a women's fitness creator $1,000-$1,000 Per project Remote fitness Gaming Comedy +3 more Madelaine Rascan 936K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$1,000-$1,000 Per project",
+      "url": "https://ytjobs.co/job/42073",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
