@@ -10309,9 +10309,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 391,
+      "posted": true,
+      "posted_date": "2026-07-23"
     },
     {
       "id": "ytjobs_41921",
@@ -10625,6 +10626,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42034",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42043",
+      "title": "Long-Form Video Editor",
+      "summary": "Long-Form Video Editor \u2014 Educational Philosophy Channel Part-time Remote Education Documentary History +3 more Pet The Tiger 59 subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42043",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
