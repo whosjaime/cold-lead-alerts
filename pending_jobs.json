@@ -10496,9 +10496,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1350000,
+      "posted": true,
+      "posted_date": "2026-07-24"
     },
     {
       "id": "ytjobs_42019",
@@ -10796,6 +10797,22 @@
       "job_type": "Per project",
       "pay": "$1,000-$1,000 Per project",
       "url": "https://ytjobs.co/job/42073",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42078",
+      "title": "Video Editor",
+      "summary": "Video Editor $20,000-$50,000 Per Year . Full-time Remote Comedy Action/Adventure +2 more Onevilage 9.88M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$20,000-$50,000 Per Year",
+      "url": "https://ytjobs.co/job/42078",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
