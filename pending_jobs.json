@@ -10598,9 +10598,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 10000,
+      "posted": true,
+      "posted_date": "2026-07-24"
     },
     {
       "id": "ytjobs_41977",
@@ -10930,6 +10931,22 @@
       "job_type": "Part-time",
       "pay": "$250-$2,000 Per Hour",
       "url": "https://ytjobs.co/job/42119",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42127",
+      "title": "Thumbnail Designer WANTED",
+      "summary": "Thumbnail Designer WANTED $50-$120 Per project Remote Videoblogging People & Blogs +10 more Hard Jewelry 24K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$120 Per project",
+      "url": "https://ytjobs.co/job/42127",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
