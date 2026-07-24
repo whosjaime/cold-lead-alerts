@@ -10547,9 +10547,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-24"
     },
     {
       "id": "ytjobs_42003",
@@ -10847,6 +10848,54 @@
       "job_type": "Per project",
       "pay": "$300 Per project",
       "url": "https://ytjobs.co/job/42092",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41645",
+      "title": "Vertical Video Editor/Strategist Part-time",
+      "summary": "Vertical Video Editor/Strategist Part-time Remote Gaming Comedy Horror Shorts +2 more LaurenZside 10.3M subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41645",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41953",
+      "title": "Long-Form Gaming Video Editor For YouTube/Twitch",
+      "summary": "Long-Form Gaming Video Editor For YouTube/Twitch $100 Per project Remote Gaming Gameplay SuppauseLIVE 58 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100 Per project",
+      "url": "https://ytjobs.co/job/41953",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42111",
+      "title": "YouTube/Content Strategist Part-time",
+      "summary": "YouTube/Content Strategist Part-time Remote Sports Film & Animation +17 more TubFrog 170K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42111",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -13303,7 +13352,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-24"
     }
   ],
   "X": []
