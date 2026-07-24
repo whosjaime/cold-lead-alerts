@@ -10530,9 +10530,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2009999,
+      "posted": true,
+      "posted_date": "2026-07-24"
     },
     {
       "id": "ytjobs_42004",
@@ -13274,6 +13275,35 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-22"
+    },
+    {
+      "id": "boc_27e27d9f9c5a60a6e836a96d40430160d16dfd5fabf69fa2cff24de246da5717",
+      "title": "Spright VFX",
+      "summary": "Spright VFX / Particle Artist Remote Only $15-$15/Hourly Game Art Other",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$15-$15/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/HdsSGUAkTl",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-24"
+    },
+    {
+      "id": "boc_ea69dba0fdd308bb53b71357f51521ea738983b892de4818b0c7d53ab6a0f392",
+      "title": "Mythicus Studios Minecraft Bedrock Technical Animator/Artist",
+      "summary": "Mythicus Studios Minecraft Bedrock Technical Animator/Artist Remote Only $30-$35/Hourly 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$30-$35/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/Lxuddq8rMx",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
