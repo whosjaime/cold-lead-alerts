@@ -10624,7 +10624,7 @@
       "id": "ytjobs_42028",
       "title": "Senior Video Editor and Motion Graphics Artist",
       "summary": "Senior Video Editor and Motion Graphics Artist $95,000-$120,000 Per Year . Full-time Hybrid . Los Angeles, CA, US Autos & Vehicles People & Blogs +8 more Speeed 2.41M subs",
-      "location": "Hybrid",
+      "location": "On-site",
       "job_type": "Full-time",
       "pay": "$95,000-$120,000 Per Year",
       "url": "https://ytjobs.co/job/42028",
@@ -10632,9 +10632,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 500.0,
+      "subscribers": 2410000,
+      "posted": true,
+      "posted_date": "2026-07-25"
     },
     {
       "id": "ytjobs_42034",
