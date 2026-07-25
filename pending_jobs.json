@@ -10717,9 +10717,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-07-25"
     },
     {
       "id": "ytjobs_42053",
@@ -11033,6 +11034,22 @@
       "job_type": "Full-time",
       "pay": "$18,000-$30,000 Per Year",
       "url": "https://ytjobs.co/job/42155",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42164",
+      "title": "Video Jersey Mikes IPO Review",
+      "summary": "Video Jersey Mikes IPO Review $100-$200 Per project Remote Economy Gaming IPO Market Watch 89.9K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$200 Per project",
+      "url": "https://ytjobs.co/job/42164",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
