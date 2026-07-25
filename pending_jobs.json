@@ -10666,9 +10666,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 59,
+      "posted": true,
+      "posted_date": "2026-07-25"
     },
     {
       "id": "ytjobs_42058",
@@ -10982,6 +10983,38 @@
       "job_type": "Per project",
       "pay": "$50-$100 Per project",
       "url": "https://ytjobs.co/job/42137",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42152",
+      "title": "Video Editor for travel vlogs",
+      "summary": "Video Editor for travel vlogs $100-$700 Per project Remote Travel & Events Action/Adventure Documentary BackpackerDDS 72 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$700 Per project",
+      "url": "https://ytjobs.co/job/42152",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42149",
+      "title": "YT Strategist for Roblox Story Channel Per project",
+      "summary": "YT Strategist for Roblox Story Channel Per project Remote Film & Animation Short Movies +25 more Evara Bae 120K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42149",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -13440,6 +13473,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-24"
+    },
+    {
+      "id": "boc_16a92918e499467d857923f548a18cada3d5f99c928e723c6c75a83398fb9915",
+      "title": "MobBlocks Minecraft Bedrock Model/Animator/Artist",
+      "summary": "MobBlocks Minecraft Bedrock Model/Animator/Artist Remote Only $10-$50/Hourly 3D Models/Animator Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$10-$50/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/BFwwUQQQ8u",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-25"
     }
   ],
   "X": []
