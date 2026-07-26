@@ -10887,9 +10887,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 500.0,
+      "subscribers": 10300000,
+      "posted": true,
+      "posted_date": "2026-07-26"
     },
     {
       "id": "ytjobs_41953",
