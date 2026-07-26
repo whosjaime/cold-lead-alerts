@@ -10836,9 +10836,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 9880000,
+      "posted": true,
+      "posted_date": "2026-07-26"
     },
     {
       "id": "ytjobs_42099",
@@ -11104,6 +11105,38 @@
       "job_type": "Per project",
       "pay": "$200-$300 Per project",
       "url": "https://ytjobs.co/job/42168",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42177",
+      "title": "Thumbnail Designer for GTA V/VI Gaming Channel (430k+ Subs)",
+      "summary": "Thumbnail Designer for GTA V/VI Gaming Channel (430k+ Subs) $40-$100 Per project Remote Gaming Entertainment +4 more LankManDan 427K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$40-$100 Per project",
+      "url": "https://ytjobs.co/job/42177",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42174",
+      "title": "YouTube content Strategist",
+      "summary": "YouTube content Strategist $250-$750 Per project Remote Travel & Events Videoblogging +11 more Shday & Mal IRL 223K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$250-$750 Per project",
+      "url": "https://ytjobs.co/job/42174",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -13577,6 +13610,35 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-25"
+    },
+    {
+      "id": "boc_acf530b952849a1e19751306eaaf1a3104e7a07ccb688b5943a3c19eb41c629b",
+      "title": "played games Voxel Builder (Urgent)",
+      "summary": "played games Voxel Builder (Urgent) Remote Only $500-$750/Fixed Amount World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$500-$750",
+      "url": "https://www.bucketofcrabs.net/jobs/rwNdXY4eN8",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-26"
+    },
+    {
+      "id": "boc_8e0ef82a2e1162df2261c92fb171fce3296602053972c3f28e17af3ac9aefbe8",
+      "title": "DreamWorks Studios LEVEL DESIGNER",
+      "summary": "DreamWorks Studios LEVEL DESIGNER / BUILDER Remote Only 15%-30%/Project based World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/jbsnDZT2D1",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
