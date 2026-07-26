@@ -10938,9 +10938,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 344000,
+      "posted": true,
+      "posted_date": "2026-07-26"
     },
     {
       "id": "ytjobs_42119",
@@ -11190,6 +11191,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42196",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42199",
+      "title": "Video Editor for Blogilates (fashion design) Per project",
+      "summary": "Video Editor for Blogilates (fashion design) Per project Remote Howto & Style Documentary design +10 more blogilates 11M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42199",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
