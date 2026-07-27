@@ -11057,9 +11057,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 50.0,
+      "subscribers": 3070,
+      "posted": true,
+      "posted_date": "2026-07-27"
     },
     {
       "id": "ytjobs_42164",
