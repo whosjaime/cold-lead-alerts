@@ -11040,9 +11040,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 20.0,
+      "subscribers": 120000,
+      "posted": true,
+      "posted_date": "2026-07-27"
     },
     {
       "id": "ytjobs_42155",
@@ -11388,6 +11389,22 @@
       "job_type": "Per project",
       "pay": "$300-$700 Per project",
       "url": "https://ytjobs.co/job/42236",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42242",
+      "title": "Anime-Loving YT Shorts Editor",
+      "summary": "Anime-Loving YT Shorts Editor $15-$25 Per project Remote Comedy Anime/Animation IRL +3 more Richard A. 55 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$15-$25 Per project",
+      "url": "https://ytjobs.co/job/42242",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
