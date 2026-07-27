@@ -11074,9 +11074,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 9240,
+      "posted": true,
+      "posted_date": "2026-07-27"
     },
     {
       "id": "ytjobs_42167",
@@ -11406,6 +11407,22 @@
       "job_type": "Per project",
       "pay": "$15-$25 Per project",
       "url": "https://ytjobs.co/job/42242",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42075",
+      "title": "Social Content Creator & YouTube Producer",
+      "summary": "Social Content Creator & YouTube Producer $78,000-$130,000 Per Year . Full-time Remote . Washington D.C., DC, US Travel & Events People & Blogs +18 more Amazing America 33.9K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$78,000-$130,000 Per Year",
+      "url": "https://ytjobs.co/job/42075",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
