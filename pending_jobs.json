@@ -11142,9 +11142,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 427000,
+      "posted": true,
+      "posted_date": "2026-07-28"
     },
     {
       "id": "ytjobs_42174",
@@ -11490,6 +11491,38 @@
       "job_type": "Per project",
       "pay": "$50-$200 Per project",
       "url": "https://ytjobs.co/job/42252",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42275",
+      "title": "NBA Feature Scriptwriter Per project",
+      "summary": "NBA Feature Scriptwriter Per project Remote Sports Documentary Documentary A.M. Hoops 657K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42275",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42266",
+      "title": "YouTube Manager/Strategist Part-time",
+      "summary": "YouTube Manager/Strategist Part-time Remote Business and Finance +15 more The Long Investor 6.42K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42266",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -13993,6 +14026,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-26"
+    },
+    {
+      "id": "boc_59eb754117ff20672af09cc6b2b0edc43f393ac834ff9794525a63f6a86dfeb0",
+      "title": "Piki Studios Pixel Artist for Minecraft Bedrock",
+      "summary": "Piki Studios Pixel Artist for Minecraft Bedrock Remote Only $0.25-$20/Fixed Amount Game Art Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$0.25-$20",
+      "url": "https://www.bucketofcrabs.net/jobs/bvYNqtEqRC",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-28"
     }
   ],
   "X": []
