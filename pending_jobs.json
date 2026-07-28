@@ -11176,9 +11176,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 29800,
+      "posted": true,
+      "posted_date": "2026-07-28"
     },
     {
       "id": "ytjobs_42197",
@@ -11556,6 +11557,22 @@
       "job_type": "Full-time",
       "pay": "$7,680-$14,400 Per Year",
       "url": "https://ytjobs.co/job/42280",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42282",
+      "title": "Effects Editor NEEDED",
+      "summary": "Effects Editor NEEDED $500-$1,000 Per project Remote Comedy Sports People & Blogs +4 more Bennett Melt 529K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$500-$1,000 Per project",
+      "url": "https://ytjobs.co/job/42282",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
