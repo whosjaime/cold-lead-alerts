@@ -11210,9 +11210,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 29800,
+      "posted": true,
+      "posted_date": "2026-07-28"
     },
     {
       "id": "ytjobs_42199",
@@ -11574,6 +11575,22 @@
       "job_type": "Per project",
       "pay": "$500-$1,000 Per project",
       "url": "https://ytjobs.co/job/42282",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42289",
+      "title": "Video EditorLong-Form Documentary Editor",
+      "summary": "Video EditorLong-Form Documentary Editor \u2014 Rough Cut / Story Per project Remote . US Travel & Events People & Blogs +17 more JeremyXplores 420K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42289",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
