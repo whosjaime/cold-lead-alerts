@@ -11185,7 +11185,7 @@
       "id": "ytjobs_42197",
       "title": "Trickshot Video Editor",
       "summary": "Trickshot Video Editor $25-$75 Per Hour . Part-time Hybrid . Raleigh, NC, US Sports Entertainment Sports +4 more First Try 5.92M subs",
-      "location": "Hybrid",
+      "location": "On-site",
       "job_type": "Part-time",
       "pay": "$25-$75 Per Hour",
       "url": "https://ytjobs.co/job/42197",
@@ -11193,9 +11193,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 5920000,
+      "posted": true,
+      "posted_date": "2026-07-28"
     },
     {
       "id": "ytjobs_42196",
