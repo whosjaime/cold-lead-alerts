@@ -11533,9 +11533,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 657000,
+      "posted": true,
+      "posted_date": "2026-07-30"
     },
     {
       "id": "ytjobs_42266",
@@ -11801,6 +11802,22 @@
       "job_type": "Full-time",
       "pay": "$60,000-$70,000 Per Year",
       "url": "https://ytjobs.co/job/42378",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42384",
+      "title": "Shortform Video Editor",
+      "summary": "Shortform Video Editor - Marketing4Makers.co $50-$100 Per project Remote Education Shorts Marketing +5 more Dylan Staples Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$100 Per project",
+      "url": "https://ytjobs.co/job/42384",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
