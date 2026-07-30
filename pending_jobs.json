@@ -11499,9 +11499,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 378,
+      "posted": true,
+      "posted_date": "2026-07-30"
     },
     {
       "id": "ytjobs_42252",
@@ -11783,6 +11784,22 @@
       "job_type": "Per project",
       "pay": "$10-$50 Per project",
       "url": "https://ytjobs.co/job/11787",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42378",
+      "title": "Geopolitical News Channel Manager",
+      "summary": "Geopolitical News Channel Manager $60,000-$70,000 Per Year . Full-time Remote News & Politics People & Blogs +5 more Inside Insight Solutions Recruiter",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$60,000-$70,000 Per Year",
+      "url": "https://ytjobs.co/job/42378",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
