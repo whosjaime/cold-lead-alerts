@@ -11431,9 +11431,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 55,
+      "posted": true,
+      "posted_date": "2026-07-30"
     },
     {
       "id": "ytjobs_42075",
@@ -11715,6 +11716,22 @@
       "job_type": "Freelance",
       "pay": "$250-$750 Per project",
       "url": "https://ytjobs.co/job/42344",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42349",
+      "title": "YouTube Strategist",
+      "summary": "YouTube Strategist $20-$45 Per Hour . Part-time Remote People & Blogs News & Politics +6 more Creator Atlas Company",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$20-$45 Per Hour",
+      "url": "https://ytjobs.co/job/42349",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
