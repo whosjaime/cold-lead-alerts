@@ -11618,9 +11618,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 420000,
+      "posted": true,
+      "posted_date": "2026-07-31"
     },
     {
       "id": "ytjobs_42311",
@@ -12654,16 +12655,17 @@
     {
       "id": "ytcareers_ef995a4dc716e29ee8a8ea5c26cd41500bee8edb8786237d86ca7a96c62f1a0d",
       "title": "NBA Documentary Video Editor",
-      "summary": "NBA Documentary Video Editor",
-      "location": "Not listed",
+      "summary": "The Ballinfluence YouTube channel is hiring for the following role: NBA Documentary Video Editor.",
+      "location": "On-site",
       "job_type": "Not listed",
       "pay": "Not listed",
       "url": "https://yt.careers/youtube-jobs/251",
       "source": "YTCareers",
-      "email": null,
-      "email_source": null,
-      "company": null,
-      "posted": false
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Ballinfluence \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-07-31"
     }
   ],
   "BucketofCrabs": [
