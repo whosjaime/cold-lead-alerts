@@ -11550,9 +11550,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 6420,
+      "posted": true,
+      "posted_date": "2026-07-31"
     },
     {
       "id": "ytjobs_42281",
@@ -11818,6 +11819,22 @@
       "job_type": "Per project",
       "pay": "$50-$100 Per project",
       "url": "https://ytjobs.co/job/42384",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42385",
+      "title": "Magnific(Formerly Freepik) Youtube Video Editor",
+      "summary": "Magnific(Formerly Freepik) Youtube Video Editor $650-$1,200 Per project Remote . San Francisco, CA, US Tutorials Film & Animation +4 more Athletic Curls 6 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$650-$1,200 Per project",
+      "url": "https://ytjobs.co/job/42385",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
