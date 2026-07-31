@@ -11567,9 +11567,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1050000,
+      "posted": true,
+      "posted_date": "2026-07-31"
     },
     {
       "id": "ytjobs_42280",
@@ -11835,6 +11836,22 @@
       "job_type": "Per project",
       "pay": "$650-$1,200 Per project",
       "url": "https://ytjobs.co/job/42385",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42390",
+      "title": "DaVinci Resolve- Video Editor",
+      "summary": "DaVinci Resolve- Video Editor $5-$10 Per Hour . Part-time Remote Film & Animation Anime/Animation +5 more Rise With Troy 4 subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$5-$10 Per Hour",
+      "url": "https://ytjobs.co/job/42390",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
