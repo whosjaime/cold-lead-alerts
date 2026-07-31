@@ -11601,9 +11601,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 529000,
+      "posted": true,
+      "posted_date": "2026-07-31"
     },
     {
       "id": "ytjobs_42289",
@@ -11885,6 +11886,54 @@
       "job_type": "Per project",
       "pay": "$300-$600 Per project",
       "url": "https://ytjobs.co/job/42391",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_41714",
+      "title": "Senior YouTube Growth Strategist \u2b50 Full-time",
+      "summary": "Senior YouTube Growth Strategist \u2b50 Full-time Remote . Paris, France Music Travel & Events +22 more Isabella Busty 153K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/41714",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42399",
+      "title": "Documentary Video Editor (YouTube)",
+      "summary": "Documentary Video Editor (YouTube) $400-$750 Per project Remote Travel & Events News & Politics +6 more The Sky Digest 11.2K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$400-$750 Per project",
+      "url": "https://ytjobs.co/job/42399",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42395",
+      "title": "NFL Documentary Video Editor Per project",
+      "summary": "NFL Documentary Video Editor Per project Remote Sports Documentary Documentary +2 more Sports Tix 53.2K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42395",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -12586,6 +12635,35 @@
       "company": "Gumball Universe \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-07-21"
+    },
+    {
+      "id": "ytcareers_3d9fffc1e81723b07c1f08447579d98bfeabce988c8fbd7f0158d5e7755fc01d",
+      "title": "NBA Documentary Scriptwriter",
+      "summary": "The Ballinfluence YouTube channel is hiring for the following role: NBA Documentary Scriptwriter.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/252",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Ballinfluence \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-07-31"
+    },
+    {
+      "id": "ytcareers_ef995a4dc716e29ee8a8ea5c26cd41500bee8edb8786237d86ca7a96c62f1a0d",
+      "title": "NBA Documentary Video Editor",
+      "summary": "NBA Documentary Video Editor",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/251",
+      "source": "YTCareers",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "BucketofCrabs": [
@@ -14418,6 +14496,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-30"
+    },
+    {
+      "id": "boc_d80daf07cc52afae915f4a5a26244c5178e4b6ea0e8f5fbdc82e03a87ab2b9ba",
+      "title": "Aurrora Ltd 3D Modeller",
+      "summary": "Aurrora Ltd 3D Modeller Remote Only $22-$30/Hourly 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$22-$30/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/whHQw17jgz",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-07-31"
     }
   ],
   "X": []
