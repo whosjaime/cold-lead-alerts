@@ -11720,9 +11720,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1830000,
+      "posted": true,
+      "posted_date": "2026-08-01"
     },
     {
       "id": "ytjobs_42344",
@@ -11956,6 +11957,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42432",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42433",
+      "title": "Video Editor for Neurosurgeon and Medical Creator Per project",
+      "summary": "Video Editor for Neurosurgeon and Medical Creator Per project Remote Science & Technology medical +6 more Richard Dalyai MD MBA FAANS 49 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42433",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
