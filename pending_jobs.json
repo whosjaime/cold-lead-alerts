@@ -11788,9 +11788,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 26000,
+      "posted": true,
+      "posted_date": "2026-08-01"
     },
     {
       "id": "ytjobs_11787",
@@ -12024,6 +12025,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42457",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42461",
+      "title": "Short-Form Video Editor for Founder Content",
+      "summary": "Short-Form Video Editor for Founder Content $36,000 Per Year . Full-time Remote Social Media Education Talking head +3 more Brand Sharks Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$36,000 Per Year",
+      "url": "https://ytjobs.co/job/42461",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
