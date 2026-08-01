@@ -11839,9 +11839,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-01"
     },
     {
       "id": "ytjobs_42385",
@@ -12059,6 +12060,22 @@
       "job_type": "Per project",
       "pay": "$50-$200 Per project",
       "url": "https://ytjobs.co/job/42464",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42470",
+      "title": "Senior Video Editor for Tech/AI",
+      "summary": "Senior Video Editor for Tech/AI $300-$1,000 Per project Remote Science & Technology +3 more Sabrina Ramonov \ud83c\udf44 321K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300-$1,000 Per project",
+      "url": "https://ytjobs.co/job/42470",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
