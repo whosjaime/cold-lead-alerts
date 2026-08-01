@@ -11686,9 +11686,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 200.0,
+      "subscribers": 4120,
+      "posted": true,
+      "posted_date": "2026-08-01"
     },
     {
       "id": "ytjobs_42335",
