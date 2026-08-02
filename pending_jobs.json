@@ -11958,9 +11958,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 53200,
+      "posted": true,
+      "posted_date": "2026-08-02"
     },
     {
       "id": "ytjobs_42432",
@@ -12146,6 +12147,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42492",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42505",
+      "title": "Documentary Scriptwriter",
+      "summary": "Documentary Scriptwriter / Researcher Per project Remote Gaming Business and Finance +2 more Arctic Gaming 133K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42505",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
