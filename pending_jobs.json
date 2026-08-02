@@ -11924,9 +11924,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 153000,
+      "posted": true,
+      "posted_date": "2026-08-02"
     },
     {
       "id": "ytjobs_42399",
@@ -12128,6 +12129,22 @@
       "job_type": "Part-time",
       "pay": "$10-$17 Per Hour",
       "url": "https://ytjobs.co/job/42480",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42492",
+      "title": "TWO SHORT FORM EDITORS WANTED Full-time",
+      "summary": "TWO SHORT FORM EDITORS WANTED Full-time Remote Howto & Style Education +6 more Lewis Kelly 356K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42492",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
