@@ -12077,9 +12077,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 25.0,
+      "subscribers": 3,
+      "posted": true,
+      "posted_date": "2026-08-03"
     },
     {
       "id": "ytjobs_42470",
