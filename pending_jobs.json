@@ -12094,9 +12094,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 500.0,
+      "subscribers": 321000,
+      "posted": true,
+      "posted_date": "2026-08-03"
     },
     {
       "id": "ytjobs_42482",
@@ -12282,6 +12283,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42519",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42547",
+      "title": "Podcast Clipper",
+      "summary": "Podcast Clipper - Shorts $150-$400 Per project Remote Military fitness Running +12 more Jon Hamilton 75.7K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$150-$400 Per project",
+      "url": "https://ytjobs.co/job/42547",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
