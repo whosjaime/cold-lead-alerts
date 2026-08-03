@@ -12162,9 +12162,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 356000,
+      "posted": true,
+      "posted_date": "2026-08-03"
     },
     {
       "id": "ytjobs_42505",
