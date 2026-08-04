@@ -12281,9 +12281,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 40.0,
+      "subscribers": 58600,
+      "posted": true,
+      "posted_date": "2026-08-04"
     },
     {
       "id": "ytjobs_42519",
@@ -15199,6 +15200,21 @@
       "job_type": "Not listed",
       "pay": "Not listed",
       "url": "https://www.bucketofcrabs.net/jobs/SandMXRZ9f",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-08-04"
+    },
+    {
+      "id": "boc_7b8b243173c321240bcf17ac301ed41a614a5f3b09689229c2e84cfb22513067",
+      "title": "Unlinked Video/Image and marketing specialist",
+      "summary": "Unlinked Video/Image and marketing specialist Remote Only $1000-$3000/Fixed Amount - monthly Marketing Art Video",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1000-$3000",
+      "url": "https://www.bucketofcrabs.net/jobs/MyMVyo4xh3",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
