@@ -12213,9 +12213,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 250.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-04"
     },
     {
       "id": "ytjobs_42510",
@@ -14931,6 +14932,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-07-31"
+    },
+    {
+      "id": "boc_82b5b125102e06b822f88faa5307b41f7df37df802b9e6348b876b2ddc8e5045",
+      "title": "Shardons Studio 3D MODELLING",
+      "summary": "Shardons Studio 3D MODELLING / ANIMATOR / MULTI-MEDIA ARTIST Remote Only 100%-3000%/Project based 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/SandMXRZ9f",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-08-04"
     }
   ],
   "X": []
