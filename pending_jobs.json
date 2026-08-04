@@ -12264,9 +12264,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 25.0,
+      "subscribers": 19700,
+      "posted": true,
+      "posted_date": "2026-08-04"
     },
     {
       "id": "ytjobs_42526",
@@ -12580,6 +12581,22 @@
       "job_type": "Per project",
       "pay": "$800 Per project",
       "url": "https://ytjobs.co/job/42599",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42611",
+      "title": "Short form video editor (beauty & lifestyle content)",
+      "summary": "Short form video editor (beauty & lifestyle content) $10-$28 Per Hour . Part-time Remote Film & Animation Videoblogging +6 more Vanessa Perez 1.81K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$10-$28 Per Hour",
+      "url": "https://ytjobs.co/job/42611",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
