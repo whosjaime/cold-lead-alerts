@@ -12383,9 +12383,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 1000.0,
+      "subscribers": 1600000,
+      "posted": true,
+      "posted_date": "2026-08-05"
     },
     {
       "id": "ytjobs_24396",
@@ -12747,6 +12748,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42635",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42644",
+      "title": "Video Creator for Pickleball Channel",
+      "summary": "Video Creator for Pickleball Channel $50-$100 Per project Remote Sports People & Blogs +3 more Ruby Thomas 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$100 Per project",
+      "url": "https://ytjobs.co/job/42644",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
