@@ -12315,9 +12315,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 75700,
+      "posted": true,
+      "posted_date": "2026-08-05"
     },
     {
       "id": "ytjobs_42555",
@@ -12647,6 +12648,22 @@
       "job_type": "Per project",
       "pay": "$100-$250 Per project",
       "url": "https://ytjobs.co/job/42619",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42621",
+      "title": "2D Blender Grease Pencil Animator",
+      "summary": "2D Blender Grease Pencil Animator $240-$320 Per project Remote Comedy Education +5 more Agent Flappy 129K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$240-$320 Per project",
+      "url": "https://ytjobs.co/job/42621",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
