@@ -12349,9 +12349,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1760000,
+      "posted": true,
+      "posted_date": "2026-08-05"
     },
     {
       "id": "ytjobs_42564",
@@ -12665,6 +12666,22 @@
       "job_type": "Per project",
       "pay": "$240-$320 Per project",
       "url": "https://ytjobs.co/job/42621",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42632",
+      "title": "Video Editor for Travel Documentaries",
+      "summary": "Video Editor for Travel Documentaries $1,000-$3,000 Per project Remote Travel & Events Documentary The Bucci List 18.9K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$1,000-$3,000 Per project",
+      "url": "https://ytjobs.co/job/42632",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
