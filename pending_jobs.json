@@ -12332,9 +12332,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1590,
+      "posted": true,
+      "posted_date": "2026-08-05"
     },
     {
       "id": "ytjobs_42551",
