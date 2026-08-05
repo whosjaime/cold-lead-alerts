@@ -12434,9 +12434,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 20400,
+      "posted": true,
+      "posted_date": "2026-08-05"
     },
     {
       "id": "ytjobs_42585",
@@ -12830,6 +12831,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42646",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42660",
+      "title": "Thumbnail",
+      "summary": "Thumbnail / Packaging Strategist Part-time Remote Film & Animation Entertainment +3 more Serious History 807K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42660",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
