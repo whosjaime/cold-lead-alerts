@@ -12468,9 +12468,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 7,
+      "posted": true,
+      "posted_date": "2026-08-06"
     },
     {
       "id": "ytjobs_42575",
@@ -12848,6 +12849,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42660",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42662",
+      "title": "Long Form Horror Gaming Video Editor",
+      "summary": "Long Form Horror Gaming Video Editor $30-$300 Per project Remote Gaming Faceless Gameplay Pal 2.31K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$30-$300 Per project",
+      "url": "https://ytjobs.co/job/42662",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
