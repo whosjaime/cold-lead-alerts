@@ -12621,9 +12621,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1810,
+      "posted": true,
+      "posted_date": "2026-08-07"
     },
     {
       "id": "ytjobs_42620",
@@ -13065,6 +13066,22 @@
       "job_type": "Per project",
       "pay": "$1,500-$4,000 Per project",
       "url": "https://ytjobs.co/job/42717",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42718",
+      "title": "Video Editor For Gaming Channel",
+      "summary": "Video Editor For Gaming Channel $75-$100 Per project Remote Gaming Gaming Challenge +4 more DirtyDan 23.4K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$75-$100 Per project",
+      "url": "https://ytjobs.co/job/42718",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
