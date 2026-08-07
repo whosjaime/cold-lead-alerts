@@ -12579,7 +12579,7 @@
       "id": "ytjobs_42603",
       "title": "Production Assistant for Uncle Roger",
       "summary": "Production Assistant for Uncle Roger $22-$25 Per Hour . Part-time Hybrid . Los Angeles, CA, US Comedy Food Documentary Commentary mrnigelng 10.7M subs",
-      "location": "Hybrid",
+      "location": "On-site",
       "job_type": "Part-time",
       "pay": "$22-$25 Per Hour",
       "url": "https://ytjobs.co/job/42603",
@@ -12587,9 +12587,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 500.0,
+      "subscribers": 10700000,
+      "posted": true,
+      "posted_date": "2026-08-07"
     },
     {
       "id": "ytjobs_42599",
