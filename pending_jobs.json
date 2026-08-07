@@ -12536,9 +12536,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 514000,
+      "posted": true,
+      "posted_date": "2026-08-07"
     },
     {
       "id": "ytjobs_42606",
@@ -15677,7 +15678,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-07"
     },
     {
       "id": "boc_c26a6d57c537af92edd7d8993740577842c0ecf3c10dc6dfc2b92af24fa22d18",
@@ -15687,6 +15689,20 @@
       "job_type": "Not listed",
       "pay": "$300-$1000",
       "url": "https://www.bucketofcrabs.net/jobs/fOXLszpPdd",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_4ccd435498ceac7d26dd3643c5e5cd8d3e75d50cf32d89bd6d6f138670019389",
+      "title": "MobBlocks Level Designer",
+      "summary": "MobBlocks Level Designer / Builder Remote Only $50-$500/Fixed Amount Other World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$50-$500",
+      "url": "https://www.bucketofcrabs.net/jobs/XnUUEfHO8j",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
