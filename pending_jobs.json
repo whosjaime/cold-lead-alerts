@@ -12553,9 +12553,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 3380,
+      "posted": true,
+      "posted_date": "2026-08-07"
     },
     {
       "id": "ytjobs_42605",
@@ -12997,6 +12998,38 @@
       "job_type": "Per project",
       "pay": "$15-$25 Per project",
       "url": "https://ytjobs.co/job/42113",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42712",
+      "title": "YouTube Clip Finder/Script Writer Celebrity Niche",
+      "summary": "YouTube Clip Finder/Script Writer Celebrity Niche $100 Per project Remote Comedy Entertainment Movies +2 more Iconic Celebrity Moments 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100 Per project",
+      "url": "https://ytjobs.co/job/42712",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42699",
+      "title": "Story Editor for Emotional Documentary Series Per project",
+      "summary": "Story Editor for Emotional Documentary Series Per project Remote People & Blogs Entertainment +4 more XO Productions Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42699",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -13758,6 +13791,35 @@
       "company": "Audio Vision Productions \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-08-05"
+    },
+    {
+      "id": "ytcareers_25e262663d03c0258d4b5746140d93075d1ad233389bb390b610642b966d8e79",
+      "title": "Short Form Clipper",
+      "summary": "The thatsnotarol YouTube channel is hiring for the following role: Short Form Clipper .",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/257",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "thatsnotarol \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-08-07"
+    },
+    {
+      "id": "ytcareers_199340777292df477cfacbd6150c10957b81f15dab552ab486d842a351879208",
+      "title": "video game editor and clip editor",
+      "summary": "video game editor and clip editor",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/256",
+      "source": "YTCareers",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "BucketofCrabs": [
@@ -15693,7 +15755,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-07"
     },
     {
       "id": "boc_4ccd435498ceac7d26dd3643c5e5cd8d3e75d50cf32d89bd6d6f138670019389",
