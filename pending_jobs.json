@@ -12689,9 +12689,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 129000,
+      "posted": true,
+      "posted_date": "2026-08-07"
     },
     {
       "id": "ytjobs_42632",
@@ -13101,6 +13102,22 @@
       "job_type": "Per project",
       "pay": "$2,500-$15,000 Per project",
       "url": "https://ytjobs.co/job/42724",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42725",
+      "title": "YouTube Producer Part-time",
+      "summary": "YouTube Producer Part-time Onsite . New York City, NY, US Comedy Entertainment +3 more Nick Kosir 1.53M subs",
+      "location": "On-site",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42725",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
