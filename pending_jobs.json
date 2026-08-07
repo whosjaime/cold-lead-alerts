@@ -12570,9 +12570,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 644000,
+      "posted": true,
+      "posted_date": "2026-08-07"
     },
     {
       "id": "ytjobs_42603",
@@ -13810,16 +13811,17 @@
     {
       "id": "ytcareers_199340777292df477cfacbd6150c10957b81f15dab552ab486d842a351879208",
       "title": "video game editor and clip editor",
-      "summary": "video game editor and clip editor",
-      "location": "Not listed",
+      "summary": "The Fangsharp08b YouTube channel is hiring for the following role: video game editor and clip editor.",
+      "location": "On-site",
       "job_type": "Not listed",
       "pay": "Not listed",
       "url": "https://yt.careers/youtube-jobs/256",
       "source": "YTCareers",
-      "email": null,
-      "email_source": null,
-      "company": null,
-      "posted": false
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Fangsharp08b \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-08-07"
     }
   ],
   "BucketofCrabs": [
@@ -15770,7 +15772,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-07"
     }
   ],
   "X": []
