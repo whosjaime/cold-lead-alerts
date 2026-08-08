@@ -12876,9 +12876,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 807000,
+      "posted": true,
+      "posted_date": "2026-08-08"
     },
     {
       "id": "ytjobs_42662",
@@ -13208,6 +13209,22 @@
       "job_type": "Full-time",
       "pay": "$20,000-$30,000 Per Year",
       "url": "https://ytjobs.co/job/42740",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42744",
+      "title": "YouTube Producer & Content Operations Lead",
+      "summary": "YouTube Producer & Content Operations Lead $60,000-$90,000 Per Year . Full-time Remote News & Politics People & Blogs +8 more Heather Delaney Reese 80.5K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$60,000-$90,000 Per Year",
+      "url": "https://ytjobs.co/job/42744",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
