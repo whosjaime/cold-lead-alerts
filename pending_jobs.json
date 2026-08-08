@@ -12740,9 +12740,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-08"
     },
     {
       "id": "ytjobs_42338",
@@ -13120,6 +13121,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42725",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42729",
+      "title": "Long Term Video Editor",
+      "summary": "Long Term Video Editor | Non AI Mythology Videos $300-$400 Per project Remote Education Documentary +3 more Mysteries of Mythology 161K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300-$400 Per project",
+      "url": "https://ytjobs.co/job/42729",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
