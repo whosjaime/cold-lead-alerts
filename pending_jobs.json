@@ -12944,9 +12944,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 250.0,
+      "subscribers": 411000,
+      "posted": true,
+      "posted_date": "2026-08-08"
     },
     {
       "id": "ytjobs_42679",
