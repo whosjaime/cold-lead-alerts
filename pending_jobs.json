@@ -13114,9 +13114,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 23400,
+      "posted": true,
+      "posted_date": "2026-08-09"
     },
     {
       "id": "ytjobs_42724",
@@ -13286,6 +13287,22 @@
       "job_type": "Per project",
       "pay": "$750-$1,250 Per project",
       "url": "https://ytjobs.co/job/42763",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42767",
+      "title": "Video Editor",
+      "summary": "Video Editor $950-$1,700 Per Year . Full-time Remote Travel & Events Videoblogging +55 more The Logan Fam 422K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$950-$1,700 Per Year",
+      "url": "https://ytjobs.co/job/42767",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
