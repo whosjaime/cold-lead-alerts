@@ -13046,9 +13046,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-09"
     },
     {
       "id": "ytjobs_42699",
@@ -13250,6 +13251,22 @@
       "job_type": "Full-time",
       "pay": "$24,000-$60,000 Per Year",
       "url": "https://ytjobs.co/job/42747",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_33805",
+      "title": "Video Editing Teams for Long Form True Crime Channels Full-time",
+      "summary": "Video Editing Teams for Long Form True Crime Channels Full-time Remote People & Blogs News & Politics +3 more The Finest 7.4M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/33805",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
