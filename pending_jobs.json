@@ -13182,9 +13182,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 200.0,
+      "subscribers": 13800000,
+      "posted": true,
+      "posted_date": "2026-08-09"
     },
     {
       "id": "ytjobs_42733",
@@ -16064,6 +16065,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-08-08"
+    },
+    {
+      "id": "boc_2862225a5c1dac24cf26e12567e3bd004d054efac9a36ab823c7429aae48cd66",
+      "title": "Spring Games WE\u2019RE HIRING",
+      "summary": "Spring Games WE\u2019RE HIRING \u2014 2D / UI ARTIST Remote Only $1-$1111/Fixed Amount Game Art Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1-$1111",
+      "url": "https://www.bucketofcrabs.net/jobs/pdYXUlnBGs",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-08-09"
     }
   ],
   "X": []
