@@ -13216,9 +13216,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-10"
     },
     {
       "id": "ytjobs_42740",
@@ -13308,6 +13309,22 @@
       "job_type": "Full-time",
       "pay": "$950-$1,700 Per Year",
       "url": "https://ytjobs.co/job/42767",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42772",
+      "title": "MINECRAFT Video Editor",
+      "summary": "MINECRAFT Video Editor $20-$50 Per project Remote Gaming Entertainment +13 more CDoubleYou 947 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$20-$50 Per project",
+      "url": "https://ytjobs.co/job/42772",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
