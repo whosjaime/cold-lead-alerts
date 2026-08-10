@@ -13318,9 +13318,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 422000,
+      "posted": true,
+      "posted_date": "2026-08-10"
     },
     {
       "id": "ytjobs_42772",
@@ -13474,6 +13475,22 @@
       "job_type": "Per project",
       "pay": "$500-$2,000 Per project",
       "url": "https://ytjobs.co/job/42795",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42808",
+      "title": "Video Editor",
+      "summary": "Video Editor $70-$100 Per project Remote Gaming Howto & Style Soccer WowOliver 33.1K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$70-$100 Per project",
+      "url": "https://ytjobs.co/job/42808",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
