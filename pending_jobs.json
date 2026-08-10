@@ -13250,9 +13250,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 80500,
+      "posted": true,
+      "posted_date": "2026-08-10"
     },
     {
       "id": "ytjobs_42747",
@@ -13358,6 +13359,22 @@
       "job_type": "Part-time",
       "pay": "$20 Per Hour",
       "url": "https://ytjobs.co/job/42774",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42778",
+      "title": "Video Editor/ 500",
+      "summary": "Video Editor/ 500$+ PER VIDEO $500-$1,000 Per project Remote Entertainment Challenge JuicyJohns 44.5K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$500-$1,000 Per project",
+      "url": "https://ytjobs.co/job/42778",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
