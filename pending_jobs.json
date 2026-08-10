@@ -13284,9 +13284,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 250.0,
+      "subscribers": 7400000,
+      "posted": true,
+      "posted_date": "2026-08-10"
     },
     {
       "id": "ytjobs_42763",
@@ -13440,6 +13441,38 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42529",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42800",
+      "title": "Video Editor",
+      "summary": "Video Editor $30,000-$42,000 Per Year . Full-time Remote Film & Animation Short Movies +10 more Jamie Barclay 0 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$30,000-$42,000 Per Year",
+      "url": "https://ytjobs.co/job/42800",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42795",
+      "title": "Minecraft Long-Form Video Editor",
+      "summary": "Minecraft Long-Form Video Editor $500-$2,000 Per project Remote Gaming Minecraft Gameplay Cinematic TasteTheSno 134K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$500-$2,000 Per project",
+      "url": "https://ytjobs.co/job/42795",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -16241,7 +16274,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-10"
     }
   ],
   "X": []
