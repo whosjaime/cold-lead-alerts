@@ -13403,9 +13403,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 100000,
+      "posted": true,
+      "posted_date": "2026-08-10"
     },
     {
       "id": "ytjobs_42794",
@@ -13559,6 +13560,22 @@
       "job_type": "Per project",
       "pay": "$100-$225 Per project",
       "url": "https://ytjobs.co/job/42822",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42827",
+      "title": "Short Form Social Media Video Script Writer (",
+      "summary": "Short Form Social Media Video Script Writer (Remote) Part-time Remote Scripted Shorts/Reels Content Launch Company",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42827",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
