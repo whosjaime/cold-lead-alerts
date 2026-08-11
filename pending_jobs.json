@@ -13607,9 +13607,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-11"
     },
     {
       "id": "ytjobs_42830",
@@ -13699,6 +13700,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42878",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42885",
+      "title": "Social Creative Strategist (Beauty/Wellness)",
+      "summary": "Social Creative Strategist (Beauty/Wellness) $60,000-$85,000 Per Year . Full-time Remote . NY, US Entertainment Howto & Style +16 more Social Alchemy 0 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$60,000-$85,000 Per Year",
+      "url": "https://ytjobs.co/job/42885",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
