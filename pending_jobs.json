@@ -13590,9 +13590,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-11"
     },
     {
       "id": "ytjobs_42829",
@@ -16585,6 +16586,21 @@
       "job_type": "Not listed",
       "pay": "$100-$500",
       "url": "https://www.bucketofcrabs.net/jobs/N9JABvOC3A",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-08-11"
+    },
+    {
+      "id": "boc_e5d5fb8fce9684b76a130eb5c60e074e9bd9f6e723693e5226ec1fd20901f3d4",
+      "title": "Sniffer Studio Minecraft Beta Testers",
+      "summary": "Sniffer Studio Minecraft Beta Testers Remote Only Voluntary QA/Testing Plugin/Mod Developer",
+      "location": "Remote",
+      "job_type": "Voluntary",
+      "pay": "Voluntary",
+      "url": "https://www.bucketofcrabs.net/jobs/FqbJwUFbvK",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
