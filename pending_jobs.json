@@ -13437,9 +13437,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 55,
+      "posted": true,
+      "posted_date": "2026-08-11"
     },
     {
       "id": "ytjobs_42529",
@@ -13593,6 +13594,22 @@
       "job_type": "Per project",
       "pay": "$10-$45 Per project",
       "url": "https://ytjobs.co/job/42829",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42830",
+      "title": "Video Editor for Chris Koerner Per project",
+      "summary": "Video Editor for Chris Koerner Per project Remote Travel & Events Videoblogging +4 more Chris Koerner on The Koerner Office Podcast 658K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/42830",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -16424,7 +16441,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-11"
     },
     {
       "id": "boc_56aeb342e9b08cc0ee1349ead89864cae7a3e30cabae4c5a7e315c5b402525b8",
