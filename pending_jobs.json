@@ -13641,9 +13641,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-12"
     },
     {
       "id": "ytjobs_42856",
@@ -13765,6 +13766,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/42887",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42894",
+      "title": "Script Writer for AI/Tech Shorts",
+      "summary": "Script Writer for AI/Tech Shorts $25-$40 Per Hour . Part-time Remote . US Software Engineering AI Tutorial +4 more John Kim 7 subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$25-$40 Per Hour",
+      "url": "https://ytjobs.co/job/42894",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
