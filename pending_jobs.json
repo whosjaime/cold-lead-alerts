@@ -13854,7 +13854,7 @@
       "id": "ytjobs_42905",
       "title": "Channel Strategist/Creative Director",
       "summary": "Channel Strategist/Creative Director $30,000-$60,000 Per Year . Full-time Hybrid . Da Nang, Vietnam Documentary Iceberg +2 more Abyssal Detective 480K subs",
-      "location": "Hybrid",
+      "location": "On-site",
       "job_type": "Full-time",
       "pay": "$30,000-$60,000 Per Year",
       "url": "https://ytjobs.co/job/42905",
@@ -13862,9 +13862,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 480000,
+      "posted": true,
+      "posted_date": "2026-08-13"
     },
     {
       "id": "ytjobs_42892",
