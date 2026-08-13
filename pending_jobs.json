@@ -13828,9 +13828,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 500.0,
+      "subscribers": 443,
+      "posted": true,
+      "posted_date": "2026-08-13"
     },
     {
       "id": "ytjobs_42907",
@@ -13936,6 +13937,22 @@
       "job_type": "Full-time",
       "pay": "$65,000-$90,000 Per Year",
       "url": "https://ytjobs.co/job/42942",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42949",
+      "title": "Video Editor Needed! Must Be GOOD WITH SFX AND STORYTELLING",
+      "summary": "Video Editor Needed! Must Be GOOD WITH SFX AND STORYTELLING $500 Per project Remote Film & Animation Travel & Events +5 more Zenith 194K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$500 Per project",
+      "url": "https://ytjobs.co/job/42949",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
