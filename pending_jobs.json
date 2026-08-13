@@ -13939,7 +13939,7 @@
       "id": "ytjobs_42942",
       "title": "Video Editor (Full-Time Freelance)",
       "summary": "Video Editor (Full-Time Freelance) $65,000-$90,000 Per Year . Full-time Hybrid . New York City, NY, US Sports Comedy Entertainment +7 more NPL Company",
-      "location": "Hybrid",
+      "location": "On-site",
       "job_type": "Full-time",
       "pay": "$65,000-$90,000 Per Year",
       "url": "https://ytjobs.co/job/42942",
@@ -13947,9 +13947,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-13"
     },
     {
       "id": "ytjobs_42949",
