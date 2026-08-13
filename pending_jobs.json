@@ -13913,9 +13913,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 100.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-13"
     },
     {
       "id": "ytjobs_42928",
@@ -14053,6 +14054,22 @@
       "job_type": "Per project",
       "pay": "$30-$75 Per project",
       "url": "https://ytjobs.co/job/42978",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42984",
+      "title": "YouTube Scriptwriter-Police Bodycam Channel",
+      "summary": "YouTube Scriptwriter-Police Bodycam Channel $75-$130 Per project Remote Crime Bodycam BookedBodycam 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$75-$130 Per project",
+      "url": "https://ytjobs.co/job/42984",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -14872,6 +14889,21 @@
       "email": "hello@yt.careers",
       "email_source": "job_post",
       "company": "CygnusMC \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-08-13"
+    },
+    {
+      "id": "ytcareers_c82dc9bddbd21b20b3bd6562f7d0fb4d44bf82851e5f32bd6084f17ece6df45a",
+      "title": "Long-form YouTube Documentary Video Editor",
+      "summary": "The Enchiridion YouTube channel is hiring for the following role: Long-form YouTube Documentary Video Editor.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/260",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Enchiridion \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-08-13"
     }
