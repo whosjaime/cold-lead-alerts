@@ -14083,9 +14083,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 50.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-14"
     },
     {
       "id": "ytjobs_42989",
@@ -14223,6 +14224,22 @@
       "job_type": "Per project",
       "pay": "$35-$40 Per project",
       "url": "https://ytjobs.co/job/43002",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43007",
+      "title": "YouTube Video Editor for Lifestyle & Vlog Content",
+      "summary": "YouTube Video Editor for Lifestyle & Vlog Content $200-$500 Per project Remote Travel & Events Videoblogging +12 more Alex Esteban 76.5K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$200-$500 Per project",
+      "url": "https://ytjobs.co/job/43007",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
