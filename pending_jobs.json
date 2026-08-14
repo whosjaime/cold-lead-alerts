@@ -14236,9 +14236,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 224,
+      "posted": true,
+      "posted_date": "2026-08-14"
     },
     {
       "id": "ytjobs_43007",
@@ -14312,6 +14313,22 @@
       "job_type": "Full-time",
       "pay": "$72,800-$72,800 Per Year",
       "url": "https://ytjobs.co/job/43023",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43022",
+      "title": "Lead Editor for Cinematic Exploration Videos",
+      "summary": "Lead Editor for Cinematic Exploration Videos $4,000-$5,000 Per project Remote Travel & Events Action/Adventure +14 more Isaac Explores 2.11M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$4,000-$5,000 Per project",
+      "url": "https://ytjobs.co/job/43022",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
