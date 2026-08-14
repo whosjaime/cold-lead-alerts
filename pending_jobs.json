@@ -14185,9 +14185,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 474000,
+      "posted": true,
+      "posted_date": "2026-08-14"
     },
     {
       "id": "ytjobs_21320",
@@ -14293,6 +14294,22 @@
       "job_type": "Per project",
       "pay": "$250-$400 Per project",
       "url": "https://ytjobs.co/job/43014",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43023",
+      "title": "Expert True Crime Script Writer/Director (Documentary)",
+      "summary": "Expert True Crime Script Writer/Director (Documentary) $72,800-$72,800 Per Year . Full-time Remote Documentary Horror Crime Documentary Doventra Production LLC Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$72,800-$72,800 Per Year",
+      "url": "https://ytjobs.co/job/43023",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
