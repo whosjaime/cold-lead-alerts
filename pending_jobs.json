@@ -14423,9 +14423,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 20.0,
+      "subscribers": 53,
+      "posted": true,
+      "posted_date": "2026-08-15"
     }
   ],
   "Roster": [],
