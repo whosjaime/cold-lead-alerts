@@ -14270,9 +14270,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 632,
+      "posted": true,
+      "posted_date": "2026-08-15"
     },
     {
       "id": "ytjobs_43011",
@@ -14330,6 +14331,22 @@
       "job_type": "Per project",
       "pay": "$4,000-$5,000 Per project",
       "url": "https://ytjobs.co/job/43022",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_42727",
+      "title": "Lead Video Editor",
+      "summary": "Lead Video Editor - Gaming & Entertainment $200-$500 Per project Remote Gaming People & Blogs Comedy +7 more DDNS 32 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$200-$500 Per project",
+      "url": "https://ytjobs.co/job/42727",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
