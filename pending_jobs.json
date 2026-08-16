@@ -14491,9 +14491,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 350.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-16"
     },
     {
       "id": "ytjobs_43076",
@@ -14503,6 +14504,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/43076",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43091",
+      "title": "YouTube Gaming Video Editor",
+      "summary": "YouTube Gaming Video Editor \u2014 GTA / Rockstar Games $30-$50 Per project Remote Gaming Comedy Entertainment +4 more Mega-Matt Plays 495 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$30-$50 Per project",
+      "url": "https://ytjobs.co/job/43091",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -17559,7 +17576,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-16"
     }
   ],
   "X": []
