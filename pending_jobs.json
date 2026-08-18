@@ -14661,6 +14661,39 @@
       "email": null,
       "email_source": null,
       "company": null,
+      "referral_bonus": 0.0,
+      "subscribers": 4120,
+      "posted": true,
+      "posted_date": "2026-08-18"
+    },
+    {
+      "id": "ytjobs_43174",
+      "title": "Videographer/Video Editor",
+      "summary": "Videographer/Video Editor $60,000-$80,000 Per Year . Full-time Onsite . Salt Lake City, UT, US Autos & Vehicles Behind the scenes Challenge Dave's Auto Center 1.55M subs",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "$60,000-$80,000 Per Year",
+      "url": "https://ytjobs.co/job/43174",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43172",
+      "title": "Video Producer/Editor Per project",
+      "summary": "Video Producer/Editor Per project Remote . NY, US Film & Animation Entertainment Pushkin Industries Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/43172",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
       "referral_bonus": null,
       "subscribers": null,
       "posted": false
@@ -17758,7 +17791,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-18"
     }
   ],
   "X": []
