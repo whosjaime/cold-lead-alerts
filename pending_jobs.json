@@ -14865,9 +14865,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 50.0,
+      "subscribers": 115000,
+      "posted": true,
+      "posted_date": "2026-08-19"
     },
     {
       "id": "ytjobs_43220",
@@ -18071,7 +18072,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-19"
     }
   ],
   "X": []
