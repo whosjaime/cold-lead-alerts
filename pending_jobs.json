@@ -15596,9 +15596,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-24"
     },
     {
       "id": "ytjobs_43447",
@@ -15672,6 +15673,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/43454",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43455",
+      "title": "Video Editor",
+      "summary": "Video Editor $1,600-$1,600 Per project Remote Entertainment Documentary +7 more 300k 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$1,600-$1,600 Per project",
+      "url": "https://ytjobs.co/job/43455",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
