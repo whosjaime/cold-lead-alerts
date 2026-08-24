@@ -15511,9 +15511,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 400.0,
+      "subscribers": 2480000,
+      "posted": true,
+      "posted_date": "2026-08-24"
     },
     {
       "id": "ytjobs_43421",
@@ -15587,6 +15588,22 @@
       "job_type": "Full-time",
       "pay": "$9,000-$9,000 Per Year",
       "url": "https://ytjobs.co/job/43441",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43447",
+      "title": "Video Editor for UK Finance YouTube Channel (Premier Pro)",
+      "summary": "Video Editor for UK Finance YouTube Channel (Premier Pro) $200-$500 Per project Remote Business and Finance Tutorial +3 more Technically Money 33.9K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$200-$500 Per project",
+      "url": "https://ytjobs.co/job/43447",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
