@@ -15545,9 +15545,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 200.0,
+      "subscribers": 6790,
+      "posted": true,
+      "posted_date": "2026-08-24"
     },
     {
       "id": "ytjobs_43307",
@@ -15637,6 +15638,22 @@
       "job_type": "Per project",
       "pay": "$50-$100 Per project",
       "url": "https://ytjobs.co/job/43451",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43452",
+      "title": "Sound Mixer",
+      "summary": "Sound Mixer $50-$150 Per project Remote People & Blogs Comedy +5 more Richard A. 58 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$150 Per project",
+      "url": "https://ytjobs.co/job/43452",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
