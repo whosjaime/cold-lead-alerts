@@ -15494,9 +15494,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 5800000,
+      "posted": true,
+      "posted_date": "2026-08-24"
     },
     {
       "id": "ytjobs_43429",
@@ -15570,6 +15571,22 @@
       "job_type": "Full-time",
       "pay": "$12,000 Per Year",
       "url": "https://ytjobs.co/job/43303",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43441",
+      "title": "Short-Form Video Editor",
+      "summary": "Short-Form Video Editor $9,000-$9,000 Per Year . Full-time Remote Gaming Reaction Talking head +2 more Growthopia Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$9,000-$9,000 Per Year",
+      "url": "https://ytjobs.co/job/43441",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
