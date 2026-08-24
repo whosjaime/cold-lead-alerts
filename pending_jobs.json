@@ -15477,9 +15477,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 200.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-24"
     },
     {
       "id": "ytjobs_43435",
@@ -15553,6 +15554,22 @@
       "job_type": "Full-time",
       "pay": "$50,000-$70,000 Per Year",
       "url": "https://ytjobs.co/job/43307",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43303",
+      "title": "Video Editor (long form/shorts)",
+      "summary": "Video Editor (long form/shorts) $12,000 Per Year . Full-time Remote Gaming Comedy Entertainment +4 more Jawaddle 107 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$12,000 Per Year",
+      "url": "https://ytjobs.co/job/43303",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
