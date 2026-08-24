@@ -15613,9 +15613,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 33900,
+      "posted": true,
+      "posted_date": "2026-08-24"
     },
     {
       "id": "ytjobs_43450",
@@ -15689,6 +15690,22 @@
       "job_type": "Per project",
       "pay": "$1,600-$1,600 Per project",
       "url": "https://ytjobs.co/job/43455",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43457",
+      "title": "Video Editor for sports challenge YouTube videos",
+      "summary": "Video Editor for sports challenge YouTube videos $300-$1,500 Per project Remote Sports Challenge Jordan Kilganon 956K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300-$1,500 Per project",
+      "url": "https://ytjobs.co/job/43457",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
