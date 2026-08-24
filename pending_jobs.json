@@ -15579,9 +15579,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 107,
+      "posted": true,
+      "posted_date": "2026-08-24"
     },
     {
       "id": "ytjobs_43441",
@@ -15655,6 +15656,22 @@
       "job_type": "Per project",
       "pay": "$50-$150 Per project",
       "url": "https://ytjobs.co/job/43452",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43454",
+      "title": "Video Editor (short-form) Per project",
+      "summary": "Video Editor (short-form) Per project Remote Gaming People & Blogs Comedy +2 more jenn 793K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/43454",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
