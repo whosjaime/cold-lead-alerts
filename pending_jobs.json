@@ -15698,9 +15698,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-25"
     },
     {
       "id": "ytjobs_43457",
@@ -15710,6 +15711,22 @@
       "job_type": "Per project",
       "pay": "$300-$1,500 Per project",
       "url": "https://ytjobs.co/job/43457",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43465",
+      "title": "Content Lead",
+      "summary": "Content Lead \u2014 YouTube & Brand $45-$55 Per Hour . Part-time Onsite . Los Angeles, CA, US Film & Animation Short Movies +16 more Kotetsu Robotics Company",
+      "location": "On-site",
+      "job_type": "Part-time",
+      "pay": "$45-$55 Per Hour",
+      "url": "https://ytjobs.co/job/43465",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
