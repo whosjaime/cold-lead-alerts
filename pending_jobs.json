@@ -15800,9 +15800,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 41,
+      "posted": true,
+      "posted_date": "2026-08-25"
     },
     {
       "id": "ytjobs_43479",
@@ -15828,6 +15829,22 @@
       "job_type": "Per project",
       "pay": "$275-$645 Per project",
       "url": "https://ytjobs.co/job/43475",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43446",
+      "title": "Motion Graphics Animator (2D",
+      "summary": "Motion Graphics Animator (2D + 3D) Full-time Remote Film & Animation Entertainment +12 more Manav 28.7K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/43446",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
