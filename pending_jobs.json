@@ -15970,9 +15970,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 201000,
+      "posted": true,
+      "posted_date": "2026-08-27"
     },
     {
       "id": "ytjobs_43546",
@@ -16014,6 +16015,38 @@
       "job_type": "Per project",
       "pay": "$300-$500 Per project",
       "url": "https://ytjobs.co/job/43527",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43559",
+      "title": "True Crime Video Editor",
+      "summary": "True Crime Video Editor $300 Per Year . Full-time Remote Documentary Crime +37 more Unsealed Tapes 0 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$300 Per Year",
+      "url": "https://ytjobs.co/job/43559",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43554",
+      "title": "Senior Video Editor Full-time",
+      "summary": "Senior Video Editor Full-time Remote Travel & Events Videoblogging +9 more Strange Parts 1.96M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/43554",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -16925,6 +16958,21 @@
       "company": "Saucy Seth \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-08-22"
+    },
+    {
+      "id": "ytcareers_9f1bef90670708a45caadd3b15fc6c2ffd98fee19aaf14db901fce85996c183c",
+      "title": "Creative Captions Video Editor (Coolest Car Channel in Australia)",
+      "summary": "The Car Skool YouTube channel is hiring for the following role: Creative Captions Video Editor (Coolest Car Channel in Australia).",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/267",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Car Skool \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-08-27"
     }
   ],
   "BucketofCrabs": [
