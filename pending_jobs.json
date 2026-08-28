@@ -16004,9 +16004,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 150.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-28"
     },
     {
       "id": "ytjobs_43527",
@@ -16112,6 +16113,38 @@
       "job_type": "Full-time",
       "pay": "$30,000-$42,000 Per Year",
       "url": "https://ytjobs.co/job/43575",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43603",
+      "title": "Long Form Editor",
+      "summary": "Long Form Editor $200-$500 Per project Remote Short Movies Videoblogging +6 more Haris Hussaini 954 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$200-$500 Per project",
+      "url": "https://ytjobs.co/job/43603",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43601",
+      "title": "Researcher",
+      "summary": "Researcher $300-$300 Per project Remote Comedy Entertainment Reaction Robert & Randall 5.6K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300-$300 Per project",
+      "url": "https://ytjobs.co/job/43601",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -19498,7 +19531,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-28"
     },
     {
       "id": "boc_558af45f8c3a6b04311c6fa90b7869ada22a9286d82e57683a889e5f5f5f13dc",
