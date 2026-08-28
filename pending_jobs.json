@@ -16021,9 +16021,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 172000,
+      "posted": true,
+      "posted_date": "2026-08-28"
     },
     {
       "id": "ytjobs_43559",
@@ -16145,6 +16146,38 @@
       "job_type": "Per project",
       "pay": "$300-$300 Per project",
       "url": "https://ytjobs.co/job/43601",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43619",
+      "title": "YouTube Producer for 3 YT Channels for Men",
+      "summary": "YouTube Producer for 3 YT Channels for Men $45,000-$70,000 Per Year . Full-time Remote . TX, US People & Blogs Education Trailers +9 more Rick Walker 10.4K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$45,000-$70,000 Per Year",
+      "url": "https://ytjobs.co/job/43619",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43612",
+      "title": "Commentary Video Editor",
+      "summary": "Commentary Video Editor $400 Per project Remote Entertainment Commentary +4 more Brianne Worth 300K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$400 Per project",
+      "url": "https://ytjobs.co/job/43612",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -19546,7 +19579,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-28"
     },
     {
       "id": "boc_14df4e8965f148b4f358be4dc5aacfa8752b684251f89f88b9f64272709c1e43",
