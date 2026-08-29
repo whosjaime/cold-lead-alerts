@@ -16072,9 +16072,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 7270000,
+      "posted": true,
+      "posted_date": "2026-08-29"
     },
     {
       "id": "ytjobs_43592",
@@ -16196,6 +16197,38 @@
       "job_type": "Part-time",
       "pay": "$20-$35 Per Hour",
       "url": "https://ytjobs.co/job/43630",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43648",
+      "title": "YouTube Editor & Channel Operator",
+      "summary": "YouTube Editor & Channel Operator - Founder Content Part-time Remote Videoblogging People & Blogs +10 more Matt Kelly | The Midnight Pod 10.8K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/43648",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43639",
+      "title": "Long-Form YouTube Video Editor \u2013 Godzilla/Kaiju/Dinosaurs",
+      "summary": "Long-Form YouTube Video Editor \u2013 Godzilla/Kaiju/Dinosaurs $120-$200 Per project Remote Entertainment Movies +3 more Minya fda 59.5K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$120-$200 Per project",
+      "url": "https://ytjobs.co/job/43639",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -19642,7 +19675,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-29"
     },
     {
       "id": "boc_8e5e7f53c5fc4bbfd4362335ad841ee0ca84ef59b0a66c4377116fb3613e64ab",
