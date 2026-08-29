@@ -16038,9 +16038,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-29"
     },
     {
       "id": "ytjobs_43554",
@@ -16178,6 +16179,22 @@
       "job_type": "Per project",
       "pay": "$400 Per project",
       "url": "https://ytjobs.co/job/43612",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43630",
+      "title": "YouTube Content Assistant \u2013 1M+ Follower Media Brand",
+      "summary": "YouTube Content Assistant \u2013 1M+ Follower Media Brand $20-$35 Per Hour . Part-time Remote News & Politics Real Estate +2 more Reventure Consulting 682K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$20-$35 Per Hour",
+      "url": "https://ytjobs.co/job/43630",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -19594,7 +19611,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-08-29"
     },
     {
       "id": "boc_6a1a04b7fb72e8169ce496b3a8ddc30dbeaaf9639a02e7d28a4487e19da38eef",
