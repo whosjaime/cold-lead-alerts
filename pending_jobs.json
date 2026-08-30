@@ -16140,9 +16140,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 50.0,
+      "subscribers": 954,
+      "posted": true,
+      "posted_date": "2026-08-30"
     },
     {
       "id": "ytjobs_43601",
