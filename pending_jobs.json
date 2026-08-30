@@ -16174,9 +16174,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 10400,
+      "posted": true,
+      "posted_date": "2026-08-30"
     },
     {
       "id": "ytjobs_43612",
@@ -16266,6 +16267,38 @@
       "job_type": "Full-time",
       "pay": "$25,000-$45,000 Per Year",
       "url": "https://ytjobs.co/job/43668",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43677",
+      "title": "YouTube Ranking Shorts Video Editor",
+      "summary": "YouTube Ranking Shorts Video Editor $10-$20 Per project Remote Pets & Animals Entertainment +4 more Rank Dawg 100K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$10-$20 Per project",
+      "url": "https://ytjobs.co/job/43677",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43673",
+      "title": "Overwatch Video Editor",
+      "summary": "Overwatch Video Editor - Biweekly Uploads. $300 Per project Remote Gaming Entertainment Live stream Gameplay August 16.4K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300 Per project",
+      "url": "https://ytjobs.co/job/43673",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -19744,6 +19777,35 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-08-29"
+    },
+    {
+      "id": "boc_ffdb0a304ced618324ff479175ec5974a724bf9f23783ef8337694ec8d0dd7cb",
+      "title": "Riftlash Minecraft Builder",
+      "summary": "Riftlash Minecraft Builder Remote Only 5%-10%/Project based 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/X9e6Lv3JtN",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-08-30"
+    },
+    {
+      "id": "boc_f3722d2b8a6ede592a2a8900bd0490b52c67cf4c574122b5204041d13c3f86f2",
+      "title": "Riftlash Blockbench Animator",
+      "summary": "Riftlash Blockbench Animator Remote Only 5%-10%/Project based 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/j65HBxXEGh",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
