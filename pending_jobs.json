@@ -16208,9 +16208,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 682000,
+      "posted": true,
+      "posted_date": "2026-08-30"
     },
     {
       "id": "ytjobs_43648",
@@ -16316,6 +16317,22 @@
       "job_type": "Full-time",
       "pay": "$45,000-$65,000 Per Year",
       "url": "https://ytjobs.co/job/43697",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43703",
+      "title": "Clips Channel Editor Part-time",
+      "summary": "Clips Channel Editor Part-time Remote Entertainment News & Politics +9 more Keith Edwards 1.32M subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/43703",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
