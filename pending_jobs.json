@@ -16123,9 +16123,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 550.0,
+      "subscribers": 503,
+      "posted": true,
+      "posted_date": "2026-08-30"
     },
     {
       "id": "ytjobs_43603",
@@ -16231,6 +16232,22 @@
       "job_type": "Per project",
       "pay": "$120-$200 Per project",
       "url": "https://ytjobs.co/job/43639",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43664",
+      "title": "YouTube Creator Operations & Executive Assistant",
+      "summary": "YouTube Creator Operations & Executive Assistant $10-$14 Per Hour . Part-time Remote People & Blogs Entertainment +8 more Repzilla 365K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$10-$14 Per Hour",
+      "url": "https://ytjobs.co/job/43664",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
