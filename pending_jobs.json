@@ -16361,9 +16361,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 51900,
+      "posted": true,
+      "posted_date": "2026-09-01"
     },
     {
       "id": "ytjobs_43740",
@@ -16581,6 +16582,22 @@
       "job_type": "Per project",
       "pay": "$100-$150 Per project",
       "url": "https://ytjobs.co/job/43694",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43789",
+      "title": "Experienced Video Editor for Documentary YouTube Channel",
+      "summary": "Experienced Video Editor for Documentary YouTube Channel $500-$750 Per project Remote Film & Animation Travel & Events +9 more Traverse Image LLC Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$500-$750 Per project",
+      "url": "https://ytjobs.co/job/43789",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
