@@ -16378,9 +16378,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 41700,
+      "posted": true,
+      "posted_date": "2026-09-01"
     },
     {
       "id": "ytjobs_43738",
@@ -16598,6 +16599,22 @@
       "job_type": "Per project",
       "pay": "$500-$750 Per project",
       "url": "https://ytjobs.co/job/43789",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43795",
+      "title": "Video Editor",
+      "summary": "Video Editor $80-$200 Per project Remote Gaming Videoblogging Comedy +7 more IAmNotCloud 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$80-$200 Per project",
+      "url": "https://ytjobs.co/job/43795",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
