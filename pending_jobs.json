@@ -16310,9 +16310,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 16400,
+      "posted": true,
+      "posted_date": "2026-09-01"
     },
     {
       "id": "ytjobs_43697",
@@ -17408,6 +17409,21 @@
       "company": "Car Skool \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-08-27"
+    },
+    {
+      "id": "ytcareers_604cc1ce0d95e1a5a1a793c9b00cc09a666a53ca56bad46fae90932e6fa5c09f",
+      "title": "Short Form Percussion Content Editor",
+      "summary": "The Omni Percussion YouTube channel is hiring for the following role: Short Form Percussion Content Editor.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/269",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Omni Percussion \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-09-01"
     }
   ],
   "BucketofCrabs": [
