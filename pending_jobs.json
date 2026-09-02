@@ -16480,9 +16480,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 20.0,
+      "subscribers": 572000,
+      "posted": true,
+      "posted_date": "2026-09-02"
     },
     {
       "id": "ytjobs_43749",
@@ -16716,6 +16717,22 @@
       "job_type": "Full-time",
       "pay": "$22,000-$33,000 Per Year",
       "url": "https://ytjobs.co/job/43828",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43766",
+      "title": "Short-Form Clipper (Paid Per 1,000 Views) Per project",
+      "summary": "Short-Form Clipper (Paid Per 1,000 Views) Per project Remote Zaid Safarini 5 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/43766",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
