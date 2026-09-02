@@ -16429,9 +16429,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 132000,
+      "posted": true,
+      "posted_date": "2026-09-02"
     },
     {
       "id": "ytjobs_43671",
@@ -16617,6 +16618,22 @@
       "job_type": "Per project",
       "pay": "$80-$200 Per project",
       "url": "https://ytjobs.co/job/43795",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43803",
+      "title": "Video Editor for Tech YouTube Channel",
+      "summary": "Video Editor for Tech YouTube Channel $250-$600 Per project Remote Education Science & Technology +27 more Marina Wyss - AI & Machine Learning 151K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$250-$600 Per project",
+      "url": "https://ytjobs.co/job/43803",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
