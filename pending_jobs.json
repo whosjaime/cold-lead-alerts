@@ -16463,9 +16463,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 240000,
+      "posted": true,
+      "posted_date": "2026-09-02"
     },
     {
       "id": "ytjobs_43752",
@@ -16699,6 +16700,22 @@
       "job_type": "Full-time",
       "pay": "$18,000-$35,000 Per Year",
       "url": "https://ytjobs.co/job/43811",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43828",
+      "title": "Full Time Video Editor Role",
+      "summary": "Full Time Video Editor Role | rareliquid (275k+) $22,000-$33,000 Per Year . Full-time Remote Documentary Shorts +5 more rareliquid 275K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$22,000-$33,000 Per Year",
+      "url": "https://ytjobs.co/job/43828",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
