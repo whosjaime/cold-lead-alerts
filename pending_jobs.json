@@ -16565,9 +16565,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 6000,
+      "posted": true,
+      "posted_date": "2026-09-03"
     },
     {
       "id": "ytjobs_43773",
@@ -16881,6 +16882,22 @@
       "job_type": "Per project",
       "pay": "$500-$500 Per project",
       "url": "https://ytjobs.co/job/43849",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43879",
+      "title": "Longform Video Editor",
+      "summary": "Longform Video Editor - Checkpoint $425-$575 Per project Remote Gaming Minecraft Gaming +7 more Checkpoint 4.47M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$425-$575 Per project",
+      "url": "https://ytjobs.co/job/43879",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
