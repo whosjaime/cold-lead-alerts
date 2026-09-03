@@ -16531,9 +16531,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 161000,
+      "posted": true,
+      "posted_date": "2026-09-03"
     },
     {
       "id": "ytjobs_43781",
@@ -16767,6 +16768,22 @@
       "job_type": "Full-time",
       "pay": "$100,000-$120,000 Per Year",
       "url": "https://ytjobs.co/job/43830",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43845",
+      "title": "Assembly Video Editor for EYstreem YouTube Per project",
+      "summary": "Assembly Video Editor for EYstreem YouTube Per project Remote Gaming Reaction Scripted Gameplay EYstreem 13.8M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/43845",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
