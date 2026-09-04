@@ -16599,9 +16599,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 100000,
+      "posted": true,
+      "posted_date": "2026-09-04"
     },
     {
       "id": "ytjobs_43789",
@@ -20452,6 +20453,35 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-09-03"
+    },
+    {
+      "id": "boc_bd6f1e592e15a250eff3afecc0aed4a4e2c7edef98a518d3d6aad331a157a7c8",
+      "title": "Lua Studios Lead Game Designer",
+      "summary": "Lua Studios Lead Game Designer - Roblox Remote Only $500-$5000/Fixed Amount Operations Game Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$500-$5000",
+      "url": "https://www.bucketofcrabs.net/jobs/JOuM9bfDdy",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-04"
+    },
+    {
+      "id": "boc_49bbf6d6c8c22df24be34c67ffc57e78d76db330022fda0e312a4bb4f7f27c9d",
+      "title": "Lua Studios Minecraft Keyartist",
+      "summary": "Lua Studios Minecraft Keyartist Remote Only $50-$250/Fixed Amount Marketing Art Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$50-$250",
+      "url": "https://www.bucketofcrabs.net/jobs/o49Wt2yFbO",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
