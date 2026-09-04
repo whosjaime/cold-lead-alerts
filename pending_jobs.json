@@ -16633,9 +16633,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 150.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-09-04"
     },
     {
       "id": "ytjobs_43803",
@@ -16901,6 +16902,22 @@
       "job_type": "Per project",
       "pay": "$425-$575 Per project",
       "url": "https://ytjobs.co/job/43879",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43900",
+      "title": "Minecraft Story",
+      "summary": "Minecraft Story / Civilization Scriptwriter $100-$300 Per project Remote Comedy Action/Adventure +4 more Crumble 62K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$300 Per project",
+      "url": "https://ytjobs.co/job/43900",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
