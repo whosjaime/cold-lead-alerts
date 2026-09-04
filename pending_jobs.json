@@ -16667,9 +16667,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 250.0,
+      "subscribers": 13900,
+      "posted": true,
+      "posted_date": "2026-09-04"
     },
     {
       "id": "ytjobs_43820",
@@ -17031,6 +17032,22 @@
       "job_type": "Per project",
       "pay": "$300 Per project",
       "url": "https://ytjobs.co/job/18679",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43921",
+      "title": "Senior Short-Form Video Editor",
+      "summary": "Senior Short-Form Video Editor $110,000-$120,000 Per Year . Full-time Onsite . Las Vegas, NV, US People & Blogs Shorts Shorts/Reels Serena Neel 3.54M subs",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "$110,000-$120,000 Per Year",
+      "url": "https://ytjobs.co/job/43921",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
