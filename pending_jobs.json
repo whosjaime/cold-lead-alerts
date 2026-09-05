@@ -16752,9 +16752,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 5,
+      "posted": true,
+      "posted_date": "2026-09-05"
     },
     {
       "id": "ytjobs_40739",
@@ -17100,6 +17101,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/43927",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43941",
+      "title": "YouTube Documentary Editor & Motion Designer",
+      "summary": "YouTube Documentary Editor & Motion Designer $1,200-$2,000 Per project Remote Science & Technology Documentary +7 more Hidden Engine 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$1,200-$2,000 Per project",
+      "url": "https://ytjobs.co/job/43941",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
