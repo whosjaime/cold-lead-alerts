@@ -16701,9 +16701,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 315,
+      "posted": true,
+      "posted_date": "2026-09-05"
     },
     {
       "id": "ytjobs_43811",
@@ -17049,6 +17050,22 @@
       "job_type": "Full-time",
       "pay": "$110,000-$120,000 Per Year",
       "url": "https://ytjobs.co/job/43921",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43925",
+      "title": "Short Form Editor Full-time",
+      "summary": "Short Form Editor Full-time Remote Sports IRL Challenge Shorts/Reels Eric Sim 1.13M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/43925",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
