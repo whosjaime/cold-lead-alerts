@@ -16922,9 +16922,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 4470000,
+      "posted": true,
+      "posted_date": "2026-09-06"
     },
     {
       "id": "ytjobs_43900",
@@ -17206,6 +17207,22 @@
       "job_type": "Per project",
       "pay": "$10-$25 Per project",
       "url": "https://ytjobs.co/job/43952",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_36648",
+      "title": "Technical Scriptwriter Full-time",
+      "summary": "Technical Scriptwriter Full-time Remote Howto & Style Education AI +8 more The Zinny Studio 175K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/36648",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
