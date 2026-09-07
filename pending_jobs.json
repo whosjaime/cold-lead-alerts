@@ -16990,9 +16990,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 4300000,
+      "posted": true,
+      "posted_date": "2026-09-07"
     },
     {
       "id": "ytjobs_43910",
@@ -17226,6 +17227,38 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/36648",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44003",
+      "title": "Full-Time YouTube Video Editor",
+      "summary": "Full-Time YouTube Video Editor \u2014 Contact Coffee Full-time Remote . Manchester, United Kingdom Videoblogging Vlog Contact Coffee Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44003",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_43997",
+      "title": "YouTube Strategist for a Kids Channel",
+      "summary": "YouTube Strategist for a Kids Channel $500-$1,000 Per project Remote Entertainment Gaming Storytime DC Social Media Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$500-$1,000 Per project",
+      "url": "https://ytjobs.co/job/43997",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -18182,6 +18215,21 @@
       "company": "Blue Becky \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-09-02"
+    },
+    {
+      "id": "ytcareers_769363ad62ba0499096cc16dea3051b5f5674ec7a926f7dafd6608973109c0f0",
+      "title": "Finance/Investing Video Editor",
+      "summary": "The Omni Capital YouTube channel is hiring for the following role: Finance/Investing Video Editor.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/272",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Omni Capital \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-09-07"
     }
   ],
   "BucketofCrabs": [
@@ -20824,6 +20872,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-09-04"
+    },
+    {
+      "id": "boc_71ad417f8238d8064d72877a13d9aa56e9cbe640bc5974def6be5be0cee2b20e",
+      "title": "Master Duckies Level Design/Builder",
+      "summary": "Master Duckies Level Design/Builder Remote Only $500-$800/Fixed Amount World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$500-$800",
+      "url": "https://www.bucketofcrabs.net/jobs/AkCQkdsdpf",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-07"
     }
   ],
   "X": []
