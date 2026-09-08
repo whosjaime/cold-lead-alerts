@@ -17058,9 +17058,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1610000,
+      "posted": true,
+      "posted_date": "2026-09-08"
     },
     {
       "id": "ytjobs_43921",
@@ -17310,6 +17311,22 @@
       "job_type": "Contract",
       "pay": "$20-$300 Per project",
       "url": "https://ytjobs.co/job/44014",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44026",
+      "title": "Video Editor",
+      "summary": "Video Editor $260-$650 Per project Remote Film & Animation Comedy +7 more Gumball Universe 566K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$260-$650 Per project",
+      "url": "https://ytjobs.co/job/44026",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
