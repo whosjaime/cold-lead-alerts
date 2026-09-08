@@ -17024,9 +17024,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 49900,
+      "posted": true,
+      "posted_date": "2026-09-08"
     },
     {
       "id": "ytjobs_17615",
@@ -17292,6 +17293,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/44009",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44014",
+      "title": "Assistant Video Editor (Contract) for (TCG/Collectibles)",
+      "summary": "Assistant Video Editor (Contract) for (TCG/Collectibles) $20-$300 Per project Remote Gaming Entertainment Education +10 more Gearshift Media Company",
+      "location": "Remote",
+      "job_type": "Contract",
+      "pay": "$20-$300 Per project",
+      "url": "https://ytjobs.co/job/44014",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
