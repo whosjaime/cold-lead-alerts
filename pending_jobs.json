@@ -17075,9 +17075,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 1000.0,
+      "subscribers": 3540000,
+      "posted": true,
+      "posted_date": "2026-09-08"
     },
     {
       "id": "ytjobs_43925",
@@ -17327,6 +17328,38 @@
       "job_type": "Per project",
       "pay": "$260-$650 Per project",
       "url": "https://ytjobs.co/job/44026",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44054",
+      "title": "Short-Video Editor Part-time",
+      "summary": "Short-Video Editor Part-time Remote Shorts IRL Shorts/Reels Jasonolo 603K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44054",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44048",
+      "title": "Senior Content Creator",
+      "summary": "Senior Content Creator $24,000-$42,000 Per Year . Full-time Remote Autos & Vehicles Comedy +19 more Lora Consulting Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$24,000-$42,000 Per Year",
+      "url": "https://ytjobs.co/job/44048",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -18298,6 +18331,21 @@
       "company": "Omni Capital \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-09-07"
+    },
+    {
+      "id": "ytcareers_4af1e518beaa1c18b055ca32c7b15a886e004a65aae7bace8cf16d868712b3e4",
+      "title": "[HIRING] 2D/2.5D ANIMATOR \u2014 HOODIE GUY STYLE SHORT \u2014 $60-100/SHORT",
+      "summary": "The Dave Explains YouTube channel is hiring for the following role: [HIRING] 2D/2.5D ANIMATOR \u2014 HOODIE GUY STYLE SHORT \u2014 $60-100/SHORT.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "$60-100/SHORT",
+      "url": "https://yt.careers/youtube-jobs/273",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Dave Explains \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-09-08"
     }
   ],
   "BucketofCrabs": [
@@ -20955,6 +21003,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-09-07"
+    },
+    {
+      "id": "boc_f1ff62bf9fca5758a21fa4928c10432d1ed998e6010bd930bfc7a2ae07904a85",
+      "title": "Riftlash Job Posting",
+      "summary": "Riftlash Job Posting: Texture Artist Remote Only 3%-5%/Project based Game Art Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/od2Xd36dYm",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-08"
     }
   ],
   "X": []
