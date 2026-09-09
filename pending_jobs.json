@@ -17160,9 +17160,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2,
+      "posted": true,
+      "posted_date": "2026-09-09"
     },
     {
       "id": "ytjobs_43970",
@@ -17460,6 +17461,38 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/44076",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44082",
+      "title": "Social Media Strategist Full-time",
+      "summary": "Social Media Strategist Full-time Remote Entertainment Documentary +42 more Visual Venture 1.94M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44082",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44080",
+      "title": "Head of Content (Creative Director) Part-time",
+      "summary": "Head of Content (Creative Director) Part-time Remote Real Estate Business and Finance +3 more Joseph Khateri Real Estate 10.4K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44080",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -21118,6 +21151,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-09-08"
+    },
+    {
+      "id": "boc_3f7232783f9e8e05581a52d6669df9a6fc69c9ce8867aa70ff2034a18778f2d7",
+      "title": "PokeBedrock Marketing Shorts Creator",
+      "summary": "PokeBedrock Marketing Shorts Creator Remote Only $30-$900/Fixed Amount Marketing Art Video",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$30-$900",
+      "url": "https://www.bucketofcrabs.net/jobs/dSNROM37tb",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-09"
     }
   ],
   "X": []
