@@ -17143,9 +17143,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 7940,
+      "posted": true,
+      "posted_date": "2026-09-09"
     },
     {
       "id": "ytjobs_43971",
@@ -17443,6 +17444,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/44071",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44076",
+      "title": "Martial arts video editor Per project",
+      "summary": "Martial arts video editor Per project Remote Sports Action/Adventure +4 more Josh Beam BJJ 153K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44076",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
