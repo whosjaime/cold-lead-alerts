@@ -17296,9 +17296,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 6650000,
+      "posted": true,
+      "posted_date": "2026-09-10"
     },
     {
       "id": "ytjobs_44009",
@@ -17644,6 +17645,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/44129",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44150",
+      "title": "Youtube Video Editor",
+      "summary": "Youtube Video Editor - Comedy & Challenge Videos $500-$1,000 Per project Remote Comedy Entertainment IRL +3 more JeeJ 197K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$500-$1,000 Per project",
+      "url": "https://ytjobs.co/job/44150",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
