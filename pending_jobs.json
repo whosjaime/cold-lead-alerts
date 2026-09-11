@@ -17364,9 +17364,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 50.0,
+      "subscribers": 603000,
+      "posted": true,
+      "posted_date": "2026-09-11"
     },
     {
       "id": "ytjobs_44048",
@@ -17728,6 +17729,22 @@
       "job_type": "Per project",
       "pay": "$300-$500 Per project",
       "url": "https://ytjobs.co/job/44161",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44162",
+      "title": "Video Essay/Random Video Editor",
+      "summary": "Video Essay/Random Video Editor $75-$125 Per project Remote Film & Animation Gaming Comedy +12 more FigmentFilms 684 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$75-$125 Per project",
+      "url": "https://ytjobs.co/job/44162",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -21401,6 +21418,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-09-09"
+    },
+    {
+      "id": "boc_32d46fbf16c3acb5b8f6f4f8122a55aa4d3ef187eb34d4b6a48f402e414f20ab",
+      "title": "Odyssey Minecraft Bedrock Add-On Developer",
+      "summary": "Odyssey Minecraft Bedrock Add-On Developer Remote Only $2000-$8000/Fixed Amount Game Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$2000-$8000",
+      "url": "https://www.bucketofcrabs.net/jobs/VNa7dm61UD",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-11"
     }
   ],
   "X": []
