@@ -17398,9 +17398,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 30000,
+      "posted": true,
+      "posted_date": "2026-09-11"
     },
     {
       "id": "ytjobs_44061",
@@ -17810,6 +17811,38 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/44165",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44181",
+      "title": "Full-Time Senior YouTube Video Editor Full-time",
+      "summary": "Full-Time Senior YouTube Video Editor Full-time Remote Education Marketing +8 more Insurance Exam Prep by JustInsurance 29.1K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44181",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44180",
+      "title": "Short Form Video Editor for Cruise Content",
+      "summary": "Short Form Video Editor for Cruise Content $5-$10 Per project Remote People & Blogs Comedy Shorts +7 more No Fluff Cruising 11.8K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$5-$10 Per project",
+      "url": "https://ytjobs.co/job/44180",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -21541,7 +21574,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-09-11"
     },
     {
       "id": "boc_1a2b4a556468664c45744d58610a55a9223a23ae4712bf47176dbddf86e53953",
