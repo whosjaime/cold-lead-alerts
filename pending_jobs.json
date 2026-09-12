@@ -17466,9 +17466,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 106000,
+      "posted": true,
+      "posted_date": "2026-09-12"
     },
     {
       "id": "ytjobs_44076",
@@ -17846,6 +17847,22 @@
       "job_type": "Per project",
       "pay": "$5-$10 Per project",
       "url": "https://ytjobs.co/job/44180",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44188",
+      "title": "Long-Form Video Editor (Long-Term)",
+      "summary": "Long-Form Video Editor (Long-Term) - Lex in Wonderland $150-$300 Per project Remote . Australia Videoblogging Entertainment +7 more Lex in Wonderland 13.9K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$150-$300 Per project",
+      "url": "https://ytjobs.co/job/44188",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
