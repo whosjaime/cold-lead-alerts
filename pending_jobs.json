@@ -17534,9 +17534,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 581000,
+      "posted": true,
+      "posted_date": "2026-09-12"
     },
     {
       "id": "ytjobs_44103",
@@ -18867,6 +18868,21 @@
       "company": "The Business Behind It \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-09-11"
+    },
+    {
+      "id": "ytcareers_e841cd93b34a74ea1e7387033132e45c026e1874803402074670276b9a34a7a9",
+      "title": "Full-Explainer YouTube Video Editor",
+      "summary": "The Mr. Mind Explainer YouTube channel is hiring for the following role: Full-Explainer YouTube Video Editor.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/275",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Mr. Mind Explainer \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-09-12"
     }
   ],
   "BucketofCrabs": [
