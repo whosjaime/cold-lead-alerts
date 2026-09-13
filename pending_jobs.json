@@ -17602,9 +17602,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 40700,
+      "posted": true,
+      "posted_date": "2026-09-13"
     },
     {
       "id": "ytjobs_44145",
@@ -17918,6 +17919,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/44222",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44219",
+      "title": "Long-Form Video Editor for TV & Movie Analysis Per project",
+      "summary": "Long-Form Video Editor for TV & Movie Analysis Per project Remote Entertainment Movies +9 more Character Limit 2 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44219",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -21681,6 +21698,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-09-11"
+    },
+    {
+      "id": "boc_a68958b866a67421df3459a138eefa406c2d775141e7ef971c2c05f9ae0f000d",
+      "title": "Block Studios Vibrant Visuals PBR Artist",
+      "summary": "Block Studios Vibrant Visuals PBR Artist Remote Only $10-$25/Hourly Game Art 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$10-$25/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/jhXvdYx59F",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-13"
     }
   ],
   "X": []
