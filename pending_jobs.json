@@ -17585,9 +17585,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1000000,
+      "posted": true,
+      "posted_date": "2026-09-13"
     },
     {
       "id": "ytjobs_44109",
@@ -17901,6 +17902,22 @@
       "job_type": "Part-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/44216",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44222",
+      "title": "Sports Video Editor \u2013 Basketball Content Per project",
+      "summary": "Sports Video Editor \u2013 Basketball Content Per project Remote Shorts/Reels Green Light Views 8.64K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44222",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
