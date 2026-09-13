@@ -17619,9 +17619,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 39200,
+      "posted": true,
+      "posted_date": "2026-09-13"
     },
     {
       "id": "ytjobs_44131",
@@ -21707,6 +21708,21 @@
       "job_type": "Not listed",
       "pay": "$10-$25/Hour",
       "url": "https://www.bucketofcrabs.net/jobs/jhXvdYx59F",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-13"
+    },
+    {
+      "id": "boc_ea9c9dbdaff996aa2ead1e1229136d9a4dd95a7cb074abfafc72fa31d612fa33",
+      "title": "2Script Studios Addon Developer (All types)",
+      "summary": "2Script Studios Addon Developer (All types) Remote Only 1%-100%/Project based 3D Models/Animator Game Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/bdfLOnJGnu",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
