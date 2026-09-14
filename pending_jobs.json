@@ -17653,9 +17653,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 217000,
+      "posted": true,
+      "posted_date": "2026-09-14"
     },
     {
       "id": "ytjobs_44129",
@@ -17937,6 +17938,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/44219",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44250",
+      "title": "IRL Video Editor",
+      "summary": "IRL Video Editor $150-$500 Per project Remote Anime/Animation Horror Animation Cinematic Splink 338K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$150-$500 Per project",
+      "url": "https://ytjobs.co/job/44250",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
