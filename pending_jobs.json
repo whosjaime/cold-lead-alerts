@@ -17687,9 +17687,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 197000,
+      "posted": true,
+      "posted_date": "2026-09-14"
     },
     {
       "id": "ytjobs_44158",
@@ -17955,6 +17956,22 @@
       "job_type": "Per project",
       "pay": "$150-$500 Per project",
       "url": "https://ytjobs.co/job/44250",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44264",
+      "title": "Elite Editors Only",
+      "summary": "Elite Editors Only: Travel Vlogs + E-Com Ads (AI Heavy) $10,000 Per Year . Full-time Remote Videoblogging Shorts Marketing +4 more Vitaxe LLC Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$10,000 Per Year",
+      "url": "https://ytjobs.co/job/44264",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
