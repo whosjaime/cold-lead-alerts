@@ -17721,9 +17721,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-09-14"
     },
     {
       "id": "ytjobs_11930",
@@ -17989,6 +17990,22 @@
       "job_type": "Full-time",
       "pay": "$80,000-$100,000 Per Year",
       "url": "https://ytjobs.co/job/44276",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44285",
+      "title": "YouTube Strategist for Author Per project",
+      "summary": "YouTube Strategist for Author Per project Remote Entertainment Shorts History +6 more Tammy Gross 7 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44285",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -21810,7 +21827,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-09-14"
     }
   ],
   "X": []
