@@ -17823,9 +17823,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1250000,
+      "posted": true,
+      "posted_date": "2026-09-15"
     },
     {
       "id": "ytjobs_44165",
@@ -18155,6 +18156,38 @@
       "job_type": "Per project",
       "pay": "$200-$500 Per project",
       "url": "https://ytjobs.co/job/44322",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44331",
+      "title": "Creative Director",
+      "summary": "Creative Director - Instagram Short Form Full-time Remote Smart Agency Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44331",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44326",
+      "title": "Video Editor",
+      "summary": "Video Editor $500-$800 Per project Remote Travel & Events Lifestyle Makeup +3 more Kayla Ryan 965K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$500-$800 Per project",
+      "url": "https://ytjobs.co/job/44326",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -19171,6 +19204,21 @@
       "company": "Mr. Mind Explainer \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-09-12"
+    },
+    {
+      "id": "ytcareers_8ba3e5b96e9f0bf0b47cfc8bcb3f1666c2daa08bb9e97835aeac2f33c4695c0b",
+      "title": "Video Editor \u2013 OmeTV / Fitness / Comedy",
+      "summary": "The Preston Gifford YouTube channel is hiring for the following role: Video Editor \u2013 OmeTV / Fitness / Comedy.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/277",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Preston Gifford \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-09-15"
     }
   ],
   "BucketofCrabs": [
