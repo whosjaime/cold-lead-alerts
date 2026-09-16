@@ -17874,9 +17874,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 11800,
+      "posted": true,
+      "posted_date": "2026-09-16"
     },
     {
       "id": "ytjobs_44188",
@@ -18206,6 +18207,22 @@
       "job_type": "Full-time",
       "pay": "$72,000-$90,000 Per Year",
       "url": "https://ytjobs.co/job/44333",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44342",
+      "title": "Motion Graphic Designer, Explainer & Visual Storytelling Full-time",
+      "summary": "Motion Graphic Designer, Explainer & Visual Storytelling Full-time Onsite . Ho Chi Minh City, Vietnam Travel & Events Documentary +8 more Best Ever Food Review Show Company",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44342",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
