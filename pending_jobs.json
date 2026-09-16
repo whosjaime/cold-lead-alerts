@@ -17840,9 +17840,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 23100000,
+      "posted": true,
+      "posted_date": "2026-09-16"
     },
     {
       "id": "ytjobs_44181",
@@ -18188,6 +18189,22 @@
       "job_type": "Per project",
       "pay": "$500-$800 Per project",
       "url": "https://ytjobs.co/job/44326",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44333",
+      "title": "Full Time Editor",
+      "summary": "Full Time Editor - Finance Content Focused (NORTH AMERICA) $72,000-$90,000 Per Year . Full-time Remote Business and Finance IRL Reaction +4 more YT Pros Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$72,000-$90,000 Per Year",
+      "url": "https://ytjobs.co/job/44333",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
