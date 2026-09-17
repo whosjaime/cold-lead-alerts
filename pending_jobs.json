@@ -18010,9 +18010,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 3000.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-09-17"
     },
     {
       "id": "ytjobs_44285",
@@ -18550,6 +18551,22 @@
       "job_type": "Full-time",
       "pay": "$24,000-$32,000 Per Year",
       "url": "https://ytjobs.co/job/44408",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44415",
+      "title": "Longform Video Editor Per project",
+      "summary": "Longform Video Editor Per project Remote Videoblogging Education Shorts +8 more 8 Limbs Creative Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44415",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
