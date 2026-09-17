@@ -17959,9 +17959,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 418,
+      "posted": true,
+      "posted_date": "2026-09-17"
     },
     {
       "id": "ytjobs_44250",
@@ -18371,6 +18372,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/44372",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44387",
+      "title": "Video Editor for EYstreem YouTube Per project",
+      "summary": "Video Editor for EYstreem YouTube Per project Remote . Melbourne, Australia Gaming Minecraft IRL Scripted +2 more EYstreem 13.8M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44387",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
