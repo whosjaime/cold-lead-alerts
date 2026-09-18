@@ -18078,9 +18078,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 51000,
+      "posted": true,
+      "posted_date": "2026-09-18"
     },
     {
       "id": "ytjobs_41739",
@@ -18666,6 +18667,38 @@
       "job_type": "Per project",
       "pay": "$75 Per project",
       "url": "https://ytjobs.co/job/44431",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44443",
+      "title": "Experienced Video Editors Wanted!",
+      "summary": "Experienced Video Editors Wanted! - Audit Central $225-$550 Per project Remote Comedy Entertainment +4 more SMLYTP 996K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$225-$550 Per project",
+      "url": "https://ytjobs.co/job/44443",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44441",
+      "title": "Video Editor",
+      "summary": "Video Editor $4,000-$5,000 Per project Remote Sports IRL Challenge Dev Meff 11.7K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$4,000-$5,000 Per project",
+      "url": "https://ytjobs.co/job/44441",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -22562,7 +22595,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-09-18"
     }
   ],
   "X": []
