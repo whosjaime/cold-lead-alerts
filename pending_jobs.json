@@ -18061,9 +18061,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 500.0,
+      "subscribers": 7300,
+      "posted": true,
+      "posted_date": "2026-09-18"
     },
     {
       "id": "ytjobs_44289",
@@ -18633,6 +18634,38 @@
       "job_type": "Per project",
       "pay": "$25-$100 Per project",
       "url": "https://ytjobs.co/job/44420",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44134",
+      "title": "Fortnite Content Producer",
+      "summary": "Fortnite Content Producer - Ali-A & Ali-A\u00b2 Per project Remote . United Kingdom Gaming Entertainment Shorts +5 more Ali-A 19.7M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44134",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44431",
+      "title": "Gaming Thumbnail Designer",
+      "summary": "Gaming Thumbnail Designer $75 Per project Remote Gaming Minecraft Roblox Gameplay Platinum Pace 61.1K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$75 Per project",
+      "url": "https://ytjobs.co/job/44431",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -19677,6 +19710,21 @@
       "email": "hello@yt.careers",
       "email_source": "job_post",
       "company": "Clinton Kingsley \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-09-18"
+    },
+    {
+      "id": "ytcareers_31f943690eb624ef3cd64ef2c8530fb14fb2bc121b5f29a3129577d8ea563a2e",
+      "title": "Meteorologist host for route-based YouTube show (US, freelance contractor)",
+      "summary": "The Weather on the Way YouTube channel is hiring for the following role: Meteorologist host for route-based YouTube show (US, freelance contractor).",
+      "location": "On-site",
+      "job_type": "Contract",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/280",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Weather on the Way \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-09-18"
     }
@@ -22486,6 +22534,35 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-09-14"
+    },
+    {
+      "id": "boc_4c837807b24483b49fd4bd8d8c8fe33def5f8bc89fc78cb87a0f75662200fcad",
+      "title": "Loose Screw HD Skin Artist",
+      "summary": "Loose Screw HD Skin Artist Remote Only $100-$205/Fixed Amount Game Art 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$100-$205",
+      "url": "https://www.bucketofcrabs.net/jobs/Q1J3fGQFNj",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-18"
+    },
+    {
+      "id": "boc_7d84195787ba7ce3c79b25b1ad9a19400398ca1d1d09a505b950890326921d25",
+      "title": "Block Studios Minecraft Bedrock Developer",
+      "summary": "Block Studios Minecraft Bedrock Developer Remote Only $250-$2500/Fixed Amount Game Developer Plugin/Mod Developer",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$250-$2500",
+      "url": "https://www.bucketofcrabs.net/jobs/VFq9hUuDXV",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
