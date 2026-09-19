@@ -18180,9 +18180,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 996000,
+      "posted": true,
+      "posted_date": "2026-09-19"
     },
     {
       "id": "ytjobs_44331",
@@ -18720,6 +18721,22 @@
       "job_type": "Part-time",
       "pay": "$45-$85 Per Hour",
       "url": "https://ytjobs.co/job/44457",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44468",
+      "title": "Video Editor for True Crime Channel",
+      "summary": "Video Editor for True Crime Channel $26,400-$70,000 Per Year . Full-time Remote Crime Documentary Faceless Samuel Hylton 0 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$26,400-$70,000 Per Year",
+      "url": "https://ytjobs.co/job/44468",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
