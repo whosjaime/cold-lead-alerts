@@ -18163,9 +18163,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 150.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-09-19"
     },
     {
       "id": "ytjobs_44322",
@@ -18703,6 +18704,22 @@
       "job_type": "Per project",
       "pay": "$4,000-$5,000 Per project",
       "url": "https://ytjobs.co/job/44441",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44457",
+      "title": "Video Editor & Channel Manager for Lifestyle YouTube Channel",
+      "summary": "Video Editor & Channel Manager for Lifestyle YouTube Channel $45-$85 Per Hour . Part-time Remote Videoblogging People & Blogs +15 more Luiza \u2014 Off Call 2.7K subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "$45-$85 Per Hour",
+      "url": "https://ytjobs.co/job/44457",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -22601,6 +22618,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-09-18"
+    },
+    {
+      "id": "boc_be387b673b3ff1129ac7b6aab1125b0454d10f4d5f3f1f34b8b5a4a4225f4347",
+      "title": "Framewild Studio Minecraft 3D Animator (Project-Based)",
+      "summary": "Framewild Studio Minecraft 3D Animator (Project-Based) Remote Only 28%-33%/Project based 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/Cy3tEdfh2q",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-19"
     }
   ],
   "X": []
