@@ -18129,9 +18129,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 1000.0,
+      "subscribers": 2610,
+      "posted": true,
+      "posted_date": "2026-09-19"
     },
     {
       "id": "ytjobs_44305",
