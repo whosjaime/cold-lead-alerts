@@ -18265,9 +18265,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 50.0,
+      "subscribers": 88,
+      "posted": true,
+      "posted_date": "2026-09-20"
     },
     {
       "id": "ytjobs_44364",
@@ -18757,6 +18758,22 @@
       "job_type": "Per project",
       "pay": "$400-$800 Per project",
       "url": "https://ytjobs.co/job/44480",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44491",
+      "title": "Thumbnail Designer for IRL Challenge Content",
+      "summary": "Thumbnail Designer for IRL Challenge Content $100-$200 Per project Remote Entertainment Gaming IRL Challenge Dante Morales 1.17K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$200 Per project",
+      "url": "https://ytjobs.co/job/44491",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
