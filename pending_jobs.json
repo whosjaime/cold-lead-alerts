@@ -18282,9 +18282,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 86600,
+      "posted": true,
+      "posted_date": "2026-09-20"
     },
     {
       "id": "ytjobs_44362",
@@ -18774,6 +18775,22 @@
       "job_type": "Per project",
       "pay": "$100-$200 Per project",
       "url": "https://ytjobs.co/job/44491",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44496",
+      "title": "Thumbnail Designer, 300K car detailing channel (paid trial)",
+      "summary": "Thumbnail Designer, 300K car detailing channel (paid trial) $50-$50 Per project Remote Film & Animation Gaming +6 more Wilson Auto Detailing 304K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$50-$50 Per project",
+      "url": "https://ytjobs.co/job/44496",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
