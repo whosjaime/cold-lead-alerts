@@ -18367,9 +18367,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 819000,
+      "posted": true,
+      "posted_date": "2026-09-21"
     },
     {
       "id": "ytjobs_44348",
@@ -22740,6 +22741,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-09-19"
+    },
+    {
+      "id": "boc_6b074cace12e52f0453c2dab834585cf1febe87e8804ece58be254711d1aec87",
+      "title": "Architects Edge Bedrock Marketplace Skin Artist",
+      "summary": "Architects Edge Bedrock Marketplace Skin Artist Remote Only $5-$20/Fixed Amount Game Art Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$5-$20",
+      "url": "https://www.bucketofcrabs.net/jobs/J619zu7EFo",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-21"
     }
   ],
   "X": []
