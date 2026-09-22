@@ -18435,9 +18435,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 6,
+      "posted": true,
+      "posted_date": "2026-09-22"
     },
     {
       "id": "ytjobs_36718",
@@ -18895,6 +18896,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/44507",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44540",
+      "title": "Video Editor LONG FORM",
+      "summary": "Video Editor LONG FORM $100-$400 Per project Remote Sports Entertainment Football +3 more Corrado Arangio 14.2K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$400 Per project",
+      "url": "https://ytjobs.co/job/44540",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -19956,6 +19973,21 @@
       "company": "Weather on the Way \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-09-18"
+    },
+    {
+      "id": "ytcareers_f41b1764b0d99f1fd42cc22187a11989f16536241c6b274305ba9c1aaeb90ea2",
+      "title": "TV Series & Film & Documentary Overseas Social Media Operator (Part-Time)",
+      "summary": "The M\u00ea Fim Ng\u1ecdt YouTube channel is hiring for the following role: TV Series & Film & Documentary Overseas Social Media Operator (Part-Time).",
+      "location": "On-site",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/283",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "M\u00ea Fim Ng\u1ecdt \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-09-22"
     }
   ],
   "BucketofCrabs": [
