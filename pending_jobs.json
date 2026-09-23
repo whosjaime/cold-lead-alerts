@@ -18554,9 +18554,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 198000,
+      "posted": true,
+      "posted_date": "2026-09-23"
     },
     {
       "id": "ytjobs_44409",
@@ -19254,6 +19255,22 @@
       "job_type": "Per project",
       "pay": "$400-$700 Per project",
       "url": "https://ytjobs.co/job/44591",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44621",
+      "title": "Thumbnail Designer",
+      "summary": "Thumbnail Designer | (Unspeakable - 20M) $300 Per project Remote Videoblogging People & Blogs +5 more Unspeakable 20M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300 Per project",
+      "url": "https://ytjobs.co/job/44621",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
