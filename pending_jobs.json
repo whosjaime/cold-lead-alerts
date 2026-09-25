@@ -18673,9 +18673,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-09-25"
     },
     {
       "id": "ytjobs_44134",
@@ -23396,6 +23397,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-09-21"
+    },
+    {
+      "id": "boc_fddc1b4fbc5aff9418fc1cd23fd1d4f88d061e3848901bc4c852d43ebcdd7f57",
+      "title": "WorldLab Studios Builder",
+      "summary": "WorldLab Studios Builder / Level Designer Remote Only $50-$500/Fixed Amount World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$50-$500",
+      "url": "https://www.bucketofcrabs.net/jobs/63gnDtShun",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-25"
     }
   ],
   "X": []
