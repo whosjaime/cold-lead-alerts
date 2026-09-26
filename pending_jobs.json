@@ -18809,9 +18809,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 42,
+      "posted": true,
+      "posted_date": "2026-09-26"
     },
     {
       "id": "ytjobs_44496",
@@ -19605,6 +19606,22 @@
       "job_type": "Full-time",
       "pay": "$42,000-$60,000 Per Year",
       "url": "https://ytjobs.co/job/44726",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44736",
+      "title": "YouTube Strategist for Gaming Channel",
+      "summary": "YouTube Strategist for Gaming Channel $1,000-$3,000 Per Year . Full-time Remote Gaming Gta Entertainment +2 more Trevocado 8.5K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$1,000-$3,000 Per Year",
+      "url": "https://ytjobs.co/job/44736",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -23621,7 +23638,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-09-26"
     },
     {
       "id": "boc_b43b2f0b873cbb3fc1893dcad74e562186758e3f26963099fa5818e4710312b5",
@@ -23631,6 +23649,20 @@
       "job_type": "Not listed",
       "pay": "$1-$30/Hour",
       "url": "https://www.bucketofcrabs.net/jobs/4dBvygmd77",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "boc_6c8d1a2dfcb9c3b7105cc2afb07afe6e70cbabc418797f91ebeb147cbb75c2b5",
+      "title": "Yeggs Part-Time Bedrock Developer",
+      "summary": "Yeggs Part-Time Bedrock Developer Remote Only 20%-60%/Project based Design Plugin/Mod Developer",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/DH2RvXLAaM",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
