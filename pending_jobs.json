@@ -18775,9 +18775,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 500.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-09-26"
     },
     {
       "id": "ytjobs_44480",
@@ -23538,6 +23539,21 @@
       "job_type": "Not listed",
       "pay": "$200-$450",
       "url": "https://www.bucketofcrabs.net/jobs/b2BQXjUV13",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-26"
+    },
+    {
+      "id": "boc_44361916048e08c857bb19331dd0747729b70d6bcf429139a681a8b40feca877",
+      "title": "Hoplite Game Designer",
+      "summary": "Hoplite Game Designer Remote Only $12000-$36000/Fixed Amount - yearly Design",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$12000-$36000",
+      "url": "https://www.bucketofcrabs.net/jobs/US1rdZtNN8",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
