@@ -18741,9 +18741,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 150.0,
+      "subscribers": 11700,
+      "posted": true,
+      "posted_date": "2026-09-26"
     },
     {
       "id": "ytjobs_44457",
@@ -19553,6 +19554,22 @@
       "job_type": "Per project",
       "pay": "$120-$180 Per project",
       "url": "https://ytjobs.co/job/44700",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44701",
+      "title": "Video Editor Full-time",
+      "summary": "Video Editor Full-time Onsite . Austin, TX, US Entertainment Education +7 more Caleb Hammer 3.78M subs",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44701",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -23511,6 +23528,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-09-25"
+    },
+    {
+      "id": "boc_a829abb32da81fbace3e03b7250268f67b48b8c5af3dbe2b4fa7d5cd39031be6",
+      "title": "GoE-Craft World Builder (Project Based)",
+      "summary": "GoE-Craft World Builder (Project Based) Remote Only $200-$450/Fixed Amount World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$200-$450",
+      "url": "https://www.bucketofcrabs.net/jobs/b2BQXjUV13",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-09-26"
     }
   ],
   "X": []
