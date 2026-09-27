@@ -18843,9 +18843,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 39400,
+      "posted": true,
+      "posted_date": "2026-09-27"
     },
     {
       "id": "ytjobs_44501",
@@ -19639,6 +19640,22 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/44741",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44744",
+      "title": "Video Editor For Reactions/Gaming Videos Full-time",
+      "summary": "Video Editor For Reactions/Gaming Videos Full-time Remote Gaming Comedy Reaction +3 more Nick Kinek 1 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44744",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -23685,7 +23702,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-09-27"
     }
   ],
   "X": []
