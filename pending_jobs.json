@@ -18962,9 +18962,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 9220,
+      "posted": true,
+      "posted_date": "2026-09-28"
     },
     {
       "id": "ytjobs_44553",
@@ -19742,6 +19743,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/44771",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44779",
+      "title": "Final Cut Pro Video Editor for Minecraft Videos Per project",
+      "summary": "Final Cut Pro Video Editor for Minecraft Videos Per project Remote Minecraft Travel & Events +4 more trey ovard 231K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44779",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -20818,6 +20835,21 @@
       "company": "M\u00ea Fim Ng\u1ecdt \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-09-22"
+    },
+    {
+      "id": "ytcareers_4f590f9726b0e0ac517db9a90a7cf5edba2b72d6ca4945a13aff70d39d2449f4",
+      "title": "Documentary Video Editor",
+      "summary": "The CheefCurry YouTube channel is hiring for the following role: Documentary Video Editor.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/285",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "CheefCurry \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-09-28"
     }
   ],
   "BucketofCrabs": [
