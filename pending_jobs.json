@@ -18996,9 +18996,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2240000,
+      "posted": true,
+      "posted_date": "2026-09-29"
     },
     {
       "id": "ytjobs_44548",
@@ -19872,6 +19873,22 @@
       "job_type": "Per project",
       "pay": "$80-$250 Per project",
       "url": "https://ytjobs.co/job/44784",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44814",
+      "title": "The Best Podcast & Video Editor Role Ever Full-time",
+      "summary": "The Best Podcast & Video Editor Role Ever Full-time Remote Education Economy Interview Podcast Afford Anything Podcast 66.2K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44814",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
