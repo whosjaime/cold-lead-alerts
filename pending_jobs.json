@@ -19047,9 +19047,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 50.0,
+      "subscribers": 145000,
+      "posted": true,
+      "posted_date": "2026-09-29"
     },
     {
       "id": "ytjobs_44562",
@@ -21046,6 +21047,21 @@
       "company": "CheefCurry \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-09-28"
+    },
+    {
+      "id": "ytcareers_257c5f730d458940a57c26f3ede3bd436614ccee8c1209b06436024d04162918",
+      "title": "Roblox Story Scriptwriter",
+      "summary": "The VoidCast YouTube channel is hiring for the following role: Roblox Story Scriptwriter .",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/286",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "VoidCast \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-09-29"
     }
   ],
   "BucketofCrabs": [
