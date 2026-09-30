@@ -19115,9 +19115,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1300,
+      "posted": true,
+      "posted_date": "2026-09-30"
     },
     {
       "id": "ytjobs_44584",
@@ -20055,6 +20056,22 @@
       "job_type": "Full-time",
       "pay": "$12,000-$36,000 Per Year",
       "url": "https://ytjobs.co/job/44834",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44877",
+      "title": "Video Editor for Spin-Off Gaming Channel Per project",
+      "summary": "Video Editor for Spin-Off Gaming Channel Per project Remote Gaming Minecraft Roblox +5 more ZoeTube 12.9M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/44877",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
