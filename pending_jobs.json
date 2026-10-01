@@ -19183,9 +19183,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 7310,
+      "posted": true,
+      "posted_date": "2026-10-01"
     },
     {
       "id": "ytjobs_44620",
@@ -20235,6 +20236,22 @@
       "job_type": "Part-time",
       "pay": "$100-$1,000 Per Hour",
       "url": "https://ytjobs.co/job/44902",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44934",
+      "title": "YouTube Editor \u2013 Lifestyle",
+      "summary": "YouTube Editor \u2013 Lifestyle / Dad Creator $400-$750 Per project Remote Travel & Events People & Blogs +6 more Gary 0 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$400-$750 Per project",
+      "url": "https://ytjobs.co/job/44934",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -21356,6 +21373,21 @@
       "company": "viewz media \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-09-30"
+    },
+    {
+      "id": "ytcareers_6d35b0a2013d770f747f2dff8333f5dc40d7eccdf4cb96765e03eb8fdcb780e0",
+      "title": "YouTube Strategist",
+      "summary": "The Jake Trinder YouTube channel is hiring for the following role: YouTube Strategist.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/288",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Jake Trinder \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-10-01"
     }
   ],
   "BucketofCrabs": [
@@ -24401,7 +24433,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-10-01"
     },
     {
       "id": "boc_3c4d987fb154343761f1cb48243c94c20b16267f9cdc439cba945d90cd5540f4",
