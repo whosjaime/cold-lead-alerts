@@ -19200,9 +19200,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 5090,
+      "posted": true,
+      "posted_date": "2026-10-02"
     },
     {
       "id": "ytjobs_44617",
@@ -20252,6 +20253,22 @@
       "job_type": "Per project",
       "pay": "$400-$750 Per project",
       "url": "https://ytjobs.co/job/44934",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44938",
+      "title": "Minecraft Horror",
+      "summary": "Minecraft Horror / Modded Content Video Editor $250-$500 Per project Remote Comedy Entertainment Horror +11 more Slushi 22 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$250-$500 Per project",
+      "url": "https://ytjobs.co/job/44938",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -24448,7 +24465,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-10-02"
     }
   ],
   "X": []
