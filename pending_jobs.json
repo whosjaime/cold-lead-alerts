@@ -19251,9 +19251,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 250.0,
+      "subscribers": 6490,
+      "posted": true,
+      "posted_date": "2026-10-02"
     },
     {
       "id": "ytjobs_44601",
@@ -21538,11 +21539,26 @@
     {
       "id": "ytcareers_6d832a3a527788beed273595b92992185461a01171b825a6a76ee7743df09955",
       "title": "Follow-Along Workout Video Editor",
-      "summary": "Follow-Along Workout Video Editor",
-      "location": "Not listed",
+      "summary": "The Midas Movement YouTube channel is hiring for the following role: Follow-Along Workout Video Editor.",
+      "location": "On-site",
       "job_type": "Not listed",
       "pay": "Not listed",
       "url": "https://yt.careers/youtube-jobs/289",
+      "source": "YTCareers",
+      "email": "hiring@midasmedia.ca",
+      "email_source": "job_post",
+      "company": "Midas Movement \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-10-02"
+    },
+    {
+      "id": "ytcareers_94ebdb680a53a6d1ea058213996a23f0df94b93452245ee71c7f366b27315cb3",
+      "title": "YouTube Thumbnail Designer",
+      "summary": "YouTube Thumbnail Designer",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/291",
       "source": "YTCareers",
       "email": null,
       "email_source": null,
