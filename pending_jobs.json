@@ -19268,9 +19268,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 3000,
+      "posted": true,
+      "posted_date": "2026-10-03"
     },
     {
       "id": "ytjobs_44602",
@@ -20384,6 +20385,38 @@
       "job_type": "Per project",
       "pay": "$50-$100 Per project",
       "url": "https://ytjobs.co/job/44946",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44969",
+      "title": "Long-Form Editor, AI Video Tutorial Channel (",
+      "summary": "Long-Form Editor, AI Video Tutorial Channel ($300-400/video) $400-$400 Per project Remote . United Kingdom Entertainment Howto & Style +7 more hasan 230 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300-400/video",
+      "url": "https://ytjobs.co/job/44969",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_44937",
+      "title": "Lead Video Editor",
+      "summary": "Lead Video Editor $50,000-$100,000 Per Year . Full-time Remote Short Movies Travel & Events +13 more SideQuest Drew 634K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$50,000-$100,000 Per Year",
+      "url": "https://ytjobs.co/job/44937",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -21554,16 +21587,17 @@
     {
       "id": "ytcareers_94ebdb680a53a6d1ea058213996a23f0df94b93452245ee71c7f366b27315cb3",
       "title": "YouTube Thumbnail Designer",
-      "summary": "YouTube Thumbnail Designer",
-      "location": "Not listed",
+      "summary": "The Midas Movement YouTube channel is hiring for the following role: YouTube Thumbnail Designer.",
+      "location": "On-site",
       "job_type": "Not listed",
       "pay": "Not listed",
       "url": "https://yt.careers/youtube-jobs/291",
       "source": "YTCareers",
-      "email": null,
-      "email_source": null,
-      "company": null,
-      "posted": false
+      "email": "hiring@midasmedia.ca",
+      "email_source": "job_post",
+      "company": "Midas Movement \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-10-03"
     }
   ],
   "BucketofCrabs": [
