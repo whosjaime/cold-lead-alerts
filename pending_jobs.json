@@ -19370,9 +19370,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 3450000,
+      "posted": true,
+      "posted_date": "2026-10-04"
     },
     {
       "id": "ytjobs_44653",
@@ -20502,6 +20503,22 @@
       "job_type": "Full-time",
       "pay": "$50,000-$75,000 Per Year",
       "url": "https://ytjobs.co/job/45000",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45003",
+      "title": "Short-Form YouTube Scriptwriter",
+      "summary": "Short-Form YouTube Scriptwriter / Creative Writer Part-time Remote . US Entertainment Action/Adventure +6 more Nico Grigg 4.09M subs",
+      "location": "Remote",
+      "job_type": "Part-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/45003",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -24775,6 +24792,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-10-02"
+    },
+    {
+      "id": "boc_216da40bd1e07708c1d3ae3188d4db8ef696dcc9b5de139638a97901abda19ee",
+      "title": "Aqua Axolotl BUILDER",
+      "summary": "Aqua Axolotl BUILDER / WORLD BUILDER Remote Only 10%-40%/Project based World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/9GmgFWhSP5",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-10-04"
     }
   ],
   "X": []
