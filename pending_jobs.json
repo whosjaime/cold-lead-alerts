@@ -19353,9 +19353,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 1.0,
+      "subscribers": 4870,
+      "posted": true,
+      "posted_date": "2026-10-04"
     },
     {
       "id": "ytjobs_44662",
@@ -20485,6 +20486,22 @@
       "job_type": "Per project",
       "pay": "$400-$600 Per project",
       "url": "https://ytjobs.co/job/44990",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45000",
+      "title": "Publication Manager",
+      "summary": "Publication Manager - (Upload, Deadlines, QC, Engagement) $50,000-$75,000 Per Year . Full-time Remote News & Politics Real Estate Economy YT Pros Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$50,000-$75,000 Per Year",
+      "url": "https://ytjobs.co/job/45000",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
