@@ -19455,9 +19455,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 17300,
+      "posted": true,
+      "posted_date": "2026-10-06"
     },
     {
       "id": "ytjobs_44666",
@@ -20690,6 +20691,54 @@
       "referral_bonus": null,
       "subscribers": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_45090",
+      "title": "Long-Form Video Editor- True Crime",
+      "summary": "Long-Form Video Editor- True Crime $1,000-$2,000 Per project Remote Documentary Thriller Crime +6 more The Connect: With Johnny Mitchell 1.48M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$1,000-$2,000 Per project",
+      "url": "https://ytjobs.co/job/45090",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45050",
+      "title": "Graphic Designer",
+      "summary": "Graphic Designer $60,000-$100,000 Per Year . Full-time Remote Film & Animation Comedy +21 more The Book Collective Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$60,000-$100,000 Per Year",
+      "url": "https://ytjobs.co/job/45050",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45085",
+      "title": "Long Form Finance Video Editor",
+      "summary": "Long Form Finance Video Editor $24,000-$36,000 Per Year . Full-time Remote News & Politics Education +7 more Hannah Chen Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$24,000-$36,000 Per Year",
+      "url": "https://ytjobs.co/job/45085",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -21898,16 +21947,17 @@
     {
       "id": "ytcareers_6f75e260f298049349b57a21d05d40df8f1e75e5ed2d4fe3d27816c009726f34",
       "title": "Video Editor for Van Life YouTube Channel (4-video trial, option to extend)",
-      "summary": "Video Editor for Van Life YouTube Channel (4-video trial, option to extend)",
-      "location": "Not listed",
+      "summary": "The Awkward Ascent YouTube channel is hiring for the following role: Video Editor for Van Life YouTube Channel (4-video trial, option to extend).",
+      "location": "On-site",
       "job_type": "Not listed",
       "pay": "Not listed",
       "url": "https://yt.careers/youtube-jobs/294",
       "source": "YTCareers",
-      "email": null,
-      "email_source": null,
-      "company": null,
-      "posted": false
+      "email": "christy@locamedia.ca",
+      "email_source": "job_post",
+      "company": "Awkward Ascent \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-10-06"
     },
     {
       "id": "ytcareers_b48af602a1e65b4ee5129a6cd736f765df946afd59824c21a2562cbb672abe36",
@@ -25042,7 +25092,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-10-06"
     }
   ],
   "X": []
