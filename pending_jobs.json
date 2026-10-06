@@ -19472,9 +19472,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 50.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-10-06"
     },
     {
       "id": "ytjobs_44669",
@@ -21961,17 +21962,18 @@
     },
     {
       "id": "ytcareers_b48af602a1e65b4ee5129a6cd736f765df946afd59824c21a2562cbb672abe36",
-      "title": "YouTube Scriptwriter",
-      "summary": "YouTube Scriptwriter / Content Researcher",
-      "location": "Not listed",
+      "title": "YouTube Scriptwriter / Content Researcher",
+      "summary": "The NutriScience India YouTube channel is hiring for the following role: YouTube Scriptwriter / Content Researcher.",
+      "location": "On-site",
       "job_type": "Not listed",
       "pay": "Not listed",
       "url": "https://yt.careers/youtube-jobs/293",
       "source": "YTCareers",
-      "email": null,
-      "email_source": null,
-      "company": null,
-      "posted": false
+      "email": "rbind403@gmail.com",
+      "email_source": "job_post",
+      "company": "NutriScience India \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-10-06"
     }
   ],
   "BucketofCrabs": [
