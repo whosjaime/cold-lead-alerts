@@ -19506,9 +19506,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 100.0,
+      "subscribers": 7600000,
+      "posted": true,
+      "posted_date": "2026-10-06"
     },
     {
       "id": "ytjobs_44691",
@@ -20862,6 +20863,54 @@
       "job_type": "Per project",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/45105",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45143",
+      "title": "DEAGZ Shorts Editor",
+      "summary": "DEAGZ Shorts Editor \u2014 Only If You've Done This Style $30-$50 Per project Remote Shorts DEAGZ Faceless DEAGZ Jocus 32.3K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$30-$50 Per project",
+      "url": "https://ytjobs.co/job/45143",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45138",
+      "title": "Video Editor",
+      "summary": "Video Editor - Reaction Commentary | Hayden Schreier (125K) $100-$600 Per project Remote Comedy Entertainment Reaction +3 more Hayden Schreier 124K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$600 Per project",
+      "url": "https://ytjobs.co/job/45138",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45132",
+      "title": "Looking for a YouTube Producer",
+      "summary": "Looking for a YouTube Producer $300 Per project Remote . US Autos & Vehicles Travel & Events +5 more Dagem Desta 610 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300 Per project",
+      "url": "https://ytjobs.co/job/45132",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -25253,7 +25302,8 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-10-06"
     }
   ],
   "X": []
