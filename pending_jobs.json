@@ -19523,9 +19523,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 1000.0,
+      "subscribers": 2440000,
+      "posted": true,
+      "posted_date": "2026-10-07"
     },
     {
       "id": "ytjobs_44688",
@@ -20918,6 +20919,54 @@
       "referral_bonus": null,
       "subscribers": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_45147",
+      "title": "YouTube Production Manager Full-time",
+      "summary": "YouTube Production Manager Full-time Onsite . Los Angeles, CA, US Jordan Matter 38.2M subs",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/45147",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45146",
+      "title": "Video Editor/Animator for Recurring Movie Reviews",
+      "summary": "Video Editor/Animator for Recurring Movie Reviews $500-$750 Per project Remote Entertainment Movies +9 more johnscott3 301 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$500-$750 Per project",
+      "url": "https://ytjobs.co/job/45146",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45145",
+      "title": "Videographer",
+      "summary": "Videographer - Nick Kratka's YouTube Channel $400-$650 Per project Onsite . Miami, FL, US Action/Adventure +3 more Nick Kratka 6.67M subs",
+      "location": "On-site",
+      "job_type": "Per project",
+      "pay": "$400-$650 Per project",
+      "url": "https://ytjobs.co/job/45145",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -22152,6 +22201,21 @@
       "company": "NutriScience India \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-10-06"
+    },
+    {
+      "id": "ytcareers_de0fc4e6f3bd4a5dd584a1950394066b087a657ef561111c93fd28ee57730577",
+      "title": "Documentary Video Editor & Motion Designer",
+      "summary": "The Xentra Transport - Same Day Delivery YouTube channel is hiring for the following role: Documentary Video Editor & Motion Designer.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/296",
+      "source": "YTCareers",
+      "email": "xentratransport@gmail.com",
+      "email_source": "job_post",
+      "company": "Xentra Transport",
+      "posted": true,
+      "posted_date": "2026-10-07"
     }
   ],
   "BucketofCrabs": [
