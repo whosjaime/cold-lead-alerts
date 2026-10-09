@@ -19676,9 +19676,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 8500,
+      "posted": true,
+      "posted_date": "2026-10-09"
     },
     {
       "id": "ytjobs_44741",
@@ -21343,6 +21344,22 @@
       "referral_bonus": null,
       "subscribers": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_45246",
+      "title": "Full Time Youtube Video Editor",
+      "summary": "Full Time Youtube Video Editor $20,000-$50,000 Per Year . Full-time Remote Travel & Events Entertainment +16 more CARMICHAEL 330 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$20,000-$50,000 Per Year",
+      "url": "https://ytjobs.co/job/45246",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -22592,6 +22609,21 @@
       "company": "Xentra Transport",
       "posted": true,
       "posted_date": "2026-10-07"
+    },
+    {
+      "id": "ytcareers_40ba3c3efb6f73c7ea54a54258c5c221bf7b026792c7dd39fb9db8513f9f33fe",
+      "title": "YouTube Video Editor",
+      "summary": "The Itzjunior YouTube channel is hiring for the following role: YouTube Video Editor.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/297",
+      "source": "YTCareers",
+      "email": "junioryt@itzjunior.com",
+      "email_source": "job_post",
+      "company": "Itzjunior \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-10-09"
     }
   ],
   "BucketofCrabs": [
@@ -25753,6 +25785,21 @@
       "job_type": "Freelance",
       "pay": "$350-$700",
       "url": "https://www.bucketofcrabs.net/jobs/JkWDw5rTau",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-10-09"
+    },
+    {
+      "id": "boc_f4a0b1b959ef8eb8ff301a841906bbb7ab51c45a7ebff3716e7e6762f651bd37",
+      "title": "BlueCheese Studios Developer Relations Coordinator",
+      "summary": "BlueCheese Studios Developer Relations Coordinator Remote Only $100000-$100000/Fixed Amount - yearly Operations QA/Testing",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$100000-$100000",
+      "url": "https://www.bucketofcrabs.net/jobs/yAAnEpHf3k",
       "source": "BucketofCrabs",
       "email": null,
       "email_source": null,
