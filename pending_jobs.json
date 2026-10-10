@@ -19693,9 +19693,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 500.0,
+      "subscribers": 4,
+      "posted": true,
+      "posted_date": "2026-10-10"
     },
     {
       "id": "ytjobs_44744",
@@ -21353,6 +21354,22 @@
       "job_type": "Full-time",
       "pay": "$20,000-$50,000 Per Year",
       "url": "https://ytjobs.co/job/45246",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45260",
+      "title": "Viral Reels Editor (Proven Track Record Required) Per project",
+      "summary": "Viral Reels Editor (Proven Track Record Required) Per project Remote Entertainment Education +6 more UpFlip 1.76M subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/45260",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
