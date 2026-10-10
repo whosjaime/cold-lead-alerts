@@ -19727,9 +19727,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 6250,
+      "posted": true,
+      "posted_date": "2026-10-10"
     },
     {
       "id": "ytjobs_44757",
@@ -21378,6 +21379,54 @@
       "referral_bonus": null,
       "subscribers": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_45284",
+      "title": "Gaming Video Editor",
+      "summary": "Gaming Video Editor \u2014 GTA 6 Long-Form (2\u20133 videos/week) $65-$85 Per project Remote Gaming Comedy Challenge +2 more The Green Gaming Alien 8 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$65-$85 Per project",
+      "url": "https://ytjobs.co/job/45284",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45281",
+      "title": "Expert YT Thumbnail Designer, True Crime Per project",
+      "summary": "Expert YT Thumbnail Designer, True Crime Per project Remote Documentary Crime Doventra Production LLC Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/45281",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45266",
+      "title": "Content Creators & Video Creators for Toy/Plushie Channel",
+      "summary": "Content Creators & Video Creators for Toy/Plushie Channel $60,000-$96,000 Per Year . Full-time Onsite . Las Vegas, NV, US Gaming Comedy Howto & Style +9 more Elaine Camu 169 subs",
+      "location": "On-site",
+      "job_type": "Full-time",
+      "pay": "$60,000-$96,000 Per Year",
+      "url": "https://ytjobs.co/job/45266",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -22642,6 +22691,49 @@
       "company": "Itzjunior \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-10-09"
+    },
+    {
+      "id": "ytcareers_7393e267d45f8583fca9820fb2327730d7bf177cb2738adcac4285892e11b2ac",
+      "title": "YouTube Creative Producer for Food & Candy Challenges",
+      "summary": "The Kami Adam YouTube channel is hiring for the following role: YouTube Creative Producer for Food & Candy Challenges.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/300",
+      "source": "YTCareers",
+      "email": "austincoco1122@gmail.com",
+      "email_source": "job_post",
+      "company": "Kami Adam \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-10-10"
+    },
+    {
+      "id": "ytcareers_27a06ca8b31436e3dfec142a74229137bf160f340b1ad628422b72a1c2469bf6",
+      "title": "Looking for a YouTube Growth Specialist",
+      "summary": "Looking for a YouTube Growth Specialist",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/299",
+      "source": "YTCareers",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
+    },
+    {
+      "id": "ytcareers_5c12ca9e6b233ab087fa3be15882170b8e31621f793cf00d350aab445638b24e",
+      "title": "YouTube Creative Producer for Food & Candy Challenges",
+      "summary": "YouTube Creative Producer for Food & Candy Challenges",
+      "location": "Not listed",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/298",
+      "source": "YTCareers",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "BucketofCrabs": [
