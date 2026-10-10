@@ -19744,9 +19744,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1000,
+      "posted": true,
+      "posted_date": "2026-10-10"
     },
     {
       "id": "ytjobs_44752",
@@ -21427,6 +21428,38 @@
       "referral_bonus": null,
       "subscribers": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_45291",
+      "title": "Bi-Weekly YT Video Editor",
+      "summary": "Bi-Weekly YT Video Editor $450-$650 Per project Remote Gaming Videoblogging +9 more mattheperson 396K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$450-$650 Per project",
+      "url": "https://ytjobs.co/job/45291",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45290",
+      "title": "Long Form Tech Review Editor",
+      "summary": "Long Form Tech Review Editor $300-$800 Per project Remote Science & Technology +9 more Tuba Makes 5.28K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$300-$800 Per project",
+      "url": "https://ytjobs.co/job/45290",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -22710,16 +22743,17 @@
     {
       "id": "ytcareers_27a06ca8b31436e3dfec142a74229137bf160f340b1ad628422b72a1c2469bf6",
       "title": "Looking for a YouTube Growth Specialist",
-      "summary": "Looking for a YouTube Growth Specialist",
-      "location": "Not listed",
+      "summary": "The BNG Hamad YouTube channel is hiring for the following role: Looking for a YouTube Growth Specialist.",
+      "location": "On-site",
       "job_type": "Not listed",
       "pay": "Not listed",
       "url": "https://yt.careers/youtube-jobs/299",
       "source": "YTCareers",
-      "email": null,
-      "email_source": null,
-      "company": null,
-      "posted": false
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "BNG Hamad \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-10-10"
     },
     {
       "id": "ytcareers_5c12ca9e6b233ab087fa3be15882170b8e31621f793cf00d350aab445638b24e",
