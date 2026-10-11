@@ -19761,9 +19761,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 2670000,
+      "posted": true,
+      "posted_date": "2026-10-11"
     },
     {
       "id": "ytjobs_44610",
@@ -21460,6 +21461,22 @@
       "referral_bonus": null,
       "subscribers": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_45303",
+      "title": "Junior Video Creator",
+      "summary": "Junior Video Creator \u2014 Plush Comedy & YouTube Challenges Hel $60,000-$96,000 Per Year . Full-time Remote Entertainment Family +13 more Elaine Camu 169 subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$60,000-$96,000 Per Year",
+      "url": "https://ytjobs.co/job/45303",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -22758,16 +22775,17 @@
     {
       "id": "ytcareers_5c12ca9e6b233ab087fa3be15882170b8e31621f793cf00d350aab445638b24e",
       "title": "YouTube Creative Producer for Food & Candy Challenges",
-      "summary": "YouTube Creative Producer for Food & Candy Challenges",
-      "location": "Not listed",
+      "summary": "The COLOHLO CANDY YouTube channel is hiring for the following role: YouTube Creative Producer for Food & Candy Challenges.",
+      "location": "On-site",
       "job_type": "Not listed",
       "pay": "Not listed",
       "url": "https://yt.careers/youtube-jobs/298",
       "source": "YTCareers",
-      "email": null,
-      "email_source": null,
-      "company": null,
-      "posted": false
+      "email": "austincoco1122@gmail.com",
+      "email_source": "job_post",
+      "company": "COLOHLO CANDY \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-10-11"
     }
   ],
   "BucketofCrabs": [
