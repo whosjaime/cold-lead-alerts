@@ -19812,9 +19812,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 231000,
+      "posted": true,
+      "posted_date": "2026-10-11"
     },
     {
       "id": "ytjobs_44810",
@@ -21488,6 +21489,22 @@
       "job_type": "Full-time",
       "pay": "$18,000 Per Year",
       "url": "https://ytjobs.co/job/45306",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45321",
+      "title": "Senior Short-Form Video Editor",
+      "summary": "Senior Short-Form Video Editor | YouTube, Instagram & TikTok Full-time Remote Travel & Events Documentary +7 more Adrian G.Martin 125K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/45321",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
