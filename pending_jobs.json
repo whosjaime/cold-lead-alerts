@@ -19829,9 +19829,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-10-12"
     },
     {
       "id": "ytjobs_44809",
@@ -21505,6 +21506,22 @@
       "job_type": "Full-time",
       "pay": "Not listed",
       "url": "https://ytjobs.co/job/45321",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45322",
+      "title": "YouTube Vlog & Social Media Video Editor Per project",
+      "summary": "YouTube Vlog & Social Media Video Editor Per project Remote People & Blogs Comedy +9 more GOOD BOY HOUSE 2.72K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/45322",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -26003,6 +26020,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-10-09"
+    },
+    {
+      "id": "boc_af273159305cd3a7fe831fd804c65953ef74d1813ae9bd50004abc42b50310c0",
+      "title": "Last Light MC Builder",
+      "summary": "Last Light MC Builder / Level Designer Remote Only $1-$11/Fixed Amount World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$1-$11",
+      "url": "https://www.bucketofcrabs.net/jobs/pe3GbwykHU",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-10-12"
     }
   ],
   "X": []
