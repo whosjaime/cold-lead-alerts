@@ -19931,9 +19931,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
+      "referral_bonus": 0.0,
       "subscribers": null,
-      "posted": false
+      "posted": true,
+      "posted_date": "2026-10-13"
     },
     {
       "id": "ytjobs_44814",
@@ -21783,6 +21784,22 @@
       "job_type": "Full-time",
       "pay": "$300-$700 Per Year",
       "url": "https://ytjobs.co/job/45375",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45403",
+      "title": "Video Editor for NFL documentary long form",
+      "summary": "Video Editor for NFL documentary long form $100-$250 Per project Remote Sports Gaming Entertainment The Hendy Highlight 1.34K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$100-$250 Per project",
+      "url": "https://ytjobs.co/job/45403",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -26326,6 +26343,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-10-12"
+    },
+    {
+      "id": "boc_bd5ed51538c391007cc4564011b98d1d58d1c6b21cc347f37bec77a6f712e2f9",
+      "title": "Eternal Creations Minecraft Bedrock Animator",
+      "summary": "Eternal Creations Minecraft Bedrock Animator Remote Only $15-$25/Hourly 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$15-$25/Hour",
+      "url": "https://www.bucketofcrabs.net/jobs/XEQJdJ8Kve",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-10-13"
     }
   ],
   "X": []
