@@ -19880,9 +19880,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 119000,
+      "posted": true,
+      "posted_date": "2026-10-13"
     },
     {
       "id": "ytjobs_44794",
@@ -21675,6 +21676,22 @@
       "referral_bonus": null,
       "subscribers": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_45362",
+      "title": "Long-Form Editor",
+      "summary": "Long-Form Editor - Fast-growing channel! $250-$350 Per project Remote Entertainment Education +3 more Tyler Goins 4.5K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$250-$350 Per project",
+      "url": "https://ytjobs.co/job/45362",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -22984,6 +23001,21 @@
       "company": "COLOHLO CANDY \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-10-11"
+    },
+    {
+      "id": "ytcareers_aa31b4f8752e267699d56212f2be5278c1923cce55b27b40e17f2d41c8060674",
+      "title": "Video Editor",
+      "summary": "The Sagan Recruitment YouTube channel is hiring for the following role: Video Editor.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/301",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Sagan Recruitment \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-10-13"
     }
   ],
   "BucketofCrabs": [
