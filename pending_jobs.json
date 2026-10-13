@@ -19897,9 +19897,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 74,
+      "posted": true,
+      "posted_date": "2026-10-13"
     },
     {
       "id": "ytjobs_44791",
@@ -21685,6 +21686,22 @@
       "job_type": "Per project",
       "pay": "$250-$350 Per project",
       "url": "https://ytjobs.co/job/45362",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45372",
+      "title": "Short Form Video Editor",
+      "summary": "Short Form Video Editor $25-$100 Per project Remote Education Science & Technology +19 more Momentum Labs Company",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$25-$100 Per project",
+      "url": "https://ytjobs.co/job/45372",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
