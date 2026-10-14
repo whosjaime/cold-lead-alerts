@@ -19948,9 +19948,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 66500,
+      "posted": true,
+      "posted_date": "2026-10-14"
     },
     {
       "id": "ytjobs_44833",
@@ -21800,6 +21801,22 @@
       "job_type": "Per project",
       "pay": "$100-$250 Per project",
       "url": "https://ytjobs.co/job/45403",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45406",
+      "title": "Short-Form Video Strategist (Instagram Reels) Full-time",
+      "summary": "Short-Form Video Strategist (Instagram Reels) Full-time Remote Education Classics Marketing +10 more Vroom Media Group Inc. Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/45406",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
@@ -26358,6 +26375,35 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-10-13"
+    },
+    {
+      "id": "boc_1ad3f5b2af2bbc84e2c27c6352376ae4a3b50bb98df2b247f284322d8f25f90c",
+      "title": "Bedrock Productions Entity Artist",
+      "summary": "Bedrock Productions Entity Artist Remote Only $10-$50/Fixed Amount Game Art 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$10-$50",
+      "url": "https://www.bucketofcrabs.net/jobs/DEK6nUABfv",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-10-14"
+    },
+    {
+      "id": "boc_488f866e0663abafe8bf390e34030d3ac1981a46b91d5816fa8172036134ece2",
+      "title": "Bedrock Productions Block Texture Artist",
+      "summary": "Bedrock Productions Block Texture Artist Remote Only $10-$50/Fixed Amount Game Art",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$10-$50",
+      "url": "https://www.bucketofcrabs.net/jobs/b8jzqs2kL2",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": false
     }
   ],
   "X": []
