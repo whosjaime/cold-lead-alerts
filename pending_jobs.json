@@ -20152,9 +20152,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 1000.0,
+      "subscribers": 17500,
+      "posted": true,
+      "posted_date": "2026-10-16"
     },
     {
       "id": "ytjobs_44885",
@@ -22091,6 +22092,38 @@
       "referral_bonus": null,
       "subscribers": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_45491",
+      "title": "YouTube Strategist",
+      "summary": "YouTube Strategist $120,000-$300,000 Per Year . Full-time Remote Education Business and Finance +3 more Views To Clients Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$120,000-$300,000 Per Year",
+      "url": "https://ytjobs.co/job/45491",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_29725",
+      "title": "Post Production Manager",
+      "summary": "Post Production Manager $24,000-$30,000 Per Year . Full-time Remote Autos & Vehicles News & Politics +7 more YTMG LTD Company",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$24,000-$30,000 Per Year",
+      "url": "https://ytjobs.co/job/29725",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -23415,6 +23448,21 @@
       "company": "Sagan Recruitment \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-10-13"
+    },
+    {
+      "id": "ytcareers_5ec7edd56d868a722158e307bf54918685d5dd6b0e8df30d28bfa08155046030",
+      "title": "Short-Form Video Editor for Podcasts & Social Media",
+      "summary": "The Ray Sinlao YouTube channel is hiring for the following role: Short-Form Video Editor for Podcasts & Social Media.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/303",
+      "source": "YTCareers",
+      "email": "hello@yt.careers",
+      "email_source": "job_post",
+      "company": "Ray Sinlao \u00b7 YT.Careers",
+      "posted": true,
+      "posted_date": "2026-10-16"
     }
   ],
   "BucketofCrabs": [
@@ -26717,6 +26765,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-10-15"
+    },
+    {
+      "id": "boc_d0c09f0cfe645e3d9505c55391b92237d8e00e55f6c45f19996798e2641d2416",
+      "title": "Riftlash Builder",
+      "summary": "Riftlash Builder Remote Only 3%-5%/Project based World Builder",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/xQerZPnmqs",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-10-16"
     }
   ],
   "X": []
