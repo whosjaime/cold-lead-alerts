@@ -20135,9 +20135,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 13300000,
+      "posted": true,
+      "posted_date": "2026-10-16"
     },
     {
       "id": "ytjobs_44893",
@@ -22067,6 +22068,22 @@
       "job_type": "Per project",
       "pay": "$250-$300 Per project",
       "url": "https://ytjobs.co/job/45460",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45482",
+      "title": "Lead Video Editor",
+      "summary": "Lead Video Editor $70,000-$144,000 Per Year . Full-time Hybrid . Los Angeles, CA, US Videoblogging Comedy +5 more Brent Rivera 44.2M subs",
+      "location": "Hybrid",
+      "job_type": "Full-time",
+      "pay": "$70,000-$144,000 Per Year",
+      "url": "https://ytjobs.co/job/45482",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
