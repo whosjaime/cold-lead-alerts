@@ -20237,9 +20237,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 10,
+      "posted": true,
+      "posted_date": "2026-10-17"
     },
     {
       "id": "ytjobs_44905",
@@ -22160,6 +22161,54 @@
       "referral_bonus": null,
       "subscribers": null,
       "posted": false
+    },
+    {
+      "id": "ytjobs_45523",
+      "title": "Video Podcast Editor (Audio-Focused) Per project",
+      "summary": "Video Podcast Editor (Audio-Focused) Per project Remote Gaming Movies Anime/Animation +5 more Pod Fiction 6 subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/45523",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45522",
+      "title": "Viral Vlog Thumbnail Designer",
+      "summary": "Viral Vlog Thumbnail Designer $25-$100 Per project Remote Videoblogging Comedy +7 more Trey Colley 2.42K subs",
+      "location": "Remote",
+      "job_type": "Per project",
+      "pay": "$25-$100 Per project",
+      "url": "https://ytjobs.co/job/45522",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45521",
+      "title": "Short form high volume video editor",
+      "summary": "Short form high volume video editor $5,000-$30,000 Per Year . Full-time Remote Shorts Live stream GOOMBA 72.6K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$5,000-$30,000 Per Year",
+      "url": "https://ytjobs.co/job/45521",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
     }
   ],
   "Roster": [],
@@ -23499,6 +23548,21 @@
       "company": "Ray Sinlao \u00b7 YT.Careers",
       "posted": true,
       "posted_date": "2026-10-16"
+    },
+    {
+      "id": "ytcareers_3644634c20d56c9d7fcf338cf979adddd4b38dcfbb5ad52b5ffbdaac87ce35c0",
+      "title": "Short-form Video Editor",
+      "summary": "The Tomi | Midas YouTube channel is hiring for the following role: Short-form Video Editor - Tech & Fitness.",
+      "location": "On-site",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://yt.careers/youtube-jobs/304",
+      "source": "YTCareers",
+      "email": "hiring@midasmedia.ca",
+      "email_source": "job_post",
+      "company": "Tech & Fitness",
+      "posted": true,
+      "posted_date": "2026-10-17"
     }
   ],
   "BucketofCrabs": [
