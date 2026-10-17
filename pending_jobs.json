@@ -20305,9 +20305,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 25.0,
+      "subscribers": 1190,
+      "posted": true,
+      "posted_date": "2026-10-17"
     },
     {
       "id": "ytjobs_44934",
@@ -22253,6 +22254,22 @@
       "job_type": "Per project",
       "pay": "$1,000-$1,000 Per project",
       "url": "https://ytjobs.co/job/45538",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45546",
+      "title": "Short Form Video Editor (6M+ Followers)",
+      "summary": "Short Form Video Editor (6M+ Followers) $10-$200 Per Year . Full-time Remote Comedy Entertainment Education +7 more Wyatt Eiden 1.21M subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "$10-$200 Per Year",
+      "url": "https://ytjobs.co/job/45546",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
