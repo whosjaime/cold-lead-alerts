@@ -20390,9 +20390,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 7910,
+      "posted": true,
+      "posted_date": "2026-10-18"
     },
     {
       "id": "ytjobs_44954",
@@ -27048,6 +27049,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-10-16"
+    },
+    {
+      "id": "boc_87975442e3631ab9c0e24c39546b37e9a3299693facb2c67c17e4ab6987dab8e",
+      "title": "Reza Texture Artist",
+      "summary": "Reza Texture Artist Remote Only 1%-35%/Project based Game Art 3D Models/Animator",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "Not listed",
+      "url": "https://www.bucketofcrabs.net/jobs/L1sbYy8NdX",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-10-18"
     }
   ],
   "X": []
