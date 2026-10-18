@@ -20339,9 +20339,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 29,
+      "posted": true,
+      "posted_date": "2026-10-18"
     },
     {
       "id": "ytjobs_44957",
@@ -22271,6 +22272,22 @@
       "job_type": "Full-time",
       "pay": "$10-$200 Per Year",
       "url": "https://ytjobs.co/job/45546",
+      "source": "YTJobs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "referral_bonus": null,
+      "subscribers": null,
+      "posted": false
+    },
+    {
+      "id": "ytjobs_45551",
+      "title": "Long-Form Editor & Creative (AI, Remotion, 3D, DaVinci) Full-time",
+      "summary": "Long-Form Editor & Creative (AI, Remotion, 3D, DaVinci) Full-time Remote Gaming Videoblogging Comedy +10 more Mizkif 973K subs",
+      "location": "Remote",
+      "job_type": "Full-time",
+      "pay": "Not listed",
+      "url": "https://ytjobs.co/job/45551",
       "source": "YTJobs",
       "email": null,
       "email_source": null,
