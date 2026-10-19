@@ -20424,9 +20424,10 @@
       "email": null,
       "email_source": null,
       "company": null,
-      "referral_bonus": null,
-      "subscribers": null,
-      "posted": false
+      "referral_bonus": 0.0,
+      "subscribers": 1110,
+      "posted": true,
+      "posted_date": "2026-10-19"
     },
     {
       "id": "ytjobs_44948",
@@ -27065,6 +27066,21 @@
       "company": null,
       "posted": true,
       "posted_date": "2026-10-18"
+    },
+    {
+      "id": "boc_adb1264b733540c7f82e4b18be264fc3912098c5e11ae6613be4badbc7ac6ff4",
+      "title": "UnderBlocks Studios Sound",
+      "summary": "UnderBlocks Studios Sound / Music Designer at UnderBlocks Remote Only $50-$500/Fixed Amount Audio Other",
+      "location": "Remote",
+      "job_type": "Not listed",
+      "pay": "$50-$500",
+      "url": "https://www.bucketofcrabs.net/jobs/gZZCm3Dg1L",
+      "source": "BucketofCrabs",
+      "email": null,
+      "email_source": null,
+      "company": null,
+      "posted": true,
+      "posted_date": "2026-10-19"
     }
   ],
   "X": []
